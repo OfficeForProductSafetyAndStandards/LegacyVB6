@@ -1,0 +1,5 @@
+FILE QUARANTINED
+
+Microsoft Forefront Security SMTPGW removed a file since it was found to match a filter.
+File name: "HPIBTest.tar.gz->iOr9fb.tar->HPIB-test/ieee_32m.dll"
+Filter name: "FILE FILTER= VSCHT_Executable: *.*"

@@ -1,0 +1,18 @@
+Structure of the file "program.dat"
+
+[Comment]
+
+[File name]  		'without extension,
+			'program creates 2 files: *.raw, *.dat
+
+[Contact distance/mm] [Sample dimensions a,b,c /mm] [Relative density]
+
+[Initial Current /mA]   'applied at the beginning of each segment
+
+[Number of Segments]
+
+[Initial T /K] [Final T /K] [Temperature step /K]
+[Initial field /T] [Final field /T] [Field Step/T] [hysteresis / 0~1]
+			'these 2 lines are repeated for each segment
+			'hysteresis=0: Field is varied from Bi to Bf
+			'hysteresis=1: Field is varied Bi -> Bf -> -Bf -> Bi

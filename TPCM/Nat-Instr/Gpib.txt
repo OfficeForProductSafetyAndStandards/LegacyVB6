@@ -1,0 +1,5 @@
+FILE QUARANTINED
+
+Microsoft Forefront Security SMTPGW removed a file since it was found to match a filter.
+File name: "TPMS.tar.gz->AgrgHa.tar->TPCM/Nat-Instr/Gpib.dll"
+Filter name: "FILE FILTER= VSCHT_Executable: *.*"

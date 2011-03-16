@@ -1,0 +1,4 @@
+TPCM - Thermoelectric Power and thermal Conductivity Measurement  
+Version 2.1 for Windows 95 and higher
+David Sedmidubsky
+Caen, 12.7.2000

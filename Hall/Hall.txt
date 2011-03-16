@@ -1,0 +1,51 @@
+Mìøení Hallova jevu a rezistivity
+
+Hallùv jev je zaloen na vytvoøení Hallova napìtí kolmo ke smìru protékaného proudu v magnetickém poli kolmém na proud i napìtí. Oproti spoèívá je rezisitivita a magnetorezistence (rezistivita v magnetickém poli obecné orientace) v generaci napìtí ve smìru protékaného proudu.
+
+Mìøení metodou podle van der Paw se provádí na destièce o tloušce mnohem menší, ne je délka hran. V rozích destièky jsou kontakty, které oznaèíme 1,2,3,4 proti smìru hodinovıch ruèièek.
+
+-----------------------------------------------------
+
+Mìøení rezistivity se provádí následovnì:
+
+aplikuje se proud I_12^+ a mìøí se napìtí V_34^+ => R_A^+ = V_34^+ / I_12^+
+aplikuje se proud I_12^- a mìøí se napìtí V_34^- => R_A^- = V_34^- / I_12^-
+R_A = (R_A^+ - R_A^-) / 2
+aplikuje se proud I_23^+ a mìøí se napìtí V_14^+ => R_B^+ = V_14^+ / I_23^+
+aplikuje se proud I_23^- a mìøí se napìtí V_14^- => R_B^+ = V_14^- / I_23^-
+R_B = (R_B^+ - R_B^-) / 2
+
+øeší se rovnice pro R_S: exp(-pi*R_A/R_S) + exp(-pi*R_B/R_S) = 1
+rezistivita ro = R_S*t , kde t je tlouška vzorku.
+
+Mìøení magnetorezistence se provádí obdobnì, pouze pøi magnetickém poli aplikovaném kolmo k destièce.
+
+Mìøení Hallova jevu se provádí následovnì:
+
+aplikuje se pole B^+
+aplikuje se proud I_13^+ a mìøí se napìtí V_24^+ 
+aplikuje se proud I_13^- a mìøí se napìtí V_24^- 
+vypoète se Hallovo napìtí: V_24 = (V_24^ - V_24^-)/2 
+opakovat pøi rùznıch polích B^+ ,  0 , B^-
+(mono vše opakovat pro kontrolu pro I_13 a V_24, ale není to nutné)
+závislost V(B) by mìla bıt pro Hall pøímková a všude s kladnou smìrnicí (lichá funkce), pro magnetorezistenci pøímková lomená, tedy pro B^+ kladná smìrnice a pro B^- záporná. Pøispìvku magnetorezistence se nikdy nelze vyhnout, protoe kontakty nejsou ideálnì kolmé. 
+Derivace V'(B) je tedy pro B^+ (Hall+MR) a pro B^- (Hall-MR). Jeliko R_H = V_H*t/I/B, lze V_H/B nahradit (V'(B^+) + V'(B^-))/2 (souètem se eliminuje MR).
+Pokud nemáme k dispozici celou závislost V(B), postaèí pouze 2 body: V(B^+) , V(B^-). Potom V_H = (V(B^+) - V(B^-))/2 
+
+-----------------------------------------------------
+
+Keithley slouí jako zdroj stejnosmìrného proudu kladné i záporné polarity. Programuje se po GPIB.
+
+Agilent slouí pro mìøení napìtí a pøepínání kontaktù. Programuje se po GPIB.
+konfigurace kanálù:	I_12, V_34 - CLOSE 201,202, 101
+			I_23, V_14 - CLOSE 202,203,205, 102
+			I_13, V_24 - CLOSE 201,203,206, 103
+			I_24, V_13 - CLOSE 202,204, 104
+
+Eurotherm souí jako zdroj napìtí 0-5 V, které se nastavuje jako vıstupní vıkon v manuálním reimu. Eurotherm (ten kterı kupujeme) je schopen generovat pouze proud 0-20 mA, na 0-5 V se pøevede zaøazaním boèníku s pøíslušnım odporem. Eurotherm je ovládán po RS232 protokolem Modbus.
+
+Zdrojem napìtí 0-5 V se øídí vıkonová jednotka generující stejnosmìrnı proud, kterı protéká cívkou.
+
+Polarita proudu se pøepíná pomocí switche, kterı je ovládán pøes paralelní port (viz adresáø LPT). 
+
+Pole se mìøí Hallovou sondou umístìnou vedle vzorku, jako nominální odpor, jeho hodnota se mìøí ètyøbodovì pøímo pomocí Agilentu. R_H se pøepoète na B pomocí kalibraèního polynomu.
