@@ -1,5 +1,0 @@
-FILE QUARANTINED
-
-Microsoft Forefront Security SMTPGW removed a file since it was found to match a filter.
-File name: "EuroTest.tar.gz->DMluMb.tar->EuroTest/EuroTest.exe"
-Filter name: "FILE FILTER= VSCHT_Executable: *.*"

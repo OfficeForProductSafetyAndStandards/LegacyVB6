@@ -1,5 +1,0 @@
-FILE QUARANTINED
-
-Microsoft Forefront Security SMTPGW removed a file since it was found to match a filter.
-File name: "Hall.tar.gz->HjwBOb.tar->Hall/Magnet.exe"
-Filter name: "FILE FILTER= VSCHT_Executable: *.*"
