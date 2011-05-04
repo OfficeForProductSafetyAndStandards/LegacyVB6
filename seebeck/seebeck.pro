@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-TARGET = sebeck
+TARGET = seebeck
 TEMPLATE = app
 
 
