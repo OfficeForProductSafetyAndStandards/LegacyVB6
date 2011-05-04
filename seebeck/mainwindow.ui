@@ -26,7 +26,17 @@
      <widget class="QTableWidget" name="devicesTableWidget">
       <column>
        <property name="text">
-        <string>Device</string>
+        <string>Device ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>PAD</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>SAD</string>
        </property>
       </column>
      </widget>
