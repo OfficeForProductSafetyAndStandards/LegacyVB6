@@ -1,7 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <windows.h>
-#include "gpib488.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,5 +16,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_refreshPushButton_clicked()
 {
-    // TODO
+
+
 }

@@ -1,0 +1,1 @@
+dlltool -d gpib488.def -l libgpib488.dll.a
