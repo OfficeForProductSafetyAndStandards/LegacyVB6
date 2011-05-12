@@ -9,7 +9,7 @@ class HPIB
 {
 public:
     HPIB();
-    Addr4882_t *FindLstn(int boardId);
+    static Addr4882_t *FindLstn(int boardId);
 };
 
 #endif // HPIB_H

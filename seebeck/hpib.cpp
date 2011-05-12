@@ -6,17 +6,27 @@ HPIB::HPIB()
 
 Addr4882_t *HPIB::FindLstn(int boardId)
 {
-    Addr4882_t addrlist[32];
-    Addr4882_t *results = new Addr4882_t[ARRAY_SIZE(addrlist)];
+    // addresses:
+    // 0    - master
+    // 1-30 - devices
+    // 31   - all devices?
+    const Addr4882_t PIDsLstnTest[] = {
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+        17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, NOADDR
+    };
 
-    for (unsigned int x = 0; x < ARRAY_SIZE(addrlist) - 1; x++) {
-        addrlist[x] = x + 1;
+    SendIFC(boardId);
+    if ((Ibsta() & ERR) != 0)
+        return NULL;
+
+    Addr4882_t *PIDsLstn = new Addr4882_t[ARRAY_SIZE(PIDsLstnTest)];
+    ::FindLstn(boardId, PIDsLstnTest, PIDsLstn, ARRAY_SIZE(PIDsLstnTest) - 1);
+    if (Ibsta() & ERR) {
+        delete[] PIDsLstn;
+        return NULL;
     }
-    addrlist[ARRAY_SIZE(addrlist) - 1] = NOADDR;
-    ::FindLstn(boardId, addrlist, results, ARRAY_SIZE(addrlist) - 1);
 
-    int Num_Listeners = Ibcnt();
-    results[Num_Listeners] = NOADDR;
+    PIDsLstn[Ibcnt()] = NOADDR;
 
-    return results;
+    return PIDsLstn;
 }
