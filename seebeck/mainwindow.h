@@ -21,7 +21,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    HPIBDev dev;
 };
 
 #endif // MAINWINDOW_H

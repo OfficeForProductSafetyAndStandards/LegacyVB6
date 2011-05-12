@@ -2,15 +2,35 @@
 
 HPIBDev::HPIBDev()
 {
-    boardNum = 0;
-    PAD = 0;
-    SAD = 0;
     devId = -1;
+}
+
+HPIBDev::~HPIBDev()
+{
+    if (isOpen())
+        close();
+}
+
+void HPIBDev::close()
+{
+    // TODO
+}
+
+bool HPIBDev::isOpen()
+{
+    if (devId >= 0)
+        return true;
+    return false;
 }
 
 int HPIBDev::open(int boardNum, int PAD, int SAD)
 {
    char spr;
+
+   SendIFC(boardNum);
+   if ((Ibsta() & ERR) != 0) {
+       return -1;
+   }
 
    devId = ibdev(boardNum, PAD, SAD, 12, 1, 0);
    if (devId >= 0) {

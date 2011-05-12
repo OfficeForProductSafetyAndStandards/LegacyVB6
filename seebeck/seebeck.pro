@@ -13,11 +13,14 @@ LIBS    += -L. -lgpib488.dll
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    hpibdev.cpp
+    hpibdev.cpp \
+    hpib.cpp
 
 HEADERS  += mainwindow.h \
     gpib488.h \
-    hpibdev.h
+    hpibdev.h \
+    hpib.h \
+    common.h
 
 FORMS    += mainwindow.ui
 
