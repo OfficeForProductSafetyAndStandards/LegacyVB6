@@ -1,2 +1,0 @@
-This program is licensed under LGPL license, see file LGPL.txt for details.
-All header files are licensed under BSD license, see file BSD.txt for details.
