@@ -66,8 +66,10 @@ void MainWindow::on_measurePushButton_clicked()
     if (dev.open(0, PAD, SAD) == -1)
         return;
 
-    if (dev.cmdConf(SCPI::modeVoltDC, 101) == -1)
-        return;
+    for(int x = 101; x <= 108; x++) {
+        if (dev.cmdConf(SCPI::modeVoltDC, x) == -1)
+            return;
+    }
 
     if (dev.cmdMeas(buf, sizeof(buf)) == -1)
         return;

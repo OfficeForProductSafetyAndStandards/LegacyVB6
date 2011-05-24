@@ -27,10 +27,10 @@ int SCPI::sendCmd(const char *cmd, bool isQuery)
        memcpy(buf, cmd, len);
        memcpy(buf + len, opc, sizeof(opc) - 1);
        len += sizeof(opc) - 1;
-       return sendCmd(buf, len);
+       return GPIB::sendCmd(buf, len);
    }
    else
-       return sendCmd(cmd, len);
+       return GPIB::sendCmd(cmd, len);
 }
 
 int SCPI::cmdConf(mode_t mode, int channel)
@@ -68,7 +68,8 @@ int SCPI::cmdIDN(char *buf, int bufLen)
 int SCPI::cmdMeas(char *buf, int bufLen)
 {
     //const char cmd[] = "meas?";
-    const char cmd[] = "meas:volt:dc? (@101)";
+    const char cmd[] = "meas? (@101,102,103,104,105,106,107,108)";
+    //const char cmd[] = "meas? (@101,102,103,104)";
 
     if (sendCmd(cmd, true) == -1)
         return -1;

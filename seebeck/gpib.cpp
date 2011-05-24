@@ -82,7 +82,7 @@ int GPIB::open(int boardNum, int PAD, int SAD)
     if (devId >= 0) {
        ibclr(devId);
        ibrsp(devId, &poll);
-       ibtmo(devId, T1s);
+       ibtmo(devId, T3s);
        SendLLO(boardNum);
     }
 
