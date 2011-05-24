@@ -269,34 +269,34 @@ extern unsigned long ibcntl;
 //
 // Traditional Function Prototypes
 //
-unsigned long ibask    (int ud, int option, int * v);
-unsigned long ibcac    (int ud, int v);
-unsigned long ibclr    (int ud);
-unsigned long ibcmd    (int ud, const void * buf, size_t cnt);
-unsigned long ibconfig (int ud, int option, int v);
-int           ibdev    (int boardID, int pad, int sad, int tmo, int eot, int eos);
-unsigned long ibexpert (int ud, int option, const void * Input, void * Output);
-int           ibfindA  (const char * udname);
-int           ibfindW  (const wchar_t * udname);
-unsigned long ibgts    (int ud, int v);
-unsigned long iblines  (int ud, short * result);
-unsigned long ibln     (int ud, int pad, int sad, short * listen);
-unsigned long ibloc    (int ud);
-unsigned long ibonl    (int ud, int v);
-unsigned long ibpct    (int ud);
-unsigned long ibppc    (int ud, int v);
-unsigned long ibrd     (int ud, void * buf, size_t cnt);
-unsigned long ibrdfA   (int ud, const char * filename);
-unsigned long ibrdfW   (int ud, const wchar_t * filename);
-unsigned long ibrpp    (int ud, char * ppr);
-unsigned long ibrsp    (int ud, char * spr);
-unsigned long ibsic    (int ud);
-unsigned long ibstop   (int ud);
-unsigned long ibtrg    (int ud);
-unsigned long ibwait   (int ud, int mask);
-unsigned long ibwrt    (int ud, const void * buf, size_t cnt);
-unsigned long ibwrtfA  (int ud, const char * filename);
-unsigned long ibwrtfW  (int ud, const wchar_t * filename);
+unsigned long __stdcall ibask    (int ud, int option, int * v);
+unsigned long __stdcall ibcac    (int ud, int v);
+unsigned long __stdcall ibclr    (int ud);
+unsigned long __stdcall ibcmd    (int ud, const void * buf, size_t cnt);
+unsigned long __stdcall ibconfig (int ud, int option, int v);
+int           __stdcall ibdev    (int boardID, int pad, int sad, int tmo, int eot, int eos);
+unsigned long __stdcall ibexpert (int ud, int option, const void * Input, void * Output);
+int           __stdcall ibfindA  (const char * udname);
+int           __stdcall ibfindW  (const wchar_t * udname);
+unsigned long __stdcall ibgts    (int ud, int v);
+unsigned long __stdcall iblines  (int ud, short * result);
+unsigned long __stdcall ibln     (int ud, int pad, int sad, short * listen);
+unsigned long __stdcall ibloc    (int ud);
+unsigned long __stdcall ibonl    (int ud, int v);
+unsigned long __stdcall ibpct    (int ud);
+unsigned long __stdcall ibppc    (int ud, int v);
+unsigned long __stdcall ibrd     (int ud, void * buf, size_t cnt);
+unsigned long __stdcall ibrdfA   (int ud, const char * filename);
+unsigned long __stdcall ibrdfW   (int ud, const wchar_t * filename);
+unsigned long __stdcall ibrpp    (int ud, char * ppr);
+unsigned long __stdcall ibrsp    (int ud, char * spr);
+unsigned long __stdcall ibsic    (int ud);
+unsigned long __stdcall ibstop   (int ud);
+unsigned long __stdcall ibtrg    (int ud);
+unsigned long __stdcall ibwait   (int ud, int mask);
+unsigned long __stdcall ibwrt    (int ud, const void * buf, size_t cnt);
+unsigned long __stdcall ibwrtfA  (int ud, const char * filename);
+unsigned long __stdcall ibwrtfW  (int ud, const wchar_t * filename);
 
 //
 // Aliases for config functions
@@ -322,50 +322,50 @@ unsigned long ibwrtfW  (int ud, const wchar_t * filename);
 //
 // Function to access process-wide GPIB global variables
 //
-unsigned long Ibsta(void);
-unsigned long Iberr(void);
-unsigned long Ibcnt(void);
+unsigned long __stdcall Ibsta(void);
+unsigned long __stdcall Iberr(void);
+unsigned long __stdcall Ibcnt(void);
 
 //
 // Functions to access Thread-local GPIB global variables
 //
-unsigned long ThreadIbsta(void);
-unsigned long ThreadIberr(void);
-unsigned long ThreadIbcnt(void);
+unsigned long __stdcall ThreadIbsta(void);
+unsigned long __stdcall ThreadIberr(void);
+unsigned long __stdcall ThreadIbcnt(void);
 #define ThreadIbcntl() ThreadIbcnt()
 
 //
 //  Multi-Device Function Prototypes
 //
-void AllSpoll       (int boardID, const Addr4882_t * addrlist, short * results);
-void DevClear       (int boardID, Addr4882_t addr);
-void DevClearList   (int boardID, const Addr4882_t * addrlist);
-void EnableLocal    (int boardID, const Addr4882_t * addrlist);
-void EnableRemote   (int boardID, const Addr4882_t * addrlist);
-void FindLstn       (int boardID, const Addr4882_t * addrlist, Addr4882_t * results, size_t limit);
-void FindRQS        (int boardID, const Addr4882_t * addrlist, short * dev_stat);
-void PPoll          (int boardID, short * result);
-void PPollConfig    (int boardID, Addr4882_t addr, int dataLine, int lineSense);
-void PPollUnconfig  (int boardID, const Addr4882_t * addrlist);
-void PassControl    (int boardID, Addr4882_t addr);
-void RcvRespMsg     (int boardID, void * buffer, size_t cnt, int Termination);
-void ReadStatusByte (int boardID, Addr4882_t addr, short * result);
-void Receive        (int boardID, Addr4882_t addr, void * buffer, size_t cnt, int Termination);
-void ReceiveSetup   (int boardID, Addr4882_t addr);
-void ResetSys       (int boardID, const Addr4882_t * addrlist);
-void Send           (int boardID, Addr4882_t addr, const void * databuf, size_t datacnt, int eotMode);
-void SendCmds       (int boardID, const void * buffer, size_t cnt);
-void SendDataBytes  (int boardID, const void * buffer, size_t cnt, int eot_mode);
-void SendIFC        (int boardID);
-void SendLLO        (int boardID);
-void SendList       (int boardID, const Addr4882_t * addrlist, const void * databuf, size_t datacnt, int eotMode);
-void SendSetup      (int boardID, const Addr4882_t * addrlist);
-void SetRWLS        (int boardID, const Addr4882_t * addrlist);
-void TestSRQ        (int boardID, short * result);
-void TestSys        (int boardID, const Addr4882_t * addrlist, short * results);
-void Trigger        (int boardID, Addr4882_t addr);
-void TriggerList    (int boardID, const Addr4882_t * addrlist);
-void WaitSRQ        (int boardID, short * result);
+void __stdcall AllSpoll       (int boardID, const Addr4882_t * addrlist, short * results);
+void __stdcall DevClear       (int boardID, Addr4882_t addr);
+void __stdcall DevClearList   (int boardID, const Addr4882_t * addrlist);
+void __stdcall EnableLocal    (int boardID, const Addr4882_t * addrlist);
+void __stdcall EnableRemote   (int boardID, const Addr4882_t * addrlist);
+void __stdcall FindLstn       (int boardID, const Addr4882_t * addrlist, Addr4882_t * results, size_t limit);
+void __stdcall FindRQS        (int boardID, const Addr4882_t * addrlist, short * dev_stat);
+void __stdcall PPoll          (int boardID, short * result);
+void __stdcall PPollConfig    (int boardID, Addr4882_t addr, int dataLine, int lineSense);
+void __stdcall PPollUnconfig  (int boardID, const Addr4882_t * addrlist);
+void __stdcall PassControl    (int boardID, Addr4882_t addr);
+void __stdcall RcvRespMsg     (int boardID, void * buffer, size_t cnt, int Termination);
+void __stdcall ReadStatusByte (int boardID, Addr4882_t addr, short * result);
+void __stdcall Receive        (int boardID, Addr4882_t addr, void * buffer, size_t cnt, int Termination);
+void __stdcall ReceiveSetup   (int boardID, Addr4882_t addr);
+void __stdcall ResetSys       (int boardID, const Addr4882_t * addrlist);
+void __stdcall Send           (int boardID, Addr4882_t addr, const void * databuf, size_t datacnt, int eotMode);
+void __stdcall SendCmds       (int boardID, const void * buffer, size_t cnt);
+void __stdcall SendDataBytes  (int boardID, const void * buffer, size_t cnt, int eot_mode);
+void __stdcall SendIFC        (int boardID);
+void __stdcall SendLLO        (int boardID);
+void __stdcall SendList       (int boardID, const Addr4882_t * addrlist, const void * databuf, size_t datacnt, int eotMode);
+void __stdcall SendSetup      (int boardID, const Addr4882_t * addrlist);
+void __stdcall SetRWLS        (int boardID, const Addr4882_t * addrlist);
+void __stdcall TestSRQ        (int boardID, short * result);
+void __stdcall TestSys        (int boardID, const Addr4882_t * addrlist, short * results);
+void __stdcall Trigger        (int boardID, Addr4882_t addr);
+void __stdcall TriggerList    (int boardID, const Addr4882_t * addrlist);
+void __stdcall WaitSRQ        (int boardID, short * result);
 
 #ifdef __cplusplus
 }
