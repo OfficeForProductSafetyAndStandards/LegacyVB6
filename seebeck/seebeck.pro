@@ -13,14 +13,14 @@ LIBS    += -L. $${PWD}/gpib488.obj
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    hpibdev.cpp \
-    hpib.cpp
+    gpib.cpp \
+    scpi.cpp
 
 HEADERS  += mainwindow.h \
     gpib488.h \
-    hpibdev.h \
-    hpib.h \
-    common.h
+    common.h \
+    gpib.h \
+    scpi.h
 
 FORMS    += mainwindow.ui
 

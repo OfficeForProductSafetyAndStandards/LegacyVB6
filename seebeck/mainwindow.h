@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "hpibdev.h"
+#include "scpi.h"
 
 namespace Ui {
     class MainWindow;
@@ -18,6 +18,10 @@ public:
 
 private slots:
     void on_refreshPushButton_clicked();
+
+    void on_measurePushButton_clicked();
+
+    void on_errorPushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
