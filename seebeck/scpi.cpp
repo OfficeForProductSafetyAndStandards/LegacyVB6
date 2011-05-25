@@ -65,13 +65,21 @@ int SCPI::cmdIDN(char *buf, int bufLen)
     return GPIB::readValue(buf, bufLen);
 }
 
-int SCPI::cmdMeas(char *buf, int bufLen)
+int SCPI::cmdMeas(char *buf, int bufLen, const int channels[])
 {
-    //const char cmd[] = "meas?";
-    const char cmd[] = "meas? (@101,102,103,104,105,106,107,108)";
-    //const char cmd[] = "meas? (@101,102,103,104)";
+    const char cmd[] = "meas? (@";
+    int offs = sizeof(cmd) - 1;
 
-    if (sendCmd(cmd, true) == -1)
+    memcpy(buf, cmd, offs);
+    for (int idx = 0; channels[idx] > 0; idx++) {
+        if ((offs + 5) > bufLen)
+            return -1;
+        sprintf(buf + offs, "%i,", channels[idx]);
+        offs += strlen(buf + offs);
+    }
+    buf[offs - 1] = ')';
+
+    if (sendCmd(buf, true) == -1)
         return -1;
 
     return GPIB::readValue(buf, bufLen);

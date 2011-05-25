@@ -24,7 +24,7 @@ public:
     int cmdConf(mode_t unit, int channel);
     int cmdError(char *buf, int bufLen);
     int cmdIDN(char *buf, int bufLen);
-    int cmdMeas(char *buf, int bufLen);
+    int cmdMeas(char *buf, int bufLen, const int channels[]);
     int cmdReset();
 
 protected:

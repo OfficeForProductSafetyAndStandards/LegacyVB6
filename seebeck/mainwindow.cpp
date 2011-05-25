@@ -71,7 +71,8 @@ void MainWindow::on_measurePushButton_clicked()
             return;
     }
 
-    if (dev.cmdMeas(buf, sizeof(buf)) == -1)
+    const int channels[] = {109, 110, 111, 112, 113, 114, 115, 116, -1};
+    if (dev.cmdMeas(buf, sizeof(buf), channels) == -1)
         return;
 
     ui->resultLineEdit->setText(buf);
