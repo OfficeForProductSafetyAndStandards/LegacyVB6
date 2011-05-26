@@ -11,11 +11,18 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    qeurotherm.cpp \
+    modbus_dev.cpp \
+    qmodbuswidget.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    qeurotherm.h \
+    qmodbuswidget.h \
+    modbus_dev.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    qeurotherm.ui
 
 LIBS     += -lmodbus
 
