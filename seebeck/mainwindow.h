@@ -23,8 +23,15 @@ private slots:
 
     void on_errorPushButton_clicked();
 
+    void on_openPushButton_clicked();
+
+    void on_configurePushButton_clicked();
+
+    void on_closePushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    SCPI dev;
 };
 
 #endif // MAINWINDOW_H

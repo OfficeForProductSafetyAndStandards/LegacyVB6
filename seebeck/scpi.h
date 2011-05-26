@@ -20,11 +20,12 @@ public:
 
     SCPI();
     ~SCPI();
-    void close();
-    int cmdConf(mode_t unit, int channel);
+    int cmdConf(mode_t mode, const int channels[]);
     int cmdError(char *buf, int bufLen);
     int cmdIDN(char *buf, int bufLen);
+    int cmdInit();
     int cmdMeas(char *buf, int bufLen, const int channels[]);
+    int cmdRead(char *buf, int bufLen);
     int cmdReset();
 
 protected:

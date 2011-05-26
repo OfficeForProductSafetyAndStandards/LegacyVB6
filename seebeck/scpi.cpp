@@ -33,12 +33,22 @@ int SCPI::sendCmd(const char *cmd, bool isQuery)
        return GPIB::sendCmd(cmd, len);
 }
 
-int SCPI::cmdConf(mode_t mode, int channel)
+int SCPI::cmdConf(mode_t mode, const int channels[])
 {
-    const char cmd[] = "conf:%s (@%i)";
-    char buf[64];
+    const char cmd[] = "conf:%s (@";
+    unsigned int offs;
+    char buf[256];
 
-    sprintf(buf, cmd, strMode(mode), channel);
+    sprintf(buf, cmd, strMode(mode));
+    offs = strlen(buf);
+    for (int idx = 0; channels[idx] > 0; idx++) {
+        if ((offs + 5) > sizeof(buf))
+            return -1;
+        sprintf(buf + offs, "%i,", channels[idx]);
+        offs += strlen(buf + offs);
+    }
+    buf[offs - 1] = ')';
+
     if (sendCmd(buf, false) == -1)
         return -1;
 
@@ -65,6 +75,16 @@ int SCPI::cmdIDN(char *buf, int bufLen)
     return GPIB::readValue(buf, bufLen);
 }
 
+int SCPI::cmdInit()
+{
+    const char cmd[] = "init";
+
+    if (sendCmd(cmd, false) == -1)
+        return -1;
+
+    return readValue();
+}
+
 int SCPI::cmdMeas(char *buf, int bufLen, const int channels[])
 {
     const char cmd[] = "meas? (@";
@@ -80,6 +100,16 @@ int SCPI::cmdMeas(char *buf, int bufLen, const int channels[])
     buf[offs - 1] = ')';
 
     if (sendCmd(buf, true) == -1)
+        return -1;
+
+    return GPIB::readValue(buf, bufLen);
+}
+
+int SCPI::cmdRead(char *buf, int bufLen)
+{
+    const char cmd[] = "read?";
+
+    if (sendCmd(cmd, true) == -1)
         return -1;
 
     return GPIB::readValue(buf, bufLen);

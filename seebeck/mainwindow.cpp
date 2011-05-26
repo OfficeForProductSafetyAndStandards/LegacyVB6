@@ -50,29 +50,9 @@ void MainWindow::on_refreshPushButton_clicked()
 
 void MainWindow::on_measurePushButton_clicked()
 {
-    SCPI dev;
-    int PAD, SAD;
-    int row;
-    bool ok;
     char buf[256];
 
-    row = ui->devicesTableWidget->currentRow();
-    if (row < 0)
-        return;
-
-    PAD = ui->devicesTableWidget->item(row, 1)->text().toInt(&ok);
-    SAD = 0; //ui->devicesTableWidget->item(row, 2)->text().toInt(&ok);
-
-    if (dev.open(0, PAD, SAD) == -1)
-        return;
-
-    for(int x = 101; x <= 108; x++) {
-        if (dev.cmdConf(SCPI::modeVoltDC, x) == -1)
-            return;
-    }
-
-    const int channels[] = {109, 110, 111, 112, 113, 114, 115, 116, -1};
-    if (dev.cmdMeas(buf, sizeof(buf), channels) == -1)
+    if (dev.cmdRead(buf, sizeof(buf)) == -1)
         return;
 
     ui->resultLineEdit->setText(buf);
@@ -80,18 +60,8 @@ void MainWindow::on_measurePushButton_clicked()
 
 void MainWindow::on_errorPushButton_clicked()
 {
-    SCPI dev;
-    int PAD, SAD = 0;
-    int len, row;
-    bool ok;
+    int len;
     char buf[256];
-
-    row = ui->devicesTableWidget->currentRow();
-    if (row < 0)
-        return;
-    PAD = ui->devicesTableWidget->item(row, 1)->text().toInt(&ok);
-    if (dev.open(0, PAD, SAD) == -1)
-        return;
 
     len = dev.cmdError(buf, sizeof(buf));
     if (len == -1)
@@ -101,4 +71,45 @@ void MainWindow::on_errorPushButton_clicked()
 
     QTableWidgetItem *item = new QTableWidgetItem(buf);
     ui->errorTableWidget->setItem(0, 0, item);
+}
+
+void MainWindow::on_openPushButton_clicked()
+{
+    int PAD, SAD = 0;
+    int row;
+    bool ok;
+
+    row = ui->devicesTableWidget->currentRow();
+    if (row < 0)
+        return;
+
+    PAD = ui->devicesTableWidget->item(row, 1)->text().toInt(&ok);
+    if (dev.open(0, PAD, SAD) == -1)
+        return;
+
+    ui->configurePushButton->setEnabled(true);
+    ui->closePushButton->setEnabled(true);
+    ui->errorPushButton->setEnabled(true);
+    ui->measurePushButton->setEnabled(true);
+    ui->openPushButton->setEnabled(false);
+}
+
+void MainWindow::on_configurePushButton_clicked()
+{
+    const int channels[] = {109, 110, 111, 112, 113, 114, 115, 116, -1};
+    if (dev.cmdConf(SCPI::modeVoltDC, channels) == -1)
+        return;
+
+    ui->configurePushButton->setEnabled(false);
+}
+
+void MainWindow::on_closePushButton_clicked()
+{
+    dev.close();
+
+    ui->configurePushButton->setEnabled(false);
+    ui->closePushButton->setEnabled(false);
+    ui->errorPushButton->setEnabled(false);
+    ui->measurePushButton->setEnabled(false);
+    ui->openPushButton->setEnabled(true);
 }
