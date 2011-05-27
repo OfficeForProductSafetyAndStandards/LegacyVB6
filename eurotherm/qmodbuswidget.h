@@ -3,6 +3,7 @@
 
 #include <QComboBox>
 #include <QSpinBox>
+#include <QTimer>
 #include <QWidget>
 #include <modbus.h>
 #include "modbus_dev.h"
@@ -16,12 +17,14 @@ public:
 signals:
 
 public slots:
+    void read();
+
 private:
     modbus_t *modbus_;
     const ModbusReg *modbusReg_;
     QComboBox *comboBox_;
     QSpinBox *spinBox_;
-
+    QTimer timer;
 };
 
 #endif // QMODBUSWIDGET_H
