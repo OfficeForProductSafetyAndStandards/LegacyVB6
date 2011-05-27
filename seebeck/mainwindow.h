@@ -19,6 +19,8 @@ private slots:
 
     void on_toolButton_clicked();
 
+    void on_resultsPathToolButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
