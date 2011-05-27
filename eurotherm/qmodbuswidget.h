@@ -1,6 +1,7 @@
 #ifndef QMODBUSWIDGET_H
 #define QMODBUSWIDGET_H
 
+#include <QComboBox>
 #include <QSpinBox>
 #include <QWidget>
 #include <modbus.h>
@@ -18,6 +19,7 @@ public slots:
 private:
     modbus_t *modbus_;
     const ModbusReg *modbusReg_;
+    QComboBox *comboBox_;
     QSpinBox *spinBox_;
 
 };
