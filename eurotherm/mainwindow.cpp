@@ -1,6 +1,8 @@
+#include <QFormLayout>
 #include "mainwindow.h"
+#include "modbus_dev.h"
+#include "qmodbuswidget.h"
 #include "ui_mainwindow.h"
-
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -12,6 +14,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    if (modbus) {
+        modbus_close(modbus);
+        modbus_free(modbus);
+    }
     delete ui;
 }
 
@@ -35,9 +41,28 @@ void MainWindow::on_openPushButton_clicked()
     ui->readPushButton->setEnabled(true);
     ui->writePushButton->setEnabled(true);
 
-    /*modbus_close(modbus);
-    modbus_free(modbus);
-    modbus = NULL;*/
+    QFormLayout *layout;
+
+    layout = new QFormLayout();
+    layout->setLabelAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    layout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
+    ui->regsWidget->setLayout(layout);
+
+    for (int idx = 0; eurotherm3216[idx].regNum; idx++) {
+        QModbusWidget *w;
+        QLabel *l;
+        QString desc("%1:");
+
+        if (eurotherm3216[idx].regName)
+            desc = desc.arg(eurotherm3216[idx].regName);
+        else
+            desc = desc.arg(eurotherm3216[idx].regNum);
+
+        l = new QLabel(desc, ui->regsWidget);
+        w = new QModbusWidget(ui->regsWidget, modbus, &eurotherm3216[idx]);
+
+        layout->addRow(l, w);
+    }
 }
 
 void MainWindow::on_readPushButton_clicked()
