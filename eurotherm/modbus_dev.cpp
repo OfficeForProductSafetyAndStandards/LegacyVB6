@@ -10,6 +10,14 @@ const ValueName ValueNamesAction[] =
     { 1, "Direct", },
 };
 
+const ValueName ValueNamesDisplayUnits[] = {
+    { 0, "°C", },
+    { 1, "°F", },
+    { 2, "K", },
+    { 3, "None", },
+    { 4, "%", },
+};
+
 const ValueName ValueNamesInstMode[] = {
     { 0, "Auto", },
     { 1, "Manual", },
@@ -18,10 +26,36 @@ const ValueName ValueNamesInstMode[] = {
 
 const ValueName ValueNamesNULL[] = {};
 
+const ValueName ValueNamesOffActive[] = {
+    { 0, "Off", },
+    { 1, "Active", },
+};
+
 const ValueName ValueNamesOnOff[] =
 {
     { 0, "Off", },
     { 1, "On", },
+};
+
+const ValueName ValueNamesSensorTypes[] = {
+    { 0, "J", },
+    { 1, "K", },
+    { 2, "L", },
+    { 3, "R", },
+    { 4, "B", },
+    { 5, "N", },
+    { 6, "T", },
+    { 7, "S", },
+    { 8, "RTD", },
+    { 9, "milivolt", },
+    { 10, "Comms Input", },
+    { 11, "Custom", },
+};
+
+const ValueName ValueNamesSetpoints[] =
+{
+    { 0, "Setpoint 1"},
+    { 1, "Setpoint 2"},
 };
 
 const ModbusReg eurotherm3216[] = {
@@ -40,28 +74,28 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        3, NULL,
+        3, "Manual Output Value",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        4, NULL,
+        4, "Working Output",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        5, NULL,
-        true, true, false,
+        5, "Working Setpoint",
+        true, false, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        6, NULL,
+        6, "Proportional Band",
         true, true, false,
         0, 65535,
         NULL,
@@ -103,28 +137,28 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        13, NULL,
+        13, "Alarm 1 Treshold",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        14, NULL,
+        14, "Alarm 2 Treshold",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        15, NULL,
+        15, "Active Setpoint",
         true, true, false,
         0, 65535,
         NULL,
-        ARRAY_SIZE(ValueNamesNULL), NULL,
+        ARRAY_SIZE(ValueNamesSetpoints), ValueNamesSetpoints,
     },
     {
-        16, NULL,
+        16, "Channel 2 Deadband",
         true, true, false,
         0, 65535,
         NULL,
@@ -180,21 +214,21 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        30, NULL,
+        30, "Output High Limit",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        31, NULL,
+        31, "Output Low Limit",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        34, NULL,
+        34, "Safe Output Value",
         true, true, false,
         0, 65535,
         NULL,
@@ -299,21 +333,28 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        111, NULL,
+        107, "Measured Leakage Current",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        112, NULL,
+        111, "Setpoint High Limit",
         true, true, false,
         0, 65535,
         NULL,
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        131, NULL,
+        112, "Setpoint Low Limit",
+        true, true, false,
+        0, 65535,
+        NULL,
+        ARRAY_SIZE(ValueNamesNULL), NULL,
+    },
+    {
+        131, "Comms Address",
         true, true, false,
         0, 65535,
         NULL,
@@ -369,11 +410,11 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        260, NULL,
+        260, "New Alarm Status",
         true, true, false,
         0, 65535,
         NULL,
-        ARRAY_SIZE(ValueNamesNULL), NULL,
+        ARRAY_SIZE(ValueNamesOffActive), ValueNamesOffActive,
     },
     {
         263, NULL,
@@ -474,17 +515,17 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        313, NULL,
+        313, "Recipe to Recall",
         true, true, false,
-        0, 65535,
-        NULL,
+        0, 5,
+        "None",
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        314, NULL,
+        314, "Recipe to Save",
         true, true, false,
-        0, 65535,
-        NULL,
+        0, 5,
+        "None",
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
@@ -579,11 +620,11 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        516, NULL,
+        516, "Display Units",
         true, true, false,
-        0, 65535,
+        0, 4,
         NULL,
-        ARRAY_SIZE(ValueNamesNULL), NULL,
+        ARRAY_SIZE(ValueNamesDisplayUnits), ValueNamesDisplayUnits,
     },
     {
         517, NULL,
@@ -782,11 +823,11 @@ const ModbusReg eurotherm3216[] = {
         ARRAY_SIZE(ValueNamesNULL), NULL,
     },
     {
-        12290, NULL,
+        12290, "Input Sensor Type",
         true, true, false,
-        0, 65535,
+        0, 11,
         NULL,
-        ARRAY_SIZE(ValueNamesNULL), NULL,
+        ARRAY_SIZE(ValueNamesSensorTypes), ValueNamesSensorTypes,
     },
     {
         12291, NULL,
