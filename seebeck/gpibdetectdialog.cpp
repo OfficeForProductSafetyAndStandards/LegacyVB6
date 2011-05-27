@@ -6,6 +6,8 @@ GPIBDetectDialog::GPIBDetectDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::GPIBDetectDialog)
 {
+    devAddr_ = -1;
+    GPIBBrdNum_ = -1;
     ui->setupUi(this);
     refresh();
 }
