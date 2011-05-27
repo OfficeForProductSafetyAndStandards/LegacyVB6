@@ -17,6 +17,8 @@ QModbusWidget::QModbusWidget(QWidget *parent, modbus_t *modbus, const ModbusReg 
         if (modbusReg_->specialValueName)
             spinBox_->setSpecialValueText(modbusReg_->specialValueName);
         spinBox_->setValue(val);
+        if (!modbusReg->write)
+            spinBox_->setReadOnly(true);
     } else {
         const ValueName *valueName = modbusReg->valNames;
         int idx;
@@ -26,6 +28,8 @@ QModbusWidget::QModbusWidget(QWidget *parent, modbus_t *modbus, const ModbusReg 
             comboBox_->addItem(valueName[x].name, valueName[x].value);
         idx = comboBox_->findData(val);
         comboBox_->setCurrentIndex(idx);
+        if (!modbusReg->write)
+            comboBox_->setEditable(false);
     }
 
     layout = new QBoxLayout(QBoxLayout::LeftToRight);
