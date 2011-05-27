@@ -33,6 +33,20 @@ int SCPI::sendCmd(const char *cmd, bool isQuery)
        return GPIB::sendCmd(cmd, len);
 }
 
+int SCPI::cmdBoardIDN(char *buf, int bufLen, int boardNum)
+{
+    const char cmd[] = "syst:ctype? %i";
+    int len;
+
+    len = snprintf(buf, bufLen, cmd, boardNum);
+    if (len >= bufLen)
+        return -1;
+    if (sendCmd(buf, true) == -1)
+      return -1;
+
+    return GPIB::readValue(buf, bufLen);
+}
+
 int SCPI::cmdConf(mode_t mode, const int channels[])
 {
     const char cmd[] = "conf:%s (@";

@@ -14,15 +14,18 @@ LIBS    += -L. $${PWD}/gpib488.obj
 SOURCES += main.cpp\
         mainwindow.cpp \
     gpib.cpp \
-    scpi.cpp
+    scpi.cpp \
+    gpibdetectdialog.cpp
 
 HEADERS  += mainwindow.h \
     gpib488.h \
     common.h \
     gpib.h \
-    scpi.h
+    scpi.h \
+    gpibdetectdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    gpibdetectdialog.ui
 
 OTHER_FILES += \
     gpib488.obj

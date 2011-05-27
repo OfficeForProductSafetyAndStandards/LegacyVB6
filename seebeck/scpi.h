@@ -20,6 +20,7 @@ public:
 
     SCPI();
     ~SCPI();
+    int cmdBoardIDN(char *buf, int bufLen, int boardNum);
     int cmdConf(mode_t mode, const int channels[]);
     int cmdError(char *buf, int bufLen);
     int cmdIDN(char *buf, int bufLen);
