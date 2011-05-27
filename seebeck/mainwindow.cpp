@@ -19,6 +19,14 @@ MainWindow::~MainWindow()
 void MainWindow::on_toolButton_clicked()
 {
     GPIBDetectDialog d(this);
+    int GPIBBrdNum, devAddr;
 
-    d.exec();
+    if (d.exec() != QDialog::Accepted)
+        return;
+
+    if (!d.getResult(&GPIBBrdNum, &devAddr))
+        return;
+
+    ui->GPIBBrdNumSpinBox->setValue(GPIBBrdNum);
+    ui->GPIBDevAddrSpinBox->setValue(devAddr);
 }

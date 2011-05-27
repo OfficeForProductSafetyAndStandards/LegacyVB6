@@ -7,6 +7,7 @@ GPIBDetectDialog::GPIBDetectDialog(QWidget *parent) :
     ui(new Ui::GPIBDetectDialog)
 {
     ui->setupUi(this);
+    refresh();
 }
 
 GPIBDetectDialog::~GPIBDetectDialog()
@@ -16,12 +17,41 @@ GPIBDetectDialog::~GPIBDetectDialog()
 
 void GPIBDetectDialog::on_buttonBox_accepted()
 {
+    QTableWidgetItem *item;
+    bool ok;
+    int row;
+    QVariant x;
 
+    row = ui->devicesTableWidget->currentRow();
+    if (row < 0) {
+        devAddr_ = -1;
+        GPIBBrdNum_ = -1;
+        return;
+    }
+
+    item = ui->devicesTableWidget->item(row, 0);
+
+    x.setValue(item->text());
+    GPIBBrdNum_ = x.toInt(&ok);
+    if (!ok)
+        GPIBBrdNum_ = -1;
+
+    item = ui->devicesTableWidget->item(row, 2);
+    x.setValue(item->text());
+    devAddr_ = x.toInt(&ok);
+    if (!ok)
+        devAddr_ = -1;
 }
 
-void GPIBDetectDialog::on_buttonBox_clicked(QAbstractButton *button)
+bool GPIBDetectDialog::getResult(int *GPIBBrdNum, int *devAddr)
 {
-    refresh();
+    if (GPIBBrdNum_ == -1 || devAddr_ == -1)
+        return false;
+
+    *GPIBBrdNum = GPIBBrdNum_;
+    *devAddr = devAddr_;
+
+    return true;
 }
 
 void GPIBDetectDialog::refresh()
@@ -111,4 +141,9 @@ void GPIBDetectDialog::refresh()
     }
 
     ui->msgLabel->setText("Searching for devices finished.");
+}
+
+void GPIBDetectDialog::on_pushButton_clicked()
+{
+    refresh();
 }
