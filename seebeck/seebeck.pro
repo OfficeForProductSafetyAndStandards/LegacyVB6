@@ -15,14 +15,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     gpib.cpp \
     scpi.cpp \
-    gpibdetectdialog.cpp
+    gpibdetectdialog.cpp \
+    qgbib.cpp
 
 HEADERS  += mainwindow.h \
     gpib488.h \
     common.h \
     gpib.h \
     scpi.h \
-    gpibdetectdialog.h
+    gpibdetectdialog.h \
+    qgbib.h
 
 FORMS    += mainwindow.ui \
     gpibdetectdialog.ui
