@@ -1,0 +1,403 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmTinsleyLaserReading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreen.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmCustomerDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmCustomerDetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmVOLCompensationForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmVOLCompensationForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmVOLCompensationForm.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmTinsleyLaserReading.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreenApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreenApp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreenApp.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\winformsapp1\\frmstartscreenapp.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:winformsapp1\\frmstartscreenapp.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmFlexiMeasurementsSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmManualEdaleEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmManualEdaleEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmFlexiMeasurementsSelection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmCustomerDetails.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Properties\\Settings.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\Properties\\Settings.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WinFormsApp1\\frmStartScreen.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mike\\source\\repos\\WinFormsApp1\\winformsapp1\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:winformsapp1\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmTinsleyLaserReading.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmTinsleyLaserReading.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmTinsleyLaserReading.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T15:15:46.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmStartScreen.csproj",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreen.csproj",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreen.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-11T11:39:03.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmStartScreen.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreen.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T15:15:46.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAABcNAAA0MzMzM3MlwCQNAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-02-20T14:29:48.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmVOLCompensationForm.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmVOLCompensationForm.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmVOLCompensationForm.cs",
+              "ViewState": "AQIAAAAAAAA0ZmZmZmYUwBwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T16:36:03.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmVOLCompensationForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmVOLCompensationForm.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\frmVOLCompensationForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T16:19:19.74Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmCustomerDetails.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmCustomerDetails.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmCustomerDetails.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAhwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T16:15:43.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCustomerDetails.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmCustomerDetails.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\frmCustomerDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:25:15.475Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmStartScreenApp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreenApp.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreenApp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T11:38:21.9Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmStartScreenApp.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreenApp.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreenApp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T09:10:07.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmStartScreenApp.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreenApp.Designer.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreenApp.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-11T11:38:50.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmFlexiMeasurementsSelection.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "ViewState": "AQIAABAAAAAAAQAAAEAswCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:18:18.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmManualEdaleEntry.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmManualEdaleEntry.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\frmManualEdaleEntry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T11:16:47.371Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "frmManualEdaleEntry.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmManualEdaleEntry.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmManualEdaleEntry.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmManualEdaleEntry.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAUwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T11:24:25.333Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmFlexiMeasurementsSelection.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmFlexiMeasurementsSelection.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\frmFlexiMeasurementsSelection.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T14:54:28.156Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmCustomerDetails.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmCustomerDetails.Designer.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmCustomerDetails.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmCustomerDetails.Designer.cs",
+              "ViewState": "AQIAAAEAAACAAAAAAEAlwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T13:27:18.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmFlexiMeasurementsSelection.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\frmFlexiMeasurementsSelection.Designer.cs",
+              "ViewState": "AQIAAAIAAAAEzczMzCw8wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-12T15:03:05.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Program.cs",
+              "RelativeToolTip": "WinFormsApp1\\Program.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAYwGQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-13T11:52:30.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Properties\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Properties\\Settings.Designer.cs",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Properties\\Settings.Designer.cs",
+              "RelativeToolTip": "WinFormsApp1\\Properties\\Settings.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-13T11:56:22.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "frmStartScreen.csproj",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreen.csproj",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreen.csproj",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreen.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-12T13:26:05.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmVOLCompensationForm.resx",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.resx",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmVOLCompensationForm.resx",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmVOLCompensationForm.resx",
+              "RelativeToolTip": "WinFormsApp1\\frmVOLCompensationForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-02-20T15:15:46.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmTinsleyLaserReading.resx",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.resx",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmTinsleyLaserReading.resx",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmTinsleyLaserReading.resx",
+              "RelativeToolTip": "WinFormsApp1\\frmTinsleyLaserReading.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-02-20T15:15:40.838Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmStartScreenApp.resx",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.resx",
+              "RelativeDocumentMoniker": "WinFormsApp1\\frmStartScreenApp.resx",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\frmStartScreenApp.resx",
+              "RelativeToolTip": "WinFormsApp1\\frmStartScreenApp.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-02-12T08:27:02.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Settings.settings",
+              "DocumentMoniker": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Properties\\Settings.settings",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\mike\\source\\repos\\WinFormsApp1\\WinFormsApp1\\Properties\\Settings.settings",
+              "RelativeToolTip": "WinFormsApp1\\Properties\\Settings.settings",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
+              "WhenOpened": "2024-02-12T13:29:42.6Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

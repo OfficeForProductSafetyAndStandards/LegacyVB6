@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "frmStartScreen": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "EdalePath": "c:\\temp\\"
+      },
+      "hotReloadEnabled": false,
+      "remoteDebugEnabled": true
+    }
+  }
+}
