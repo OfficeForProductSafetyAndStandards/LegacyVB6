@@ -16,5 +16,11 @@ namespace LengthBench
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frmMeasurementSelection = new frmMeasurementSelection();
+            frmMeasurementSelection.Show();
+        }
     }
 }
