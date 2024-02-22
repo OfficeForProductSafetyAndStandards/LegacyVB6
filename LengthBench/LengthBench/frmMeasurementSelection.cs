@@ -27,5 +27,10 @@ namespace LengthBench
             Form frmVOLCompenationForm = new frmVOLCompensationForm();
             frmVOLCompenationForm.Show();
         }
+
+        private void cmdSetUpLaser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

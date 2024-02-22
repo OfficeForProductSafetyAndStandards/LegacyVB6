@@ -8,7 +8,7 @@ namespace LengthBench
         }
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
             Form frmLaser = new frmLaser();
             frmLaser.Show();
         }

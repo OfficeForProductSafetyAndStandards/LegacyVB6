@@ -31,7 +31,7 @@
             optImperial = new RadioButton();
             optMetric = new RadioButton();
             fraImperialMetric = new GroupBox();
-            button1 = new Button();
+            cmdSetUpLaser = new Button();
             cmdAgilient1339 = new Button();
             fraClass = new GroupBox();
             radioButton3 = new RadioButton();
@@ -81,14 +81,15 @@
             fraImperialMetric.TabStop = false;
             fraImperialMetric.Text = "Imperial or Metric";
             // 
-            // button1
+            // cmdSetUpLaser
             // 
-            button1.Location = new Point(129, 164);
-            button1.Name = "button1";
-            button1.Size = new Size(498, 81);
-            button1.TabIndex = 3;
-            button1.Text = "Set Up Laser for Metric or Imperial";
-            button1.UseVisualStyleBackColor = true;
+            cmdSetUpLaser.Location = new Point(129, 164);
+            cmdSetUpLaser.Name = "cmdSetUpLaser";
+            cmdSetUpLaser.Size = new Size(498, 81);
+            cmdSetUpLaser.TabIndex = 3;
+            cmdSetUpLaser.Text = "Set Up Laser for Metric or Imperial";
+            cmdSetUpLaser.UseVisualStyleBackColor = true;
+            cmdSetUpLaser.Click += cmdSetUpLaser_Click;
             // 
             // cmdAgilient1339
             // 
@@ -217,7 +218,7 @@
             Controls.Add(fraComposite);
             Controls.Add(fraClass);
             Controls.Add(cmdAgilient1339);
-            Controls.Add(button1);
+            Controls.Add(cmdSetUpLaser);
             Controls.Add(fraImperialMetric);
             Name = "frmMeasurementSelection";
             Text = "frmMeasurementSelectio";
@@ -236,7 +237,7 @@
         private RadioButton optImperial;
         private RadioButton optMetric;
         private GroupBox fraImperialMetric;
-        private Button button1;
+        private Button cmdSetUpLaser;
         private Button cmdAgilient1339;
         private GroupBox fraClass;
         private RadioButton radioButton3;
