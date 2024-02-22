@@ -18,6 +18,7 @@ namespace LengthBench
         static int LaserTestSetNo;
         static int ProbeCounter;
 
+        /*
         static Microsoft.Office.Interop.Excel._Workbook? xlbookResults;
         static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResults;
         static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperature;
@@ -26,6 +27,7 @@ namespace LengthBench
         static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperatureUncorrected;
         static Microsoft.Office.Interop.Excel._Worksheet? xlsheet;
         static Microsoft.Office.Interop.Excel.Application? xl;
+        */
 
         static int? xlRow;
         static int[]? ProbeSelected;
