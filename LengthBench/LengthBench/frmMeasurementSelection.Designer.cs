@@ -1,6 +1,6 @@
 ﻿namespace LengthBench
 {
-    partial class frmMeasurementSelectio
+    partial class frmMeasurementSelection
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@
             optImperial = new RadioButton();
             optMetric = new RadioButton();
             fraImperialMetric = new GroupBox();
-            button1 = new Button();
+            cmdSetUpLaser = new Button();
             cmdAgilient1339 = new Button();
             fraClass = new GroupBox();
-            fraComposite = new GroupBox();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
-            optYes = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            fraComposite = new GroupBox();
             optNo = new RadioButton();
+            optYes = new RadioButton();
             label1 = new Label();
             cmdNextScreen = new Button();
             cmdNextScreenWithoutVol = new Button();
@@ -81,14 +81,15 @@
             fraImperialMetric.TabStop = false;
             fraImperialMetric.Text = "Imperial or Metric";
             // 
-            // button1
+            // cmdSetUpLaser
             // 
-            button1.Location = new Point(129, 164);
-            button1.Name = "button1";
-            button1.Size = new Size(498, 81);
-            button1.TabIndex = 3;
-            button1.Text = "Set Up Laser for Metric or Imperial";
-            button1.UseVisualStyleBackColor = true;
+            cmdSetUpLaser.Location = new Point(129, 164);
+            cmdSetUpLaser.Name = "cmdSetUpLaser";
+            cmdSetUpLaser.Size = new Size(498, 81);
+            cmdSetUpLaser.TabIndex = 3;
+            cmdSetUpLaser.Text = "Set Up Laser for Metric or Imperial";
+            cmdSetUpLaser.UseVisualStyleBackColor = true;
+            cmdSetUpLaser.Click += cmdSetUpLaser_Click;
             // 
             // cmdAgilient1339
             // 
@@ -111,16 +112,28 @@
             fraClass.TabStop = false;
             fraClass.Text = "Class of Tape";
             // 
-            // fraComposite
+            // radioButton3
             // 
-            fraComposite.Controls.Add(optNo);
-            fraComposite.Controls.Add(optYes);
-            fraComposite.Location = new Point(558, 284);
-            fraComposite.Name = "fraComposite";
-            fraComposite.Size = new Size(221, 180);
-            fraComposite.TabIndex = 6;
-            fraComposite.TabStop = false;
-            fraComposite.Text = "Composite";
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(31, 138);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(123, 36);
+            radioButton3.TabIndex = 2;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Class III";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(31, 87);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(117, 36);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Class II";
+            radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // radioButton1
             // 
@@ -133,38 +146,16 @@
             radioButton1.Text = "Class I";
             radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // fraComposite
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(31, 87);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(184, 36);
-            radioButton2.TabIndex = 1;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "radioButton2";
-            radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(31, 138);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(184, 36);
-            radioButton3.TabIndex = 2;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "radioButton3";
-            radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // optYes
-            // 
-            optYes.AutoSize = true;
-            optYes.Location = new Point(16, 67);
-            optYes.Name = "optYes";
-            optYes.Size = new Size(79, 36);
-            optYes.TabIndex = 3;
-            optYes.TabStop = true;
-            optYes.Text = "Yes";
-            optYes.UseVisualStyleBackColor = true;
+            fraComposite.Controls.Add(optNo);
+            fraComposite.Controls.Add(optYes);
+            fraComposite.Location = new Point(558, 284);
+            fraComposite.Name = "fraComposite";
+            fraComposite.Size = new Size(221, 180);
+            fraComposite.TabIndex = 6;
+            fraComposite.TabStop = false;
+            fraComposite.Text = "Composite";
             // 
             // optNo
             // 
@@ -176,6 +167,17 @@
             optNo.TabStop = true;
             optNo.Text = "No";
             optNo.UseVisualStyleBackColor = true;
+            // 
+            // optYes
+            // 
+            optYes.AutoSize = true;
+            optYes.Location = new Point(16, 67);
+            optYes.Name = "optYes";
+            optYes.Size = new Size(79, 36);
+            optYes.TabIndex = 3;
+            optYes.TabStop = true;
+            optYes.Text = "Yes";
+            optYes.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -194,6 +196,7 @@
             cmdNextScreen.TabIndex = 8;
             cmdNextScreen.Text = "Take VOL";
             cmdNextScreen.UseVisualStyleBackColor = true;
+            cmdNextScreen.Click += cmdNextScreen_Click;
             // 
             // cmdNextScreenWithoutVol
             // 
@@ -204,7 +207,7 @@
             cmdNextScreenWithoutVol.Text = "No VOL";
             cmdNextScreenWithoutVol.UseVisualStyleBackColor = true;
             // 
-            // frmMeasurementSelectio
+            // frmMeasurementSelection
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -215,9 +218,9 @@
             Controls.Add(fraComposite);
             Controls.Add(fraClass);
             Controls.Add(cmdAgilient1339);
-            Controls.Add(button1);
+            Controls.Add(cmdSetUpLaser);
             Controls.Add(fraImperialMetric);
-            Name = "frmMeasurementSelectio";
+            Name = "frmMeasurementSelection";
             Text = "frmMeasurementSelectio";
             fraImperialMetric.ResumeLayout(false);
             fraImperialMetric.PerformLayout();
@@ -234,7 +237,7 @@
         private RadioButton optImperial;
         private RadioButton optMetric;
         private GroupBox fraImperialMetric;
-        private Button button1;
+        private Button cmdSetUpLaser;
         private Button cmdAgilient1339;
         private GroupBox fraClass;
         private RadioButton radioButton3;

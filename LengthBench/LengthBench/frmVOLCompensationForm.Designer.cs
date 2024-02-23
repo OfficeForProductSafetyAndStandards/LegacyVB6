@@ -128,6 +128,7 @@
             cmdClose.TabIndex = 9;
             cmdClose.Text = "Continue to Customer Details";
             cmdClose.UseVisualStyleBackColor = true;
+            cmdClose.Click += cmdClose_Click;
             // 
             // cmdRetrurnToMainMenu
             // 
