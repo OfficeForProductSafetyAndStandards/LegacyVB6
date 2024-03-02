@@ -37,9 +37,17 @@ namespace LengthBench
         static string? NewFileName1;
 
         static void SetUp_Laser()
-        { 
+        {
 
-                    reading_2nd_laser = true;
+            bool reading_2nd_laser = false;
+            // SerialEDM serial = null;
+            bool manual_reading = false;
+            // ManualInstrumentReading reader = null;
+            Laser laser = null;
+            // EthernetServer server1 = new EthernetServer();
+            // WifiServer server2 = new WifiServer();
+            reading_2nd_laser = true;
+
                     laser = new Laser();
                     laser.Initialize_E1735A_DLL();
 
@@ -59,8 +67,7 @@ namespace LengthBench
                         Console.WriteLine("The refractive index correction has been set to: " + laser.getParameter(LaserParameters.OP_AIRCOMP) + "\n");
                         Console.WriteLine("The material compensation has been set to: " + laser.getParameter(LaserParameters.OP_MATCOMP) + "\n");
                         String.Concat("The laser beam strength is ", b_strength.ToString(), "%\r\n");
-                        Console.WriteLine("The Current laser position is: " + laser.ReadSample().ToString() + "\n");
-                        break;
+                Console.WriteLine("The Current laser position is: " + laser.ReadSample().ToString() + "\n");
                     }
                     else
                     {
@@ -69,11 +76,9 @@ namespace LengthBench
                         Console.ReadKey();
                         Environment.Exit(0);
                     }
-                }
-
-           }
         }
-        static void setup
+
+        static void SetUp()
         {
             // smtp mail server
             /*
