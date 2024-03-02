@@ -33,14 +33,56 @@ namespace LengthBench
         static int[]? ProbeSelected;
         static int eventtime;
 
-
-
         static string? NewFileName;
         static string? NewFileName1;
 
-        static void SetUp()
-        {
+        static void SetUp_Laser()
+        { 
 
+                    reading_2nd_laser = true;
+                    laser = new Laser();
+                    laser.Initialize_E1735A_DLL();
+
+                    if (laser.readDeviceCnt() == 1)
+                    {
+                        laser.setDevice();
+                        Console.WriteLine("Found 1 laser E5135 module, blinking LED ....\r\n");
+                        laser.blink();
+                        double b_strength = laser.ReadBeamStrength();
+        Console.WriteLine("The beam strength is: " + b_strength.ToString() + "\r\n");
+                        laser.setParameter(LaserParameters.OP_WAVELENGTH, 632.991370);
+                        laser.setParameter(LaserParameters.OP_MATCOMP, 1);
+                        laser.setParameter(LaserParameters.OP_AIRCOMP, 1);
+                        laser.Reset();
+                        Console.WriteLine("The laser has been reset\n");
+                        Console.WriteLine("The wavelength has been set to: " + laser.getParameter(LaserParameters.OP_WAVELENGTH) + "\n");
+                        Console.WriteLine("The refractive index correction has been set to: " + laser.getParameter(LaserParameters.OP_AIRCOMP) + "\n");
+                        Console.WriteLine("The material compensation has been set to: " + laser.getParameter(LaserParameters.OP_MATCOMP) + "\n");
+                        String.Concat("The laser beam strength is ", b_strength.ToString(), "%\r\n");
+                        Console.WriteLine("The Current laser position is: " + laser.ReadSample().ToString() + "\n");
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("No laser E1735 module found, please check the connection and try again\n");
+                        Console.WriteLine("Press any key to exit\n");
+                        Console.ReadKey();
+                        Environment.Exit(0);
+                    }
+                }
+
+           }
+        }
+        static void setup
+        {
+            // smtp mail server
+            /*
+            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
+            smtp.Credentials = new System.Net.NetworkCredential("milomia322@gmail.com", "29HennryLaver");
+            smtp.EnableSsl = true;
+            // send mail
+            smtp.Send("millomia322@gmail.com", "m-hunt3@sky.com", "subject", "body");
+            
             /*
             string edalePath = Environment.GetEnvironmentVariable("EdalePath");
             
