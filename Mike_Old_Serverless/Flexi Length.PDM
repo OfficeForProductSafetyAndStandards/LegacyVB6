@@ -1,0 +1,320 @@
+[Root]
+Most Recent Package=50m Length Win 98
+
+
+[Package|New Flexi|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=S:\mqu\Length Program\Flexi\Deploy Flexi
+
+[Package|New Flexi|Configure DAO ISAMs]
+Applicable=No
+
+[Package|New Flexi|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|New Flexi|Files Found]
+
+[Package|New Flexi|Files Released]
+
+[Package|New Flexi|Missing Dependency Information]
+C:\WINNT\SYSTEM32\VISDATA.EXE=
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=
+C:\WINNT\SYSTEM32\gpib-32.dll=
+
+[Package|New Flexi|Out-of-Date Dependency Information]
+
+[Package|New Flexi|Files Added]
+
+[Package|New Flexi|Files Removed]
+
+[Package|New Flexi|Files In Project]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\SYSTEM32\gpib-32.dll=Yes
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=Yes
+C:\WINNT\SYSTEM32\VISDATA.EXE=Yes
+C:\WINNT\SYSTEM32\MSCOMM32.OCX=Yes
+C:\WINNT\SYSTEM32\MSSTDFMT.DLL=Yes
+C:\WINNT\SYSTEM32\MSADODC.OCX=Yes
+C:\WINNT\SYSTEM32\MSBIND.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|New Flexi|Configure Registry Files]
+Applicable=No
+
+[Package|New Flexi|Configure Remote Servers]
+Applicable=No
+
+[Package|New Flexi|Install Locations]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=$(AppPath)
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\gpib-32.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=$(WinSysPath)
+C:\WINNT\SYSTEM32\VISDATA.EXE=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSBIND.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|New Flexi|Configure Shared Files]
+Applicable=Yes
+S:\mqu\Length Program\Flexi\Flexi Length.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|New Flexi|Distribution]
+Type=single
+Size=
+Title=50m Laser System
+
+[Package|New Flexi|IconGroups]
+Group0=50m Laser System
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|New Flexi|50m Laser System]
+Icon1="Flexi Length.EXE"
+Title1=50m Laser System
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|New Flexi|Package]
+PackageFolder=S:\mqu\Length Program\Flexi\Deploy Flexi
+ProjectFolder=S:\mqu\Length Program\Flexi
+ServerSideCab=
+File1=S:\mqu\Length Program\Flexi\Deploy Flexi\setup.exe
+File2=S:\mqu\Length Program\Flexi\Deploy Flexi\Setup.Lst
+File3=S:\mqu\Length Program\Flexi\Deploy Flexi\Flexi Length.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=S:\mqu\Length Program\Flexi\Deploy Flexi
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\WINNT\SYSTEM32\VISDATA.EXE=
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=
+C:\WINNT\SYSTEM32\gpib-32.dll=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=Yes
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\SYSTEM32\gpib-32.dll=Yes
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=Yes
+C:\WINNT\SYSTEM32\VISDATA.EXE=Yes
+C:\WINNT\SYSTEM32\MSCOMM32.OCX=Yes
+C:\WINNT\SYSTEM32\MSSTDFMT.DLL=Yes
+C:\WINNT\SYSTEM32\MSADODC.OCX=Yes
+C:\WINNT\SYSTEM32\MSBIND.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=$(AppPath)
+C:\WINNT\SYSTEM32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\SYSTEM32\gpib-32.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\EXCEL9.OLB=$(WinSysPath)
+C:\WINNT\SYSTEM32\VISDATA.EXE=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\SYSTEM32\MSBIND.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\SYSTEM32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+S:\mqu\Length Program\Flexi\Flexi Length.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=50m Laser System
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=50m Laser System
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|50m Laser System]
+Icon1="Flexi Length.EXE"
+Title1=50m Laser System
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=S:\mqu\Length Program\Flexi\Deploy Flexi
+ProjectFolder=S:\mqu\Length Program\Flexi
+ServerSideCab=
+File1=S:\mqu\Length Program\Flexi\Deploy Flexi\setup.exe
+File2=S:\mqu\Length Program\Flexi\Deploy Flexi\Setup.Lst
+File3=S:\mqu\Length Program\Flexi\Deploy Flexi\Flexi Length.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|50m Length Win 98|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=S:\mqu\Length Program\Flexi\Deploy 2 win 98
+
+[Package|50m Length Win 98|Configure DAO ISAMs]
+Applicable=No
+
+[Package|50m Length Win 98|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|50m Length Win 98|Files Found]
+
+[Package|50m Length Win 98|Files Released]
+
+[Package|50m Length Win 98|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\VISDATA.EXE=
+C:\Program Files\Microsoft Office\Office\EXCEL8.OLB=
+C:\WINDOWS\SYSTEM\gpib-32.dll=
+
+[Package|50m Length Win 98|Out-of-Date Dependency Information]
+
+[Package|50m Length Win 98|Files Added]
+
+[Package|50m Length Win 98|Files Removed]
+
+[Package|50m Length Win 98|Files In Project]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=Yes
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\gpib-32.dll=Yes
+C:\Program Files\Microsoft Office\Office\EXCEL8.OLB=Yes
+C:\WINDOWS\SYSTEM\VISDATA.EXE=Yes
+C:\WINDOWS\SYSTEM\MSCOMM32.OCX=Yes
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=Yes
+C:\WINDOWS\SYSTEM\MSADODC.OCX=Yes
+C:\WINDOWS\SYSTEM\MSBIND.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|50m Length Win 98|Configure Registry Files]
+Applicable=No
+
+[Package|50m Length Win 98|Configure Remote Servers]
+Applicable=No
+
+[Package|50m Length Win 98|Install Locations]
+S:\mqu\Length Program\Flexi\Flexi Length.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\gpib-32.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\EXCEL8.OLB=$(WinSysPath)
+C:\WINDOWS\SYSTEM\VISDATA.EXE=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSCOMM32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSBIND.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|50m Length Win 98|Configure Shared Files]
+Applicable=Yes
+S:\mqu\Length Program\Flexi\Flexi Length.exe=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|50m Length Win 98|Distribution]
+Type=single
+Size=
+Title=50m Laser Length Program
+
+[Package|50m Length Win 98|IconGroups]
+Group0=50m Laser Length Program
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|50m Length Win 98|50m Laser Length Program]
+Icon1="Flexi Length.EXE"
+Title1=50m Laser Length Program
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|50m Length Win 98|Package]
+PackageFolder=S:\mqu\Length Program\Flexi\Deploy 2 win 98
+ProjectFolder=S:\mqu\Length Program\Flexi
+ServerSideCab=
+File1=S:\mqu\Length Program\Flexi\Deploy 2 win 98\setup.exe
+File2=S:\mqu\Length Program\Flexi\Deploy 2 win 98\Setup.Lst
+File3=S:\mqu\Length Program\Flexi\Deploy 2 win 98\Flexi Length.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
