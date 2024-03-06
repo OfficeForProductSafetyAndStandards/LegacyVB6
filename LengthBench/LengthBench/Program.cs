@@ -109,7 +109,7 @@ namespace LengthBench
             // smtp mail server
             /*
             System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new System.Net.NetworkCredential("milomia322@gmail.com", "29HennryLaver");
+            smtp.Credentials = new System.Net.NetworkCredential("milomia322@gmail.com", "");
             smtp.EnableSsl = true;
             // send mail
             smtp.Send("millomia322@gmail.com", "m-hunt3@sky.com", "subject", "body");
