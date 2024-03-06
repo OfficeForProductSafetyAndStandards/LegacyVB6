@@ -44,6 +44,7 @@
             txtDepartmentNumber = new TextBox();
             comboBox1 = new ComboBox();
             cmdGotoNextScreen = new Button();
+            txtCoefficient = new TextBox();
             SuspendLayout();
             // 
             // lblCustomerName
@@ -138,14 +139,14 @@
             // 
             // txtTensionWeight
             // 
-            txtTensionWeight.Location = new Point(628, 331);
+            txtTensionWeight.Location = new Point(631, 331);
             txtTensionWeight.Name = "txtTensionWeight";
             txtTensionWeight.Size = new Size(157, 39);
             txtTensionWeight.TabIndex = 16;
             // 
             // txtReferenceTemperature
             // 
-            txtReferenceTemperature.Location = new Point(631, 275);
+            txtReferenceTemperature.Location = new Point(637, 282);
             txtReferenceTemperature.Name = "txtReferenceTemperature";
             txtReferenceTemperature.Size = new Size(157, 39);
             txtReferenceTemperature.TabIndex = 17;
@@ -168,11 +169,12 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Aluminium", "Brass", "Bronze", "Invar", "Nickel Steel", "Steel", "Stainless Steel" });
-            comboBox1.Location = new Point(628, 200);
+            comboBox1.Items.AddRange(new object[] { "Aluminium", "Brass", "Bronze", "Invar", "Nickel Steel", "Steel", "Stainless Steel", "Other" });
+            comboBox1.Location = new Point(635, 187);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(159, 40);
             comboBox1.TabIndex = 21;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // cmdGotoNextScreen
             // 
@@ -184,11 +186,20 @@
             cmdGotoNextScreen.UseVisualStyleBackColor = true;
             cmdGotoNextScreen.Click += cmdGotoNextScreen_Click;
             // 
+            // txtCoefficient
+            // 
+            txtCoefficient.AcceptsReturn = true;
+            txtCoefficient.Location = new Point(637, 232);
+            txtCoefficient.Name = "txtCoefficient";
+            txtCoefficient.Size = new Size(157, 39);
+            txtCoefficient.TabIndex = 23;
+            // 
             // frmCustomerDetails
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(861, 534);
+            Controls.Add(txtCoefficient);
             Controls.Add(cmdGotoNextScreen);
             Controls.Add(comboBox1);
             Controls.Add(txtDepartmentNumber);
@@ -230,5 +241,6 @@
         private TextBox txtDepartmentNumber;
         private ComboBox comboBox1;
         private Button cmdGotoNextScreen;
+        private TextBox txtCoefficient;
     }
 }

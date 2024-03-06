@@ -16,7 +16,7 @@ namespace LengthBench
             string Datestring = DateTime.Now.ToString ("dd mmm yyyy");
             string Timestring = DateTime.UtcNow.ToString("hh-mm");
             Program.NewFileName = "c:\\metrology\\@private\\@mu\\Length Results\\Flexi\\" + Program.NewFileName + ' ' + Datestring + ' ' + Timestring;
-            Program.xlbookResults.SaveAs(Program.NewFileName);
+            // Program.xlbookResults.SaveAs(Program.NewFileName);
 
             Form frmLaser = new frmLaser();
             frmLaser.Show();
