@@ -134,6 +134,7 @@
             txtCustomerName.Size = new Size(157, 39);
             txtCustomerName.TabIndex = 11;
             txtCustomerName.Text = "`";
+            txtCustomerName.TextChanged += txtCustomerName_TextChanged;
             // 
             // txtTensionWeight
             // 
@@ -181,6 +182,7 @@
             cmdGotoNextScreen.TabIndex = 22;
             cmdGotoNextScreen.Text = "OK?";
             cmdGotoNextScreen.UseVisualStyleBackColor = true;
+            cmdGotoNextScreen.Click += cmdGotoNextScreen_Click;
             // 
             // frmCustomerDetails
             // 
@@ -205,6 +207,7 @@
             Controls.Add(lblCustomerName);
             Name = "frmCustomerDetails";
             Text = "frmCustomerDetails";
+            Load += frmCustomerDetails_Load;
             ResumeLayout(false);
             PerformLayout();
         }

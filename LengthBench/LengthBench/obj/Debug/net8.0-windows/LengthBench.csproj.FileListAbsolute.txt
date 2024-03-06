@@ -44,3 +44,6 @@ C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\LengthBench.frmMeasurementSelection.resources
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\LengthBench.csproj.ResolveComReference.cache
+C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\bin\Debug\net8.0-windows\LengthBench.dll.config
+C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\LengthBench.Nolaserfound.resources
+C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows\LengthBench.frmLaserReadings1.resources

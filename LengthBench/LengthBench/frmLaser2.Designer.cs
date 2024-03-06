@@ -48,6 +48,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(875, 39);
             textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 

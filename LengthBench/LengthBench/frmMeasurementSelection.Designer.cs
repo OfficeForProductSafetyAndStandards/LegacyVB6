@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             optImperial = new RadioButton();
             optMetric = new RadioButton();
             fraImperialMetric = new GroupBox();
@@ -43,6 +44,8 @@
             label1 = new Label();
             cmdNextScreen = new Button();
             cmdNextScreenWithoutVol = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
             fraImperialMetric.SuspendLayout();
             fraClass.SuspendLayout();
             fraComposite.SuspendLayout();
@@ -58,6 +61,7 @@
             optImperial.TabStop = true;
             optImperial.Text = "Imperial";
             optImperial.UseVisualStyleBackColor = true;
+            optImperial.CheckedChanged += optImperial_CheckedChanged;
             // 
             // optMetric
             // 
@@ -69,6 +73,7 @@
             optMetric.TabStop = true;
             optMetric.Text = "Metric";
             optMetric.UseVisualStyleBackColor = true;
+            optMetric.CheckedChanged += optMetric_CheckedChanged;
             // 
             // fraImperialMetric
             // 
@@ -99,6 +104,7 @@
             cmdAgilient1339.TabIndex = 4;
             cmdAgilient1339.Text = "Agilent 1339";
             cmdAgilient1339.UseVisualStyleBackColor = true;
+            cmdAgilient1339.Click += cmdAgilient1339_Click;
             // 
             // fraClass
             // 
@@ -122,6 +128,7 @@
             radioButton3.TabStop = true;
             radioButton3.Text = "Class III";
             radioButton3.UseVisualStyleBackColor = true;
+            radioButton3.CheckedChanged += radioButton3_CheckedChanged;
             // 
             // radioButton2
             // 
@@ -145,6 +152,7 @@
             radioButton1.TabStop = true;
             radioButton1.Text = "Class I";
             radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
             // 
             // fraComposite
             // 
@@ -167,6 +175,7 @@
             optNo.TabStop = true;
             optNo.Text = "No";
             optNo.UseVisualStyleBackColor = true;
+            optNo.CheckedChanged += optNo_CheckedChanged;
             // 
             // optYes
             // 
@@ -178,6 +187,7 @@
             optYes.TabStop = true;
             optYes.Text = "Yes";
             optYes.UseVisualStyleBackColor = true;
+            optYes.CheckedChanged += optYes_CheckedChanged;
             // 
             // label1
             // 
@@ -222,6 +232,7 @@
             Controls.Add(fraImperialMetric);
             Name = "frmMeasurementSelection";
             Text = "frmMeasurementSelectio";
+            Load += frmMeasurementSelection_Load;
             fraImperialMetric.ResumeLayout(false);
             fraImperialMetric.PerformLayout();
             fraClass.ResumeLayout(false);
@@ -249,5 +260,7 @@
         private Label label1;
         private Button cmdNextScreen;
         private Button cmdNextScreenWithoutVol;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }

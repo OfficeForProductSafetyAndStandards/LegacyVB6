@@ -58,6 +58,7 @@
             txtTemperature.Name = "txtTemperature";
             txtTemperature.Size = new Size(206, 39);
             txtTemperature.TabIndex = 0;
+            txtTemperature.TextChanged += txtTemperature_TextChanged;
             // 
             // txtHumidity
             // 
@@ -73,6 +74,7 @@
             txtBarometer.Name = "txtBarometer";
             txtBarometer.Size = new Size(206, 39);
             txtBarometer.TabIndex = 2;
+            txtBarometer.TextChanged += txtBarometer_TextChanged;
             // 
             // txtVOL
             // 
@@ -138,6 +140,7 @@
             cmdRetrurnToMainMenu.TabIndex = 10;
             cmdRetrurnToMainMenu.Text = "Return to Main Menu";
             cmdRetrurnToMainMenu.UseVisualStyleBackColor = true;
+            cmdRetrurnToMainMenu.Click += cmdRetrurnToMainMenu_Click;
             // 
             // cmdEndProgram
             // 
@@ -276,6 +279,7 @@
             Controls.Add(txtTemperature);
             Name = "frmVOLCompensationForm";
             Text = "VOL Compensation Form";
+            Load += frmVOLCompensationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

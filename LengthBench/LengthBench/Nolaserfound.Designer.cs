@@ -1,6 +1,6 @@
 ﻿namespace LengthBench
 {
-    partial class frmLaser
+    partial class Nolaserfound
     {
         /// <summary>
         /// Required designer variable.
@@ -29,47 +29,25 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(59, 68);
+            label1.Location = new Point(71, 46);
             label1.Name = "label1";
-            label1.Size = new Size(670, 32);
+            label1.Size = new Size(742, 96);
             label1.TabIndex = 0;
-            label1.Text = "What file for saving results, use Department No. for simplicity";
+            label1.Text = "Unable to communicate with laser - is the laser on and connected ? \r\nDo you have the right  e1735a.dll and e1735aCore .dll installed \r\nin c:\\windows\\SysWOW64 directory\r\n";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(43, 123);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(686, 39);
-            textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(622, 249);
-            button1.Name = "button1";
-            button1.Size = new Size(120, 82);
-            button1.TabIndex = 2;
-            button1.Text = "OK";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // frmLaser
+            // Nolaserfound
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 356);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
+            ClientSize = new Size(800, 450);
             Controls.Add(label1);
-            Name = "frmLaser";
-            Text = "Form1";
-            Load += frmLaser_Load;
+            Name = "Nolaserfound";
+            Text = "Laser Not Found";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -77,7 +55,5 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private Button button1;
     }
 }
