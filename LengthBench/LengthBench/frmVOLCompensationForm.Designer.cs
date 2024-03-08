@@ -242,6 +242,7 @@
             cmdTakeVOL.TabIndex = 21;
             cmdTakeVOL.Text = "Take VOL";
             cmdTakeVOL.UseVisualStyleBackColor = true;
+            cmdTakeVOL.Click += cmdTakeVOL_Click;
             // 
             // textBox1
             // 

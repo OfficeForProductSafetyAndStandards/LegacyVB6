@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -76,6 +77,19 @@ namespace LengthBench
         private void frmVOLCompensationForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmdTakeVOL_Click(object sender, EventArgs e)
+        {
+            Program.xlsheetResultsVOLandCustomerData.Cells[10, 2] = txtHumidity.Text.ToString();
+            Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = txtBarometer.Text.ToString();
+            Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
+            Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
+            Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
+            Program.xlbookResults.Save();
+            txtVOL = Program.xlsheetResultsVOLandCustomerData.Cells[13, 2];
+            //place results from humidity and barometric pressure into spreadsheet
+            //save the spreadsheet get VOL from calculated value sheet
         }
     }
 }
