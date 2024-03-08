@@ -16,14 +16,15 @@ namespace LengthBench
         
         private void timer_Tick(object sender, EventArgs e)
         {
-            // var x = Program.laser.ReadSample();
-            // pbBeamStrength.Value = x;
+            var x = Program.laser.ReadBeamStrength();
+            pbBeamStrength.Value = (int)x;
 
             // stub for now use timer to generate a random number
-            Random Random = new Random();
-            decimal x = Random.Next(0, 100);
-            label2.Text = x.ToString();
-            pbBeamStrength.Value = (int)x;
+            //Random Random = new Random();
+            //decimal x = Random.Next(0, 100);
+            var y = Program.laser.ReadSample();
+            label2.Text = y.ToString();
+            // pbBeamStrength.Value = (int)x;
 
         }
         public frmLaserReadings1()
