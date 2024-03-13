@@ -43,7 +43,6 @@
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox9 = new TextBox();
-            textBox13 = new TextBox();
             textBox14 = new TextBox();
             textBox15 = new TextBox();
             textBox16 = new TextBox();
@@ -63,6 +62,11 @@
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             groupBox1 = new GroupBox();
+            txtLaserReading9 = new TextBox();
+            txtLaserReading8 = new TextBox();
+            txtLaserReading7 = new TextBox();
+            txtLaserReading6 = new TextBox();
+            txtLaserReading5 = new TextBox();
             txtLaserReading4 = new TextBox();
             txtLaserReading3 = new TextBox();
             txtLaserReading2 = new TextBox();
@@ -190,13 +194,6 @@
             textBox9.Size = new Size(156, 39);
             textBox9.TabIndex = 17;
             // 
-            // textBox13
-            // 
-            textBox13.Location = new Point(608, 723);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(156, 39);
-            textBox13.TabIndex = 21;
-            // 
             // textBox14
             // 
             textBox14.Location = new Point(608, 678);
@@ -268,6 +265,7 @@
             button2.TabIndex = 35;
             button2.Text = "Yes";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button3
             // 
@@ -281,15 +279,55 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtLaserReading9);
+            groupBox1.Controls.Add(txtLaserReading8);
+            groupBox1.Controls.Add(txtLaserReading7);
+            groupBox1.Controls.Add(txtLaserReading6);
+            groupBox1.Controls.Add(txtLaserReading5);
             groupBox1.Controls.Add(txtLaserReading4);
             groupBox1.Controls.Add(txtLaserReading3);
             groupBox1.Controls.Add(txtLaserReading2);
             groupBox1.Controls.Add(txtLaserReading1);
             groupBox1.Location = new Point(418, 294);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(190, 482);
+            groupBox1.Size = new Size(164, 440);
             groupBox1.TabIndex = 37;
             groupBox1.TabStop = false;
+            // 
+            // txtLaserReading9
+            // 
+            txtLaserReading9.Location = new Point(6, 384);
+            txtLaserReading9.Name = "txtLaserReading9";
+            txtLaserReading9.Size = new Size(156, 39);
+            txtLaserReading9.TabIndex = 46;
+            // 
+            // txtLaserReading8
+            // 
+            txtLaserReading8.Location = new Point(6, 339);
+            txtLaserReading8.Name = "txtLaserReading8";
+            txtLaserReading8.Size = new Size(156, 39);
+            txtLaserReading8.TabIndex = 45;
+            // 
+            // txtLaserReading7
+            // 
+            txtLaserReading7.Location = new Point(6, 294);
+            txtLaserReading7.Name = "txtLaserReading7";
+            txtLaserReading7.Size = new Size(156, 39);
+            txtLaserReading7.TabIndex = 44;
+            // 
+            // txtLaserReading6
+            // 
+            txtLaserReading6.Location = new Point(6, 248);
+            txtLaserReading6.Name = "txtLaserReading6";
+            txtLaserReading6.Size = new Size(156, 39);
+            txtLaserReading6.TabIndex = 43;
+            // 
+            // txtLaserReading5
+            // 
+            txtLaserReading5.Location = new Point(6, 203);
+            txtLaserReading5.Name = "txtLaserReading5";
+            txtLaserReading5.Size = new Size(156, 39);
+            txtLaserReading5.TabIndex = 42;
             // 
             // txtLaserReading4
             // 
@@ -346,7 +384,6 @@
             Controls.Add(textBox16);
             Controls.Add(textBox15);
             Controls.Add(textBox14);
-            Controls.Add(textBox13);
             Controls.Add(textBox9);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
@@ -387,7 +424,6 @@
         private TextBox textBox7;
         private TextBox textBox8;
         private TextBox textBox9;
-        private TextBox textBox13;
         private TextBox textBox14;
         private TextBox textBox15;
         private TextBox textBox16;
@@ -412,5 +448,10 @@
         private TextBox txtLaserReading2;
         private TextBox txtLaserReading3;
         private TextBox txtLaserReading4;
+        private TextBox txtLaserReading8;
+        private TextBox txtLaserReading7;
+        private TextBox txtLaserReading6;
+        private TextBox txtLaserReading5;
+        private TextBox txtLaserReading9;
     }
 }

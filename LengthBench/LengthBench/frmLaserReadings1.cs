@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.ApplicationModel.Background;
 using Timer = System.Windows.Forms.Timer;
 
 namespace LengthBench
@@ -49,26 +50,47 @@ namespace LengthBench
             // stub for now use timer to generate a random number var x = Program.laser.ReadSample();
             Random Random = new Random();
             decimal x = Random.Next(0, 100);
-            switch(iPts)
-                { 
+            switch (iPts)
+            {
                 case 0:
-                txtLaserReading0.Text = x.ToString();
-                break;
-            case 1:
-                txtLaserReading1.Text = x.ToString();
-                break;
-            case 2:
-                txtLaserReading2.Text = x.ToString();
-                break;
-            case 3:
-                txtLaserReading3.Text = x.ToString();
-                break;
+                    txtLaserReading0.Text = x.ToString();
+                    break;
+                case 1:
+                    txtLaserReading1.Text = x.ToString();
+                    break;
+                case 2:
+                    txtLaserReading2.Text = x.ToString();
+                    break;
+                case 3:
+                    txtLaserReading3.Text = x.ToString();
+                    break;
+                case 4:
+                    txtLaserReading4.Text = x.ToString();
+                    break;
+                case 5:
+                    txtLaserReading5.Text = x.ToString();
+                    break;
+                case 6:
+                    txtLaserReading6.Text = x.ToString();
+                    break;
+                case 7:
+                    txtLaserReading7.Text = x.ToString();
+                    break;
+                case 8:
+                    txtLaserReading8.Text = x.ToString();
+                    break;
+                case 9:
+                    txtLaserReading9.Text = x.ToString();
+                    break;
+                case 19:
+                    txtLaserReading19.Text = x.ToString();
+                    break;
             }
+            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2] = x;
+            iPts += 1;
 
-                iPts += 1;
-
-           //DispLaserReading(txtLaserReading(iPts), x)
-           //PutReadingInExcel(dbReading, iPts, LaserTestSetNo)
+            //DispLaserReading(txtLaserReading(iPts), x)
+            //PutReadingInExcel(dbReading, iPts, LaserTestSetNo)
 
         }
 
@@ -94,6 +116,11 @@ namespace LengthBench
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Program.xlbookResults.Save();
         }
     }
 }
