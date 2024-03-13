@@ -19,7 +19,7 @@ namespace LengthBench
             // Program.xlbookResults.SaveAs(Program.NewFileName);
 
             Form frmLaser = new frmLaser();
-            frmLaser.Show();
+            frmLaser.ShowDialog();
 
             /*
             using (Form frmLaser2 = new frmLaser2())

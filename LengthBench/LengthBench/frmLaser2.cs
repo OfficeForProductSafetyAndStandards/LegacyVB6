@@ -30,7 +30,7 @@ namespace LengthBench
             Program.xlsheetResultsMeasurement.Cells[12, 2] = Program.NewFileName1;
 
             Form frmMeasurementSelection = new frmMeasurementSelection();
-            frmMeasurementSelection.Show();
+            frmMeasurementSelection.ShowDialog();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

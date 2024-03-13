@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.ApplicationModel.ConversationalAgent;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LengthBench
 {
@@ -50,6 +52,18 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[7, 2] = txtReferenceTemperature.Text;
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 2] = dateTimePicker1.Text;
 
+            int y = Convert.ToInt32(txtNumberOfPoints.Text);
+            y = y + 4;
+
+            for (int x = 4; x < y; x++)
+            {
+                Form frmlaser1 = new frmlaser1();
+                frmlaser1.ShowDialog();
+                int Point = 0;
+                Program.xlsheetResultsMeasurement.Cells[x, 7] = LengthBench.frmlaser1.x;
+            }
+
+            Program.xlbookResults?.Save();
 
             Form frmLaserReadings1 = new frmLaserReadings1();
             frmLaserReadings1.Show();
@@ -67,16 +81,16 @@ namespace LengthBench
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            double coef=0;
+            double coef = 0;
 
             string mat = comboBox1.Text;
-            switch(mat)
-            { 
+            switch (mat)
+            {
                 case "Aluminium":
-                    coef= 23.1;
+                    coef = 23.1;
                     break;
                 case "Brass":
-                    coef= 17.5;
+                    coef = 17.5;
                     break;
                 case "Bronze":
                     coef = 17.3;
@@ -101,6 +115,11 @@ namespace LengthBench
 
             Program.xlsheetResultsVOLandCustomerData.Cells[5, 2] = coef;
             txtCoefficient.Text = coef.ToString();
+        }
+
+        private void txtNumberOfPoints_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -157,6 +157,7 @@
             txtNumberOfPoints.Name = "txtNumberOfPoints";
             txtNumberOfPoints.Size = new Size(157, 39);
             txtNumberOfPoints.TabIndex = 19;
+            txtNumberOfPoints.TextChanged += txtNumberOfPoints_TextChanged;
             // 
             // txtDepartmentNumber
             // 

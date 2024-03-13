@@ -32,34 +32,23 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
+            cmdLaserReading = new Button();
             cmdResetLaser = new Button();
             label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            txtLaserReading = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtLaserReading0 = new TextBox();
             textBox5 = new TextBox();
             textBox6 = new TextBox();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
             textBox13 = new TextBox();
             textBox14 = new TextBox();
             textBox15 = new TextBox();
             textBox16 = new TextBox();
             textBox17 = new TextBox();
             textBox18 = new TextBox();
-            textBox1 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
             pbBeamStrength = new ProgressBar();
             label8 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -73,6 +62,13 @@
             timer6 = new System.Windows.Forms.Timer(components);
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
+            groupBox1 = new GroupBox();
+            txtLaserReading3 = new TextBox();
+            txtLaserReading2 = new TextBox();
+            txtLaserReading1 = new TextBox();
+            label5 = new Label();
+            txtLaserReading4 = new TextBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -104,16 +100,16 @@
             label3.TabIndex = 2;
             label3.Text = "mm";
             // 
-            // button1
+            // cmdLaserReading
             // 
-            button1.BackColor = Color.Cyan;
-            button1.Location = new Point(178, 149);
-            button1.Name = "button1";
-            button1.Size = new Size(339, 70);
-            button1.TabIndex = 3;
-            button1.Text = "Take Laser Readings";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            cmdLaserReading.BackColor = Color.Cyan;
+            cmdLaserReading.Location = new Point(178, 149);
+            cmdLaserReading.Name = "cmdLaserReading";
+            cmdLaserReading.Size = new Size(339, 70);
+            cmdLaserReading.TabIndex = 3;
+            cmdLaserReading.Text = "Take Laser Readings";
+            cmdLaserReading.UseVisualStyleBackColor = false;
+            cmdLaserReading.Click += button1_Click;
             // 
             // cmdResetLaser
             // 
@@ -124,7 +120,6 @@
             cmdResetLaser.TabIndex = 4;
             cmdResetLaser.Text = "Reset Laser";
             cmdResetLaser.UseVisualStyleBackColor = false;
-            cmdResetLaser.Click += cmdResetLaser_Click;
             // 
             // label4
             // 
@@ -134,15 +129,6 @@
             label4.Size = new Size(156, 32);
             label4.TabIndex = 5;
             label4.Text = "Zero Reading";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(434, 268);
-            label5.Name = "label5";
-            label5.Size = new Size(132, 32);
-            label5.TabIndex = 6;
-            label5.Text = "Graduation";
             // 
             // label6
             // 
@@ -162,26 +148,12 @@
             label7.TabIndex = 8;
             label7.Text = "Zero Reading";
             // 
-            // txtLaserReading
+            // txtLaserReading0
             // 
-            txtLaserReading.Location = new Point(235, 317);
-            txtLaserReading.Name = "txtLaserReading";
-            txtLaserReading.Size = new Size(156, 39);
-            txtLaserReading.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(434, 317);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(156, 39);
-            textBox3.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(434, 452);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(156, 39);
-            textBox4.TabIndex = 12;
+            txtLaserReading0.Location = new Point(235, 317);
+            txtLaserReading0.Name = "txtLaserReading0";
+            txtLaserReading0.Size = new Size(156, 39);
+            txtLaserReading0.TabIndex = 10;
             // 
             // textBox5
             // 
@@ -217,27 +189,6 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(156, 39);
             textBox9.TabIndex = 17;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(434, 407);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(156, 39);
-            textBox10.TabIndex = 18;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(434, 362);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(156, 39);
-            textBox11.TabIndex = 19;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(434, 723);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(156, 39);
-            textBox12.TabIndex = 20;
             // 
             // textBox13
             // 
@@ -280,41 +231,6 @@
             textBox18.Name = "textBox18";
             textBox18.Size = new Size(156, 39);
             textBox18.TabIndex = 26;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(434, 497);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 39);
-            textBox1.TabIndex = 27;
-            // 
-            // textBox19
-            // 
-            textBox19.Location = new Point(434, 543);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(156, 39);
-            textBox19.TabIndex = 28;
-            // 
-            // textBox20
-            // 
-            textBox20.Location = new Point(434, 588);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(156, 39);
-            textBox20.TabIndex = 29;
-            // 
-            // textBox21
-            // 
-            textBox21.Location = new Point(434, 633);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(156, 39);
-            textBox21.TabIndex = 30;
-            // 
-            // textBox22
-            // 
-            textBox22.Location = new Point(434, 678);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(156, 39);
-            textBox22.TabIndex = 31;
             // 
             // pbBeamStrength
             // 
@@ -363,51 +279,94 @@
             button3.Text = "No";
             button3.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txtLaserReading4);
+            groupBox1.Controls.Add(txtLaserReading3);
+            groupBox1.Controls.Add(txtLaserReading2);
+            groupBox1.Controls.Add(txtLaserReading1);
+            groupBox1.Location = new Point(418, 294);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(190, 482);
+            groupBox1.TabIndex = 37;
+            groupBox1.TabStop = false;
+            // 
+            // txtLaserReading3
+            // 
+            txtLaserReading3.Location = new Point(6, 113);
+            txtLaserReading3.Name = "txtLaserReading3";
+            txtLaserReading3.Size = new Size(156, 39);
+            txtLaserReading3.TabIndex = 40;
+            // 
+            // txtLaserReading2
+            // 
+            txtLaserReading2.Location = new Point(6, 68);
+            txtLaserReading2.Name = "txtLaserReading2";
+            txtLaserReading2.Size = new Size(156, 39);
+            txtLaserReading2.TabIndex = 39;
+            // 
+            // txtLaserReading1
+            // 
+            txtLaserReading1.Location = new Point(6, 23);
+            txtLaserReading1.Name = "txtLaserReading1";
+            txtLaserReading1.Size = new Size(156, 39);
+            txtLaserReading1.TabIndex = 38;
+            txtLaserReading1.TextChanged += textBox1_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(434, 268);
+            label5.Name = "label5";
+            label5.Size = new Size(132, 32);
+            label5.TabIndex = 6;
+            label5.Text = "Graduation";
+            // 
+            // txtLaserReading4
+            // 
+            txtLaserReading4.Location = new Point(6, 158);
+            txtLaserReading4.Name = "txtLaserReading4";
+            txtLaserReading4.Size = new Size(156, 39);
+            txtLaserReading4.TabIndex = 41;
+            // 
             // frmLaserReadings1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.YellowGreen;
             ClientSize = new Size(1227, 970);
+            Controls.Add(groupBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(pbBeamStrength);
-            Controls.Add(textBox22);
-            Controls.Add(textBox21);
-            Controls.Add(textBox20);
-            Controls.Add(textBox19);
-            Controls.Add(textBox1);
             Controls.Add(textBox18);
             Controls.Add(textBox17);
             Controls.Add(textBox16);
             Controls.Add(textBox15);
             Controls.Add(textBox14);
             Controls.Add(textBox13);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
             Controls.Add(textBox9);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
             Controls.Add(textBox6);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(txtLaserReading);
+            Controls.Add(txtLaserReading0);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(cmdResetLaser);
-            Controls.Add(button1);
+            Controls.Add(cmdLaserReading);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmLaserReadings1";
             Text = "Laser Class I";
             Load += frmLaserReadings1_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -417,34 +376,23 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
+        private Button cmdLaserReading;
         private Button cmdResetLaser;
         private Label label4;
-        private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox txtLaserReading;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtLaserReading0;
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
         private TextBox textBox8;
         private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
         private TextBox textBox13;
         private TextBox textBox14;
         private TextBox textBox15;
         private TextBox textBox16;
         private TextBox textBox17;
         private TextBox textBox18;
-        private TextBox textBox1;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
-        private TextBox textBox22;
         private ProgressBar pbBeamStrength;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
@@ -458,5 +406,11 @@
         private System.Windows.Forms.Timer timer6;
         private System.Windows.Forms.Timer timer7;
         private System.Windows.Forms.Timer timer8;
+        private GroupBox groupBox1;
+        private Label label5;
+        private TextBox txtLaserReading1;
+        private TextBox txtLaserReading2;
+        private TextBox txtLaserReading3;
+        private TextBox txtLaserReading4;
     }
 }

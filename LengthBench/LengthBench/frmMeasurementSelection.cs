@@ -29,7 +29,7 @@ namespace LengthBench
         private void cmdNextScreen_Click(object sender, EventArgs e)
         {
             Form frmVOLCompenationForm = new frmVOLCompensationForm();
-            frmVOLCompenationForm.Show();
+            frmVOLCompenationForm.ShowDialog();
         }
 
         private void cmdSetUpLaser_Click(object sender, EventArgs e)
