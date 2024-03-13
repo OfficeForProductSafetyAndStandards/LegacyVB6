@@ -39,7 +39,7 @@
             label7 = new Label();
             txtLaserReading0 = new TextBox();
             textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            txtLaserReading19 = new TextBox();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox9 = new TextBox();
@@ -63,11 +63,11 @@
             timer7 = new System.Windows.Forms.Timer(components);
             timer8 = new System.Windows.Forms.Timer(components);
             groupBox1 = new GroupBox();
+            txtLaserReading4 = new TextBox();
             txtLaserReading3 = new TextBox();
             txtLaserReading2 = new TextBox();
             txtLaserReading1 = new TextBox();
             label5 = new Label();
-            txtLaserReading4 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -162,12 +162,12 @@
             textBox5.Size = new Size(156, 39);
             textBox5.TabIndex = 13;
             // 
-            // textBox6
+            // txtLaserReading19
             // 
-            textBox6.Location = new Point(780, 317);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(156, 39);
-            textBox6.TabIndex = 14;
+            txtLaserReading19.Location = new Point(780, 317);
+            txtLaserReading19.Name = "txtLaserReading19";
+            txtLaserReading19.Size = new Size(156, 39);
+            txtLaserReading19.TabIndex = 14;
             // 
             // textBox7
             // 
@@ -291,6 +291,13 @@
             groupBox1.TabIndex = 37;
             groupBox1.TabStop = false;
             // 
+            // txtLaserReading4
+            // 
+            txtLaserReading4.Location = new Point(6, 158);
+            txtLaserReading4.Name = "txtLaserReading4";
+            txtLaserReading4.Size = new Size(156, 39);
+            txtLaserReading4.TabIndex = 41;
+            // 
             // txtLaserReading3
             // 
             txtLaserReading3.Location = new Point(6, 113);
@@ -322,13 +329,6 @@
             label5.TabIndex = 6;
             label5.Text = "Graduation";
             // 
-            // txtLaserReading4
-            // 
-            txtLaserReading4.Location = new Point(6, 158);
-            txtLaserReading4.Name = "txtLaserReading4";
-            txtLaserReading4.Size = new Size(156, 39);
-            txtLaserReading4.TabIndex = 41;
-            // 
             // frmLaserReadings1
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -350,7 +350,7 @@
             Controls.Add(textBox9);
             Controls.Add(textBox8);
             Controls.Add(textBox7);
-            Controls.Add(textBox6);
+            Controls.Add(txtLaserReading19);
             Controls.Add(textBox5);
             Controls.Add(txtLaserReading0);
             Controls.Add(label7);
@@ -383,7 +383,7 @@
         private Label label7;
         private TextBox txtLaserReading0;
         private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox txtLaserReading19;
         private TextBox textBox7;
         private TextBox textBox8;
         private TextBox textBox9;

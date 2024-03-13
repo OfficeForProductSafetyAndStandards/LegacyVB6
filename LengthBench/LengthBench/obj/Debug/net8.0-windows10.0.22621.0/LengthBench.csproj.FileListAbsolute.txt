@@ -28,3 +28,4 @@ C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows1
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows10.0.22621.0\LengthBench.pdb
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows10.0.22621.0\LengthBench.genruntimeconfig.cache
 C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows10.0.22621.0\ref\LengthBench.dll
+C:\Users\mike\source\LegacyVB6\LengthBench\LengthBench\obj\Debug\net8.0-windows10.0.22621.0\LengthBench.frmlaser1.resources

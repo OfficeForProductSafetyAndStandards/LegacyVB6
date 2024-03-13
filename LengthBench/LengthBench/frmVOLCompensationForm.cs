@@ -21,7 +21,15 @@ namespace LengthBench
 
         private void txtHumidity_TextChanged(object sender, EventArgs e)
         {
-            Program.humidity = Convert.ToDouble(txtHumidity.Text);
+            try
+            {
+                Program.humidity = Convert.ToDouble(txtHumidity.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid number");
+            }   
+
             Program.xlsheetResultsVOLandCustomerData.Cells[10, 2] = Program.humidity;
         }
 
@@ -63,13 +71,30 @@ namespace LengthBench
 
         private void txtTemperature_TextChanged(object sender, EventArgs e)
         {
-            Program.temperature = Convert.ToDouble(txtTemperature.Text);
+
+            try
+            {
+                Program.temperature = Convert.ToDouble(txtTemperature.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid number");
+            }   
+
             Program.xlsheetResultsVOLandCustomerData.Cells[9, 2] = Program.temperature;
         }
 
         private void txtBarometer_TextChanged(object sender, EventArgs e)
         {
-            Program.pressure = Convert.ToDouble(txtBarometer.Text);
+            try
+            { 
+                Program.pressure = Convert.ToDouble(txtBarometer.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid number");
+            }       
+
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = Program.pressure;
 
         }
