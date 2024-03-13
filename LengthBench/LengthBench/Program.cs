@@ -4,12 +4,11 @@ namespace LengthBench
 
     {
         private const string V = "Excel.Appication";
-        public
-        static string TypeOfThermometer = "";
-        static int NoOfPoints;
-        static int Rownumber;
-        static int LaserTestSetNo;
-        static int ProbeCounter;
+        public static string TypeOfThermometer = "";
+        public static int NoOfPoints;
+        public static int Rownumber;
+        public static int LaserTestSetNo;
+        public static int ProbeCounter;
 
 
         public static Microsoft.Office.Interop.Excel._Workbook? xlbookResults;
@@ -22,9 +21,9 @@ namespace LengthBench
         public static Microsoft.Office.Interop.Excel.Application? xl;
 
 
-        static int? xlRow;
-        static int[]? ProbeSelected;
-        static int eventtime;
+        public static int? xlRow;
+        public static int[]? ProbeSelected;
+        public static int eventtime;
 
         public static string? NewFileName;
         public static string? NewFileName1;

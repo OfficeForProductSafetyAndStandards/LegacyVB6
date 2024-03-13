@@ -134,7 +134,6 @@
             txtCustomerName.Name = "txtCustomerName";
             txtCustomerName.Size = new Size(157, 39);
             txtCustomerName.TabIndex = 11;
-            txtCustomerName.Text = "`";
             txtCustomerName.TextChanged += txtCustomerName_TextChanged;
             // 
             // txtTensionWeight
