@@ -54,7 +54,7 @@ namespace LengthBench
         {
             //  optImperial.Checked = false;
             metric = false;
-            Program.xlsheetResultsMeasurement.Cells[25, 5] = "Imperial";
+            Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
 
         }
 
@@ -62,7 +62,7 @@ namespace LengthBench
         {
             // optMetric.Checked = false;
             metric = true;
-            Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
+            Program.xlsheetResultsMeasurement.Cells[25, 5] = "Imperial";
         }
 
         private void cmdAgilient1339_Click(object sender, EventArgs e)
