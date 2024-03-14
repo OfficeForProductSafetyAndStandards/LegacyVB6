@@ -65,8 +65,11 @@ namespace LengthBench
 
             Program.xlbookResults?.Save();
 
-            Form frmLaserReadings1 = new frmLaserReadings1();
-            frmLaserReadings1.Show();
+            Form frmTempMeasure1 = new frmTempMeasure();
+            frmTempMeasure1.Show();
+
+           // Form frmLaserReadings1 = new frmLaserReadings1();
+           // frmLaserReadings1.Show();
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
@@ -119,6 +122,16 @@ namespace LengthBench
 
         private void txtNumberOfPoints_TextChanged(object sender, EventArgs e)
         {
+
+            try
+            {
+                int x = Convert.ToInt32(txtNumberOfPoints.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a number");
+            }
+            Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
 
         }
     }

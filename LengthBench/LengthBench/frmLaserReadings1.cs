@@ -17,14 +17,14 @@ namespace LengthBench
         private int iPts = 0;
         private void timer_Tick(object sender, EventArgs e)
         {
-            //var x = Program.laser.ReadBeamStrength();
-            //pbBeamStrength.Value = (int)x;
+            var x = Program.laser.ReadBeamStrength() * 100;
+            pbBeamStrength.Value = (int)x;
 
             // stub for now use timer to generate a random number
-            Random Random = new Random();
-            decimal x = Random.Next(0, 100);
-            decimal y = Random.Next(0, 100);
-            //var y = Program.laser.ReadSample();
+            //Random Random = new Random();
+            //decimal x = Random.Next(0, 100);
+            //decimal y = Random.Next(0, 100);
+            var y = Program.laser.ReadSample();
             label2.Text = y.ToString();
             pbBeamStrength.Value = (int)x;
 
@@ -49,7 +49,8 @@ namespace LengthBench
         {
             // stub for now use timer to generate a random number var x = Program.laser.ReadSample();
             Random Random = new Random();
-            decimal x = Random.Next(0, 100);
+            //decimal x = Random.Next(0, 100);
+            double x = Program.laser.ReadSample();
             switch (iPts)
             {
                 case 0:
@@ -89,6 +90,12 @@ namespace LengthBench
             Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2] = x;
             iPts += 1;
 
+            if ( iPts > Program.NoOfPoints )
+            {
+                Form form = new frmTempMeasure();
+                form.Show();
+            }
+
             //DispLaserReading(txtLaserReading(iPts), x)
             //PutReadingInExcel(dbReading, iPts, LaserTestSetNo)
 
@@ -122,6 +129,11 @@ namespace LengthBench
         {
             // save the results
             Program.xlbookResults.Save();
+        }
+
+        private void txtLaserReading5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

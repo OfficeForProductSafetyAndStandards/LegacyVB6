@@ -8,19 +8,19 @@
     "net8.0-windows10.0.22621": []
   },
   "packageFolders": {
-    "C:\\Users\\mike\\.nuget\\packages\\": {}
+    "C:\\Users\\Lab2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+      "projectUniqueName": "C:\\Users\\Lab2\\source\\repos\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
       "projectName": "LengthBench",
-      "projectPath": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
-      "packagesPath": "C:\\Users\\mike\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
+      "projectPath": "C:\\Users\\Lab2\\source\\repos\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+      "packagesPath": "C:\\Users\\Lab2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lab2\\source\\repos\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lab2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -78,7 +78,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

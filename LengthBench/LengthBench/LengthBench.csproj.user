@@ -7,6 +7,9 @@
     <Compile Update="frmLaserReadings1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmTempMeasure.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Nolaserfound.cs">
       <SubType>Form</SubType>
     </Compile>
