@@ -35,6 +35,11 @@ namespace LengthBench
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            Program.dept = textBox1.Text;
+        }
+
+        private void frmLaser2_Load(object sender, EventArgs e)
+        {
 
         }
     }

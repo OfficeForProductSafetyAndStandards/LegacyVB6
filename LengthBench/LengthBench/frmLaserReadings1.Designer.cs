@@ -38,16 +38,16 @@
             label6 = new Label();
             label7 = new Label();
             txtLaserReading0 = new TextBox();
-            textBox5 = new TextBox();
-            txtLaserReading19 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
+            txtLaserRun4 = new TextBox();
+            txtFinalZeroReading = new TextBox();
+            txtLaserRun3 = new TextBox();
+            txtLaserRun1 = new TextBox();
+            txtLaserRun2 = new TextBox();
+            txtLaserRun9 = new TextBox();
+            txtLaserRun8 = new TextBox();
+            txtLaserRun7 = new TextBox();
+            txtLaserRun6 = new TextBox();
+            txtLaserRun5 = new TextBox();
             pbBeamStrength = new ProgressBar();
             label8 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
@@ -72,6 +72,20 @@
             txtLaserReading2 = new TextBox();
             txtLaserReading1 = new TextBox();
             label5 = new Label();
+            txtLaserReading10 = new TextBox();
+            txtLaserReading11 = new TextBox();
+            txtLaserReading12 = new TextBox();
+            txtLaserReading13 = new TextBox();
+            txtLaserReading14 = new TextBox();
+            txtLaserReading15 = new TextBox();
+            txtLaserReading16 = new TextBox();
+            txtLaserRun10 = new TextBox();
+            txtLaserRun11 = new TextBox();
+            txtLaserRun12 = new TextBox();
+            txtLaserRun13 = new TextBox();
+            txtLaserRun14 = new TextBox();
+            txtLaserRun15 = new TextBox();
+            txtLaserRun16 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -133,12 +147,12 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(127, 126);
+            label4.Location = new Point(108, 126);
             label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(77, 15);
+            label4.Size = new Size(109, 15);
             label4.TabIndex = 5;
-            label4.Text = "Zero Reading";
+            label4.Text = "Initial Zero Reading";
             // 
             // label6
             // 
@@ -146,9 +160,9 @@
             label6.Location = new Point(332, 126);
             label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(66, 15);
+            label6.Size = new Size(40, 15);
             label6.TabIndex = 7;
-            label6.Text = "Graduation";
+            label6.Text = "RUN 2";
             // 
             // label7
             // 
@@ -156,9 +170,9 @@
             label7.Location = new Point(420, 126);
             label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(77, 15);
+            label7.Size = new Size(105, 15);
             label7.TabIndex = 8;
-            label7.Text = "Zero Reading";
+            label7.Text = "Final Zero Reading";
             // 
             // txtLaserReading0
             // 
@@ -168,89 +182,89 @@
             txtLaserReading0.Size = new Size(86, 23);
             txtLaserReading0.TabIndex = 10;
             // 
-            // textBox5
+            // txtLaserRun4
             // 
-            textBox5.Location = new Point(326, 212);
-            textBox5.Margin = new Padding(2, 1, 2, 1);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(86, 23);
-            textBox5.TabIndex = 13;
+            txtLaserRun4.Location = new Point(326, 212);
+            txtLaserRun4.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun4.Name = "txtLaserRun4";
+            txtLaserRun4.Size = new Size(86, 23);
+            txtLaserRun4.TabIndex = 13;
             // 
-            // txtLaserReading19
+            // txtFinalZeroReading
             // 
-            txtLaserReading19.Location = new Point(420, 149);
-            txtLaserReading19.Margin = new Padding(2, 1, 2, 1);
-            txtLaserReading19.Name = "txtLaserReading19";
-            txtLaserReading19.Size = new Size(86, 23);
-            txtLaserReading19.TabIndex = 14;
+            txtFinalZeroReading.Location = new Point(420, 149);
+            txtFinalZeroReading.Margin = new Padding(2, 1, 2, 1);
+            txtFinalZeroReading.Name = "txtFinalZeroReading";
+            txtFinalZeroReading.Size = new Size(86, 23);
+            txtFinalZeroReading.TabIndex = 14;
             // 
-            // textBox7
+            // txtLaserRun3
             // 
-            textBox7.Location = new Point(327, 191);
-            textBox7.Margin = new Padding(2, 1, 2, 1);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(86, 23);
-            textBox7.TabIndex = 15;
+            txtLaserRun3.Location = new Point(327, 191);
+            txtLaserRun3.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun3.Name = "txtLaserRun3";
+            txtLaserRun3.Size = new Size(86, 23);
+            txtLaserRun3.TabIndex = 15;
             // 
-            // textBox8
+            // txtLaserRun1
             // 
-            textBox8.Location = new Point(327, 149);
-            textBox8.Margin = new Padding(2, 1, 2, 1);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(86, 23);
-            textBox8.TabIndex = 16;
+            txtLaserRun1.Location = new Point(327, 149);
+            txtLaserRun1.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun1.Name = "txtLaserRun1";
+            txtLaserRun1.Size = new Size(86, 23);
+            txtLaserRun1.TabIndex = 16;
             // 
-            // textBox9
+            // txtLaserRun2
             // 
-            textBox9.Location = new Point(327, 170);
-            textBox9.Margin = new Padding(2, 1, 2, 1);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(86, 23);
-            textBox9.TabIndex = 17;
+            txtLaserRun2.Location = new Point(327, 170);
+            txtLaserRun2.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun2.Name = "txtLaserRun2";
+            txtLaserRun2.Size = new Size(86, 23);
+            txtLaserRun2.TabIndex = 17;
             // 
-            // textBox14
+            // txtLaserRun9
             // 
-            textBox14.Location = new Point(327, 318);
-            textBox14.Margin = new Padding(2, 1, 2, 1);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(86, 23);
-            textBox14.TabIndex = 22;
+            txtLaserRun9.Location = new Point(327, 318);
+            txtLaserRun9.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun9.Name = "txtLaserRun9";
+            txtLaserRun9.Size = new Size(86, 23);
+            txtLaserRun9.TabIndex = 22;
             // 
-            // textBox15
+            // txtLaserRun8
             // 
-            textBox15.Location = new Point(327, 297);
-            textBox15.Margin = new Padding(2, 1, 2, 1);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(86, 23);
-            textBox15.TabIndex = 23;
+            txtLaserRun8.Location = new Point(327, 297);
+            txtLaserRun8.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun8.Name = "txtLaserRun8";
+            txtLaserRun8.Size = new Size(86, 23);
+            txtLaserRun8.TabIndex = 23;
             // 
-            // textBox16
+            // txtLaserRun7
             // 
-            textBox16.Location = new Point(327, 276);
-            textBox16.Margin = new Padding(2, 1, 2, 1);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(86, 23);
-            textBox16.TabIndex = 24;
+            txtLaserRun7.Location = new Point(327, 276);
+            txtLaserRun7.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun7.Name = "txtLaserRun7";
+            txtLaserRun7.Size = new Size(86, 23);
+            txtLaserRun7.TabIndex = 24;
             // 
-            // textBox17
+            // txtLaserRun6
             // 
-            textBox17.Location = new Point(327, 255);
-            textBox17.Margin = new Padding(2, 1, 2, 1);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(86, 23);
-            textBox17.TabIndex = 25;
+            txtLaserRun6.Location = new Point(327, 255);
+            txtLaserRun6.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun6.Name = "txtLaserRun6";
+            txtLaserRun6.Size = new Size(86, 23);
+            txtLaserRun6.TabIndex = 25;
             // 
-            // textBox18
+            // txtLaserRun5
             // 
-            textBox18.Location = new Point(327, 233);
-            textBox18.Margin = new Padding(2, 1, 2, 1);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(86, 23);
-            textBox18.TabIndex = 26;
+            txtLaserRun5.Location = new Point(327, 233);
+            txtLaserRun5.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun5.Name = "txtLaserRun5";
+            txtLaserRun5.Size = new Size(86, 23);
+            txtLaserRun5.TabIndex = 26;
             // 
             // pbBeamStrength
             // 
-            pbBeamStrength.Location = new Point(33, 375);
+            pbBeamStrength.Location = new Point(50, 537);
             pbBeamStrength.Margin = new Padding(2, 1, 2, 1);
             pbBeamStrength.Name = "pbBeamStrength";
             pbBeamStrength.Size = new Size(610, 55);
@@ -259,7 +273,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(-1, 394);
+            label8.Location = new Point(11, 557);
             label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.Size = new Size(17, 15);
@@ -400,32 +414,158 @@
             label5.Location = new Point(234, 126);
             label5.Margin = new Padding(2, 0, 2, 0);
             label5.Name = "label5";
-            label5.Size = new Size(66, 15);
+            label5.Size = new Size(40, 15);
             label5.TabIndex = 6;
-            label5.Text = "Graduation";
+            label5.Text = "RUN 1";
+            // 
+            // txtLaserReading10
+            // 
+            txtLaserReading10.Location = new Point(228, 343);
+            txtLaserReading10.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading10.Name = "txtLaserReading10";
+            txtLaserReading10.Size = new Size(86, 23);
+            txtLaserReading10.TabIndex = 47;
+            // 
+            // txtLaserReading11
+            // 
+            txtLaserReading11.Location = new Point(228, 368);
+            txtLaserReading11.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading11.Name = "txtLaserReading11";
+            txtLaserReading11.Size = new Size(86, 23);
+            txtLaserReading11.TabIndex = 48;
+            // 
+            // txtLaserReading12
+            // 
+            txtLaserReading12.Location = new Point(228, 393);
+            txtLaserReading12.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading12.Name = "txtLaserReading12";
+            txtLaserReading12.Size = new Size(86, 23);
+            txtLaserReading12.TabIndex = 49;
+            // 
+            // txtLaserReading13
+            // 
+            txtLaserReading13.Location = new Point(227, 418);
+            txtLaserReading13.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading13.Name = "txtLaserReading13";
+            txtLaserReading13.Size = new Size(86, 23);
+            txtLaserReading13.TabIndex = 50;
+            // 
+            // txtLaserReading14
+            // 
+            txtLaserReading14.Location = new Point(228, 443);
+            txtLaserReading14.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading14.Name = "txtLaserReading14";
+            txtLaserReading14.Size = new Size(86, 23);
+            txtLaserReading14.TabIndex = 51;
+            // 
+            // txtLaserReading15
+            // 
+            txtLaserReading15.Location = new Point(228, 468);
+            txtLaserReading15.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading15.Name = "txtLaserReading15";
+            txtLaserReading15.Size = new Size(86, 23);
+            txtLaserReading15.TabIndex = 52;
+            // 
+            // txtLaserReading16
+            // 
+            txtLaserReading16.Location = new Point(227, 493);
+            txtLaserReading16.Margin = new Padding(2, 1, 2, 1);
+            txtLaserReading16.Name = "txtLaserReading16";
+            txtLaserReading16.Size = new Size(86, 23);
+            txtLaserReading16.TabIndex = 53;
+            // 
+            // txtLaserRun10
+            // 
+            txtLaserRun10.Location = new Point(326, 343);
+            txtLaserRun10.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun10.Name = "txtLaserRun10";
+            txtLaserRun10.Size = new Size(86, 23);
+            txtLaserRun10.TabIndex = 54;
+            // 
+            // txtLaserRun11
+            // 
+            txtLaserRun11.Location = new Point(327, 368);
+            txtLaserRun11.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun11.Name = "txtLaserRun11";
+            txtLaserRun11.Size = new Size(86, 23);
+            txtLaserRun11.TabIndex = 55;
+            // 
+            // txtLaserRun12
+            // 
+            txtLaserRun12.Location = new Point(326, 393);
+            txtLaserRun12.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun12.Name = "txtLaserRun12";
+            txtLaserRun12.Size = new Size(86, 23);
+            txtLaserRun12.TabIndex = 56;
+            // 
+            // txtLaserRun13
+            // 
+            txtLaserRun13.Location = new Point(326, 418);
+            txtLaserRun13.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun13.Name = "txtLaserRun13";
+            txtLaserRun13.Size = new Size(86, 23);
+            txtLaserRun13.TabIndex = 57;
+            // 
+            // txtLaserRun14
+            // 
+            txtLaserRun14.Location = new Point(327, 443);
+            txtLaserRun14.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun14.Name = "txtLaserRun14";
+            txtLaserRun14.Size = new Size(86, 23);
+            txtLaserRun14.TabIndex = 58;
+            // 
+            // txtLaserRun15
+            // 
+            txtLaserRun15.Location = new Point(326, 468);
+            txtLaserRun15.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun15.Name = "txtLaserRun15";
+            txtLaserRun15.Size = new Size(86, 23);
+            txtLaserRun15.TabIndex = 59;
+            // 
+            // txtLaserRun16
+            // 
+            txtLaserRun16.Location = new Point(326, 493);
+            txtLaserRun16.Margin = new Padding(2, 1, 2, 1);
+            txtLaserRun16.Name = "txtLaserRun16";
+            txtLaserRun16.Size = new Size(86, 23);
+            txtLaserRun16.TabIndex = 60;
             // 
             // frmLaserReadings1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.YellowGreen;
-            ClientSize = new Size(661, 455);
+            ClientSize = new Size(683, 602);
+            Controls.Add(txtLaserRun16);
+            Controls.Add(txtLaserRun15);
+            Controls.Add(txtLaserRun14);
+            Controls.Add(txtLaserRun13);
+            Controls.Add(txtLaserRun12);
+            Controls.Add(txtLaserRun11);
+            Controls.Add(txtLaserRun10);
+            Controls.Add(txtLaserReading16);
+            Controls.Add(txtLaserReading15);
+            Controls.Add(txtLaserReading14);
+            Controls.Add(txtLaserReading13);
+            Controls.Add(txtLaserReading12);
+            Controls.Add(txtLaserReading11);
+            Controls.Add(txtLaserReading10);
             Controls.Add(groupBox1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(pbBeamStrength);
-            Controls.Add(textBox18);
-            Controls.Add(textBox17);
-            Controls.Add(textBox16);
-            Controls.Add(textBox15);
-            Controls.Add(textBox14);
-            Controls.Add(textBox9);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(txtLaserReading19);
-            Controls.Add(textBox5);
+            Controls.Add(txtLaserRun5);
+            Controls.Add(txtLaserRun6);
+            Controls.Add(txtLaserRun7);
+            Controls.Add(txtLaserRun8);
+            Controls.Add(txtLaserRun9);
+            Controls.Add(txtLaserRun2);
+            Controls.Add(txtLaserRun1);
+            Controls.Add(txtLaserRun3);
+            Controls.Add(txtFinalZeroReading);
+            Controls.Add(txtLaserRun4);
             Controls.Add(txtLaserReading0);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -457,16 +597,16 @@
         private Label label6;
         private Label label7;
         private TextBox txtLaserReading0;
-        private TextBox textBox5;
-        private TextBox txtLaserReading19;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
+        private TextBox txtLaserRun4;
+        private TextBox txtFinalZeroReading;
+        private TextBox txtLaserRun3;
+        private TextBox txtLaserRun1;
+        private TextBox txtLaserRun2;
+        private TextBox txtLaserRun9;
+        private TextBox txtLaserRun8;
+        private TextBox txtLaserRun7;
+        private TextBox txtLaserRun6;
+        private TextBox txtLaserRun5;
         private ProgressBar pbBeamStrength;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
@@ -491,5 +631,19 @@
         private TextBox txtLaserReading6;
         private TextBox txtLaserReading5;
         private TextBox txtLaserReading9;
+        private TextBox txtLaserReading10;
+        private TextBox txtLaserReading11;
+        private TextBox txtLaserReading12;
+        private TextBox txtLaserReading13;
+        private TextBox txtLaserReading14;
+        private TextBox txtLaserReading15;
+        private TextBox txtLaserReading16;
+        private TextBox txtLaserRun10;
+        private TextBox txtLaserRun11;
+        private TextBox txtLaserRun12;
+        private TextBox txtLaserRun13;
+        private TextBox txtLaserRun14;
+        private TextBox txtLaserRun15;
+        private TextBox txtLaserRun16;
     }
 }

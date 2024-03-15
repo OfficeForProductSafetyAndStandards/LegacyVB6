@@ -19,6 +19,8 @@ namespace LengthBench
         public frmCustomerDetails()
         {
             InitializeComponent();
+            txtDepartmentNumber.Text = Program.dept;
+            txtReferenceTemperature.Text = Program.temperature.ToString();
         }
 
         private void label9_Click(object sender, EventArgs e)

@@ -24,6 +24,7 @@ namespace LengthBench
         public static int? xlRow;
         public static int[]? ProbeSelected;
         public static int eventtime;
+        public static string? dept;
 
         public static string? NewFileName;
         public static string? NewFileName1;

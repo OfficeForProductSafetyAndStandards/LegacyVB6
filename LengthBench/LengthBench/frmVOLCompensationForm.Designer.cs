@@ -84,7 +84,7 @@
             txtVOL.Location = new Point(6, 127);
             txtVOL.Margin = new Padding(2, 1, 2, 1);
             txtVOL.Name = "txtVOL";
-            txtVOL.Size = new Size(141, 23);
+            txtVOL.Size = new Size(113, 23);
             txtVOL.TabIndex = 3;
             // 
             // lblTemperature

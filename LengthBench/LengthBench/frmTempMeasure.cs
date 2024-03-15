@@ -44,8 +44,16 @@ namespace LengthBench
 
             Program.ProbeCounter++;
 
-            Form frmLaserReadings = new frmLaserReadings1();
-            frmLaserReadings.ShowDialog();
+            if (Program.ProbeCounter == 1)
+            { // only disply once
+                Form frmLaserReadings = new frmLaserReadings1();
+                frmLaserReadings.ShowDialog();
+            }
+
+            if (Program.ProbeCounter == 2)
+            { // final reading
+                this.Close();   
+            }
         }
 
         private void frmTempMeasure_Load(object sender, EventArgs e)
