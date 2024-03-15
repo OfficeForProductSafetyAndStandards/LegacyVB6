@@ -112,9 +112,17 @@ namespace LengthBench
             Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
             Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
             Program.xlbookResults.Save();
-            txtVOL = Program.xlsheetResultsVOLandCustomerData.Cells[13, 2];
+            // txtVOL = Program.xlsheetResultsVOLandCustomerData.Cells[13, 2];
             //place results from humidity and barometric pressure into spreadsheet
             //save the spreadsheet get VOL from calculated value sheet
+            double PressuremmHg = Program.pressure / 1.33322;
+            double F = (1 + (0.003661 * Program.temperature));
+            double s = (3.033 * Math.Pow(10, -3) * Program.humidity * (Math.Exp(0.057627 * Program.temperature)));
+            double n = ((0.3836391 * PressuremmHg) * (1 + (Math.Pow(10, -6) * PressuremmHg * (0.817 - (0.0133 * Program.temperature))))) / F - s;
+            double vol1 = ((Math.Pow(10,12)) / (n + Math.Pow(10,6))) - 999000;
+            double vol = Math.Round(vol1, 2);
+            txtVOL.Text = vol.ToString();
+
         }
     }
 }

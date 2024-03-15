@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LengthBench")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7deb249949f0e9f655239d45ec2708f7d4dae085")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09b396b04c6b6178b1ff131188154de7b6d63cbb")]
 [assembly: System.Reflection.AssemblyProductAttribute("LengthBench")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LengthBench")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
