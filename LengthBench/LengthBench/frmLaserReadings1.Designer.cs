@@ -398,6 +398,7 @@
             txtLaserReading2.Name = "txtLaserReading2";
             txtLaserReading2.Size = new Size(86, 23);
             txtLaserReading2.TabIndex = 39;
+            txtLaserReading2.TextChanged += txtLaserReading2_TextChanged;
             // 
             // txtLaserReading1
             // 

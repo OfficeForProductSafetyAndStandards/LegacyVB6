@@ -72,6 +72,7 @@ namespace LengthBench
                     if (Program.ProbeCounter == 1)
                     {
                         txtLaserReading1.Text = x.ToString();
+
                     }
                     if (Program.ProbeCounter == 2)
                     {
@@ -204,7 +205,7 @@ namespace LengthBench
                         txtLaserReading14.Text = x.ToString();
                     }
                     if (Program.ProbeCounter == 2)
-                    { 
+                    {
                         txtLaserRun14.Text = x.ToString();
                     }
                     break;
@@ -229,7 +230,7 @@ namespace LengthBench
                     }
                     break;
             }
-            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2] = x;
+            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 1+Program.ProbeCounter] = x.ToString();
 
             if (Program.ProbeCounter == 1)
             { // counting forwards
@@ -240,7 +241,7 @@ namespace LengthBench
                 iPts -= 1; // decrement the point number
             }
 
-            if ( iPts > Program.NoOfPoints )
+            if (iPts > Program.NoOfPoints)
             {
                 Form form = new frmTempMeasure();
                 form.Show();
@@ -281,6 +282,11 @@ namespace LengthBench
         }
 
         private void txtLaserReading5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLaserReading2_TextChanged(object sender, EventArgs e)
         {
 
         }
