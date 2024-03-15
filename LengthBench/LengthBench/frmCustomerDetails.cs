@@ -20,7 +20,7 @@ namespace LengthBench
         {
             InitializeComponent();
             txtDepartmentNumber.Text = Program.dept;
-            txtReferenceTemperature.Text = Program.temperature.ToString();
+            txtReferenceTemperature.Text = "20";
         }
 
         private void label9_Click(object sender, EventArgs e)

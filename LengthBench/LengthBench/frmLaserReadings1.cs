@@ -274,6 +274,8 @@ namespace LengthBench
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            Form frmTempMeasure = new frmTempMeasure();
+            frmTempMeasure.ShowDialog();
             // save the results
             Program.xlbookResults.Save();
         }

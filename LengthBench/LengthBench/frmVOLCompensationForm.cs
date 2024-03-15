@@ -108,9 +108,31 @@ namespace LengthBench
         {
             Program.xlsheetResultsVOLandCustomerData.Cells[10, 2] = txtHumidity.Text.ToString();
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = txtBarometer.Text.ToString();
-            Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
-            Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
-            Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
+            try
+            {
+                Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid Temperature");
+            }
+            try
+            {
+                Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a valid Humidity");
+            }
+            try
+            {
+                Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid Barometer Reading");
+            }
+
             Program.xlbookResults.Save();
             // txtVOL = Program.xlsheetResultsVOLandCustomerData.Cells[13, 2];
             //place results from humidity and barometric pressure into spreadsheet

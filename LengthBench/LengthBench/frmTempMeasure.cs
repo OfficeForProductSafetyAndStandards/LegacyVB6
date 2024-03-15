@@ -51,8 +51,13 @@ namespace LengthBench
             }
 
             if (Program.ProbeCounter == 2)
-            { // final reading
+            { // intermediate reading
                 this.Close();   
+            }
+
+            if (Program.ProbeCounter == 3)
+            { // final reading
+                this.Close();
             }
         }
 
