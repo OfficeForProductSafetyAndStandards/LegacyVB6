@@ -119,8 +119,10 @@ namespace LengthBench
             double F = (1 + (0.003661 * Program.temperature));
             double s = (3.033 * Math.Pow(10, -3) * Program.humidity * (Math.Exp(0.057627 * Program.temperature)));
             double n = ((0.3836391 * PressuremmHg) * (1 + (Math.Pow(10, -6) * PressuremmHg * (0.817 - (0.0133 * Program.temperature))))) / F - s;
-            double vol1 = ((Math.Pow(10,12)) / (n + Math.Pow(10,6))) - 999000;
-            double vol = Math.Round(vol1, 2);
+            double vol1 = ((Math.Pow(10, 12)) / (n + Math.Pow(10, 6))); // - 999000;
+            double vol_comp = vol1 / Math.Pow(10, 6);
+            double vol = Math.Round(vol_comp, 15); // TODO ivor james will check
+            Program.laser.setParameter(LaserParameters.OP_ALLCOMP, vol);
             txtVOL.Text = vol.ToString();
 
         }
