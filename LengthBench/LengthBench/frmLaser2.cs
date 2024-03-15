@@ -27,7 +27,7 @@ namespace LengthBench
             Program.xlbookResults.SaveAs(Program.NewFileName);
             Program.xlsheetResultsMeasurement.Cells[26, 5] = Program.metrologist;
             Program.NewFileName1 = textBox1.Text;
-            Program.xlsheetResultsMeasurement.Cells[12, 2] = Program.NewFileName1;
+            // Program.xlsheetResultsVOLandCustomerData.Cells[12, 2] = Program.NewFileName1;
 
             Form frmMeasurementSelection = new frmMeasurementSelection();
             frmMeasurementSelection.ShowDialog();
