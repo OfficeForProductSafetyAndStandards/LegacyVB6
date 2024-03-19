@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.Media.Capture;
 
 namespace LengthBench
 {
@@ -19,6 +20,7 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
                 Program.xlsheetResultsTemperatureUncorrected.Cells[2, 3 + Program.ProbeCounter] = txtManual1.Text;
                 Program.xlsheetResultsTemperatureUncorrected.Cells[3, 3 + Program.ProbeCounter] = txtManual2.Text;
                 Program.xlsheetResultsTemperatureUncorrected.Cells[4, 3 + Program.ProbeCounter] = txtManual3.Text;
@@ -42,28 +44,54 @@ namespace LengthBench
                 Program.xlsheetResultsTemperature.Cells[11, 3 + Program.ProbeCounter] = txtManual20.Text;
                 Program.xlbookResults.Save();
 
-            Program.ProbeCounter++;
+            
 
-            if (Program.ProbeCounter == 1)
-            { // only disply once
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
+            {
+                // Program.ProbeCounter++;
                 Form frmLaserReadings = new frmLaserReadings1();
                 frmLaserReadings.ShowDialog();
             }
 
-            if (Program.ProbeCounter == 2)
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
             { // intermediate reading
-                this.Close();   
+              // Program.ProbeCounter++;
+                this.Close();
+              //  return;
             }
 
-            if (Program.ProbeCounter == 3)
-            { // final reading
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.FINAL)
+            { // final reading - should close entire app
                 this.Close();
             }
-        }
+
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
+            { // edale reading
+
+                Program.ProbeCounter++;
+                this.Close();
+            }
+
+
+            }
 
         private void frmTempMeasure_Load(object sender, EventArgs e)
         {
-
+            switch (Program.ProbeCounter)
+            {
+                case (int)Program.CONSTANTS.EDALE:
+                    this.Text = "Edale Temperature Dialog";
+                    break;
+                case (int)Program.CONSTANTS.INITIAL:
+                    this.Text = "Initial Temperature Dialog";
+                    break;
+                case (int)Program.CONSTANTS.INTERMEDIATE:
+                    this.Text = "Intermediate Temperatur Dialog";
+                    break;
+                case (int)Program.CONSTANTS.FINAL:
+                    this.Text = "Final Temperature Dialog";
+                    break;
+            }
 
             
         }

@@ -91,7 +91,7 @@ NewFileName = InputBox("What File for saving results, use Department No for simp
 xlsheetResultsVOLandCustomerData.Cells(2, 2) = NewFileName
 Datestring = Format(Date, "dd mmm yyyy")
 Timestring = Format(Time(), "hh-mm")
-NewFileName = "S:\mqu\Length Results\Flexi\" & NewFileName & " " & Datestring & " " & Timestring
+NewFileName = "c:\metrology\@private\@mu\Length Results\Flexi\" & NewFileName & " " & Datestring & " " & Timestring
 'Using Department No add time and date to make this set of results unique
 xlbookResults.SaveAs (NewFileName)
 xlsheetResultsMeasurement.Cells(26, 5) = cboMetrologist.Text

@@ -28,7 +28,7 @@ namespace LengthBench
             catch (Exception ex)
             {
                 MessageBox.Show("Please enter a valid number");
-            }   
+            }
 
             Program.xlsheetResultsVOLandCustomerData.Cells[10, 2] = Program.humidity;
         }
@@ -55,7 +55,7 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Program.Hygrometer = "IB5269";
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace LengthBench
             catch (Exception ex)
             {
                 MessageBox.Show("Please enter a valid number");
-            }   
+            }
 
             Program.xlsheetResultsVOLandCustomerData.Cells[9, 2] = Program.temperature;
         }
@@ -87,13 +87,13 @@ namespace LengthBench
         private void txtBarometer_TextChanged(object sender, EventArgs e)
         {
             try
-            { 
+            {
                 Program.pressure = Convert.ToDouble(txtBarometer.Text);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Please enter a valid number");
-            }       
+            }
 
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = Program.pressure;
 
@@ -110,7 +110,10 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = txtBarometer.Text.ToString();
             try
             {
-                Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
+                if (Program.LaserFound == true)
+                {
+                    Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
+                }
             }
             catch (Exception ex)
             {
@@ -118,7 +121,10 @@ namespace LengthBench
             }
             try
             {
-                Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
+                if (Program.LaserFound == true)
+                {
+                    Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
+                }
             }
             catch (Exception ex)
             {
@@ -126,7 +132,10 @@ namespace LengthBench
             }
             try
             {
-                Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
+                if (Program.LaserFound == true)
+                {
+                    Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
+                }
             }
             catch
             {
@@ -144,10 +153,59 @@ namespace LengthBench
             double vol1 = ((Math.Pow(10, 12)) / (n + Math.Pow(10, 6))); // - 999000;
             double vol_comp = vol1 / Math.Pow(10, 6);
             double vol = Math.Round(vol_comp, 15); // TODO ivor james will check
-            Program.laser.setParameter(LaserParameters.OP_ALLCOMP, vol);
-            txtVOL.Text = vol.ToString();
+            if (Program.LaserFound == true)
+            {
+                Program.laser.setParameter(LaserParameters.OP_ALLCOMP, vol);
+                txtVOL.Text = vol.ToString();
+            }
 
         }
+
+        private void cmdTakeTemperature_Click(object sender, EventArgs e)
+        {
+            Program.ProbeCounter = (int)Program.CONSTANTS.EDALE;
+            Program.Thermometer = "Edale";
+            Program.xlsheetResultsMeasurement.Cells[24, 2] = "Edale";
+        Form frmEdaleTempMeasure = new frmTempMeasure();
+            frmEdaleTempMeasure.Show();
+        }
+
+        private void cmdTinsley_Click(object sender, EventArgs e)
+        {
+            Program.Thermometer = "Tinsley";
+            Program.xlsheetResultsMeasurement.Cells[24, 2] = "Tinsley";
+        }
+
+        private void cmdIB5211_Click(object sender, EventArgs e)
+        {
+            Program.Barometer = "IB211";
+            Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5211";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Program.Barometer = "IB5276";
+            Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5276";
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Program.Barometer = "IB5277";
+            Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5277";
+        }
+
+        private void cmdIB5270_Click(object sender, EventArgs e)
+        {
+            Program.Hygrometer = "IB5270";
+            Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5270";
+        }
+
+        private void cmdIB5271_Click(object sender, EventArgs e)
+        {
+            Program.Hygrometer = "IB5271";
+            Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5276";
+        }
+    }
     }
 }
 

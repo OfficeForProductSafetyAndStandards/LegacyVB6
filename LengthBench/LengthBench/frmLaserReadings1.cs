@@ -17,16 +17,23 @@ namespace LengthBench
         private int iPts = 0;
         private void timer_Tick(object sender, EventArgs e)
         {
-            var x = Program.laser.ReadBeamStrength() * 100;
-            pbBeamStrength.Value = (int)x;
-
-            // stub for now use timer to generate a random number
-            //Random Random = new Random();
-            //decimal x = Random.Next(0, 100);
-            //decimal y = Random.Next(0, 100);
-            var y = Program.laser.ReadSample();
-            label2.Text = y.ToString();
-            pbBeamStrength.Value = (int)x;
+            if (Program.LaserFound == true)
+            {
+                var x = Program.laser.ReadBeamStrength() * 100;
+                pbBeamStrength.Value = (int)x;
+                var y = Program.laser.ReadSample();
+                label2.Text = y.ToString();
+                pbBeamStrength.Value = (int)x;
+            }
+            else
+            {
+                // stub for now use timer to generate a random number
+                Random Random = new Random();
+                decimal x = Random.Next(0, 100);
+                decimal y = Random.Next(0, 100);
+                label2.Text = y.ToString();
+                pbBeamStrength.Value = (int)x;
+            }
 
         }
         public frmLaserReadings1()
@@ -52,179 +59,187 @@ namespace LengthBench
             {
                 return;
             }
-            // stub for now use timer to generate a random number var x = Program.laser.ReadSample();
+           
             Random Random = new Random();
-            //decimal x = Random.Next(0, 100);
-            double x = Program.laser.ReadSample();
+            double x = 0;
+            if (Program.LaserFound)
+            {
+                x = Program.laser.ReadSample();
+            }
+            else
+            { 
+                x = Random.Next(0, 100);
+            }
+
             switch (iPts)
             {
                 case 0:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading0.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtFinalZeroReading.Text = x.ToString();
-                    }
+                    }   
                     break;
                 case 1:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading1.Text = x.ToString();
 
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun1.Text = x.ToString();
                     }
                     break;
                 case 2:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading2.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun2.Text = x.ToString();
                     }
                     break;
                 case 3:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading3.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun3.Text = x.ToString();
                     }
                     break;
                 case 4:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading4.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun4.Text = x.ToString();
                     }
                     break;
                 case 5:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading5.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun5.Text = x.ToString();
                     }
                     break;
                 case 6:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading6.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun6.Text = x.ToString();
                     }
                     break;
                 case 7:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading7.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun7.Text = x.ToString();
                     }
                     break;
                 case 8:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading8.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun8.Text = x.ToString();
                     }
                     break;
                 case 9:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading9.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun9.Text = x.ToString();
                     }
                     break;
                 case 10:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading10.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun10.Text = x.ToString();
                     }
                     break;
                 case 11:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading11.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun11.Text = x.ToString();
                     }
                     break;
                 case 12:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading12.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun12.Text = x.ToString();
                     }
                     break;
                 case 13:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading13.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun13.Text = x.ToString();
                     }
                     break;
                 case 14:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading14.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun14.Text = x.ToString();
                     }
                     break;
                 case 15:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading15.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun15.Text = x.ToString();
                     }
                     break;
                 case 16:
-                    if (Program.ProbeCounter == 1)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
                     {
                         txtLaserReading16.Text = x.ToString();
                     }
-                    if (Program.ProbeCounter == 2)
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtLaserRun16.Text = x.ToString();
                     }
@@ -232,17 +247,18 @@ namespace LengthBench
             }
             Program.xlsheetResultsMeasurement.Cells[iPts + 3, 1+Program.ProbeCounter] = x.ToString();
 
-            if (Program.ProbeCounter == 1)
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             { // counting forwards
                 iPts += 1; // increment the point number
             }
-            if (Program.ProbeCounter == 2)
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
             { // counting backwards
                 iPts -= 1; // decrement the point number
             }
 
             if (iPts > Program.NoOfPoints)
             {
+                Program.ProbeCounter++;
                 Form form = new frmTempMeasure();
                 form.Show();
                 iPts--;
@@ -275,6 +291,7 @@ namespace LengthBench
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            Program.ProbeCounter++;
             Form frmTempMeasure = new frmTempMeasure();
             frmTempMeasure.ShowDialog();
             // save the results

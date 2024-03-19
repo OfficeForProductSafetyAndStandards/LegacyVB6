@@ -164,6 +164,7 @@
             fraComposite.TabIndex = 6;
             fraComposite.TabStop = false;
             fraComposite.Text = "Composite";
+            fraComposite.Enter += fraComposite_Enter;
             // 
             // optNo
             // 

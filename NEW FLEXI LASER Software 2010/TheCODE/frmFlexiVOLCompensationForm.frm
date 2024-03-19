@@ -537,7 +537,7 @@ Debug.Print dbVol
     
     
     xlbookResults.Save
-    txtVOL = xlsheetResultsVOLandCustomerData.Cells(13, 2)
+    'txtVOL = xlsheetResultsVOLandCustomerData.Cells(13, 2)
     cmdClose.Enabled = True
     'place results from humidity and barometric pressure into spreadsheet
     'save the spreadsheet get VOL from calculated value sheet

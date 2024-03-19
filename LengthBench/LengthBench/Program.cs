@@ -1,15 +1,30 @@
+using Windows.UI.WebUI;
+
 namespace LengthBench
 {
     public static class Program
 
     {
-        private const string V = "Excel.Appication";
+
+    public enum CONSTANTS
+    {
+        EDALE=-1,
+        INITIAL=0,
+        INTERMEDIATE=1,
+        FINAL=2
+    }
+
+    private const string V = "Excel.Appication";
         public static string TypeOfThermometer = "";
+        public static string Thermometer = "";
+        public static string Barometer = "";
+        public static string Hygrometer = "";
+
         public static int NoOfPoints;
         public static int Rownumber;
         public static int LaserTestSetNo;
         public static int ProbeCounter;
-
+        public static bool LaserFound;
 
         public static Microsoft.Office.Interop.Excel._Workbook? xlbookResults;
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResults;
@@ -54,6 +69,7 @@ namespace LengthBench
 
             if (laser.readDeviceCnt() == 1)
             {
+                Program.LaserFound = true;
                 laser.setDevice();
                 Console.WriteLine("Found 1 laser E5135 module, blinking LED ....\r\n");
                 laser.blink();
@@ -96,6 +112,7 @@ namespace LengthBench
             }
             else
             {
+                Program.LaserFound = false;
                 Console.WriteLine("No laser E1735 module found, please check the connection and try again\n");
                 Console.WriteLine("Press any key to exit\n");
                 Form frm = new Nolaserfound();

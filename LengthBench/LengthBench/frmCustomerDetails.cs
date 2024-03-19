@@ -53,8 +53,17 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[6, 2] = comboBox1.Text;
             Program.xlsheetResultsVOLandCustomerData.Cells[7, 2] = txtReferenceTemperature.Text;
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 2] = dateTimePicker1.Text;
+            int y=0;
 
-            int y = Convert.ToInt32(txtNumberOfPoints.Text);
+            try
+            {
+                y = Convert.ToInt32(txtNumberOfPoints.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please enter a number of points");
+                return;
+            }
             y = y + 4;
 
             for (int x = 4; x < y; x++)

@@ -93,5 +93,10 @@ namespace LengthBench
 
             Program.xlsheetResultsMeasurement.Cells[27, 5] = "No";
         }
+
+        private void fraComposite_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

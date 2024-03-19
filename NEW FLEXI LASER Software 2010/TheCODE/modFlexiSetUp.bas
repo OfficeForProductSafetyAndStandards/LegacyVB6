@@ -32,7 +32,7 @@ Err.Clear                   'Clear Err object in case error occurred.
 On Error GoTo 0             'Resume normal error processing
 
 'Set xlbook = xl.Workbooks.Open("\\PDC\Metrology\@Private\@MU\Edale Correction.xls", , True)
-Set xlbook = xl.Workbooks.Open("\\TRENT\Metrology\@Private\@MU\Edale Correction.xls", , True)
+Set xlbook = xl.Workbooks.Open("c:\Metrology\@Private\@MU\Edale Correction.xls", , True)
 'This is the location of the read only Edale Corrections sheet
 End Sub
 Sub Setup_For_Test()
@@ -44,7 +44,7 @@ End If
 Err.Clear                   'Clear Err object in case error occurred.
 On Error GoTo 0             'Resume normal error processing
 'Set xlbookResults = xl.Workbooks.Open("\\PDC\Metrology\@Private\@MU\Length Bench Results Flexi.xls", , , , , , True)
-Set xlbookResults = xl.Workbooks.Open("\\TRENT\Metrology\@Private\@MU\Length Bench Results Flexi.xls", , , , , , True)
+Set xlbookResults = xl.Workbooks.Open("c:\Metrology\@Private\@MU\Length Bench Results Flexi.xls", , , , , , True)
 'This is the location of the Read-only version of the Flexi length results sheet
 Set xlsheetResultsTemperature = xlbookResults.Sheets("Temperature Results")
 Set xlsheetResultsMeasurement = xlbookResults.Sheets("Measurement Results")
