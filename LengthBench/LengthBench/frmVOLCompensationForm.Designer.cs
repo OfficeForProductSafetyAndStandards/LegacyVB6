@@ -54,7 +54,7 @@
             // 
             // txtTemperature
             // 
-            txtTemperature.Location = new Point(11, 47);
+            txtTemperature.Location = new Point(13, 55);
             txtTemperature.Margin = new Padding(4, 2, 4, 2);
             txtTemperature.Name = "txtTemperature";
             txtTemperature.Size = new Size(206, 39);
@@ -63,7 +63,7 @@
             // 
             // txtHumidity
             // 
-            txtHumidity.Location = new Point(11, 192);
+            txtHumidity.Location = new Point(11, 241);
             txtHumidity.Margin = new Padding(4, 2, 4, 2);
             txtHumidity.Name = "txtHumidity";
             txtHumidity.Size = new Size(206, 39);
@@ -72,7 +72,7 @@
             // 
             // txtBarometer
             // 
-            txtBarometer.Location = new Point(11, 111);
+            txtBarometer.Location = new Point(22, 175);
             txtBarometer.Margin = new Padding(4, 2, 4, 2);
             txtBarometer.Name = "txtBarometer";
             txtBarometer.Size = new Size(206, 39);
@@ -81,7 +81,7 @@
             // 
             // txtVOL
             // 
-            txtVOL.Location = new Point(11, 271);
+            txtVOL.Location = new Point(13, 354);
             txtVOL.Margin = new Padding(4, 2, 4, 2);
             txtVOL.Name = "txtVOL";
             txtVOL.Size = new Size(206, 39);

@@ -206,6 +206,5 @@ namespace LengthBench
             Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5276";
         }
     }
-    }
 }
 
