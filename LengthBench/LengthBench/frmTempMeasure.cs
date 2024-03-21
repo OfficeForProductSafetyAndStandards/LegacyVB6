@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.Media.Capture;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LengthBench
 {
@@ -18,9 +19,188 @@ namespace LengthBench
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void CorrectEdale(int NoOfProbes)
         {
+            string []txtManualEdale = new string[10];
+
+            // convert vb to csharp
+            for (int ProbeCounter = 0; ProbeCounter < NoOfProbes; ProbeCounter++)
+            {
+                switch (ProbeCounter)
+                {
+                    case 0:
+                        if (checkBox1.Checked == true && txtManual1.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual1.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual1.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual1.Text) - Math.Round(Convert.ToDouble(txtManual1.Text));
+                            txtManual11.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 1:
+                        if (checkBox2.Checked == true && txtManual2.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual2.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual2.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual2.Text) - Math.Round(Convert.ToDouble(txtManual2.Text));
+                            txtManual12.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 2:
+                        if (checkBox3.Checked == true && txtManual3.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual3.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual3.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual3.Text) - Math.Round(Convert.ToDouble(txtManual3.Text));
+                            txtManual13.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 3:
+                        if (checkBox4.Checked == true && txtManual4.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 3, Program.Rownumber] = Convert.ToDouble(txtManual4.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual4.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual4.Text) - Math.Round(Convert.ToDouble(txtManual4.Text));
+                            txtManual14.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 4:
+                        if (checkBox5.Checked == true && txtManual5.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual5.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual5.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual5.Text) - Math.Round(Convert.ToDouble(txtManual5.Text));
+                            txtManual15.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 5:
+                        if (checkBox6.Checked == true && txtManual6.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual6.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual6.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual6.Text) - Math.Round(Convert.ToDouble(txtManual6.Text));
+                            txtManual16.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 6:
+                        if (checkBox7.Checked == true && txtManual7.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual7.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual7.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual7.Text) - Math.Round(Convert.ToDouble(txtManual7.Text));
+                            txtManual17.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 7:
+                        if (checkBox8.Checked == true && txtManual8.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual8.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual8.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual8.Text) - Math.Round(Convert.ToDouble(txtManual8.Text));
+                            txtManual18.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 8:
+                        if (checkBox9.Checked == true && txtManual9.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual9.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual9.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual9.Text) - Math.Round(Convert.ToDouble(txtManual9.Text));
+                            txtManual19.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+                    case 9:
+                        if (checkBox10.Checked == true && txtManual10.Text != "")
+                        {
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual10.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual10.Text);
+                            Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+                            double x = Convert.ToDouble(txtManual10.Text) - Math.Round(Convert.ToDouble(txtManual10.Text));
+                            txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                        }
+                        break;
+
+                }
+            }
+        }
+
+            /*
+            for ProbeCounter = 0 To(NoOfProbes - 1) 'takes one from NoOfProbes as text boxes start from zero
+            If Check1(ProbeCounter +1).Value = 1 And txtManualEdale(ProbeCounter).Text >= 0 Then
+            'If checkboxes from 1 onwards clicked and value in text box is greater or equal to 18 then
+                xlsheetResultsTemperatureUncorrected.Cells(ProbeCounter + 2, Rownumber) = _
+                Val(txtManualEdale(ProbeCounter))
+                xlsheet.Cells(22, 2) = Val(txtManualEdale(ProbeCounter)) 'puts value from text boxes into excel sheet
+                xlsheet.Cells(22, 3) = Val(ProbeCounter + 3) 'places probenumber in excel for comparison
+                txtManualEdale(ProbeCounter + 12).Text = Round(xlsheet.Cells(22, 4), 2)
+            Else
+            End If
+        'Place uncorrected results into uncorrected results sheet then place result into
+        'the Edale correction sheet along with the pribe number then retreive the corrected
+        'results into the corrected results sheet
+            If txtManualEdale(ProbeCounter +12) < 18 Then
+            shapeRed(ProbeCounter).FillColor = vbBlue
+            ElseIf txtManualEdale(ProbeCounter +12) > 22 Then
+            shapeRed(ProbeCounter).FillColor = vbRed
+            Else
+            shapeRed(ProbeCounter).FillColor = vbGreen
+            End If
+            If Check1(ProbeCounter +1).Value = 1 Then
+            shapeRed(ProbeCounter).Visible = True
+            Else
+            shapeRed(ProbeCounter).Visible = False
+            End If
+            Next ProbeCounter
+        'Display appropriate coloured dot in accordance with what ever temperature the
+        'correction has shown up
+        On Error GoTo 0
+        Refresh
+         */
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            string Thermometer;
+
+            bool []ProbesSelected = new bool[10];
+
+            for (int probeCounter = 0; probeCounter < 10; probeCounter++)
+            { // convert vb to csharp
+                if (checkBox1.Checked == true)
+                {
+                    ProbesSelected[probeCounter] = true;
+                }
+                else
+                {
+                    ProbesSelected[probeCounter] = false;
+                }
+
+                // If the check box is ticked make ProbesSelected(Probecounter) = 1
+                // signifying that this is selected
+            }
             
+                Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
+                CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
+
+
+                /*
+                    if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
+                        lblTemperatureOk.Visible = True 'make these 3 buttons visible
+                        cmdResultsNotOk.Visible = True
+                        cmdResultsOk.Visible = True
+                    */
+
+
+
                 Program.xlsheetResultsTemperatureUncorrected.Cells[2, 3 + Program.ProbeCounter] = txtManual1.Text;
                 Program.xlsheetResultsTemperatureUncorrected.Cells[3, 3 + Program.ProbeCounter] = txtManual2.Text;
                 Program.xlsheetResultsTemperatureUncorrected.Cells[4, 3 + Program.ProbeCounter] = txtManual3.Text;
@@ -69,7 +249,7 @@ namespace LengthBench
             { // edale reading
 
                 Program.ProbeCounter++;
-                this.Close();
+                // this.Close();
             }
 
 
@@ -80,7 +260,7 @@ namespace LengthBench
             switch (Program.ProbeCounter)
             {
                 case (int)Program.CONSTANTS.EDALE:
-                    this.Text = "Edale Temperature Dialog";
+                    this.Text = "VOL Temperature Dialog";
                     break;
                 case (int)Program.CONSTANTS.INITIAL:
                     this.Text = "Initial Temperature Dialog";

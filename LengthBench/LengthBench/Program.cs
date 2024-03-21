@@ -26,6 +26,7 @@ namespace LengthBench
         public static int ProbeCounter;
         public static bool LaserFound;
 
+        public static Microsoft.Office.Interop.Excel._Workbook? xlCorrectionBook;
         public static Microsoft.Office.Interop.Excel._Workbook? xlbookResults;
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResults;
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperature;
@@ -34,6 +35,7 @@ namespace LengthBench
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperatureUncorrected;
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheet;
         public static Microsoft.Office.Interop.Excel.Application? xl;
+
 
 
         public static int? xlRow;
@@ -142,6 +144,7 @@ namespace LengthBench
             excelAppEdale.Visible = false;
             filename = "c:\\temp\\Edale.xlsx";
             Microsoft.Office.Interop.Excel._Workbook workbook = excelAppEdale.Workbooks.Open(filename, false);
+            Program.xlCorrectionBook = workbook;
 
             Microsoft.Office.Interop.Excel.Application excelAppLength = new Microsoft.Office.Interop.Excel.Application();
             excelAppLength.Visible = false;
