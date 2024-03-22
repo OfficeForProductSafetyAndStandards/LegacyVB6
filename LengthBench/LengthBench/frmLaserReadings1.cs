@@ -245,7 +245,7 @@ namespace LengthBench
                     }
                     break;
             }
-            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 1+Program.ProbeCounter] = x.ToString();
+            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2+Program.ProbeCounter] = x.ToString();
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             { // counting forwards

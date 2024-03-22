@@ -134,39 +134,6 @@ namespace LengthBench
             }
         }
 
-            /*
-            for ProbeCounter = 0 To(NoOfProbes - 1) 'takes one from NoOfProbes as text boxes start from zero
-            If Check1(ProbeCounter +1).Value = 1 And txtManualEdale(ProbeCounter).Text >= 0 Then
-            'If checkboxes from 1 onwards clicked and value in text box is greater or equal to 18 then
-                xlsheetResultsTemperatureUncorrected.Cells(ProbeCounter + 2, Rownumber) = _
-                Val(txtManualEdale(ProbeCounter))
-                xlsheet.Cells(22, 2) = Val(txtManualEdale(ProbeCounter)) 'puts value from text boxes into excel sheet
-                xlsheet.Cells(22, 3) = Val(ProbeCounter + 3) 'places probenumber in excel for comparison
-                txtManualEdale(ProbeCounter + 12).Text = Round(xlsheet.Cells(22, 4), 2)
-            Else
-            End If
-        'Place uncorrected results into uncorrected results sheet then place result into
-        'the Edale correction sheet along with the pribe number then retreive the corrected
-        'results into the corrected results sheet
-            If txtManualEdale(ProbeCounter +12) < 18 Then
-            shapeRed(ProbeCounter).FillColor = vbBlue
-            ElseIf txtManualEdale(ProbeCounter +12) > 22 Then
-            shapeRed(ProbeCounter).FillColor = vbRed
-            Else
-            shapeRed(ProbeCounter).FillColor = vbGreen
-            End If
-            If Check1(ProbeCounter +1).Value = 1 Then
-            shapeRed(ProbeCounter).Visible = True
-            Else
-            shapeRed(ProbeCounter).Visible = False
-            End If
-            Next ProbeCounter
-        'Display appropriate coloured dot in accordance with what ever temperature the
-        'correction has shown up
-        On Error GoTo 0
-        Refresh
-         */
-
         public void button1_Click(object sender, EventArgs e)
         {
             string Thermometer;
