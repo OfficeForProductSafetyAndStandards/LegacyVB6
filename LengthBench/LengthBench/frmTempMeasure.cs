@@ -196,8 +196,8 @@ namespace LengthBench
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             {
                 // Program.ProbeCounter++;
-                Form frmLaserReadings = new frmLaserReadings1();
-                frmLaserReadings.ShowDialog();
+                // Form frmLaserReadings = new frmLaserReadings1();
+                // frmLaserReadings.ShowDialog();
             }
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
@@ -215,7 +215,7 @@ namespace LengthBench
             if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
             { // edale reading
 
-                Program.ProbeCounter++;
+                // Program.ProbeCounter++;
                 // this.Close();
             }
 
@@ -233,7 +233,7 @@ namespace LengthBench
                     this.Text = "Initial Temperature Dialog";
                     break;
                 case (int)Program.CONSTANTS.INTERMEDIATE:
-                    this.Text = "Intermediate Temperatur Dialog";
+                    this.Text = "Intermediate Temperature Dialog";
                     break;
                 case (int)Program.CONSTANTS.FINAL:
                     this.Text = "Final Temperature Dialog";
@@ -247,6 +247,20 @@ namespace LengthBench
         {
             Program.xlbookResults.Save();
             this.Close();
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
+            {
+                Program.ProbeCounter++;
+                return;
+            }
+            
+
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
+            {
+                Form frmLaserReadings = new frmLaserReadings1();
+                frmLaserReadings.ShowDialog();
+            }
+          
         }
     }
 }
+   
