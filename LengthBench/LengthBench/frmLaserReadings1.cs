@@ -296,6 +296,8 @@ namespace LengthBench
             frmTempMeasure.ShowDialog();
             // save the results
             Program.xlbookResults.Save();
+            // thats all folks
+            Application.Exit();
         }
 
         private void txtLaserReading5_TextChanged(object sender, EventArgs e)

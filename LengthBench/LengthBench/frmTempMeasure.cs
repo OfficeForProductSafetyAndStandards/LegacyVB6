@@ -22,7 +22,7 @@ namespace LengthBench
 
         private void CorrectEdale(int NoOfProbes)
         {
-            string []txtManualEdale = new string[10];
+            string[] txtManualEdale = new string[10];
 
             // convert vb to csharp
             for (int ProbeCounter = 0; ProbeCounter < NoOfProbes; ProbeCounter++)
@@ -138,7 +138,7 @@ namespace LengthBench
         {
             string Thermometer;
 
-            bool []ProbesSelected = new bool[10];
+            bool[] ProbesSelected = new bool[10];
 
             for (int probeCounter = 0; probeCounter < 10; probeCounter++)
             { // convert vb to csharp
@@ -154,44 +154,44 @@ namespace LengthBench
                 // If the check box is ticked make ProbesSelected(Probecounter) = 1
                 // signifying that this is selected
             }
-            
-                Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
-                CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
+
+            Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
+            CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
 
 
-                /*
-                    if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
-                        lblTemperatureOk.Visible = True 'make these 3 buttons visible
-                        cmdResultsNotOk.Visible = True
-                        cmdResultsOk.Visible = True
-                    */
+            /*
+                if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
+                    lblTemperatureOk.Visible = True 'make these 3 buttons visible
+                    cmdResultsNotOk.Visible = True
+                    cmdResultsOk.Visible = True
+                */
 
 
 
-                Program.xlsheetResultsTemperatureUncorrected.Cells[2, 3 + Program.ProbeCounter] = txtManual1.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[3, 3 + Program.ProbeCounter] = txtManual2.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[4, 3 + Program.ProbeCounter] = txtManual3.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[5, 3 + Program.ProbeCounter] = txtManual4.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[6, 3 + Program.ProbeCounter] = txtManual5.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[7, 3 + Program.ProbeCounter] = txtManual6.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[8, 3 + Program.ProbeCounter] = txtManual7.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[9, 3 + Program.ProbeCounter] = txtManual8.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[10, 3 + Program.ProbeCounter] = txtManual9.Text;
-                Program.xlsheetResultsTemperatureUncorrected.Cells[11, 3 + Program.ProbeCounter] = txtManual10.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[2, 3 + Program.ProbeCounter] = txtManual1.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[3, 3 + Program.ProbeCounter] = txtManual2.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[4, 3 + Program.ProbeCounter] = txtManual3.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[5, 3 + Program.ProbeCounter] = txtManual4.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[6, 3 + Program.ProbeCounter] = txtManual5.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[7, 3 + Program.ProbeCounter] = txtManual6.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[8, 3 + Program.ProbeCounter] = txtManual7.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[9, 3 + Program.ProbeCounter] = txtManual8.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[10, 3 + Program.ProbeCounter] = txtManual9.Text;
+            Program.xlsheetResultsTemperatureUncorrected.Cells[11, 3 + Program.ProbeCounter] = txtManual10.Text;
 
-                Program.xlsheetResultsTemperature.Cells[2, 3 + Program.ProbeCounter] = txtManual11.Text;
-                Program.xlsheetResultsTemperature.Cells[3, 3 + Program.ProbeCounter] = txtManual12.Text;
-                Program.xlsheetResultsTemperature.Cells[4, 3 + Program.ProbeCounter] = txtManual13.Text;
-                Program.xlsheetResultsTemperature.Cells[5, 3 + Program.ProbeCounter] = txtManual14.Text;
-                Program.xlsheetResultsTemperature.Cells[6, 3 + Program.ProbeCounter] = txtManual15.Text;
-                Program.xlsheetResultsTemperature.Cells[7, 3 + Program.ProbeCounter] = txtManual16.Text;
-                Program.xlsheetResultsTemperature.Cells[8, 3 + Program.ProbeCounter] = txtManual17.Text;
-                Program.xlsheetResultsTemperature.Cells[9, 3 + Program.ProbeCounter] = txtManual18.Text;
-                Program.xlsheetResultsTemperature.Cells[10, 3 + Program.ProbeCounter] = txtManual19.Text;
-                Program.xlsheetResultsTemperature.Cells[11, 3 + Program.ProbeCounter] = txtManual20.Text;
-                Program.xlbookResults.Save();
+            Program.xlsheetResultsTemperature.Cells[2, 3 + Program.ProbeCounter] = txtManual11.Text;
+            Program.xlsheetResultsTemperature.Cells[3, 3 + Program.ProbeCounter] = txtManual12.Text;
+            Program.xlsheetResultsTemperature.Cells[4, 3 + Program.ProbeCounter] = txtManual13.Text;
+            Program.xlsheetResultsTemperature.Cells[5, 3 + Program.ProbeCounter] = txtManual14.Text;
+            Program.xlsheetResultsTemperature.Cells[6, 3 + Program.ProbeCounter] = txtManual15.Text;
+            Program.xlsheetResultsTemperature.Cells[7, 3 + Program.ProbeCounter] = txtManual16.Text;
+            Program.xlsheetResultsTemperature.Cells[8, 3 + Program.ProbeCounter] = txtManual17.Text;
+            Program.xlsheetResultsTemperature.Cells[9, 3 + Program.ProbeCounter] = txtManual18.Text;
+            Program.xlsheetResultsTemperature.Cells[10, 3 + Program.ProbeCounter] = txtManual19.Text;
+            Program.xlsheetResultsTemperature.Cells[11, 3 + Program.ProbeCounter] = txtManual20.Text;
+            // Program.xlbookResults.Save();
 
-            
+
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             {
@@ -204,7 +204,7 @@ namespace LengthBench
             { // intermediate reading
               // Program.ProbeCounter++;
                 this.Close();
-              //  return;
+                //  return;
             }
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.FINAL)
@@ -220,7 +220,7 @@ namespace LengthBench
             }
 
 
-            }
+        }
 
         private void frmTempMeasure_Load(object sender, EventArgs e)
         {
@@ -240,7 +240,13 @@ namespace LengthBench
                     break;
             }
 
-            
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Program.xlbookResults.Save();
+            this.Close();
         }
     }
 }

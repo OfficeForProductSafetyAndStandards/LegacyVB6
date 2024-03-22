@@ -21,7 +21,7 @@ namespace LengthBench
         {
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
             Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
-            string Datestring = DateTime.Now.ToString("dd mmm yyyy");
+            string Datestring = DateTime.Now.ToString("dd MMM yyyy");
             string Timestring = DateTime.UtcNow.ToString("hh-mm");
             Program.NewFileName = "c:\\metrology\\@private\\@mu\\Length Results\\Flexi\\" + Program.NewFileName + ' ' + Datestring + ' ' + Timestring;
             Program.xlbookResults.SaveAs(Program.NewFileName);

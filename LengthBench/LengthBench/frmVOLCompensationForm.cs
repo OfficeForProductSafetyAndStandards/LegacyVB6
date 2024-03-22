@@ -60,6 +60,8 @@ namespace LengthBench
 
         private void cmdClose_Click(object sender, EventArgs e)
         {
+            // save off the humidity and barometric pressure values
+            Program.xlbookResults?.Save();
             Form frmCustomerDetails = new frmCustomerDetails();
             frmCustomerDetails.Show();
         }
@@ -162,11 +164,13 @@ namespace LengthBench
         }
 
         private void cmdTakeTemperature_Click(object sender, EventArgs e)
-        {
+        { // clicked edale
             Program.ProbeCounter = (int)Program.CONSTANTS.EDALE;
             Program.Thermometer = "Edale";
-            Program.xlsheetResultsMeasurement.Cells[24, 2] = "Edale";
-        Form frmEdaleTempMeasure = new frmTempMeasure();
+            Program.xlsheetResultsMeasurement.Cells[24, 2] = "IB5390";
+            Program.xlsheetResultsMeasurement.Cells[28, 2] = "Edale";
+
+            Form frmEdaleTempMeasure = new frmTempMeasure();
             frmEdaleTempMeasure.Show();
         }
 

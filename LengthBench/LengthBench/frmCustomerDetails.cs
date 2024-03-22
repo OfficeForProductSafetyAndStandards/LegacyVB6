@@ -52,7 +52,10 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[5, 2] = txtCoefficient.Text;
             Program.xlsheetResultsVOLandCustomerData.Cells[6, 2] = comboBox1.Text;
             Program.xlsheetResultsVOLandCustomerData.Cells[7, 2] = txtReferenceTemperature.Text;
-            Program.xlsheetResultsVOLandCustomerData.Cells[8, 2] = dateTimePicker1.Text;
+            string Datestring = DateTime.Now.ToString("MM/dd/yyyy");
+            string Timestring = DateTime.UtcNow.ToString("hh:mm tt");
+            Program.xlsheetResultsVOLandCustomerData.Cells[8, 2] = Datestring;
+            Program.xlsheetResultsVOLandCustomerData.Cells[8, 3] = "Time of test " + Timestring;
             int y=0;
 
             try
@@ -132,18 +135,15 @@ namespace LengthBench
         }
 
         private void txtNumberOfPoints_TextChanged(object sender, EventArgs e)
-        {
-
+        { 
             try
             {
-                int x = Convert.ToInt32(txtNumberOfPoints.Text);
+                Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
             }
             catch (Exception)
             {
-                MessageBox.Show("Please enter a number");
-            }
-            Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
-
+                MessageBox.Show("Please enter a number for points");
+            }   
         }
     }
 }
