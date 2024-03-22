@@ -156,8 +156,8 @@ namespace LengthBench
             if (Program.LaserFound == true)
             {
                 Program.laser.setParameter(LaserParameters.OP_ALLCOMP, vol);
-                txtVOL.Text = vol.ToString();
             }
+            txtVOL.Text = vol.ToString();
 
         }
 
