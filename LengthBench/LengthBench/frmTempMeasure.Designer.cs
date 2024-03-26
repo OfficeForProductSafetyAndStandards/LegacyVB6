@@ -67,17 +67,17 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.Location = new Point(56, 53);
-            checkBox1.Margin = new Padding(6, 6, 6, 6);
+            checkBox1.Margin = new Padding(6);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(159, 36);
+            checkBox1.Size = new Size(128, 36);
             checkBox1.TabIndex = 0;
-            checkBox1.Text = "checkBox1";
+            checkBox1.Text = "Probe 1";
             checkBox1.UseVisualStyleBackColor = true;
             // 
             // txtManual1
             // 
             txtManual1.Location = new Point(249, 53);
-            txtManual1.Margin = new Padding(6, 6, 6, 6);
+            txtManual1.Margin = new Padding(6);
             txtManual1.Name = "txtManual1";
             txtManual1.Size = new Size(123, 39);
             txtManual1.TabIndex = 1;
@@ -85,7 +85,7 @@
             // txtManual2
             // 
             txtManual2.Location = new Point(249, 115);
-            txtManual2.Margin = new Padding(6, 6, 6, 6);
+            txtManual2.Margin = new Padding(6);
             txtManual2.Name = "txtManual2";
             txtManual2.Size = new Size(123, 39);
             txtManual2.TabIndex = 2;
@@ -93,7 +93,7 @@
             // cmdTakeReading
             // 
             cmdTakeReading.Location = new Point(688, 53);
-            cmdTakeReading.Margin = new Padding(6, 6, 6, 6);
+            cmdTakeReading.Margin = new Padding(6);
             cmdTakeReading.Name = "cmdTakeReading";
             cmdTakeReading.Size = new Size(217, 115);
             cmdTakeReading.TabIndex = 3;
@@ -105,17 +105,17 @@
             // 
             checkBox2.AutoSize = true;
             checkBox2.Location = new Point(56, 124);
-            checkBox2.Margin = new Padding(6, 6, 6, 6);
+            checkBox2.Margin = new Padding(6);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(159, 36);
+            checkBox2.Size = new Size(128, 36);
             checkBox2.TabIndex = 4;
-            checkBox2.Text = "checkBox2";
+            checkBox2.Text = "Probe 2";
             checkBox2.UseVisualStyleBackColor = true;
             // 
             // txtManual3
             // 
             txtManual3.Location = new Point(249, 177);
-            txtManual3.Margin = new Padding(6, 6, 6, 6);
+            txtManual3.Margin = new Padding(6);
             txtManual3.Name = "txtManual3";
             txtManual3.Size = new Size(123, 39);
             txtManual3.TabIndex = 5;
@@ -124,17 +124,17 @@
             // 
             checkBox3.AutoSize = true;
             checkBox3.Location = new Point(56, 186);
-            checkBox3.Margin = new Padding(6, 6, 6, 6);
+            checkBox3.Margin = new Padding(6);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(159, 36);
+            checkBox3.Size = new Size(128, 36);
             checkBox3.TabIndex = 6;
-            checkBox3.Text = "checkBox3";
+            checkBox3.Text = "Probe 3";
             checkBox3.UseVisualStyleBackColor = true;
             // 
             // txtManual4
             // 
             txtManual4.Location = new Point(249, 239);
-            txtManual4.Margin = new Padding(6, 6, 6, 6);
+            txtManual4.Margin = new Padding(6);
             txtManual4.Name = "txtManual4";
             txtManual4.Size = new Size(123, 39);
             txtManual4.TabIndex = 7;
@@ -142,7 +142,7 @@
             // txtManual5
             // 
             txtManual5.Location = new Point(249, 301);
-            txtManual5.Margin = new Padding(6, 6, 6, 6);
+            txtManual5.Margin = new Padding(6);
             txtManual5.Name = "txtManual5";
             txtManual5.Size = new Size(123, 39);
             txtManual5.TabIndex = 8;
@@ -150,7 +150,7 @@
             // txtManual6
             // 
             txtManual6.Location = new Point(249, 363);
-            txtManual6.Margin = new Padding(6, 6, 6, 6);
+            txtManual6.Margin = new Padding(6);
             txtManual6.Name = "txtManual6";
             txtManual6.Size = new Size(123, 39);
             txtManual6.TabIndex = 9;
@@ -158,7 +158,7 @@
             // txtManual7
             // 
             txtManual7.Location = new Point(249, 425);
-            txtManual7.Margin = new Padding(6, 6, 6, 6);
+            txtManual7.Margin = new Padding(6);
             txtManual7.Name = "txtManual7";
             txtManual7.Size = new Size(123, 39);
             txtManual7.TabIndex = 10;
@@ -166,7 +166,7 @@
             // txtManual8
             // 
             txtManual8.Location = new Point(249, 486);
-            txtManual8.Margin = new Padding(6, 6, 6, 6);
+            txtManual8.Margin = new Padding(6);
             txtManual8.Name = "txtManual8";
             txtManual8.Size = new Size(123, 39);
             txtManual8.TabIndex = 11;
@@ -174,7 +174,7 @@
             // txtManual9
             // 
             txtManual9.Location = new Point(249, 548);
-            txtManual9.Margin = new Padding(6, 6, 6, 6);
+            txtManual9.Margin = new Padding(6);
             txtManual9.Name = "txtManual9";
             txtManual9.Size = new Size(123, 39);
             txtManual9.TabIndex = 12;
@@ -182,7 +182,7 @@
             // txtManual10
             // 
             txtManual10.Location = new Point(249, 610);
-            txtManual10.Margin = new Padding(6, 6, 6, 6);
+            txtManual10.Margin = new Padding(6);
             txtManual10.Name = "txtManual10";
             txtManual10.Size = new Size(123, 39);
             txtManual10.TabIndex = 13;
@@ -191,83 +191,84 @@
             // 
             checkBox4.AutoSize = true;
             checkBox4.Location = new Point(56, 239);
-            checkBox4.Margin = new Padding(6, 6, 6, 6);
+            checkBox4.Margin = new Padding(6);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(159, 36);
+            checkBox4.Size = new Size(128, 36);
             checkBox4.TabIndex = 14;
-            checkBox4.Text = "checkBox4";
+            checkBox4.Text = "Probe 4";
             checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
             // 
             // checkBox5
             // 
             checkBox5.AutoSize = true;
             checkBox5.Location = new Point(56, 301);
-            checkBox5.Margin = new Padding(6, 6, 6, 6);
+            checkBox5.Margin = new Padding(6);
             checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(159, 36);
+            checkBox5.Size = new Size(128, 36);
             checkBox5.TabIndex = 15;
-            checkBox5.Text = "checkBox5";
+            checkBox5.Text = "Probe 5";
             checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
             checkBox6.AutoSize = true;
             checkBox6.Location = new Point(56, 371);
-            checkBox6.Margin = new Padding(6, 6, 6, 6);
+            checkBox6.Margin = new Padding(6);
             checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(159, 36);
+            checkBox6.Size = new Size(128, 36);
             checkBox6.TabIndex = 16;
-            checkBox6.Text = "checkBox6";
+            checkBox6.Text = "Probe 6";
             checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox7
             // 
             checkBox7.AutoSize = true;
             checkBox7.Location = new Point(56, 425);
-            checkBox7.Margin = new Padding(6, 6, 6, 6);
+            checkBox7.Margin = new Padding(6);
             checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(159, 36);
+            checkBox7.Size = new Size(128, 36);
             checkBox7.TabIndex = 17;
-            checkBox7.Text = "checkBox7";
+            checkBox7.Text = "Probe 7";
             checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
             checkBox8.AutoSize = true;
             checkBox8.Location = new Point(56, 478);
-            checkBox8.Margin = new Padding(6, 6, 6, 6);
+            checkBox8.Margin = new Padding(6);
             checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(159, 36);
+            checkBox8.Size = new Size(128, 36);
             checkBox8.TabIndex = 18;
-            checkBox8.Text = "checkBox8";
+            checkBox8.Text = "Probe 8";
             checkBox8.UseVisualStyleBackColor = true;
             // 
             // checkBox9
             // 
             checkBox9.AutoSize = true;
             checkBox9.Location = new Point(56, 544);
-            checkBox9.Margin = new Padding(6, 6, 6, 6);
+            checkBox9.Margin = new Padding(6);
             checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(159, 36);
+            checkBox9.Size = new Size(128, 36);
             checkBox9.TabIndex = 19;
-            checkBox9.Text = "checkBox9";
+            checkBox9.Text = "Probe 9";
             checkBox9.UseVisualStyleBackColor = true;
             // 
             // checkBox10
             // 
             checkBox10.AutoSize = true;
             checkBox10.Location = new Point(56, 610);
-            checkBox10.Margin = new Padding(6, 6, 6, 6);
+            checkBox10.Margin = new Padding(6);
             checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(172, 36);
+            checkBox10.Size = new Size(141, 36);
             checkBox10.TabIndex = 20;
-            checkBox10.Text = "checkBox10";
+            checkBox10.Text = "Probe 10";
             checkBox10.UseVisualStyleBackColor = true;
             // 
             // txtManual11
             // 
             txtManual11.Location = new Point(466, 53);
-            txtManual11.Margin = new Padding(6, 6, 6, 6);
+            txtManual11.Margin = new Padding(6);
             txtManual11.Name = "txtManual11";
             txtManual11.Size = new Size(123, 39);
             txtManual11.TabIndex = 21;
@@ -275,7 +276,7 @@
             // txtManual12
             // 
             txtManual12.Location = new Point(466, 115);
-            txtManual12.Margin = new Padding(6, 6, 6, 6);
+            txtManual12.Margin = new Padding(6);
             txtManual12.Name = "txtManual12";
             txtManual12.Size = new Size(123, 39);
             txtManual12.TabIndex = 22;
@@ -283,7 +284,7 @@
             // txtManual13
             // 
             txtManual13.Location = new Point(466, 177);
-            txtManual13.Margin = new Padding(6, 6, 6, 6);
+            txtManual13.Margin = new Padding(6);
             txtManual13.Name = "txtManual13";
             txtManual13.Size = new Size(123, 39);
             txtManual13.TabIndex = 23;
@@ -291,7 +292,7 @@
             // txtManual14
             // 
             txtManual14.Location = new Point(466, 235);
-            txtManual14.Margin = new Padding(6, 6, 6, 6);
+            txtManual14.Margin = new Padding(6);
             txtManual14.Name = "txtManual14";
             txtManual14.Size = new Size(123, 39);
             txtManual14.TabIndex = 24;
@@ -299,7 +300,7 @@
             // txtManual15
             // 
             txtManual15.Location = new Point(466, 301);
-            txtManual15.Margin = new Padding(6, 6, 6, 6);
+            txtManual15.Margin = new Padding(6);
             txtManual15.Name = "txtManual15";
             txtManual15.Size = new Size(123, 39);
             txtManual15.TabIndex = 25;
@@ -307,7 +308,7 @@
             // txtManual16
             // 
             txtManual16.Location = new Point(466, 363);
-            txtManual16.Margin = new Padding(6, 6, 6, 6);
+            txtManual16.Margin = new Padding(6);
             txtManual16.Name = "txtManual16";
             txtManual16.Size = new Size(123, 39);
             txtManual16.TabIndex = 26;
@@ -315,7 +316,7 @@
             // txtManual17
             // 
             txtManual17.Location = new Point(466, 425);
-            txtManual17.Margin = new Padding(6, 6, 6, 6);
+            txtManual17.Margin = new Padding(6);
             txtManual17.Name = "txtManual17";
             txtManual17.Size = new Size(123, 39);
             txtManual17.TabIndex = 27;
@@ -323,7 +324,7 @@
             // txtManual18
             // 
             txtManual18.Location = new Point(466, 482);
-            txtManual18.Margin = new Padding(6, 6, 6, 6);
+            txtManual18.Margin = new Padding(6);
             txtManual18.Name = "txtManual18";
             txtManual18.Size = new Size(123, 39);
             txtManual18.TabIndex = 28;
@@ -331,7 +332,7 @@
             // txtManual19
             // 
             txtManual19.Location = new Point(466, 535);
-            txtManual19.Margin = new Padding(6, 6, 6, 6);
+            txtManual19.Margin = new Padding(6);
             txtManual19.Name = "txtManual19";
             txtManual19.Size = new Size(123, 39);
             txtManual19.TabIndex = 29;
@@ -339,14 +340,14 @@
             // txtManual20
             // 
             txtManual20.Location = new Point(466, 606);
-            txtManual20.Margin = new Padding(6, 6, 6, 6);
+            txtManual20.Margin = new Padding(6);
             txtManual20.Name = "txtManual20";
             txtManual20.Size = new Size(123, 39);
             txtManual20.TabIndex = 30;
             // 
             // button1
             // 
-            button1.Location = new Point(688, 186);
+            button1.Location = new Point(697, 239);
             button1.Margin = new Padding(6);
             button1.Name = "button1";
             button1.Size = new Size(114, 76);
@@ -357,13 +358,14 @@
             // 
             // button2
             // 
-            button2.Location = new Point(823, 186);
+            button2.Location = new Point(821, 239);
             button2.Margin = new Padding(6);
             button2.Name = "button2";
             button2.Size = new Size(84, 76);
             button2.TabIndex = 32;
             button2.Text = "No";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // frmTempMeasure
             // 
@@ -403,7 +405,7 @@
             Controls.Add(txtManual2);
             Controls.Add(txtManual1);
             Controls.Add(checkBox1);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "frmTempMeasure";
             Text = "frmTempMeasure";
             Load += frmTempMeasure_Load;

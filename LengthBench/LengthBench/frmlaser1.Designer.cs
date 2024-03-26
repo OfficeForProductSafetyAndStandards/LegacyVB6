@@ -72,7 +72,7 @@
             Controls.Add(textPoint);
             Controls.Add(label1);
             Name = "frmlaser1";
-            Text = "frmlaser1";
+            Text = "Laser";
             Load += frmlaser1_Load;
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);

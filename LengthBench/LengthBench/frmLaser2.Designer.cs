@@ -36,28 +36,28 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 21);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(46, 45);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(444, 15);
+            label1.Size = new Size(901, 32);
             label1.TabIndex = 0;
             label1.Text = "Enter Daybook number. Ensure that this number is correct as it cannot be changed.";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(31, 52);
-            textBox1.Margin = new Padding(2, 1, 2, 1);
+            textBox1.Location = new Point(58, 111);
+            textBox1.Margin = new Padding(4, 2, 4, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(473, 23);
+            textBox1.Size = new Size(875, 39);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(421, 135);
-            button1.Margin = new Padding(2, 1, 2, 1);
+            button1.Location = new Point(782, 288);
+            button1.Margin = new Padding(4, 2, 4, 2);
             button1.Name = "button1";
-            button1.Size = new Size(74, 35);
+            button1.Size = new Size(137, 75);
             button1.TabIndex = 2;
             button1.Text = "OK";
             button1.UseVisualStyleBackColor = true;
@@ -65,15 +65,15 @@
             // 
             // frmLaser2
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(546, 211);
+            ClientSize = new Size(1014, 450);
             Controls.Add(button1);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "frmLaser2";
-            Text = "frmLaser2";
+            Text = "Laser";
             Load += frmLaser2_Load;
             ResumeLayout(false);
             PerformLayout();

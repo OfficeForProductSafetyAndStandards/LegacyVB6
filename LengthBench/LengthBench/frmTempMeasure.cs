@@ -245,6 +245,7 @@ namespace LengthBench
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            Program.temperature = (double)Program.xlsheetResultsTemperature.Cells[16, 2].value2;
             Program.xlbookResults.Save();
             this.Close();
             if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
@@ -252,14 +253,24 @@ namespace LengthBench
                 Program.ProbeCounter++;
                 return;
             }
-            
+
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             {
                 Form frmLaserReadings = new frmLaserReadings1();
                 frmLaserReadings.ShowDialog();
             }
-          
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

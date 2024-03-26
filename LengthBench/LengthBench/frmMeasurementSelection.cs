@@ -28,6 +28,8 @@ namespace LengthBench
 
         private void cmdNextScreen_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose();
             Form frmVOLCompenationForm = new frmVOLCompensationForm();
             frmVOLCompenationForm.ShowDialog();
         }

@@ -72,13 +72,12 @@ namespace LengthBench
         }
 
         private void txtTemperature_TextChanged(object sender, EventArgs e)
-        {
-
+        { 
             try
             {
                 Program.temperature = Convert.ToDouble(txtTemperature.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid number");
             }
@@ -92,7 +91,7 @@ namespace LengthBench
             {
                 Program.pressure = Convert.ToDouble(txtBarometer.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid number");
             }
@@ -108,6 +107,7 @@ namespace LengthBench
 
         private void cmdTakeVOL_Click(object sender, EventArgs e)
         {
+            cmdClose.Enabled = true;
             Program.xlsheetResultsVOLandCustomerData.Cells[10, 2] = txtHumidity.Text.ToString();
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = txtBarometer.Text.ToString();
             try
@@ -117,7 +117,7 @@ namespace LengthBench
                     Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid Temperature");
             }
@@ -128,7 +128,7 @@ namespace LengthBench
                     Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid Humidity");
             }
@@ -171,7 +171,8 @@ namespace LengthBench
             Program.xlsheetResultsMeasurement.Cells[28, 2] = "Edale";
 
             Form frmEdaleTempMeasure = new frmTempMeasure();
-            frmEdaleTempMeasure.Show();
+            frmEdaleTempMeasure.ShowDialog();
+            txtTemperature.Text = Program.temperature.ToString();
         }
 
         private void cmdTinsley_Click(object sender, EventArgs e)

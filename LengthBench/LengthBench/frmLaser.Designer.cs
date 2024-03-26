@@ -68,7 +68,7 @@
             Controls.Add(textBox1);
             Controls.Add(label1);
             Name = "frmLaser";
-            Text = "Form1";
+            Text = "Laser";
             Load += frmLaser_Load;
             ResumeLayout(false);
             PerformLayout();

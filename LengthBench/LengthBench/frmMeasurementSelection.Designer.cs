@@ -232,7 +232,7 @@
             Controls.Add(cmdSetUpLaser);
             Controls.Add(fraImperialMetric);
             Name = "frmMeasurementSelection";
-            Text = "frmMeasurementSelectio";
+            Text = "Laser System Setup";
             Load += frmMeasurementSelection_Load;
             fraImperialMetric.ResumeLayout(false);
             fraImperialMetric.PerformLayout();

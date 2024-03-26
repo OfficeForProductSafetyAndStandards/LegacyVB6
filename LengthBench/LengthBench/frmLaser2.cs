@@ -19,6 +19,8 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose();
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
             Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
             string Datestring = DateTime.Now.ToString("dd MMM yyyy");

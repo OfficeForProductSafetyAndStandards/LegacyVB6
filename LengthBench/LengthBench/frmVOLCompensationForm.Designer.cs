@@ -54,7 +54,7 @@
             // 
             // txtTemperature
             // 
-            txtTemperature.Location = new Point(13, 55);
+            txtTemperature.Location = new Point(11, 78);
             txtTemperature.Margin = new Padding(4, 2, 4, 2);
             txtTemperature.Name = "txtTemperature";
             txtTemperature.Size = new Size(206, 39);
@@ -72,7 +72,7 @@
             // 
             // txtBarometer
             // 
-            txtBarometer.Location = new Point(22, 175);
+            txtBarometer.Location = new Point(13, 170);
             txtBarometer.Margin = new Padding(4, 2, 4, 2);
             txtBarometer.Name = "txtBarometer";
             txtBarometer.Size = new Size(206, 39);
@@ -90,7 +90,7 @@
             // lblTemperature
             // 
             lblTemperature.AutoSize = true;
-            lblTemperature.Location = new Point(284, 55);
+            lblTemperature.Location = new Point(312, 81);
             lblTemperature.Margin = new Padding(4, 0, 4, 0);
             lblTemperature.Name = "lblTemperature";
             lblTemperature.Size = new Size(149, 32);
@@ -132,6 +132,7 @@
             // 
             // cmdClose
             // 
+            cmdClose.Enabled = false;
             cmdClose.Location = new Point(41, 425);
             cmdClose.Margin = new Padding(4, 2, 4, 2);
             cmdClose.Name = "cmdClose";

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.ApplicationModel.Background;
 using Timer = System.Windows.Forms.Timer;
+using System.Net;
+using System.Net.Mail;
 
 namespace LengthBench
 {
@@ -59,7 +61,7 @@ namespace LengthBench
             {
                 return;
             }
-           
+
             Random Random = new Random();
             double x = 0;
             if (Program.LaserFound)
@@ -67,7 +69,7 @@ namespace LengthBench
                 x = Program.laser.ReadSample();
             }
             else
-            { 
+            {
                 x = Random.Next(0, 100);
             }
 
@@ -81,7 +83,7 @@ namespace LengthBench
                     if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtFinalZeroReading.Text = x.ToString();
-                    }   
+                    }
                     break;
                 case 1:
                     if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
@@ -245,7 +247,7 @@ namespace LengthBench
                     }
                     break;
             }
-            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2+Program.ProbeCounter] = x.ToString();
+            Program.xlsheetResultsMeasurement.Cells[iPts + 3, 2 + Program.ProbeCounter] = x.ToString();
 
             if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
             { // counting forwards
@@ -308,6 +310,45 @@ namespace LengthBench
         private void txtLaserReading2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MailMessage mail = new MailMessage();
+            mail.Subject = "Your Subject";
+            mail.From = new MailAddress("[email protected]");
+            mail.To.Add("[email protected]");
+            mail.Body = "Hello! Your mail content goes here...";
+            mail.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient("smtp.tools.sky.com", 587);
+            smtp.EnableSsl = true;
+            NetworkCredential netCre = new NetworkCredential("m-hunt3@sky.com", "29HenryLaver");
+            smtp.Credentials = netCre;
+
+            try
+            {
+                smtp.Send(mail);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception
+            }
         }
     }
 }
