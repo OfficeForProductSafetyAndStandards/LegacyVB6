@@ -329,16 +329,23 @@ namespace LengthBench
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            string user = "";
+            string password = "";
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             MailMessage mail = new MailMessage();
             mail.Subject = "Your Subject";
-            mail.From = new MailAddress("[email protected]");
-            mail.To.Add("[email protected]");
+            mail.From = new MailAddress("m-hunt3@sky.com");
+            mail.To.Add("m-hunt3@sky.com");
             mail.Body = "Hello! Your mail content goes here...";
             mail.IsBodyHtml = true;
 
             SmtpClient smtp = new SmtpClient("smtp.tools.sky.com", 587);
             smtp.EnableSsl = true;
-            NetworkCredential netCre = new NetworkCredential("m-hunt3@sky.com", "29HenryLaver");
+
+            user = textBox1.Text;
+            password = textBox2.Text;
+
+            NetworkCredential netCre = new NetworkCredential(user, password);
             smtp.Credentials = netCre;
 
             try
@@ -348,6 +355,7 @@ namespace LengthBench
             catch (Exception ex)
             {
                 // Handle the exception
+                MessageBox.Show(ex.InnerException.ToString());
             }
         }
     }
