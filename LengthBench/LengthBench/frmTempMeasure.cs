@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.Media.Capture;
+using Windows.UI.Composition.Interactions;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace LengthBench
@@ -19,11 +20,23 @@ namespace LengthBench
             InitializeComponent();
         }
 
+        private Color check(double x)
+        {
+            Color backColor = Color.Green;
+            if (x < 18.0) backColor = Color.Blue;
+            if (x > 22.0) backColor = Color.Red;
+            return BackColor;
+        }
+
 
         private void CorrectEdale(int NoOfProbes)
         {
             string[] txtManualEdale = new string[10];
+            double x = 0;
+            Color backColor=Color.Green;
+            
 
+             
             // convert vb to csharp
             for (int ProbeCounter = 0; ProbeCounter < NoOfProbes; ProbeCounter++)
             {
@@ -35,17 +48,33 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual1.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual1.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual1.Text) - Math.Round(Convert.ToDouble(txtManual1.Text));
+
+                            x = Convert.ToDouble(txtManual1.Text);
+                            Color color = check(x);
+                            //txtManual11.ForeColor = Color.White;
+                            txtManual11.BackColor = color;
                             txtManual11.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
                     case 1:
                         if (checkBox2.Checked == true && txtManual2.Text != "")
-                        {
-                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual2.Text);
-                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual2.Text);
+                        { 
+                            try
+                            {
+                                x = Convert.ToDouble(txtManual2.Text);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Please enter a valid number");
+                            }       
+
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = x;
+                            Program.xlsheet.Cells[22, 2] = x;
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual2.Text) - Math.Round(Convert.ToDouble(txtManual2.Text));
+                            x = Convert.ToDouble(txtManual2.Text);
+                            Color color = check(x);
+                            //txtManual12.ForeColor = Color.White;
+                            txtManual12.BackColor = color;
                             txtManual12.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -55,7 +84,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual3.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual3.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual3.Text) - Math.Round(Convert.ToDouble(txtManual3.Text));
+                            x = Convert.ToDouble(txtManual3.Text) - Math.Round(Convert.ToDouble(txtManual3.Text));
                             txtManual13.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -65,7 +94,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 3, Program.Rownumber] = Convert.ToDouble(txtManual4.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual4.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual4.Text) - Math.Round(Convert.ToDouble(txtManual4.Text));
+                            x = Convert.ToDouble(txtManual4.Text) - Math.Round(Convert.ToDouble(txtManual4.Text));
                             txtManual14.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -75,7 +104,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual5.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual5.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual5.Text) - Math.Round(Convert.ToDouble(txtManual5.Text));
+                            x = Convert.ToDouble(txtManual5.Text) - Math.Round(Convert.ToDouble(txtManual5.Text));
                             txtManual15.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -85,7 +114,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual6.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual6.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual6.Text) - Math.Round(Convert.ToDouble(txtManual6.Text));
+                            x = Convert.ToDouble(txtManual6.Text) - Math.Round(Convert.ToDouble(txtManual6.Text));
                             txtManual16.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -95,7 +124,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual7.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual7.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual7.Text) - Math.Round(Convert.ToDouble(txtManual7.Text));
+                            x = Convert.ToDouble(txtManual7.Text) - Math.Round(Convert.ToDouble(txtManual7.Text));
                             txtManual17.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -105,7 +134,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual8.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual8.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual8.Text) - Math.Round(Convert.ToDouble(txtManual8.Text));
+                            x = Convert.ToDouble(txtManual8.Text) - Math.Round(Convert.ToDouble(txtManual8.Text));
                             txtManual18.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -115,7 +144,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual9.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual9.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual9.Text) - Math.Round(Convert.ToDouble(txtManual9.Text));
+                            x = Convert.ToDouble(txtManual9.Text) - Math.Round(Convert.ToDouble(txtManual9.Text));
                             txtManual19.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
@@ -125,7 +154,7 @@ namespace LengthBench
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual10.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual10.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
-                            double x = Convert.ToDouble(txtManual10.Text) - Math.Round(Convert.ToDouble(txtManual10.Text));
+                            x = Convert.ToDouble(txtManual10.Text) - Math.Round(Convert.ToDouble(txtManual10.Text));
                             txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;

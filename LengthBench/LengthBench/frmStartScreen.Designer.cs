@@ -75,6 +75,7 @@
             Controls.Add(comboBox1);
             Name = "frmStartScreen";
             Text = "Flexi Laser Program";
+            Load += frmStartScreen_Load;
             ResumeLayout(false);
         }
 

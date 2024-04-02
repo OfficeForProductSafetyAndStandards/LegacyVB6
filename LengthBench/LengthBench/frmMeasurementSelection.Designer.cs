@@ -58,7 +58,6 @@
             optImperial.Name = "optImperial";
             optImperial.Size = new Size(131, 36);
             optImperial.TabIndex = 0;
-            optImperial.TabStop = true;
             optImperial.Text = "Imperial";
             optImperial.UseVisualStyleBackColor = true;
             optImperial.CheckedChanged += optImperial_CheckedChanged;
@@ -66,6 +65,7 @@
             // optMetric
             // 
             optMetric.AutoSize = true;
+            optMetric.Checked = true;
             optMetric.Location = new Point(307, 53);
             optMetric.Name = "optMetric";
             optMetric.Size = new Size(113, 36);
@@ -145,6 +145,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.Checked = true;
             radioButton1.Location = new Point(31, 38);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(111, 36);
@@ -169,6 +170,7 @@
             // optNo
             // 
             optNo.AutoSize = true;
+            optNo.Checked = true;
             optNo.Location = new Point(16, 109);
             optNo.Name = "optNo";
             optNo.Size = new Size(77, 36);
@@ -185,7 +187,6 @@
             optYes.Name = "optYes";
             optYes.Size = new Size(79, 36);
             optYes.TabIndex = 3;
-            optYes.TabStop = true;
             optYes.Text = "Yes";
             optYes.UseVisualStyleBackColor = true;
             optYes.CheckedChanged += optYes_CheckedChanged;

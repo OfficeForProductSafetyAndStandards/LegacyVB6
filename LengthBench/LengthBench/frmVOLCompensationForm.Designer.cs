@@ -176,6 +176,7 @@
             // 
             // cmdTinsley
             // 
+            cmdTinsley.Enabled = false;
             cmdTinsley.Location = new Point(505, 36);
             cmdTinsley.Margin = new Padding(4, 2, 4, 2);
             cmdTinsley.Name = "cmdTinsley";

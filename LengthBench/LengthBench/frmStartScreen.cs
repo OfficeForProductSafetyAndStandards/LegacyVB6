@@ -15,7 +15,7 @@ namespace LengthBench
             // this.Dispose();
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
             Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
-            string Datestring = DateTime.Now.ToString ("dd mmm yyyy");
+            string Datestring = DateTime.Now.ToString("dd mmm yyyy");
             string Timestring = DateTime.UtcNow.ToString("hh-mm");
             Program.NewFileName = "c:\\metrology\\@private\\@mu\\Length Results\\Flexi\\" + Program.NewFileName + ' ' + Datestring + ' ' + Timestring;
             // Program.xlbookResults.SaveAs(Program.NewFileName);
@@ -32,8 +32,13 @@ namespace LengthBench
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-                Program.metrologist = comboBox1.Text;
-                button1.Enabled = true;
+            Program.metrologist = comboBox1.Text;
+            button1.Enabled = true;
+        }
+
+        private void frmStartScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -61,6 +61,11 @@
             txtManual20 = new TextBox();
             button1 = new Button();
             button2 = new Button();
+            label1 = new Label();
+            groupBox1 = new GroupBox();
+            radioButton2 = new RadioButton();
+            radioButton1 = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // checkBox1
@@ -92,11 +97,11 @@
             // 
             // cmdTakeReading
             // 
-            cmdTakeReading.Location = new Point(688, 53);
+            cmdTakeReading.Location = new Point(499, 722);
             cmdTakeReading.Margin = new Padding(6);
             cmdTakeReading.Name = "cmdTakeReading";
             cmdTakeReading.Size = new Size(217, 115);
-            cmdTakeReading.TabIndex = 3;
+            cmdTakeReading.TabIndex = 20;
             cmdTakeReading.Text = "Correct Reading";
             cmdTakeReading.UseVisualStyleBackColor = true;
             cmdTakeReading.Click += button1_Click;
@@ -118,7 +123,7 @@
             txtManual3.Margin = new Padding(6);
             txtManual3.Name = "txtManual3";
             txtManual3.Size = new Size(123, 39);
-            txtManual3.TabIndex = 5;
+            txtManual3.TabIndex = 3;
             // 
             // checkBox3
             // 
@@ -137,7 +142,7 @@
             txtManual4.Margin = new Padding(6);
             txtManual4.Name = "txtManual4";
             txtManual4.Size = new Size(123, 39);
-            txtManual4.TabIndex = 7;
+            txtManual4.TabIndex = 4;
             // 
             // txtManual5
             // 
@@ -145,7 +150,7 @@
             txtManual5.Margin = new Padding(6);
             txtManual5.Name = "txtManual5";
             txtManual5.Size = new Size(123, 39);
-            txtManual5.TabIndex = 8;
+            txtManual5.TabIndex = 5;
             // 
             // txtManual6
             // 
@@ -153,7 +158,7 @@
             txtManual6.Margin = new Padding(6);
             txtManual6.Name = "txtManual6";
             txtManual6.Size = new Size(123, 39);
-            txtManual6.TabIndex = 9;
+            txtManual6.TabIndex = 6;
             // 
             // txtManual7
             // 
@@ -161,7 +166,7 @@
             txtManual7.Margin = new Padding(6);
             txtManual7.Name = "txtManual7";
             txtManual7.Size = new Size(123, 39);
-            txtManual7.TabIndex = 10;
+            txtManual7.TabIndex = 7;
             // 
             // txtManual8
             // 
@@ -169,7 +174,7 @@
             txtManual8.Margin = new Padding(6);
             txtManual8.Name = "txtManual8";
             txtManual8.Size = new Size(123, 39);
-            txtManual8.TabIndex = 11;
+            txtManual8.TabIndex = 8;
             // 
             // txtManual9
             // 
@@ -177,7 +182,7 @@
             txtManual9.Margin = new Padding(6);
             txtManual9.Name = "txtManual9";
             txtManual9.Size = new Size(123, 39);
-            txtManual9.TabIndex = 12;
+            txtManual9.TabIndex = 9;
             // 
             // txtManual10
             // 
@@ -185,7 +190,7 @@
             txtManual10.Margin = new Padding(6);
             txtManual10.Name = "txtManual10";
             txtManual10.Size = new Size(123, 39);
-            txtManual10.TabIndex = 13;
+            txtManual10.TabIndex = 10;
             // 
             // checkBox4
             // 
@@ -267,11 +272,12 @@
             // 
             // txtManual11
             // 
+            txtManual11.BackColor = SystemColors.Control;
             txtManual11.Location = new Point(466, 53);
             txtManual11.Margin = new Padding(6);
             txtManual11.Name = "txtManual11";
             txtManual11.Size = new Size(123, 39);
-            txtManual11.TabIndex = 21;
+            txtManual11.TabIndex = 11;
             // 
             // txtManual12
             // 
@@ -279,7 +285,7 @@
             txtManual12.Margin = new Padding(6);
             txtManual12.Name = "txtManual12";
             txtManual12.Size = new Size(123, 39);
-            txtManual12.TabIndex = 22;
+            txtManual12.TabIndex = 12;
             // 
             // txtManual13
             // 
@@ -287,7 +293,7 @@
             txtManual13.Margin = new Padding(6);
             txtManual13.Name = "txtManual13";
             txtManual13.Size = new Size(123, 39);
-            txtManual13.TabIndex = 23;
+            txtManual13.TabIndex = 13;
             // 
             // txtManual14
             // 
@@ -295,7 +301,7 @@
             txtManual14.Margin = new Padding(6);
             txtManual14.Name = "txtManual14";
             txtManual14.Size = new Size(123, 39);
-            txtManual14.TabIndex = 24;
+            txtManual14.TabIndex = 14;
             // 
             // txtManual15
             // 
@@ -303,7 +309,7 @@
             txtManual15.Margin = new Padding(6);
             txtManual15.Name = "txtManual15";
             txtManual15.Size = new Size(123, 39);
-            txtManual15.TabIndex = 25;
+            txtManual15.TabIndex = 15;
             // 
             // txtManual16
             // 
@@ -347,7 +353,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(697, 239);
+            button1.Location = new Point(728, 741);
             button1.Margin = new Padding(6);
             button1.Name = "button1";
             button1.Size = new Size(114, 76);
@@ -358,7 +364,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(821, 239);
+            button2.Location = new Point(854, 741);
             button2.Margin = new Padding(6);
             button2.Name = "button2";
             button2.Size = new Size(84, 76);
@@ -367,11 +373,56 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(1, 861);
+            label1.Name = "label1";
+            label1.Size = new Size(1085, 32);
+            label1.TabIndex = 33;
+            label1.Text = "NOTE : -Only click correct reading when all temperatures have been entered or read from the Edales";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Location = new Point(56, 674);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(382, 163);
+            groupBox1.TabIndex = 34;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Select Temperatue Entry Method";
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(22, 104);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(125, 36);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Manual";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(22, 51);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(154, 36);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Automatic";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
             // frmTempMeasure
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(943, 960);
+            ClientSize = new Size(1120, 960);
+            Controls.Add(groupBox1);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(txtManual20);
@@ -409,6 +460,8 @@
             Name = "frmTempMeasure";
             Text = "frmTempMeasure";
             Load += frmTempMeasure_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -448,5 +501,9 @@
         private TextBox txtManual20;
         private Button button1;
         private Button button2;
+        private Label label1;
+        private GroupBox groupBox1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
