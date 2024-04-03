@@ -47,7 +47,7 @@
             // 
             // textPoint
             // 
-            textPoint.Location = new Point(414, 58);
+            textPoint.Location = new Point(478, 58);
             textPoint.Name = "textPoint";
             textPoint.Size = new Size(150, 39);
             textPoint.TabIndex = 1;

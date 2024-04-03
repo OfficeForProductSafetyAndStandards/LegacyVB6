@@ -14,9 +14,11 @@ namespace LengthBench
     {
 
         public static int x = 0;
-        public frmlaser1()
+        public frmlaser1(int p)
         {
             InitializeComponent();
+            string s = (p-3).ToString();
+            label1.Text = "Length of interval No. " + s + " in " + Program.Units;
         }
 
         public void button1_Click(object sender, EventArgs e)

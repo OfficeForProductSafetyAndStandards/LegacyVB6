@@ -110,17 +110,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(201, 98);
+            label2.Font = new Font("Times New Roman", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(178, 65);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(104, 32);
+            label2.Size = new Size(256, 73);
             label2.TabIndex = 1;
             label2.Text = "0.000 00";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(338, 98);
+            label3.Location = new Point(461, 98);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(56, 32);

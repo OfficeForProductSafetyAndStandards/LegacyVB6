@@ -49,7 +49,6 @@
             cmdIB5276 = new Button();
             cmdIB5211 = new Button();
             cmdTakeVOL = new Button();
-            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // txtTemperature
@@ -274,20 +273,11 @@
             cmdTakeVOL.UseVisualStyleBackColor = true;
             cmdTakeVOL.Click += cmdTakeVOL_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(693, 361);
-            textBox1.Margin = new Padding(4, 2, 4, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(140, 39);
-            textBox1.TabIndex = 22;
-            // 
             // frmVOLCompensationForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1333, 642);
-            Controls.Add(textBox1);
             Controls.Add(cmdTakeVOL);
             Controls.Add(cmdIB5211);
             Controls.Add(cmdIB5276);
@@ -340,6 +330,5 @@
         private Button cmdIB5276;
         private Button cmdIB5211;
         private Button cmdTakeVOL;
-        private TextBox textBox1;
     }
 }

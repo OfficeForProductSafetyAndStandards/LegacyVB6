@@ -65,6 +65,14 @@
             groupBox1 = new GroupBox();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
+            label2 = new Label();
+            label3 = new Label();
+            textBox1 = new TextBox();
+            label4 = new Label();
+            textBox2 = new TextBox();
+            label5 = new Label();
+            textBox3 = new TextBox();
+            label6 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -272,12 +280,13 @@
             // 
             // txtManual11
             // 
-            txtManual11.BackColor = SystemColors.Control;
+            txtManual11.BackColor = SystemColors.Window;
             txtManual11.Location = new Point(466, 53);
             txtManual11.Margin = new Padding(6);
             txtManual11.Name = "txtManual11";
             txtManual11.Size = new Size(123, 39);
             txtManual11.TabIndex = 11;
+            txtManual11.TextChanged += txtManual11_TextChanged;
             // 
             // txtManual12
             // 
@@ -416,11 +425,92 @@
             radioButton1.Text = "Automatic";
             radioButton1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(728, 674);
+            label2.Name = "label2";
+            label2.Size = new Size(218, 32);
+            label2.TabIndex = 35;
+            label2.Text = "Are the results OK?";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(613, 53);
+            label3.Name = "label3";
+            label3.Size = new Size(495, 32);
+            label3.TabIndex = 36;
+            label3.Text = "Legend for temperature indicators text boxes";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.Red;
+            textBox1.Location = new Point(637, 115);
+            textBox1.Margin = new Padding(6);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(123, 39);
+            textBox1.TabIndex = 37;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(780, 118);
+            label4.Name = "label4";
+            label4.Size = new Size(341, 32);
+            label4.TabIndex = 38;
+            label4.Text = "Over UKAS Temperature Limits";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.Green;
+            textBox2.Location = new Point(637, 177);
+            textBox2.Margin = new Padding(6);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(123, 39);
+            textBox2.TabIndex = 39;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(780, 187);
+            label5.Name = "label5";
+            label5.Size = new Size(360, 32);
+            label5.TabIndex = 40;
+            label5.Text = "Within UKAS Temperature Limits";
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.Blue;
+            textBox3.Location = new Point(637, 239);
+            textBox3.Margin = new Padding(6);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(123, 39);
+            textBox3.TabIndex = 41;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(780, 243);
+            label6.Name = "label6";
+            label6.Size = new Size(355, 32);
+            label6.TabIndex = 42;
+            label6.Text = "Under UKAS Temperature Limits";
+            // 
             // frmTempMeasure
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1120, 960);
+            Controls.Add(label6);
+            Controls.Add(textBox3);
+            Controls.Add(label5);
+            Controls.Add(textBox2);
+            Controls.Add(label4);
+            Controls.Add(textBox1);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Controls.Add(button2);
@@ -505,5 +595,13 @@
         private GroupBox groupBox1;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private Label label2;
+        private Label label3;
+        private TextBox textBox1;
+        private Label label4;
+        private TextBox textBox2;
+        private Label label5;
+        private TextBox textBox3;
+        private Label label6;
     }
 }

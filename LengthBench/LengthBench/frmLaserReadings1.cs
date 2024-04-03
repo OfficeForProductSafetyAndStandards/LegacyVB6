@@ -47,7 +47,7 @@ namespace LengthBench
             pbBeamStrength.BackColor = System.Drawing.Color.White;
             pbBeamStrength.ForeColor = System.Drawing.Color.Red;
             Timer timer = new Timer();
-            timer.Interval = 1000;
+            timer.Interval = 100;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
 
@@ -298,6 +298,7 @@ namespace LengthBench
             frmTempMeasure.ShowDialog();
             // save the results
             Program.xlbookResults.Save();
+            Program.xlbookResults.Close();
             // thats all folks
             Application.Exit();
         }
