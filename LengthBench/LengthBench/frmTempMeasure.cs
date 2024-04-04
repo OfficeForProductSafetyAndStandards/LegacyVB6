@@ -41,7 +41,7 @@ namespace LengthBench
             for (int ProbeCounter = 0; ProbeCounter < NoOfProbes; ProbeCounter++)
             {
                 switch (ProbeCounter)
-                {
+                { // this is the probe number
                     case 0:
                         if (checkBox1.Checked == true && txtManual1.Text != "")
                         {
@@ -182,10 +182,11 @@ namespace LengthBench
                             txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
-
+                
+                    }
                 }
             }
-        }
+        
 
         public void button1_Click(object sender, EventArgs e)
         {
