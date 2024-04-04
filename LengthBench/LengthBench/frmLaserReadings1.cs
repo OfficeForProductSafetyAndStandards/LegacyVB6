@@ -11,6 +11,10 @@ using Windows.ApplicationModel.Background;
 using Timer = System.Windows.Forms.Timer;
 using System.Net;
 using System.Net.Mail;
+using Outlook = Microsoft.Office.Interop.Outlook;
+
+
+
 
 namespace LengthBench
 {
@@ -342,6 +346,18 @@ namespace LengthBench
 
             SmtpClient smtp = new SmtpClient("smtp.tools.sky.com", 587);
             smtp.EnableSsl = true;
+
+            Outlook.Application olkApp = new Outlook.Application();
+            Outlook.MailItem olkMail = (Outlook.MailItem)olkApp.CreateItem(Outlook.OlItemType.olMailItem);
+
+            olkMail.Subject = "Your Subject";
+            olkMail.To = "m-hunt3@sky.com";
+            olkMail.Body = "Your message here";
+            olkMail.Attachments.Add("c:\\temp\\length.xlsx", Outlook.OlAttachmentType.olByValue, 1, "Your Attachment Name");
+
+            olkMail.Send();
+
+
 
             user = textBox1.Text;
             password = textBox2.Text;
