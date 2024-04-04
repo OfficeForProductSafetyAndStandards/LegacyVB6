@@ -88,10 +88,7 @@
             txtLaserRun16 = new TextBox();
             textBox1 = new TextBox();
             label10 = new Label();
-            textBox2 = new TextBox();
             label11 = new Label();
-            label12 = new Label();
-            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -559,14 +556,6 @@
             label10.Text = "Email Results";
             label10.Click += label10_Click;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(1003, 748);
-            textBox2.Margin = new Padding(4, 2, 4, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(156, 39);
-            textBox2.TabIndex = 63;
-            // 
             // label11
             // 
             label11.AutoSize = true;
@@ -575,35 +564,10 @@
             label11.Location = new Point(790, 694);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(163, 45);
+            label11.Size = new Size(215, 45);
             label11.TabIndex = 64;
-            label11.Text = "Username";
+            label11.Text = "Email address";
             label11.Click += label11_Click;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F);
-            label12.ForeColor = Color.Red;
-            label12.Location = new Point(790, 741);
-            label12.Margin = new Padding(4, 0, 4, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(153, 45);
-            label12.TabIndex = 65;
-            label12.Text = "Password";
-            label12.Click += label12_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Cyan;
-            button1.Location = new Point(852, 807);
-            button1.Margin = new Padding(4, 2, 4, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(154, 81);
-            button1.TabIndex = 66;
-            button1.Text = "Send";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click_1;
             // 
             // frmLaserReadings1
             // 
@@ -611,10 +575,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
             ClientSize = new Size(1268, 1284);
-            Controls.Add(button1);
-            Controls.Add(label12);
             Controls.Add(label11);
-            Controls.Add(textBox2);
             Controls.Add(label10);
             Controls.Add(textBox1);
             Controls.Add(txtLaserRun16);
@@ -728,9 +689,6 @@
         private TextBox txtLaserRun16;
         private TextBox textBox1;
         private Label label10;
-        private TextBox textBox2;
         private Label label11;
-        private Label label12;
-        private Button button1;
     }
 }

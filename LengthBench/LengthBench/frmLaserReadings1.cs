@@ -306,15 +306,25 @@ namespace LengthBench
             // thats all folks
             Application.Exit();
 
+            if (textBox1.Text.Length ==  0 ) { return; }
+            Outlook.MailItem olkMail;
             Outlook.Application olkApp = new Outlook.Application();
-            Outlook.MailItem olkMail = (Outlook.MailItem)olkApp.CreateItem(Outlook.OlItemType.olMailItem);
+            try
+            {
+                olkMail = (Outlook.MailItem)olkApp.CreateItem(Outlook.OlItemType.olMailItem);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception
+                MessageBox.Show(ex.InnerException.ToString());
+                return;
+            }
 
-            olkMail.Subject = "Your Subject";
-            olkMail.To = "m-hunt3@sky.com";
-           // string fname = "<"+Program.NewFileName + ".xlsx>";
+            olkMail.Subject = "";
+            olkMail.To = textBox1.Text;
             string fname = Program.NewFileName + ".xlsx";
             olkMail.Body = fname;
-            // fname="c:\\temp\\edale.xlsx";
+            olkMail.Subject = fname;
             olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
 
             try
@@ -324,7 +334,7 @@ namespace LengthBench
             catch (Exception ex)
             {
                 // Handle the exception
-                MessageBox.Show(ex.InnerException.ToString());
+                MessageBox.Show(ex.Message);
             }   
         }
 
@@ -355,46 +365,7 @@ namespace LengthBench
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string user = "";
-            string password = "";
-            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            MailMessage mail = new MailMessage();
-            mail.Subject = "Your Subject";
-            mail.From = new MailAddress("m-hunt3@sky.com");
-            mail.To.Add("m-hunt3@sky.com");
-            mail.Body = "Hello! Your mail content goes here...";
-            mail.IsBodyHtml = true;
-
-            SmtpClient smtp = new SmtpClient("smtp.tools.sky.com", 587);
-            smtp.EnableSsl = true;
-
-            Outlook.Application olkApp = new Outlook.Application();
-            Outlook.MailItem olkMail = (Outlook.MailItem)olkApp.CreateItem(Outlook.OlItemType.olMailItem);
-
-            olkMail.Subject = "Your Subject";
-            olkMail.To = "m-hunt3@sky.com";
-            olkMail.Body = "Your message here";
-            olkMail.Attachments.Add("c:\\temp\\length.xlsx", Outlook.OlAttachmentType.olByValue, 1, "Your Attachment Name");
-
-            olkMail.Send();
-
-
-
-            user = textBox1.Text;
-            password = textBox2.Text;
-
-            NetworkCredential netCre = new NetworkCredential(user, password);
-            smtp.Credentials = netCre;
-
-            try
-            {
-                smtp.Send(mail);
-            }
-            catch (Exception ex)
-            {
-                // Handle the exception
-                MessageBox.Show(ex.InnerException.ToString());
-            }
+      
         }
     }
 }
