@@ -18,6 +18,10 @@ namespace LengthBench
         public frmMeasurementSelection()
         {
             InitializeComponent();
+            metric = false;
+            Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
+            Program.xlsheetResultsMeasurement.Cells[24, 5] = "Class I";
+            Program.xlbookResults.Save();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)

@@ -311,12 +311,21 @@ namespace LengthBench
 
             olkMail.Subject = "Your Subject";
             olkMail.To = "m-hunt3@sky.com";
-            string fname = Program.NewFileName;
+           // string fname = "<"+Program.NewFileName + ".xlsx>";
+            string fname = Program.NewFileName + ".xlsx";
             olkMail.Body = fname;
-            
+            // fname="c:\\temp\\edale.xlsx";
             olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
 
-            olkMail.Send();
+            try
+            {
+                olkMail.Send();
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception
+                MessageBox.Show(ex.InnerException.ToString());
+            }   
         }
 
         private void txtLaserReading5_TextChanged(object sender, EventArgs e)
