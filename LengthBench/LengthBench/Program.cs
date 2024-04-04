@@ -44,6 +44,7 @@ namespace LengthBench
         public static string? dept;
         public static string? Units = "metres";
         public static bool[] ProbesSelected = new bool[10];
+        public static string FlexiPath;
 
         public static string? NewFileName;
         public static string? NewFileName1;
@@ -127,19 +128,11 @@ namespace LengthBench
 
         static void SetUp()
         {
-            // smtp mail server
-            /*
-            System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
-            smtp.Credentials = new System.Net.NetworkCredential("milomia322@gmail.com", "");
-            smtp.EnableSsl = true;
-            // send mail
-            smtp.Send("millomia322@gmail.com", "m-hunt3@sky.com", "subject", "body");
-            */
 
-            string edalePath = Environment.GetEnvironmentVariable("EdalePath");
+            Program.FlexiPath = Environment.GetEnvironmentVariable("FlexiPath");
 
-            string filename = "\"" + edalePath + "EdaleCorrection.xlsx" + "\"";
-            filename = "\"" + "c:\\temp\\EdaleCorrection.xlsx" + "\"";
+            // TODO - do we have env vars for these locations ?
+            string filename = "\"" + "c:\\temp\\EdaleCorrection.xlsx" + "\"";
 
 
             Microsoft.Office.Interop.Excel.Application excelAppEdale = new Microsoft.Office.Interop.Excel.Application();
@@ -170,9 +163,6 @@ namespace LengthBench
             
             // Clears Excel spreadsheet by placing 0's i n all boxes
             // xlbookResults.Save();
-
-
-
         }
 
         /// <summary>

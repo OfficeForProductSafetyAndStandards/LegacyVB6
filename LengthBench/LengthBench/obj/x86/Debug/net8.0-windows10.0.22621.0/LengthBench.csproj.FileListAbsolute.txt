@@ -159,3 +159,4 @@ C:\Users\mike\LegacyVB6\LengthBench\LengthBench\obj\x86\Debug\net8.0-windows10.0
 C:\Users\mike\LegacyVB6\LengthBench\LengthBench\obj\x86\Debug\net8.0-windows10.0.22621.0\LengthBench.genruntimeconfig.cache
 C:\Users\mike\LegacyVB6\LengthBench\LengthBench\obj\x86\Debug\net8.0-windows10.0.22621.0\ref\LengthBench.dll
 C:\Users\mike\LegacyVB6\LengthBench\LengthBench\obj\x86\Debug\net8.0-windows10.0.22621.0\Interop.Microsoft.Office.Interop.Outlook.dll
+C:\Users\michaelhunt\source\repos\LegacyVB6\LengthBench\LengthBench\obj\x86\Debug\net8.0-windows10.0.22621.0\Interop.Microsoft.Office.Interop.Outlook.dll

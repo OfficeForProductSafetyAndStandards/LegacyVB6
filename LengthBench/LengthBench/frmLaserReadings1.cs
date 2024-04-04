@@ -51,7 +51,7 @@ namespace LengthBench
             pbBeamStrength.BackColor = System.Drawing.Color.White;
             pbBeamStrength.ForeColor = System.Drawing.Color.Red;
             Timer timer = new Timer();
-            timer.Interval = 100;
+            timer.Interval = 10;
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
 
@@ -305,6 +305,18 @@ namespace LengthBench
             Program.xlbookResults.Close();
             // thats all folks
             Application.Exit();
+
+            Outlook.Application olkApp = new Outlook.Application();
+            Outlook.MailItem olkMail = (Outlook.MailItem)olkApp.CreateItem(Outlook.OlItemType.olMailItem);
+
+            olkMail.Subject = "Your Subject";
+            olkMail.To = "m-hunt3@sky.com";
+            string fname = Program.NewFileName;
+            olkMail.Body = fname;
+            
+            olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
+
+            olkMail.Send();
         }
 
         private void txtLaserReading5_TextChanged(object sender, EventArgs e)

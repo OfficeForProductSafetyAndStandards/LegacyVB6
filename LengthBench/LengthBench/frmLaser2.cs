@@ -25,7 +25,15 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
             string Datestring = DateTime.Now.ToString("dd MMM yyyy");
             string Timestring = DateTime.UtcNow.ToString("hh-mm");
-            Program.NewFileName = "c:\\metrology\\@private\\@mu\\Length Results\\Flexi\\" + Program.dept + ' ' + Datestring + ' ' + Timestring;
+            if (Program.FlexiPath == null)
+            {
+                Program.NewFileName = "c:\\metrology\\@private\\@mu\\Length Results\\Flexi\\" + Program.dept + ' ' + Datestring + ' ' + Timestring;
+            }
+            else
+            {
+                Program.NewFileName = Program.FlexiPath + "\\" + Program.dept + ' ' + Datestring + ' ' + Timestring;
+            }
+
             Program.xlbookResults.SaveAs(Program.NewFileName);
             Program.xlsheetResultsMeasurement.Cells[26, 5] = Program.metrologist;
             Program.NewFileName1 = textBox1.Text;
