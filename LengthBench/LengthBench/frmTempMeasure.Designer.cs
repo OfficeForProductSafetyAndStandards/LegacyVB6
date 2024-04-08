@@ -406,6 +406,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
+            radioButton2.Checked = true;
             radioButton2.Location = new Point(22, 104);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(125, 36);
@@ -421,7 +422,6 @@
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(154, 36);
             radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
             radioButton1.Text = "Automatic";
             radioButton1.UseVisualStyleBackColor = true;
             // 

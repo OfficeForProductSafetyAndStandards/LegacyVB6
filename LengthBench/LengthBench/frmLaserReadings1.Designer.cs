@@ -128,6 +128,7 @@
             // cmdLaserReading
             // 
             cmdLaserReading.BackColor = Color.Cyan;
+            cmdLaserReading.Enabled = false;
             cmdLaserReading.Location = new Point(178, 149);
             cmdLaserReading.Margin = new Padding(4, 2, 4, 2);
             cmdLaserReading.Name = "cmdLaserReading";
@@ -147,6 +148,7 @@
             cmdResetLaser.TabIndex = 4;
             cmdResetLaser.Text = "Reset Laser";
             cmdResetLaser.UseVisualStyleBackColor = false;
+            cmdResetLaser.Click += cmdResetLaser_Click_1;
             // 
             // label4
             // 
@@ -537,10 +539,10 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(1003, 694);
+            textBox1.Location = new Point(1004, 694);
             textBox1.Margin = new Padding(4, 2, 4, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(156, 39);
+            textBox1.Size = new Size(251, 39);
             textBox1.TabIndex = 61;
             // 
             // label10
@@ -561,7 +563,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F);
             label11.ForeColor = Color.Red;
-            label11.Location = new Point(790, 694);
+            label11.Location = new Point(781, 688);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Size = new Size(215, 45);

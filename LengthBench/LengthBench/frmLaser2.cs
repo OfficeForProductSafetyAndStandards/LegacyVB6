@@ -22,7 +22,6 @@ namespace LengthBench
             this.Close();
             this.Dispose();
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
-            Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
             string Datestring = DateTime.Now.ToString("dd MMM yyyy");
             string Timestring = DateTime.UtcNow.ToString("hh-mm");
             if (Program.FlexiPath == null)
@@ -33,6 +32,7 @@ namespace LengthBench
             {
                 Program.NewFileName = Program.FlexiPath + "\\" + Program.dept + ' ' + Datestring + ' ' + Timestring;
             }
+            Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
 
             Program.xlbookResults.SaveAs(Program.NewFileName);
             Program.xlsheetResultsMeasurement.Cells[26, 5] = Program.metrologist;
@@ -45,7 +45,7 @@ namespace LengthBench
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            Program.dept = textBox1.Text;
+            Program.daybook = textBox1.Text;
         }
 
         private void frmLaser2_Load(object sender, EventArgs e)

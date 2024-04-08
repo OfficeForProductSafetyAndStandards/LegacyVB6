@@ -42,6 +42,7 @@ namespace LengthBench
         public static int[]? ProbeSelected;
         public static int eventtime;
         public static string? dept;
+        public static string? daybook;
         public static string? Units = "metres";
         public static bool[] ProbesSelected = new bool[10];
         public static string FlexiPath;

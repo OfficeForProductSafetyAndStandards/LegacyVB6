@@ -122,7 +122,7 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(628, 399);
+            dateTimePicker1.Location = new Point(630, 387);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(157, 39);
             dateTimePicker1.TabIndex = 10;
@@ -142,17 +142,18 @@
             txtTensionWeight.Name = "txtTensionWeight";
             txtTensionWeight.Size = new Size(157, 39);
             txtTensionWeight.TabIndex = 16;
+            txtTensionWeight.TextChanged += txtTensionWeight_TextChanged;
             // 
             // txtReferenceTemperature
             // 
-            txtReferenceTemperature.Location = new Point(637, 282);
+            txtReferenceTemperature.Location = new Point(631, 282);
             txtReferenceTemperature.Name = "txtReferenceTemperature";
             txtReferenceTemperature.Size = new Size(157, 39);
             txtReferenceTemperature.TabIndex = 17;
             // 
             // txtNumberOfPoints
             // 
-            txtNumberOfPoints.Location = new Point(631, 141);
+            txtNumberOfPoints.Location = new Point(631, 134);
             txtNumberOfPoints.Name = "txtNumberOfPoints";
             txtNumberOfPoints.Size = new Size(157, 39);
             txtNumberOfPoints.TabIndex = 19;
@@ -170,7 +171,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Aluminium", "Brass", "Bronze", "Invar", "Nickel Steel", "Steel", "Stainless Steel", "Other" });
-            comboBox1.Location = new Point(635, 187);
+            comboBox1.Location = new Point(631, 184);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(159, 40);
             comboBox1.TabIndex = 21;
@@ -189,7 +190,7 @@
             // txtCoefficient
             // 
             txtCoefficient.AcceptsReturn = true;
-            txtCoefficient.Location = new Point(637, 232);
+            txtCoefficient.Location = new Point(631, 230);
             txtCoefficient.Name = "txtCoefficient";
             txtCoefficient.Size = new Size(157, 39);
             txtCoefficient.TabIndex = 23;
@@ -217,7 +218,7 @@
             Controls.Add(lblDepartmentNumber);
             Controls.Add(lblCustomerName);
             Name = "frmCustomerDetails";
-            Text = "frmCustomerDetails";
+            Text = "Customer Details";
             Load += frmCustomerDetails_Load;
             ResumeLayout(false);
             PerformLayout();

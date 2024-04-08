@@ -19,9 +19,10 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+            Program.dept = textBox1.Text;
             this.Close();
             this.Dispose();
-            Program.NewFileName = textBox1.Text;
             Form frmLaser2 = new frmLaser2();
             frmLaser2.ShowDialog();
            

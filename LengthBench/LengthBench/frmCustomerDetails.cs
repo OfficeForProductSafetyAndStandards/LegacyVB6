@@ -56,7 +56,7 @@ namespace LengthBench
             string Timestring = DateTime.UtcNow.ToString("hh:mm tt");
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 2] = Datestring;
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 3] = "Time of test " + Timestring;
-            int y=0;
+            int y = 0;
 
             try
             {
@@ -82,8 +82,8 @@ namespace LengthBench
             Form frmTempMeasure1 = new frmTempMeasure();
             frmTempMeasure1.Show();
 
-           // Form frmLaserReadings1 = new frmLaserReadings1();
-           // frmLaserReadings1.Show();
+            // Form frmLaserReadings1 = new frmLaserReadings1();
+            // frmLaserReadings1.Show();
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace LengthBench
         }
 
         private void txtNumberOfPoints_TextChanged(object sender, EventArgs e)
-        { 
+        {
             try
             {
                 Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
@@ -143,7 +143,12 @@ namespace LengthBench
             catch (Exception)
             {
                 MessageBox.Show("Please enter a number for points");
-            }   
+            }
+        }
+
+        private void txtTensionWeight_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

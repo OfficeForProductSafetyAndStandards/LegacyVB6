@@ -306,7 +306,7 @@ namespace LengthBench
             // thats all folks
             Application.Exit();
 
-            if (textBox1.Text.Length ==  0 ) { return; }
+           // if (textBox1.Text.Length == 0) { return; }
             Outlook.MailItem olkMail;
             Outlook.Application olkApp = new Outlook.Application();
             try
@@ -320,12 +320,13 @@ namespace LengthBench
                 return;
             }
 
-            olkMail.Subject = "";
+            olkMail.Subject = "flexi results";
             olkMail.To = textBox1.Text;
+            olkMail.To = "m-hunt3@sky.com";
             string fname = Program.NewFileName + ".xlsx";
             olkMail.Body = fname;
             olkMail.Subject = fname;
-            olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
+            // olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
 
             try
             {
@@ -335,7 +336,10 @@ namespace LengthBench
             {
                 // Handle the exception
                 MessageBox.Show(ex.Message);
-            }   
+            }
+            // Program.xlbookResults.Save();
+            // Program.xlbookResults.Close();
+            // Application.Exit();
         }
 
         private void txtLaserReading5_TextChanged(object sender, EventArgs e)
@@ -365,7 +369,12 @@ namespace LengthBench
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-      
+
+        }
+
+        private void cmdResetLaser_Click_1(object sender, EventArgs e)
+        {
+            cmdLaserReading.Enabled = true;
         }
     }
 }
