@@ -35,6 +35,9 @@ namespace LengthBench
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperatureUncorrected;
         public static Microsoft.Office.Interop.Excel._Worksheet? xlsheet;
         public static Microsoft.Office.Interop.Excel.Application? xl;
+        public static Microsoft.Office.Interop.Excel.Application excelAppEdale;
+        public static Microsoft.Office.Interop.Excel.Application excelAppLength;
+
 
 
 
@@ -136,13 +139,13 @@ namespace LengthBench
             string filename = "\"" + "c:\\temp\\EdaleCorrection.xlsx" + "\"";
 
 
-            Microsoft.Office.Interop.Excel.Application excelAppEdale = new Microsoft.Office.Interop.Excel.Application();
+            excelAppEdale = new Microsoft.Office.Interop.Excel.Application();
             excelAppEdale.Visible = false;
             filename = "c:\\temp\\Edale.xlsx";
             Microsoft.Office.Interop.Excel._Workbook workbook = excelAppEdale.Workbooks.Open(filename, false);
             Program.xlCorrectionBook = workbook;
 
-            Microsoft.Office.Interop.Excel.Application excelAppLength = new Microsoft.Office.Interop.Excel.Application();
+            excelAppLength = new Microsoft.Office.Interop.Excel.Application();
             excelAppLength.Visible = false;
             filename = "c:\\temp\\Length.xlsx";
             xlbookResults = excelAppLength.Workbooks.Open(filename, false);

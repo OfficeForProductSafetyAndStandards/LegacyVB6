@@ -326,7 +326,7 @@ namespace LengthBench
             string fname = Program.NewFileName + ".xlsx";
             olkMail.Body = fname;
             olkMail.Subject = fname;
-            // olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
+            olkMail.Attachments.Add(fname, Outlook.OlAttachmentType.olByValue, 1, fname);
 
             try
             {
@@ -337,8 +337,10 @@ namespace LengthBench
                 // Handle the exception
                 MessageBox.Show(ex.Message);
             }
-            // Program.xlbookResults.Save();
-            // Program.xlbookResults.Close();
+            Program.excelAppEdale.DisplayAlerts = false;
+            Program.excelAppEdale.Quit();
+            Program.excelAppLength.DisplayAlerts = false;
+            Program.excelAppLength.Quit();
             // Application.Exit();
         }
 
