@@ -69,10 +69,13 @@ namespace LengthBench
         private void cmdRetrurnToMainMenu_Click(object sender, EventArgs e)
         {
             Program.xlbookResults?.Save();
+            this.Close();
+            // Form frmStartup = new frmStartScreen();
+            // frmStartup.Show();
         }
 
         private void txtTemperature_TextChanged(object sender, EventArgs e)
-        { 
+        {
             try
             {
                 Program.temperature = Convert.ToDouble(txtTemperature.Text);
@@ -209,6 +212,15 @@ namespace LengthBench
         {
             Program.Hygrometer = "IB5271";
             Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5276";
+        }
+
+        private void cmdEndProgram_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+            Program.excelAppEdale.DisplayAlerts = false;
+            Program.excelAppEdale.Quit();
+            Program.excelAppLength.DisplayAlerts = false;
+            Program.excelAppLength.Quit();
         }
     }
 }

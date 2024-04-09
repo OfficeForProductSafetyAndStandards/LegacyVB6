@@ -161,6 +161,7 @@
             cmdEndProgram.TabIndex = 11;
             cmdEndProgram.Text = "End Program";
             cmdEndProgram.UseVisualStyleBackColor = true;
+            cmdEndProgram.Click += cmdEndProgram_Click;
             // 
             // cmdPrintout
             // 
