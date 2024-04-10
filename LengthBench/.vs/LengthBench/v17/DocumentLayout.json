@@ -19,11 +19,11 @@
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\michaelhunt\\legacyvb6\\lengthbench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\michaelhunt\\legacyvb6\\lengthbench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "LengthBench\\frmVOLCompensationForm.cs",
               "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
               "RelativeToolTip": "LengthBench\\frmVOLCompensationForm.cs",
-              "ViewState": "AQIAAMwAAAAAAAAAAAA4wN4AAAAqAAAA",
+              "ViewState": "AQIAAKUAAACgnZmZmVkjwKwAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T06:12:59.863Z",
               "EditorCaption": ""
@@ -110,8 +110,7 @@
               "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs [Design]",
               "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:52:22.778Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-18T12:52:22.778Z"
             },
             {
               "$type": "Document",
@@ -123,8 +122,7 @@
               "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs",
               "ViewState": "AQIAAEQBAAAAaGZmZmYcwFMBAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:52:25.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T12:52:25.74Z"
             },
             {
               "$type": "Document",
@@ -135,8 +133,7 @@
               "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs [Design]",
               "RelativeToolTip": "LengthBench\\frmVOLCompensationForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T10:24:52.192Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-18T10:24:52.192Z"
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs [Design]",
               "RelativeToolTip": "LengthBench\\frmStartScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T13:46:29.907Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-09T13:46:29.907Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "LengthBench\\frmStartScreen.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAqwB0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T13:46:32.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-09T13:46:32.641Z"
             },
             {
               "$type": "Document",
