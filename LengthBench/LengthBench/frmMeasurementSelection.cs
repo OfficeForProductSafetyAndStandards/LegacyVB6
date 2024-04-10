@@ -21,6 +21,8 @@ namespace LengthBench
             metric = false;
             Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
             Program.xlsheetResultsMeasurement.Cells[24, 5] = "Class I";
+            Program.xlsheetResultsMeasurement.Cells[27, 5] = "No";
+
             Program.xlbookResults.Save();
         }
 

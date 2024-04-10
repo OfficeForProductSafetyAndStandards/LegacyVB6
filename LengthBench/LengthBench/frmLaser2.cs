@@ -19,6 +19,7 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Program.NewFileName1 = textBox1.Text;
             this.Close();
             this.Dispose();
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
@@ -36,8 +37,7 @@ namespace LengthBench
 
             Program.xlbookResults.SaveAs(Program.NewFileName);
             Program.xlsheetResultsMeasurement.Cells[26, 5] = Program.metrologist;
-            Program.NewFileName1 = textBox1.Text;
-            // Program.xlsheetResultsVOLandCustomerData.Cells[12, 2] = Program.NewFileName1;
+            Program.xlsheetResultsVOLandCustomerData.Cells[12, 2] = Program.NewFileName1;
 
             Form frmMeasurementSelection = new frmMeasurementSelection();
             frmMeasurementSelection.ShowDialog();
