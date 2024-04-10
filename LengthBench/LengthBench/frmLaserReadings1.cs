@@ -321,8 +321,14 @@ namespace LengthBench
             }
 
             olkMail.Subject = "flexi results";
-            olkMail.To = textBox1.Text;
-            olkMail.To = "m-hunt3@sky.com";
+            if (textBox1.Text.Length == 0)
+            {
+                olkMail.To = "m-hunt3@sky.com";
+            }
+            else
+            {
+                olkMail.To = textBox1.Text;
+            }
             string fname = Program.NewFileName + ".xlsx";
             olkMail.Body = fname;
             olkMail.Subject = fname;
