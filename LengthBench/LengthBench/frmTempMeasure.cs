@@ -21,6 +21,7 @@ namespace LengthBench
     {
         public MSComm mscomm;
         public int counter = 0;
+        public System.Windows.Forms.Timer myTimer;
         public frmTempMeasure()
         {
             InitializeComponent();
@@ -197,6 +198,9 @@ namespace LengthBench
         public void button1_Click(object sender, EventArgs e)
         {
             string Thermometer;
+
+            myTimer.Stop();
+            mscomm.OnComm -= new DMSCommEvents_OnCommEventHandler(OnCommEvent);
 
             Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
             CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
@@ -423,68 +427,7 @@ namespace LengthBench
                     break;
 
             }
-        
-
-            /*
-    On Error GoTo ErrorHandler
-    Dim StrLen As Integer
-    StrLen = 150 'Select the number of characters in the string before processing commences
-    Select Case MSComm2.CommEvent
-    Case comEvReceive 'fires if a chracter has been received in the input buffer
-    reading = reading & MSComm2.Input
-    'reading is the string into which the characters from the EDALE are read,
-    'MSComm1.Input takes the characters from the input buffer and places them
-    'in the string called reading
-    Select Case intcounter
-    'Select number of channel for which the temperature is to be read
-        Case 1
-        probe = "CH01"
-        Case 2
-        probe = "CH02"
-        Case 3
-        probe = "CH03"
-        Case 4
-        probe = "CH04"
-        Case 5
-        probe = "CH05"
-        Case 6
-        probe = "CH06"
-        Case 7
-        probe = "CH07"
-        Case 8
-        probe = "CH08"
-        Case 9
-        probe = "CH09"
-        Case 10
-        probe = "CH10"
-        Case 11
-        probe = "CH11"
-        Case 12
-        probe = "CH12"
-    End Select
-    If Len(reading) >= StrLen Then 'When the correct number of Chars is read carry on
-        result = Val(Mid$(reading, ((InStr(reading, probe)) + 5), 5))
-        'InStr gives the position of the selected string ie CH01 in the main string
-        'the + 5 takes the point to where the temperature reading starts
-        If result = 0 Then
-            txtManualEdale(intcounter - 1).Text = "Error"
-            Else 'put value into channels text box
-            txtManualEdale(intcounter - 1).Text = result
-        End If
-        End If
-    If intcounter< 12 Then
-    'if intcounter is less than the max number of probes then increment
-    intcounter = intcounter + 1
-    Else
-    intcounter = 1
-    End If
-    End Select
-    Exit Sub
-    ErrorHandler:
-    MsgBox "The error was " & Err.Number & Err.Description, vbOKOnly
-    End
-    End Sub
-        */
+       
 
 
             void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -536,7 +479,7 @@ namespace LengthBench
             // Handle OnComm event to read data
             mscomm.OnComm += new DMSCommEvents_OnCommEventHandler(OnCommEvent); // Assigns the event handler
             // Declare the timer
-            System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+            myTimer = new System.Windows.Forms.Timer();
             myTimer.Interval = 100;
             myTimer.Tick += new EventHandler(RefreshEvent);
             myTimer.Start();
