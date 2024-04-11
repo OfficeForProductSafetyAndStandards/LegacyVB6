@@ -1,20 +1,26 @@
-﻿using System;
+﻿using MSCommLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows.Media.Capture;
 using Windows.UI.Composition.Interactions;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LengthBench
 {
     public partial class frmTempMeasure : Form
     {
+        public MSComm mscomm;
+        public int counter = 0;
         public frmTempMeasure()
         {
             InitializeComponent();
@@ -182,11 +188,11 @@ namespace LengthBench
                             txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
-                
-                    }
+
                 }
             }
-        
+        }
+
 
         public void button1_Click(object sender, EventArgs e)
         {
@@ -297,7 +303,7 @@ namespace LengthBench
             txtManual2.Text = "0";
             txtManual3.Text = "0";
             txtManual4.Text = "0";
-            txtManual5.Text = "0";    
+            txtManual5.Text = "0";
             txtManual6.Text = "0";
             txtManual7.Text = "0";
             txtManual8.Text = "0";
@@ -325,6 +331,221 @@ namespace LengthBench
         {
 
         }
+
+        private void mscomm_OnComm()
+        {
+            switch (mscomm.CommEvent)
+            {
+
+                /*
+                case DMSCommEventsConstants.comEvReceive:
+                    // Handle incoming data
+                    string dataReceived = mscomm.Input;
+                    Console.WriteLine("Data Received: " + dataReceived);
+                    break;
+                case DMSCommEventsConstants.comEvSend:
+                    // Handle completion of data transmission
+                    Console.WriteLine("Data Sent");
+                    break;
+                    // Add cases for other events you want to handle
+                */
+            }
+        }
+
+        private void RefreshEvent(object myObject, EventArgs myEventArgs)
+        {
+            txtManual1.Text = counter.ToString();
+            counter++;
+            this.Refresh();
+        }
+        private void OnCommEvent()    
+        {
+            switch (mscomm.CommEvent)
+            {
+                case 4: //DMSCommEventsConstants.comEvReceive:
+                    // Handle incoming data
+                    string dataReceived = mscomm.Input;
+                    Console.WriteLine("Data Received: " + dataReceived);
+                    if (dataReceived == null) return;
+                    // this.Refresh();
+                    string[] probes = dataReceived.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+                    foreach (var probe in probes)
+                    {
+                        Console.WriteLine(probe);
+                        if (probe.StartsWith('C'))
+                        {
+                            if (probe.Length > 9)
+                            {
+                                string probe_no = probe.Substring(2, 2);
+                                string probe_val = probe.Substring(5, 5);   
+                                switch(probe_no)
+                                {
+                                    case "01":
+                                        txtManual1.Text = probe_val;
+                                    break;
+                                    case "02":
+                                        txtManual2.Text = probe_val;
+                                    break;
+                                    case "03":
+                                        txtManual3.Text = probe_val;
+                                    break;
+                                    case "04":
+                                        txtManual4.Text = probe_val;
+                                    break;
+                                    case "05":
+                                        txtManual5.Text = probe_val;
+                                    break;
+                                    case "06":
+                                        txtManual6.Text = probe_val;
+                                    break;
+                                    case "07":
+                                        txtManual7.Text = probe_val;
+                                    break;
+                                    case "08":
+                                        txtManual8.Text = probe_val;
+                                    break;
+                                    case "09":
+                                        txtManual9.Text = probe_val;
+                                    break;
+                                    case "10":
+                                        txtManual10.Text = probe_val;
+                                    break;
+                                }
+                            }
+                            else
+                            {  // noise ?
+                                return; 
+                            }
+                        }
+
+                    }
+                    
+                    break;
+
+            }
+        
+
+            /*
+    On Error GoTo ErrorHandler
+    Dim StrLen As Integer
+    StrLen = 150 'Select the number of characters in the string before processing commences
+    Select Case MSComm2.CommEvent
+    Case comEvReceive 'fires if a chracter has been received in the input buffer
+    reading = reading & MSComm2.Input
+    'reading is the string into which the characters from the EDALE are read,
+    'MSComm1.Input takes the characters from the input buffer and places them
+    'in the string called reading
+    Select Case intcounter
+    'Select number of channel for which the temperature is to be read
+        Case 1
+        probe = "CH01"
+        Case 2
+        probe = "CH02"
+        Case 3
+        probe = "CH03"
+        Case 4
+        probe = "CH04"
+        Case 5
+        probe = "CH05"
+        Case 6
+        probe = "CH06"
+        Case 7
+        probe = "CH07"
+        Case 8
+        probe = "CH08"
+        Case 9
+        probe = "CH09"
+        Case 10
+        probe = "CH10"
+        Case 11
+        probe = "CH11"
+        Case 12
+        probe = "CH12"
+    End Select
+    If Len(reading) >= StrLen Then 'When the correct number of Chars is read carry on
+        result = Val(Mid$(reading, ((InStr(reading, probe)) + 5), 5))
+        'InStr gives the position of the selected string ie CH01 in the main string
+        'the + 5 takes the point to where the temperature reading starts
+        If result = 0 Then
+            txtManualEdale(intcounter - 1).Text = "Error"
+            Else 'put value into channels text box
+            txtManualEdale(intcounter - 1).Text = result
+        End If
+        End If
+    If intcounter< 12 Then
+    'if intcounter is less than the max number of probes then increment
+    intcounter = intcounter + 1
+    Else
+    intcounter = 1
+    End If
+    End Select
+    Exit Sub
+    ErrorHandler:
+    MsgBox "The error was " & Err.Number & Err.Description, vbOKOnly
+    End
+    End Sub
+        */
+
+
+            void radioButton1_CheckedChanged(object sender, EventArgs e)
+            {
+                // MSCommLib.MSComm mscomm = new MSCommLib.MSCommClass();
+                mscomm = new MSComm();
+                mscomm.CommPort = 2;
+
+                // Set the port number
+                // ManualEdale (11) 'when digital edale clicked go to sub ManualEdale with no of probes as 11
+                mscomm.PortOpen = true;  // Open comm port for EDALE
+                mscomm.Output = "ManualEdale (11)";
+                // read port#
+                mscomm.RThreshold = 1;  // Fire OnComm event after any data is received
+
+                // Handle OnComm event to read data
+                // mscomm.OnComm += new DMSCommEvents_OnCommEventHandler(OnCommEvent); // Assigns the event handler
+                // Declare the timer
+                System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+                myTimer.Interval = 1000;
+                myTimer.Tick += new EventHandler(RefreshEvent);
+                myTimer.Start();
+
+
+                //mscomm.OnComm += new EventHandler(OnCommEvent); // Assigns the event handler
+
+                // mscomm.PortOpen = false; // Close comm port for EDALE
+
+            }
+
+            void txtManual1_TextChanged(object sender, EventArgs e)
+            {
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            // MSCommLib.MSComm mscomm = new MSCommLib.MSCommClass();
+            mscomm = new MSComm();
+            mscomm.CommPort = 2;
+
+            // Set the port number
+            // ManualEdale (11) 'when digital edale clicked go to sub ManualEdale with no of probes as 11
+            mscomm.PortOpen = true;  // Open comm port for EDALE
+            mscomm.Output = "ManualEdale (11)";
+            // read port#
+            mscomm.RThreshold = 1;  // Fire OnComm event after any data is received
+
+            // Handle OnComm event to read data
+            mscomm.OnComm += new DMSCommEvents_OnCommEventHandler(OnCommEvent); // Assigns the event handler
+            // Declare the timer
+            System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+            myTimer.Interval = 100;
+            myTimer.Tick += new EventHandler(RefreshEvent);
+            myTimer.Start();
+
+
+            //mscomm.OnComm += new EventHandler(OnCommEvent); // Assigns the event handler
+
+            // mscomm.PortOpen = false; // Close comm port for EDALE
+
+        }
     }
-}
-   
+   }

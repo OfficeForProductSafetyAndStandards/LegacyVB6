@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj": {}
+    "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj": {
+    "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+        "projectUniqueName": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
         "projectName": "LengthBench",
-        "projectPath": "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
-        "packagesPath": "C:\\Users\\mike\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
+        "projectPath": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+        "packagesPath": "C:\\Users\\Lab2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mike\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lab2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
