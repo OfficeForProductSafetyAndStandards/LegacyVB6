@@ -358,8 +358,8 @@ namespace LengthBench
 
         private void RefreshEvent(object myObject, EventArgs myEventArgs)
         {
-            txtManual1.Text = counter.ToString();
-            counter++;
+            // txtManual1.Text = counter.ToString();
+            // counter++;
             this.Refresh();
         }
         private void OnCommEvent()    
