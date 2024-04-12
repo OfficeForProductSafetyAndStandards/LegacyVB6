@@ -14,6 +14,8 @@ using Windows.UI.Composition.Interactions;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.IO.Ports;
+
 
 namespace LengthBench
 {
@@ -201,10 +203,15 @@ namespace LengthBench
 
             myTimer.Stop();
             mscomm.OnComm -= new DMSCommEvents_OnCommEventHandler(OnCommEvent);
+            mscomm.PortOpen = false; // Close comm port for EDALE
+            
 
             Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
             CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
 
+            button1.Visible = true;
+            button2.Visible = true;
+            label2.Visible = true;
 
             /*
                 if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
@@ -244,19 +251,19 @@ namespace LengthBench
             switch (Program.ProbeCounter)
             {
                 case (int)Program.CONSTANTS.EDALE:
-                    this.Text = "VOL Temperature Dialog";
+                    this.Text = "VOL Temperature Details";
                     break;
                 case (int)Program.CONSTANTS.INITIAL:
-                    this.Text = "Initial Temperature Dialog";
+                    this.Text = "Initial Material Temperature Details";
                     break;
                 case (int)Program.CONSTANTS.INTERMEDIATE:
-                    this.Text = "Intermediate Temperature Dialog";
+                    this.Text = "Intermediate Material Temperature Details";
                     break;
                 case (int)Program.CONSTANTS.FINAL:
-                    this.Text = "Final Temperature Dialog";
+                    this.Text = "Final Material Temperature Details";
                     break;
             }
-            // restore state from EDALE for selected probes
+            // restore state from INITIAL for selected probes
             checkBox1.Checked = Program.ProbesSelected[0];
             checkBox2.Checked = Program.ProbesSelected[1];
             checkBox3.Checked = Program.ProbesSelected[2];
@@ -277,7 +284,14 @@ namespace LengthBench
             this.Close();
             if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
             {
-                // set checkbox state for all probes
+               
+                Program.ProbeCounter++;
+                return;
+            }
+
+
+            if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
+            {
                 Program.ProbesSelected[0] = checkBox1.Checked;
                 Program.ProbesSelected[1] = checkBox2.Checked;
                 Program.ProbesSelected[2] = checkBox3.Checked;
@@ -288,15 +302,10 @@ namespace LengthBench
                 Program.ProbesSelected[7] = checkBox8.Checked;
                 Program.ProbesSelected[8] = checkBox9.Checked;
                 Program.ProbesSelected[9] = checkBox10.Checked;
-                Program.ProbeCounter++;
-                return;
-            }
-
-
-            if (Program.ProbeCounter == (int)Program.CONSTANTS.INITIAL)
-            {
                 Form frmLaserReadings = new frmLaserReadings1();
                 frmLaserReadings.ShowDialog();
+                // set checkbox state for all probes
+        
             }
 
         }
@@ -471,8 +480,14 @@ namespace LengthBench
 
             // Set the port number
             // ManualEdale (11) 'when digital edale clicked go to sub ManualEdale with no of probes as 11
-            mscomm.PortOpen = true;  // Open comm port for EDALE
-            mscomm.Output = "ManualEdale (11)";
+            try
+            {
+                mscomm.PortOpen = true;  // Open comm port for EDALE
+            }
+            catch (Exception ex)
+            {
+            }   
+            // mscomm.Output = "ManualEdale (11)";
             // read port#
             mscomm.RThreshold = 1;  // Fire OnComm event after any data is received
 

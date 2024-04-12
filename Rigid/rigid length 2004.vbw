@@ -1,0 +1,17 @@
+modSetUp = 49, 2, 674, 417, C
+frmLaserReadings = -5, 26, 544, 470, C, 132, 174, 681, 618, C
+modTakeLaserReadings = 66, 87, 605, 451, C
+modErrorCleanUp = 74, -23, 623, 421, C
+modSetUpLaser = 44, 44, 644, 387, C
+frmMeasurementSelection = 22, 22, 622, 365, C, 66, 87, 615, 531, C
+modTakeBarometerReading = 88, 116, 976, 789, C
+frmManualEdaleEntry = 60, -16, 752, 463, C, 55, -12, 995, 780, C
+modTakeTemperature = 44, 58, 581, 422, C
+frmVOLCompensationForm = 141, 93, 860, 635, C, 54, 27, 837, 469, C
+frmSelectClassOfMeasurement = 66, 66, 666, 409, C, 132, 174, 681, 618, C
+frmCustomerDetails = 125, 87, 725, 430, C, 88, 37, 637, 481, C
+NIGLOBAL = 68, 25, 556, 453, C
+VBIB32 = 272, 412, 760, 840, C
+frmLaserReadingsB = 0, 0, 549, 444, I, 154, 203, 703, 647, C
+frmStartScreen = 33, 1, 633, 344, C, 66, 87, 615, 531, C
+frmFinalSheet = 0, 0, 0, 0, C, 44, 58, 593, 502, C

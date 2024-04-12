@@ -51,6 +51,7 @@ namespace LengthBench
                 Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
             }
             Program.SetUp_Laser();
+            cmdSetUpLaser.Enabled = false;
         }
 
         private void frmMeasurementSelection_Load(object sender, EventArgs e)
@@ -76,6 +77,7 @@ namespace LengthBench
         private void cmdAgilient1339_Click(object sender, EventArgs e)
         {
             Program.xlsheetResultsMeasurement.Cells[27, 2] = "Agilent 1339";
+            cmdAgilient1339.Enabled = false;
 
         }
 

@@ -382,6 +382,7 @@ namespace LengthBench
 
         private void cmdResetLaser_Click_1(object sender, EventArgs e)
         {
+            cmdResetLaser.Enabled = false;
             cmdLaserReading.Enabled = true;
         }
     }

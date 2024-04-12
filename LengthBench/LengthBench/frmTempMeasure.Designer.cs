@@ -81,7 +81,7 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(30, 25);
+            checkBox1.Location = new Point(57, 29);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(66, 19);
             checkBox1.TabIndex = 0;
@@ -115,7 +115,7 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(30, 58);
+            checkBox2.Location = new Point(57, 58);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(66, 19);
             checkBox2.TabIndex = 4;
@@ -132,7 +132,7 @@
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(30, 87);
+            checkBox3.Location = new Point(57, 87);
             checkBox3.Name = "checkBox3";
             checkBox3.Size = new Size(66, 19);
             checkBox3.TabIndex = 6;
@@ -191,7 +191,7 @@
             // checkBox4
             // 
             checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(30, 112);
+            checkBox4.Location = new Point(57, 114);
             checkBox4.Name = "checkBox4";
             checkBox4.Size = new Size(66, 19);
             checkBox4.TabIndex = 14;
@@ -202,7 +202,7 @@
             // checkBox5
             // 
             checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(30, 141);
+            checkBox5.Location = new Point(57, 143);
             checkBox5.Name = "checkBox5";
             checkBox5.Size = new Size(66, 19);
             checkBox5.TabIndex = 15;
@@ -212,7 +212,7 @@
             // checkBox6
             // 
             checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(30, 174);
+            checkBox6.Location = new Point(57, 174);
             checkBox6.Name = "checkBox6";
             checkBox6.Size = new Size(66, 19);
             checkBox6.TabIndex = 16;
@@ -222,7 +222,7 @@
             // checkBox7
             // 
             checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(30, 199);
+            checkBox7.Location = new Point(57, 201);
             checkBox7.Name = "checkBox7";
             checkBox7.Size = new Size(66, 19);
             checkBox7.TabIndex = 17;
@@ -232,7 +232,7 @@
             // checkBox8
             // 
             checkBox8.AutoSize = true;
-            checkBox8.Location = new Point(30, 224);
+            checkBox8.Location = new Point(57, 226);
             checkBox8.Name = "checkBox8";
             checkBox8.Size = new Size(66, 19);
             checkBox8.TabIndex = 18;
@@ -242,7 +242,7 @@
             // checkBox9
             // 
             checkBox9.AutoSize = true;
-            checkBox9.Location = new Point(30, 255);
+            checkBox9.Location = new Point(57, 257);
             checkBox9.Name = "checkBox9";
             checkBox9.Size = new Size(66, 19);
             checkBox9.TabIndex = 19;
@@ -252,7 +252,7 @@
             // checkBox10
             // 
             checkBox10.AutoSize = true;
-            checkBox10.Location = new Point(30, 286);
+            checkBox10.Location = new Point(57, 286);
             checkBox10.Name = "checkBox10";
             checkBox10.Size = new Size(72, 19);
             checkBox10.TabIndex = 20;
@@ -301,35 +301,35 @@
             txtManual16.Location = new Point(251, 170);
             txtManual16.Name = "txtManual16";
             txtManual16.Size = new Size(68, 23);
-            txtManual16.TabIndex = 26;
+            txtManual16.TabIndex = 16;
             // 
             // txtManual17
             // 
             txtManual17.Location = new Point(251, 199);
             txtManual17.Name = "txtManual17";
             txtManual17.Size = new Size(68, 23);
-            txtManual17.TabIndex = 27;
+            txtManual17.TabIndex = 17;
             // 
             // txtManual18
             // 
             txtManual18.Location = new Point(251, 226);
             txtManual18.Name = "txtManual18";
             txtManual18.Size = new Size(68, 23);
-            txtManual18.TabIndex = 28;
+            txtManual18.TabIndex = 18;
             // 
             // txtManual19
             // 
             txtManual19.Location = new Point(251, 251);
             txtManual19.Name = "txtManual19";
             txtManual19.Size = new Size(68, 23);
-            txtManual19.TabIndex = 29;
+            txtManual19.TabIndex = 19;
             // 
             // txtManual20
             // 
             txtManual20.Location = new Point(251, 284);
             txtManual20.Name = "txtManual20";
             txtManual20.Size = new Size(68, 23);
-            txtManual20.TabIndex = 30;
+            txtManual20.TabIndex = 20;
             // 
             // button1
             // 
@@ -339,6 +339,7 @@
             button1.TabIndex = 31;
             button1.Text = "Yes";
             button1.UseVisualStyleBackColor = true;
+            button1.Visible = false;
             button1.Click += button1_Click_1;
             // 
             // button2
@@ -349,6 +350,7 @@
             button2.TabIndex = 32;
             button2.Text = "No";
             button2.UseVisualStyleBackColor = true;
+            button2.Visible = false;
             button2.Click += button2_Click;
             // 
             // label1
@@ -404,12 +406,13 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Red;
-            label2.Location = new Point(392, 316);
+            label2.Location = new Point(399, 329);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
             label2.Size = new Size(106, 15);
             label2.TabIndex = 35;
             label2.Text = "Are the results OK?";
+            label2.Visible = false;
             // 
             // label3
             // 

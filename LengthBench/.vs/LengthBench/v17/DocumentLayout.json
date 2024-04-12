@@ -1,180 +1,259 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\",
+  "WorkspaceRootPath": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\michaelhunt\\legacyvb6\\lengthbench\\lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaserreadings1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\lab2\\legacyvb6\\lengthbench\\lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmtempmeasure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmmeasurementselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\lab2\\legacyvb6\\lengthbench\\lengthbench\\frmlaser2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaser2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\lab2\\legacyvb6\\lengthbench\\lengthbench\\frmlaser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaser1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|c:\\users\\lab2\\legacyvb6\\lengthbench\\lengthbench\\frmlaser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmlaser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\lengthbench\\nolaserfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmtempmeasure.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmtempmeasure.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmcustomerdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmvolcompensationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\frmstartscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\lengthbench\\nolaserfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E0CDC18F-3974-48DF-9160-4C5C9ED1316D}|LengthBench\\LengthBench.csproj|solutionrelative:lengthbench\\nolaserfound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 100,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\Program.cs",
-              "RelativeDocumentMoniker": "LengthBench\\Program.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\Program.cs",
-              "RelativeToolTip": "LengthBench\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T16:51:44.796Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
+              "Title": "frmLaser2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaser2.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmLaser2.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaser2.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmLaser2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T11:29:58.648Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmlaser1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmlaser1.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmlaser1.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmlaser1.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmlaser1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T11:29:56.387Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmLaser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaser.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmLaser.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaser.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmLaser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T11:29:52.102Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmTempMeasure.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmTempMeasure.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
+              "RelativeToolTip": "LengthBench\\frmTempMeasure.cs",
+              "ViewState": "AQIAAMIAAAAAAAAAAAArwNYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T15:45:46.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmTempMeasure.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.Designer.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmTempMeasure.Designer.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.Designer.cs",
+              "RelativeToolTip": "LengthBench\\frmTempMeasure.Designer.cs",
+              "ViewState": "AQIAAIABAAAAAAAAAAAvwI0BAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-11T11:51:06.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "frmVOLCompensationForm.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmVOLCompensationForm.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
               "RelativeToolTip": "LengthBench\\frmVOLCompensationForm.cs",
-              "ViewState": "AQIAAKUAAACgnZmZmVkjwKwAAABGAAAA",
+              "ViewState": "AQIAAKUAAACgnZmZmVkjwK8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T06:12:59.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmLaserReadings1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
-              "RelativeDocumentMoniker": "LengthBench\\frmLaserReadings1.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs [Design]",
-              "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\Program.cs",
+              "RelativeDocumentMoniker": "LengthBench\\Program.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\Program.cs",
+              "RelativeToolTip": "LengthBench\\Program.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAnwEIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:52:22.778Z"
+              "WhenOpened": "2024-03-14T16:51:44.796Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmLaserReadings1.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
+              "Title": "frmLaserReadings1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmLaserReadings1.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
-              "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs",
-              "ViewState": "AQIAAEQBAAAAaGZmZmYcwFMBAAAGAAAA",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T12:52:25.74Z"
+              "WhenOpened": "2024-03-18T12:52:22.778Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "frmLaserReadings1.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmLaserReadings1.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmLaserReadings1.cs",
+              "RelativeToolTip": "LengthBench\\frmLaserReadings1.cs",
+              "ViewState": "AQIAAHQBAAAAAAAAAIA2wIEBAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:52:25.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "frmVOLCompensationForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmVOLCompensationForm.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmVOLCompensationForm.cs [Design]",
               "RelativeToolTip": "LengthBench\\frmVOLCompensationForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T10:24:52.192Z"
+              "WhenOpened": "2024-03-18T10:24:52.192Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "frmTempMeasure.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
-              "RelativeDocumentMoniker": "LengthBench\\frmTempMeasure.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
-              "RelativeToolTip": "LengthBench\\frmTempMeasure.cs",
-              "ViewState": "AQIAACgAAAAAAQAAAAAtwDsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T15:45:46.702Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "frmStartScreen.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmStartScreen.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs [Design]",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs [Design]",
               "RelativeToolTip": "LengthBench\\frmStartScreen.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T13:46:29.907Z"
+              "WhenOpened": "2024-04-09T13:46:29.907Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "frmStartScreen.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmStartScreen.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmStartScreen.cs",
               "RelativeToolTip": "LengthBench\\frmStartScreen.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAqwB0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T13:46:32.641Z"
+              "WhenOpened": "2024-04-09T13:46:32.641Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Nolaserfound.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\Nolaserfound.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\Nolaserfound.cs",
               "RelativeDocumentMoniker": "LengthBench\\Nolaserfound.cs",
               "ToolTip": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\Nolaserfound.cs [Design]",
               "RelativeToolTip": "..\\..\\..\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\Nolaserfound.cs [Design]",
@@ -183,72 +262,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Laser.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\Laser.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\Laser.cs",
               "RelativeDocumentMoniker": "LengthBench\\Laser.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\Laser.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\Laser.cs",
               "RelativeToolTip": "LengthBench\\Laser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAewJ0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T15:07:40.978Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "frmCustomerDetails.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmCustomerDetails.cs",
-              "ToolTip": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs [Design]",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmCustomerDetails.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T16:44:22.925Z"
+              "WhenOpened": "2024-03-14T16:44:22.925Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "frmCustomerDetails.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmCustomerDetails.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmCustomerDetails.cs",
               "RelativeToolTip": "LengthBench\\frmCustomerDetails.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAMA7wFwAAAAAAAAA",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAnwIQAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T14:25:38.606Z"
+              "WhenOpened": "2024-03-14T14:25:38.606Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "frmTempMeasure.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmTempMeasure.cs",
-              "ToolTip": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs [Design]",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmTempMeasure.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmTempMeasure.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T14:04:47.459Z"
+              "WhenOpened": "2024-03-14T14:04:47.459Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmMeasurementSelection.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
+              "RelativeDocumentMoniker": "LengthBench\\frmMeasurementSelection.cs",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
+              "RelativeToolTip": "LengthBench\\frmMeasurementSelection.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAjwE8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T13:50:58.396Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "frmMeasurementSelection.cs",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
-              "RelativeDocumentMoniker": "LengthBench\\frmMeasurementSelection.cs",
-              "ToolTip": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
-              "RelativeToolTip": "LengthBench\\frmMeasurementSelection.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAtwEUAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T13:50:58.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "frmMeasurementSelection.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
+              "DocumentMoniker": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs",
               "RelativeDocumentMoniker": "LengthBench\\frmMeasurementSelection.cs",
-              "ToolTip": "C:\\Users\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\mike\\source\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs [Design]",
+              "ToolTip": "C:\\Users\\Lab2\\LegacyVB6\\LengthBench\\LengthBench\\frmMeasurementSelection.cs [Design]",
+              "RelativeToolTip": "LengthBench\\frmMeasurementSelection.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T13:50:49.125Z"
+              "WhenOpened": "2024-02-21T13:50:49.125Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
