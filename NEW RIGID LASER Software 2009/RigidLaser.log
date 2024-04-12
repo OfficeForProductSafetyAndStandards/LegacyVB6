@@ -1,0 +1,6 @@
+Line 178: Class MSComctlLib.ProgressBar of control pbBeamStrength was not a loaded control class.
+Line 184: The property name _ExtentX in pbBeamStrength is invalid.
+Line 185: The property name _ExtentY in pbBeamStrength is invalid.
+Line 186: The property name _Version in pbBeamStrength is invalid.
+Line 188: The property name Orientation in pbBeamStrength is invalid.
+Line 189: The property name Scrolling in pbBeamStrength is invalid.
