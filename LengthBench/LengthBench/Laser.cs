@@ -77,13 +77,15 @@ namespace LengthBench
         
     }
 
+    
     struct TLaserSample
     {
-        double LaserPos;
-        ulong TimeStamp;
-        int LaserTrigger;
-        int LaserError;
+        // double LaserPos;
+        // ulong TimeStamp;
+        // int LaserTrigger;
+        //  int LaserError;
     }
+    
 
     struct LaserErrorMessage{
         public const string NoDevicesConnected = "The E1735A is not registed as connected with the computer.  Connect the E1735A and restart the application.  Note the E1735A.dll and E1735ACore.dll and the .sys file need to be in the SysWOW64 folder of System32 directory depending on whether you have a 32-Bit or a 64-bit OS";
@@ -155,7 +157,7 @@ namespace LengthBench
         private double bs = 0.0;
         private bool laser_operation_normal = false;
 
-        private int enviromental_to_get_or_set = 0;
+       // private int enviromental_to_get_or_set = 0;
         private double laser_wavelength = 0;
         private double laser_airtemp = 0;
         private double laser_airpres = 0;

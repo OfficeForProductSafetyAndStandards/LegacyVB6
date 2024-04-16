@@ -224,7 +224,7 @@ namespace LengthBench
 
         public void button1_Click(object sender, EventArgs e)
         {
-            string Thermometer;
+            // string Thermometer;
 
             if (radioButton1.Checked)
             { // this blows up because its assuming temperature is automatic
@@ -366,26 +366,6 @@ namespace LengthBench
 
         }
 
-        private void mscomm_OnComm()
-        {
-            switch (mscomm.CommEvent)
-            {
-
-                /*
-                case DMSCommEventsConstants.comEvReceive:
-                    // Handle incoming data
-                    string dataReceived = mscomm.Input;
-                    Console.WriteLine("Data Received: " + dataReceived);
-                    break;
-                case DMSCommEventsConstants.comEvSend:
-                    // Handle completion of data transmission
-                    Console.WriteLine("Data Sent");
-                    break;
-                    // Add cases for other events you want to handle
-                */
-            }
-        }
-
         private void RefreshEvent(object myObject, EventArgs myEventArgs)
         {
             // txtManual1.Text = counter.ToString();
@@ -459,7 +439,7 @@ namespace LengthBench
             }
 
 
-
+            /*
             void radioButton1_CheckedChanged(object sender, EventArgs e)
             {
                 // MSCommLib.MSComm mscomm = new MSCommLib.MSCommClass();
@@ -486,11 +466,12 @@ namespace LengthBench
 
                 // mscomm.PortOpen = false; // Close comm port for EDALE
 
-            }
-
+            }*/
+            /*
             void txtManual1_TextChanged(object sender, EventArgs e)
             {
             }
+            */
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -505,7 +486,7 @@ namespace LengthBench
             {
                 mscomm.PortOpen = true;  // Open comm port for EDALE
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
             // mscomm.Output = "ManualEdale (11)";

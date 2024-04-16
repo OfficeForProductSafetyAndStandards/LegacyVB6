@@ -88,6 +88,8 @@ namespace LengthBench
                     if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtFinalZeroReading.Text = x.ToString();
+                        button2.Enabled = true;
+                        button3.Enabled = true;
                     }
                     break;
                 case 1:
@@ -317,7 +319,7 @@ namespace LengthBench
             catch (Exception ex)
             {
                 // Handle the exception
-                MessageBox.Show(ex.InnerException.ToString());
+                _ = MessageBox.Show(ex.InnerException.ToString());
                 return;
             }
 

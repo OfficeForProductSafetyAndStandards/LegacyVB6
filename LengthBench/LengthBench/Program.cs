@@ -26,15 +26,15 @@ namespace LengthBench
         public static int ProbeCounter;
         public static bool LaserFound;
 
-        public static Microsoft.Office.Interop.Excel._Workbook? xlCorrectionBook;
-        public static Microsoft.Office.Interop.Excel._Workbook? xlbookResults;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResults;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperature;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsVOLandCustomerData;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsMeasurement;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheetResultsTemperatureUncorrected;
-        public static Microsoft.Office.Interop.Excel._Worksheet? xlsheet;
-        public static Microsoft.Office.Interop.Excel.Application? xl;
+        public static Microsoft.Office.Interop.Excel._Workbook xlCorrectionBook;
+        public static Microsoft.Office.Interop.Excel._Workbook xlbookResults;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheetResults;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheetResultsTemperature;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheetResultsVOLandCustomerData;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheetResultsMeasurement;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheetResultsTemperatureUncorrected;
+        public static Microsoft.Office.Interop.Excel._Worksheet xlsheet;
+        public static Microsoft.Office.Interop.Excel.Application xl;
         public static Microsoft.Office.Interop.Excel.Application excelAppEdale;
         public static Microsoft.Office.Interop.Excel.Application excelAppLength;
 
@@ -48,14 +48,14 @@ namespace LengthBench
         public static string? daybook;
         public static string? Units = "metres";
         public static bool[] ProbesSelected = new bool[10];
-        public static string FlexiPath;
+        public static string? FlexiPath;
 
         public static string? NewFileName;
         public static string? NewFileName1;
         public static string? metrologist;
         public static string? email;
 
-        public static Laser laser = null;
+        public static Laser laser;
 
         public static double temperature;
         public static double humidity;
@@ -65,14 +65,14 @@ namespace LengthBench
         public static void SetUp_Laser()
         {
 
-            bool reading_2nd_laser = false;
+            // bool reading_2nd_laser = false;
             // SerialEDM serial = null;
-            bool manual_reading = false;
+            // bool manual_reading = false;
             // ManualInstrumentReading reader = null;
             
             // EthernetServer server1 = new EthernetServer();
             // WifiServer server2 = new WifiServer();
-            reading_2nd_laser = true;
+            // reading_2nd_laser = true;
 
             laser = new Laser();
             laser.Initialize_E1735A_DLL();
@@ -97,8 +97,8 @@ namespace LengthBench
                 Console.WriteLine("The Current laser position is: " + laser.ReadSample().ToString() + "\n");
 
                 // Dim dbScaleFactor As Double 'Agilent change from mm to inch  SBB 8/3/2010
-                string BenchUsed = "D1"; // 'sets bench for single pass
-                string Units;
+                // string BenchUsed = "D1"; // 'sets bench for single pass
+                // string Units;
                 double dbScaleFactor;
                 bool optImperial = frmMeasurementSelection.metric; 
                 if (optImperial == true)

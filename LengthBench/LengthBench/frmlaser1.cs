@@ -28,12 +28,12 @@ namespace LengthBench
 
         public void textPoint_TextChanged(object sender, EventArgs e)
         {
-            string y = (sender as TextBox).Text;
+            string y = ((TextBox)sender).Text;
             try
             {
                 x = Convert.ToInt32(y);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid number");
             }

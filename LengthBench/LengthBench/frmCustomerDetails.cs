@@ -73,7 +73,6 @@ namespace LengthBench
             {
                 Form frmlaser1 = new frmlaser1(x);
                 frmlaser1.ShowDialog();
-                int Point = 0;
                 Program.xlsheetResultsMeasurement.Cells[x, 7] = LengthBench.frmlaser1.x;
             }
 
