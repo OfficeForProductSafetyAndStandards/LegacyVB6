@@ -31,10 +31,11 @@ namespace LengthBench
 
         private Color check(double x)
         {
-            Color backColor = Color.Green;
-            if (x < 18.0) backColor = Color.Blue;
-            if (x > 22.0) backColor = Color.Red;
-            return backColor;
+            Color backColor = Color.PaleGreen;
+            if (x < 18.0) backColor = Color.LightSteelBlue;
+            if (x > 22.0) backColor = Color.LightSalmon;
+            if (x == -2146826246) backColor = Color.LemonChiffon;
+             return backColor;
         }
 
 
@@ -42,6 +43,7 @@ namespace LengthBench
         {
             string[] txtManualEdale = new string[10];
             double x = 0;
+            double y = 0;
             Color backColor = Color.Green;
 
 
@@ -59,60 +61,69 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
 
                             x = Convert.ToDouble(txtManual1.Text);
-                            Color color = check(x);
-                            txtManual11.ForeColor = Color.White;
-                            txtManual11.BackColor = color;
+                        
                             txtManual11.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual11.Text);
+                            Color color = check(y);
+                            txtManual11.ForeColor = Color.Black;
+                            txtManual11.BackColor = color;
                         }
                         break;
+
                     case 1:
                         if (checkBox2.Checked == true && txtManual2.Text != "")
                         {
-                            try
-                            {
-                                x = Convert.ToDouble(txtManual2.Text);
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Please enter a valid number");
-                            }
 
-                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = x;
-                            Program.xlsheet.Cells[22, 2] = x;
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual2.Text);
+                            Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual2.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+
                             x = Convert.ToDouble(txtManual2.Text);
-                            Color color = check(x);
-                            txtManual12.ForeColor = Color.White;
-                            txtManual12.BackColor = color;
+
                             txtManual12.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual12.Text);
+                            Color color = check(y);
+                            txtManual12.ForeColor = Color.Black;
+                            txtManual12.BackColor = color;
                         }
                         break;
+
                     case 2:
                         if (checkBox3.Checked == true && txtManual3.Text != "")
                         {
+
                             Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual3.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual3.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+
                             x = Convert.ToDouble(txtManual3.Text);
-                            Color color = check(x);
-                            txtManual13.ForeColor = Color.White;
-                            txtManual13.BackColor = color;
+
                             txtManual13.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual13.Text);
+                            Color color = check(y);
+                            txtManual13.ForeColor = Color.Black;
+                            txtManual13.BackColor = color;
                         }
                         break;
+
                     case 3:
                         if (checkBox4.Checked == true && txtManual4.Text != "")
                         {
-                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 3, Program.Rownumber] = Convert.ToDouble(txtManual4.Text);
+
+                            Program.xlsheetResultsTemperatureUncorrected.Cells[ProbeCounter + 2, Program.Rownumber] = Convert.ToDouble(txtManual4.Text);
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual4.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
+
                             x = Convert.ToDouble(txtManual4.Text);
-                            Color color = check(x);
-                            txtManual14.ForeColor = Color.White;
-                            txtManual14.BackColor = color;
+
                             txtManual14.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual14.Text);
+                            Color color = check(y);
+                            txtManual14.ForeColor = Color.Black;
+                            txtManual14.BackColor = color;
                         }
                         break;
+
                     case 4:
                         if (checkBox5.Checked == true && txtManual5.Text != "")
                         {
@@ -120,12 +131,15 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual5.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual5.Text);
-                            Color color = check(x);
-                            txtManual15.ForeColor = Color.White;
+                            txtManual15.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual15.Text);
+                            Color color = check(y);
+                            txtManual15.ForeColor = Color.Black;
                             txtManual15.BackColor = color;
                             txtManual15.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
+
                     case 5:
                         if (checkBox6.Checked == true && txtManual6.Text != "")
                         {
@@ -133,12 +147,15 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual6.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual6.Text);
-                            Color color = check(x);
-                            txtManual16.ForeColor = Color.White;
+                            txtManual16.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual16.Text);
+                            Color color = check(y);
+                            txtManual16.ForeColor = Color.Black;
                             txtManual16.BackColor = color;
                             txtManual16.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
                         break;
+
                     case 6:
                         if (checkBox7.Checked == true && txtManual7.Text != "")
                         {
@@ -146,8 +163,10 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual7.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual7.Text);
-                            Color color = check(x);
-                            txtManual17.ForeColor = Color.White;
+                            txtManual17.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual17.Text);
+                            Color color = check(y);
+                            txtManual17.ForeColor = Color.Black;
                             txtManual17.BackColor = color;
                             txtManual17.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
@@ -159,8 +178,10 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual8.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual8.Text);
-                            Color color = check(x);
-                            txtManual18.ForeColor = Color.White;
+                            txtManual18.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual18.Text);
+                            Color color = check(y);
+                            txtManual18.ForeColor = Color.Black;
                             txtManual18.BackColor = color;
                             txtManual18.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
@@ -172,8 +193,10 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual9.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual9.Text);
-                            Color color = check(x);
-                            txtManual19.ForeColor = Color.White;
+                            txtManual19.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual19.Text);
+                            Color color = check(y);
+                            txtManual19.ForeColor = Color.Black;
                             txtManual19.BackColor = color;
                             txtManual19.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
@@ -185,8 +208,10 @@ namespace LengthBench
                             Program.xlsheet.Cells[22, 2] = Convert.ToDouble(txtManual10.Text);
                             Program.xlsheet.Cells[22, 3] = Convert.ToDouble(ProbeCounter + 3);
                             x = Convert.ToDouble(txtManual10.Text);
-                            Color color = check(x);
-                            txtManual20.ForeColor = Color.White;
+                            txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
+                            y = Convert.ToDouble(txtManual20.Text);
+                            Color color = check(y);
+                            txtManual20.ForeColor = Color.Black;
                             txtManual20.BackColor = color;
                             txtManual20.Text = ((double)Program.xlsheet.Cells[22, 4].value2).ToString();
                         }
@@ -201,26 +226,22 @@ namespace LengthBench
         {
             string Thermometer;
 
-            myTimer.Stop();
-            mscomm.OnComm -= new DMSCommEvents_OnCommEventHandler(OnCommEvent);
-            mscomm.PortOpen = false; // Close comm port for EDALE
-            
+            if (radioButton1.Checked)
+            { // this blows up because its assuming temperature is automatic
+
+                myTimer?.Stop();
+
+                mscomm.OnComm -= new DMSCommEvents_OnCommEventHandler(OnCommEvent);
+                mscomm.PortOpen = false; // Close comm port for EDALE
+            }
 
             Program.xlsheet = Program.xlCorrectionBook.Worksheets["IB5390"]; // goes to module TakeTemperature with name of thermometer
             CorrectEdale(10); //goes to sub CorrectEdale  with 10 as number of probes
+       
 
             button1.Visible = true;
             button2.Visible = true;
             label2.Visible = true;
-
-            /*
-                if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
-                    lblTemperatureOk.Visible = True 'make these 3 buttons visible
-                    cmdResultsNotOk.Visible = True
-                    cmdResultsOk.Visible = True
-                */
-
-
 
             Program.xlsheetResultsTemperatureUncorrected.Cells[2, 3 + Program.ProbeCounter] = txtManual1.Text;
             Program.xlsheetResultsTemperatureUncorrected.Cells[3, 3 + Program.ProbeCounter] = txtManual2.Text;
@@ -284,7 +305,7 @@ namespace LengthBench
             this.Close();
             if (Program.ProbeCounter == (int)Program.CONSTANTS.EDALE)
             {
-               
+
                 Program.ProbeCounter++;
                 return;
             }
@@ -305,7 +326,7 @@ namespace LengthBench
                 Form frmLaserReadings = new frmLaserReadings1();
                 frmLaserReadings.ShowDialog();
                 // set checkbox state for all probes
-        
+
             }
 
         }
@@ -371,7 +392,7 @@ namespace LengthBench
             // counter++;
             this.Refresh();
         }
-        private void OnCommEvent()    
+        private void OnCommEvent()
         {
             switch (mscomm.CommEvent)
             {
@@ -390,53 +411,53 @@ namespace LengthBench
                             if (probe.Length > 9)
                             {
                                 string probe_no = probe.Substring(2, 2);
-                                string probe_val = probe.Substring(5, 5);   
-                                switch(probe_no)
+                                string probe_val = probe.Substring(5, 5);
+                                switch (probe_no)
                                 {
                                     case "01":
                                         txtManual1.Text = probe_val;
-                                    break;
+                                        break;
                                     case "02":
                                         txtManual2.Text = probe_val;
-                                    break;
+                                        break;
                                     case "03":
                                         txtManual3.Text = probe_val;
-                                    break;
+                                        break;
                                     case "04":
                                         txtManual4.Text = probe_val;
-                                    break;
+                                        break;
                                     case "05":
                                         txtManual5.Text = probe_val;
-                                    break;
+                                        break;
                                     case "06":
                                         txtManual6.Text = probe_val;
-                                    break;
+                                        break;
                                     case "07":
                                         txtManual7.Text = probe_val;
-                                    break;
+                                        break;
                                     case "08":
                                         txtManual8.Text = probe_val;
-                                    break;
+                                        break;
                                     case "09":
                                         txtManual9.Text = probe_val;
-                                    break;
+                                        break;
                                     case "10":
                                         txtManual10.Text = probe_val;
-                                    break;
+                                        break;
                                 }
                             }
                             else
                             {  // noise ?
-                                return; 
+                                return;
                             }
                         }
 
                     }
-                    
+
                     break;
 
             }
-       
+
 
 
             void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -486,7 +507,7 @@ namespace LengthBench
             }
             catch (Exception ex)
             {
-            }   
+            }
             // mscomm.Output = "ManualEdale (11)";
             // read port#
             mscomm.RThreshold = 1;  // Fire OnComm event after any data is received
@@ -505,5 +526,15 @@ namespace LengthBench
             // mscomm.PortOpen = false; // Close comm port for EDALE
 
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
-   }
+}

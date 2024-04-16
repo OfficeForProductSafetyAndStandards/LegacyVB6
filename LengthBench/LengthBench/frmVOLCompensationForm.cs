@@ -187,30 +187,35 @@ namespace LengthBench
 
         private void cmdIB5211_Click(object sender, EventArgs e)
         {
+            cmdIB5211.Enabled = false;
             Program.Barometer = "IB211";
             Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5211";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            cmdIB5276.Enabled = false;  
             Program.Barometer = "IB5276";
             Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5276";
         }
 
         private void button4_Click_1(object sender, EventArgs e)
-        {
+        {   
+            cmdIB5277.Enabled = false;
             Program.Barometer = "IB5277";
             Program.xlsheetResultsMeasurement.Cells[25, 2] = "IB5277";
         }
 
         private void cmdIB5270_Click(object sender, EventArgs e)
         {
+            cmdIB5270.Enabled = false;
             Program.Hygrometer = "IB5270";
             Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5270";
         }
 
         private void cmdIB5271_Click(object sender, EventArgs e)
         {
+            cmdIB5271.Enabled = false;
             Program.Hygrometer = "IB5271";
             Program.xlsheetResultsMeasurement.Cells[26, 2] = "IB5276";
         }

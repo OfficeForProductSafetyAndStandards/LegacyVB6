@@ -50,6 +50,7 @@ namespace LengthBench
             pbBeamStrength.Value = 50;
             pbBeamStrength.BackColor = System.Drawing.Color.White;
             pbBeamStrength.ForeColor = System.Drawing.Color.Red;
+            textBox1.Text = Program.email;
             Timer timer = new Timer();
             timer.Interval = 10;
             timer.Tick += new EventHandler(timer_Tick);

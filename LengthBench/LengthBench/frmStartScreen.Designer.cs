@@ -36,7 +36,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Ivor James", "Mike Hunt", "Guest" });
+            comboBox1.Items.AddRange(new object[] { "Ivor James, ivor.james@businessandtrade.gov.uk", "Mike Hunt, m-hunt3@sky.com", "Guest" });
             comboBox1.Location = new Point(80, 77);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(256, 40);

@@ -32,7 +32,10 @@ namespace LengthBench
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.metrologist = comboBox1.Text;
+            string[] email = comboBox1.Text.Split();
+            // first name and last name
+            Program.metrologist = email[0] + email[1];
+            Program.email = email[2];
             button1.Enabled = true;
         }
 

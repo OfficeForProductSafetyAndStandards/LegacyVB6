@@ -53,6 +53,7 @@ namespace LengthBench
         public static string? NewFileName;
         public static string? NewFileName1;
         public static string? metrologist;
+        public static string? email;
 
         public static Laser laser = null;
 
