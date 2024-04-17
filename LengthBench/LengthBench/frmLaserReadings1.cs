@@ -88,8 +88,8 @@ namespace LengthBench
                     if (Program.ProbeCounter == (int)Program.CONSTANTS.INTERMEDIATE)
                     {
                         txtFinalZeroReading.Text = x.ToString();
-                        button2.Enabled = true;
-                        button3.Enabled = true;
+                        button2.Visible = true;
+                        button3.Visible = true;
                     }
                     break;
                 case 1:
@@ -309,7 +309,7 @@ namespace LengthBench
             // thats all folks
             Application.Exit();
 
-           // if (textBox1.Text.Length == 0) { return; }
+            // if (textBox1.Text.Length == 0) { return; }
             Outlook.MailItem olkMail;
             Outlook.Application olkApp = new Outlook.Application();
             try
@@ -385,8 +385,13 @@ namespace LengthBench
 
         private void cmdResetLaser_Click_1(object sender, EventArgs e)
         {
-            cmdResetLaser.Enabled = false;
-            cmdLaserReading.Enabled = true;
+            cmdResetLaser.Visible = false;
+            cmdLaserReading.Visible = true;
+        }
+
+        private void txtFinalZeroReading_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

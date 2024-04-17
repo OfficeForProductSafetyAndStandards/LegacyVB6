@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Td8STbm2Fzflq92QvSwM9wd9VTvgNRDbtYkVpHJ8Q0kpC3QEHHJASOQaQYp5pTMAVT2N3IpiZwqXI/WIrCbPuQ==",
+  "dgSpecHash": "RFe30cLT+JquoT5lXdSD6EA4faomjj9O2eLLgnsNLNukWlydJuZNI1Q5bwFBXB6fMXMFW0WLla4TpEqQ8bSv5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mike\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+  "projectFilePath": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\mike\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.31\\microsoft.windows.sdk.net.ref.10.0.22621.31.nupkg.sha512"
+    "C:\\Users\\michaelhunt\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22621.31\\microsoft.windows.sdk.net.ref.10.0.22621.31.nupkg.sha512"
   ],
   "logs": []
 }

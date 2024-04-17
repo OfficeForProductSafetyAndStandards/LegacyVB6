@@ -118,7 +118,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(461, 98);
+            label3.Location = new Point(1093, 97);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(56, 32);
@@ -128,7 +128,6 @@
             // cmdLaserReading
             // 
             cmdLaserReading.BackColor = Color.Cyan;
-            cmdLaserReading.Enabled = false;
             cmdLaserReading.Location = new Point(422, 151);
             cmdLaserReading.Margin = new Padding(4, 2, 4, 2);
             cmdLaserReading.Name = "cmdLaserReading";
@@ -136,6 +135,7 @@
             cmdLaserReading.TabIndex = 3;
             cmdLaserReading.Text = "Take Laser Readings";
             cmdLaserReading.UseVisualStyleBackColor = false;
+            cmdLaserReading.Visible = false;
             cmdLaserReading.Click += button1_Click;
             // 
             // cmdResetLaser
@@ -203,6 +203,7 @@
             txtFinalZeroReading.Name = "txtFinalZeroReading";
             txtFinalZeroReading.Size = new Size(156, 39);
             txtFinalZeroReading.TabIndex = 14;
+            txtFinalZeroReading.TextChanged += txtFinalZeroReading_TextChanged;
             // 
             // txtLaserRun3
             // 
@@ -301,7 +302,6 @@
             // button2
             // 
             button2.BackColor = Color.Cyan;
-            button2.Enabled = false;
             button2.Location = new Point(852, 435);
             button2.Margin = new Padding(4, 2, 4, 2);
             button2.Name = "button2";
@@ -309,12 +309,12 @@
             button2.TabIndex = 35;
             button2.Text = "Yes";
             button2.UseVisualStyleBackColor = false;
+            button2.Visible = false;
             button2.Click += button2_Click_1;
             // 
             // button3
             // 
             button3.BackColor = Color.Cyan;
-            button3.Enabled = false;
             button3.Location = new Point(852, 544);
             button3.Margin = new Padding(4, 2, 4, 2);
             button3.Name = "button3";
@@ -322,6 +322,7 @@
             button3.TabIndex = 36;
             button3.Text = "No";
             button3.UseVisualStyleBackColor = false;
+            button3.Visible = false;
             // 
             // groupBox1
             // 
