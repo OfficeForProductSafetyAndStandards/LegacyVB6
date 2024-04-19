@@ -197,7 +197,7 @@ namespace LengthBench
                 // Puts laser into distance mode
                 Gpib488.ibwrt(laser, "D2" + (char)10,3);
                 //  Set laser to single pass (Flexi length) or double pass (Rigid length)
-                Gpib488.ibwrt(laser, units + (char)10, 3); ;
+                Gpib488.ibwrt(laser, units + (char)10, 3);
                 // Set units (UM for metric or UE for imperial, values passed from
                 
 

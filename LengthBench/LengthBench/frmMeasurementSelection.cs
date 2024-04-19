@@ -46,12 +46,12 @@ namespace LengthBench
             if (optImperial.Checked == true)
             {
                 Program.xlsheetResultsMeasurement.Cells[25, 5] = "Imperial";
-                units = "UM";
+                units = "UE";
             }
             else
             {
                 Program.xlsheetResultsMeasurement.Cells[25, 5] = "Metric";
-                units = "UE";
+                units = "UM";
             }
             Program.SetUp_Flexi_Laser(units);
             Program.Setup_Rigid_Laser(units);
