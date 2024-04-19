@@ -16,5 +16,10 @@ namespace LengthBench
         {
             InitializeComponent();
         }
+
+        private void Nolaserfound_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

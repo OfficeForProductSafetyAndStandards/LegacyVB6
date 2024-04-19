@@ -8,24 +8,19 @@
     "net8.0-windows10.0.22621": []
   },
   "packageFolders": {
-    "C:\\Users\\michaelhunt\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\calibration\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+      "projectUniqueName": "C:\\Users\\calibration\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
       "projectName": "LengthBench",
-      "projectPath": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
-      "packagesPath": "C:\\Users\\michaelhunt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\michaelhunt\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
+      "projectPath": "C:\\Users\\calibration\\LegacyVB6\\LengthBench\\LengthBench\\LengthBench.csproj",
+      "packagesPath": "C:\\Users\\calibration\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\calibration\\LegacyVB6\\LengthBench\\LengthBench\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\michaelhunt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\calibration\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

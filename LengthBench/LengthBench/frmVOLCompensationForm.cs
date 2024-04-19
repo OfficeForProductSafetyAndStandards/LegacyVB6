@@ -115,7 +115,7 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[11, 2] = txtBarometer.Text.ToString();
             try
             {
-                if (Program.LaserFound == true)
+                if (Program.FlexiLaserFound == true)
                 {
                     Program.laser.setParameter(LaserParameters.OP_AIRTEMP, Convert.ToDouble(txtTemperature.Text));
                 }
@@ -126,7 +126,7 @@ namespace LengthBench
             }
             try
             {
-                if (Program.LaserFound == true)
+                if (Program.FlexiLaserFound == true)
                 {
                     Program.laser.setParameter(LaserParameters.OP_RELHUMI, Convert.ToDouble(txtHumidity.Text));
                 }
@@ -137,7 +137,7 @@ namespace LengthBench
             }
             try
             {
-                if (Program.LaserFound == true)
+                if (Program.FlexiLaserFound == true)
                 {
                     Program.laser.setParameter(LaserParameters.OP_AIRPRES, Convert.ToDouble(txtBarometer.Text));
                 }
@@ -158,7 +158,7 @@ namespace LengthBench
             double vol1 = ((Math.Pow(10, 12)) / (n + Math.Pow(10, 6))); // - 999000;
             double vol_comp = vol1 / Math.Pow(10, 6);
             double vol = Math.Round(vol_comp, 15); // TODO ivor james will check
-            if (Program.LaserFound == true)
+            if (Program.FlexiLaserFound == true)
             {
                 Program.laser.setParameter(LaserParameters.OP_ALLCOMP, vol);
             }

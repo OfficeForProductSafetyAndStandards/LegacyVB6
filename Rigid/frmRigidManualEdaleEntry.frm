@@ -1,5 +1,4 @@
 VERSION 5.00
-Object = "{648A5603-2C6E-101B-82B6-000000000014}#1.1#0"; "MSCOMM32.OCX"
 Begin VB.Form frmManualEdaleEntry 
    BackColor       =   &H00C0FFC0&
    Caption         =   "Temperature Measurement"
@@ -32,15 +31,14 @@ Begin VB.Form frmManualEdaleEntry
       Left            =   7440
       Top             =   8280
    End
-   Begin MSCommLib.MSComm MSComm2 
+   Begin VB.PictureBox MSComm2 
+      Height          =   480
       Left            =   9240
+      ScaleHeight     =   420
+      ScaleWidth      =   1140
+      TabIndex        =   65
       Top             =   8400
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      _Version        =   393216
-      CommPort        =   2
-      DTREnable       =   -1  'True
-      RThreshold      =   1
+      Width           =   1200
    End
    Begin VB.CommandButton cmdResultsNotOk 
       BackColor       =   &H00FFFF80&
@@ -1506,15 +1504,15 @@ Dim probe As String
 Dim result As Single
 
 Private Sub cmdResultsNotOk_Click()
-Dim x As Integer
-    For x = 0 To 23 '24 text boxes
-        txtManualEdale(x).Text = 0 'when 'no' button clicked,
+Dim X As Integer
+    For X = 0 To 23 '24 text boxes
+        txtManualEdale(X).Text = 0 'when 'no' button clicked,
         'clears text boxes by placing a zero in them
-        xlsheetResultsTemperatureUncorrected.Cells(x + 2, Rownumber) = ""
-    Next x
-    For x = 0 To 11 '12 circles
-    ShapeGreen(x).Visible = False 'if not OK hide these circles
-    Next x
+        xlsheetResultsTemperatureUncorrected.Cells(X + 2, Rownumber) = ""
+    Next X
+    For X = 0 To 11 '12 circles
+    ShapeGreen(X).Visible = False 'if not OK hide these circles
+    Next X
 lblTemperatureOk.Visible = False 'hides these 3 buttons
 cmdResultsNotOk.Visible = False
 cmdResultsOk.Visible = False
@@ -1567,7 +1565,7 @@ Else
 'Dim x As Integer
 'Dim y As Integer
 'Set rsConn = New ADODB.Connection
-'rsConn.Open ("Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MQU_Job;Data Source=Avon\Goldmine")
+'rsConn.Open ("Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MQU_Job;Data Source=ac\Goldmine")
 'Set rsLengthResults = New ADODB.Recordset
 'rsLengthResults.Open "Select * From tblLengthResults", rsConn, adOpenDynamic, adLockOptimistic
 'rsLengthResults.AddNew
@@ -1629,14 +1627,14 @@ Private Sub Form_Load()
 optIB5391.value = False
 'this makes sure that the option button is not selected so that the digital edale_
 'does not immediately start giving results.
-    Dim x As Integer
+    Dim X As Integer
     Dim Xstring As String
     Dim Sendstr As String
-For x = 0 To 11
-    txtManualEdale(x).Text = "0" 'clear text boxes by placing a zero in them
-    Xstring$ = Str(x + 1)
-    Label1(x).Caption = "Probe" + Xstring$ 'makes labels read probe 1 to probe 12
-Next x
+For X = 0 To 11
+    txtManualEdale(X).Text = "0" 'clear text boxes by placing a zero in them
+    Xstring$ = Str(X + 1)
+    Label1(X).Caption = "Probe" + Xstring$ 'makes labels read probe 1 to probe 12
+Next X
 End Sub
 Sub ManualEdale(NoOfProbes)
     
