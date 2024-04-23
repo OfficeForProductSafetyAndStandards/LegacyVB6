@@ -191,6 +191,7 @@ namespace LengthBench
         
                 // Define device desription
                 int laser=0;
+
                 laser = Gpib488.ibdev(0, 3, 0, 13, 1, 0);
                 // Define device desription
                 Gpib488.ibwrt(laser, "M1" + (char)10,3);
@@ -220,9 +221,9 @@ namespace LengthBench
 				Console.WriteLine(System.Environment.NewLine + "Hit Any Key to exit");
 				_getch();
 			}
-       }    
-       
+       }
 
+       
         public static void SetUp_Flexi_Laser(string units)
         {
 
@@ -244,7 +245,7 @@ namespace LengthBench
                 laser.setDevice();
                 Console.WriteLine("Found 1 laser E5135 module, blinking LED ....\r\n");
                 laser.blink();
-                double b_strength = laser.ReadBeamStrength();
+                double b_strength = laser.ReadFlexiBeamStrength();
                 Console.WriteLine("The beam strength is: " + b_strength.ToString() + "\r\n");
                 laser.setParameter(LaserParameters.OP_WAVELENGTH, 632.991370);
                 laser.setParameter(LaserParameters.OP_MATCOMP, 1);
@@ -255,7 +256,7 @@ namespace LengthBench
                 Console.WriteLine("The refractive index correction has been set to: " + laser.getParameter(LaserParameters.OP_AIRCOMP) + "\n");
                 Console.WriteLine("The material compensation has been set to: " + laser.getParameter(LaserParameters.OP_MATCOMP) + "\n");
                 String.Concat("The laser beam strength is ", b_strength.ToString(), "%\r\n");
-                Console.WriteLine("The Current laser position is: " + laser.ReadSample().ToString() + "\n");
+                Console.WriteLine("The Current laser position is: " + laser.ReadFlexiSample().ToString() + "\n");
 
                 // Dim dbScaleFactor As Double 'Agilent change from mm to inch  SBB 8/3/2010
                 // string BenchUsed = "D1"; // 'sets bench for single pass

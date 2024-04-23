@@ -7,6 +7,9 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Reflection;
+using static System.Net.Mime.MediaTypeNames;
+using Windows.Graphics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace LengthBench
 {
@@ -390,7 +393,14 @@ namespace LengthBench
 
         }
 
-        public double ReadBeamStrength()
+        public double ReadFlexiBeamStrength()
+        {
+            E1735A_ReadBeamStrength b_strength = (E1735A_ReadBeamStrength)Marshal.GetDelegateForFunctionPointer(FuncAddr_E1735A_ReadBeamStrength, typeof(E1735A_ReadBeamStrength));
+
+            return b_strength();
+        }
+
+        public double ReadRigidBeamStrength()
         {
             E1735A_ReadBeamStrength b_strength = (E1735A_ReadBeamStrength)Marshal.GetDelegateForFunctionPointer(FuncAddr_E1735A_ReadBeamStrength, typeof(E1735A_ReadBeamStrength));
 
@@ -409,7 +419,7 @@ namespace LengthBench
             return par(index,value);
         }
 
-        public double ReadSample()
+        public double ReadFlexiSample()
         {
             E1735A_ReadSample r_sample = (E1735A_ReadSample)Marshal.GetDelegateForFunctionPointer(FuncAddr_E1735A_ReadSample, typeof(E1735A_ReadSample));
 

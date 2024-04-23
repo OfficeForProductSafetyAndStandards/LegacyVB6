@@ -124,7 +124,7 @@ namespace LengthBench
 		public const int IbaEOSwrt         = 0x000D; // Send EOI with EOS character
 		public const int IbaEOScmp         = 0x000E; // Use 7 or 8-bit EOS compare
 		public const int IbaEOSchar        = 0x000F; // The EOS character
-		public const int IbaPP2            = 0x0010; // Use Parallel Poll Mode 2
+		public const int IbaPP2            = 0x0010; // Use Parallel Poll Mode 2ibdev
 		public const int IbaTIMING         = 0x0011; // NORMAL, HIGH, or VERY_HIGH timing
 		public const int IbaDMA            = 0x0012; // Use DMA for I/O
 		public const int IbaReadAdjust     = 0x0013; // Swap bytes during an ibrd
@@ -176,189 +176,189 @@ namespace LengthBench
 	{
 		private const string _GpibDll = "ni4882.dll";
 
-		[DllImport(_GpibDll, EntryPoint="ibask")]
+		[DllImport(_GpibDll, EntryPoint = "ibask")]
 		private static extern int _ibask(int ud, int option, out int v);
 		public static int ibask(int ud, int option, out int v)
 		{
 			return _ibask(ud, option, out v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibcac")]
+		[DllImport(_GpibDll, EntryPoint = "ibcac")]
 		private static extern int _ibcac(int ud, int v);
 		public static int ibcac(int ud, int v)
 		{
 			return _ibcac(ud, v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibclr")]
+		[DllImport(_GpibDll, EntryPoint = "ibclr")]
 		private static extern int _ibclr(int ud);
 		public static int ibclr(int ud)
 		{
 			return _ibclr(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibcmd")]
+		[DllImport(_GpibDll, EntryPoint = "ibcmd")]
 		private static extern int _ibcmd(int ud, byte[] buffer, IntPtr count);
 		public static int ibcmd(int ud, byte[] buffer, int count)
 		{
 			return _ibcmd(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibcmd")]
+		[DllImport(_GpibDll, EntryPoint = "ibcmd")]
 		private static extern int _ibcmd(int ud, string buffer, IntPtr count);
 		public static int ibcmd(int ud, string buffer, int count)
 		{
 			return _ibcmd(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibconfig")]
+		[DllImport(_GpibDll, EntryPoint = "ibconfig")]
 		private static extern int _ibconfig(int ud, int option, int v);
 		public static int ibconfig(int ud, int option, int v)
 		{
 			return _ibconfig(ud, option, v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibdev")]
+		[DllImport(_GpibDll, EntryPoint = "ibdev")]
 		private static extern int _ibdev(int board, int pad, int sad, int tmo, int eot, int eos);
 		public static int ibdev(int board, int pad, int sad, int tmo, int eot, int eos)
 		{
 			return _ibdev(board, pad, sad, tmo, eot, eos);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibfind")]
+		[DllImport(_GpibDll, EntryPoint = "ibfind")]
 		private static extern int _ibfind(string name);
 		public static int ibfind(string name)
 		{
 			return _ibfind(name);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibgts")]
+		[DllImport(_GpibDll, EntryPoint = "ibgts")]
 		private static extern int _ibgts(int ud, int v);
 		public static int ibgts(int ud, int v)
 		{
 			return _ibgts(ud, v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="iblines")]
+		[DllImport(_GpibDll, EntryPoint = "iblines")]
 		private static extern int _iblines(int ud, out short result);
 		public static int iblines(int ud, out short result)
 		{
 			return _iblines(ud, out result);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibln")]
+		[DllImport(_GpibDll, EntryPoint = "ibln")]
 		private static extern int _ibln(int ud, int pad, int sad, out short listen);
 		public static int ibln(int ud, int pad, int sad, out short listen)
 		{
 			return _ibln(ud, pad, sad, out listen);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibloc")]
+		[DllImport(_GpibDll, EntryPoint = "ibloc")]
 		private static extern int _ibloc(int ud);
 		public static int ibloc(int ud)
 		{
 			return _ibloc(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibonl")]
+		[DllImport(_GpibDll, EntryPoint = "ibonl")]
 		private static extern int _ibonl(int ud, int v);
 		public static int ibonl(int ud, int v)
 		{
 			return _ibonl(ud, v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibpct")]
+		[DllImport(_GpibDll, EntryPoint = "ibpct")]
 		private static extern int _ibpct(int ud);
 		public static int ibpct(int ud)
 		{
 			return _ibpct(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibppc")]
+		[DllImport(_GpibDll, EntryPoint = "ibppc")]
 		private static extern int _ibppc(int ud, int v);
 		public static int ibppc(int ud, int v)
 		{
 			return _ibppc(ud, v);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibrd")]
+		[DllImport(_GpibDll, EntryPoint = "ibrd")]
 		private static extern int _ibrd(int ud, [MarshalAs(UnmanagedType.LPStr)] StringBuilder buffer, IntPtr count);
 		public static int ibrd(int ud, StringBuilder buffer, int count)
 		{
 			return _ibrd(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibrd")]
+		[DllImport(_GpibDll, EntryPoint = "ibrd")]
 		private static extern int _ibrd(int ud, byte[] buffer, IntPtr count);
 		public static int ibrd(int ud, byte[] buffer, int count)
 		{
 			return _ibrd(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibrdf")]
+		[DllImport(_GpibDll, EntryPoint = "ibrdf")]
 		private static extern int _ibrdf(int ud, string filename);
 		public static int ibrdf(int ud, string filename)
 		{
 			return _ibrdf(ud, filename);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibrpp")]
+		[DllImport(_GpibDll, EntryPoint = "ibrpp")]
 		private static extern int _ibrpp(int ud, out byte ppr);
 		public static int ibrpp(int ud, out byte ppr)
 		{
 			return _ibrpp(ud, out ppr);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibrsp")]
+		[DllImport(_GpibDll, EntryPoint = "ibrsp")]
 		private static extern int _ibrsp(int ud, out byte spr);
 		public static int ibrsp(int ud, out byte spr)
 		{
 			return _ibrsp(ud, out spr);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibsic")]
+		[DllImport(_GpibDll, EntryPoint = "ibsic")]
 		private static extern int _ibsic(int ud);
 		public static int ibsic(int ud)
 		{
 			return _ibsic(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibstop")]
+		[DllImport(_GpibDll, EntryPoint = "ibstop")]
 		private static extern int _ibstop(int ud);
 		public static int ibstop(int ud)
 		{
 			return _ibstop(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibtrg")]
+		[DllImport(_GpibDll, EntryPoint = "ibtrg")]
 		private static extern int _ibtrg(int ud);
 		public static int ibtrg(int ud)
 		{
 			return _ibtrg(ud);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibwait")]
+		[DllImport(_GpibDll, EntryPoint = "ibwait")]
 		private static extern int _ibwait(int ud, int mask);
 		public static int ibwait(int ud, int mask)
 		{
 			return _ibwait(ud, mask);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibwrt")]
+		[DllImport(_GpibDll, EntryPoint = "ibwrt")]
 		private static extern int _ibwrt(int ud, byte[] buffer, IntPtr count);
 		public static int ibwrt(int ud, byte[] buffer, int count)
 		{
 			return _ibwrt(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibwrt")]
+		[DllImport(_GpibDll, EntryPoint = "ibwrt")]
 		private static extern int _ibwrt(int ud, string buffer, IntPtr count);
 		public static int ibwrt(int ud, string buffer, int count)
 		{
 			return _ibwrt(ud, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ibwrtf")]
+		[DllImport(_GpibDll, EntryPoint = "ibwrtf")]
 		private static extern int _ibwrtf(int ud, string filename);
 		public static int ibwrtf(int ud, string filename)
 		{
@@ -367,21 +367,21 @@ namespace LengthBench
 
 		/////
 
-		[DllImport(_GpibDll, EntryPoint="Ibsta")]
+		[DllImport(_GpibDll, EntryPoint = "Ibsta")]
 		private static extern int _Ibsta();
 		public static int Ibsta()
 		{
 			return _Ibsta();
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Iberr")]
+		[DllImport(_GpibDll, EntryPoint = "Iberr")]
 		private static extern int _Iberr();
 		public static int Iberr()
 		{
 			return _Iberr();
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Ibcnt")]
+		[DllImport(_GpibDll, EntryPoint = "Ibcnt")]
 		private static extern int _Ibcnt();
 		public static int Ibcnt()
 		{
@@ -390,21 +390,21 @@ namespace LengthBench
 
 		/////
 
-		[DllImport(_GpibDll, EntryPoint="ThreadIbsta")]
+		[DllImport(_GpibDll, EntryPoint = "ThreadIbsta")]
 		private static extern int _ThreadIbsta();
 		public static int ThreadIbsta()
 		{
 			return _ThreadIbsta();
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ThreadIberr")]
+		[DllImport(_GpibDll, EntryPoint = "ThreadIberr")]
 		private static extern int _ThreadIberr();
 		public static int ThreadIberr()
 		{
 			return _ThreadIberr();
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ThreadIbcnt")]
+		[DllImport(_GpibDll, EntryPoint = "ThreadIbcnt")]
 		private static extern int _ThreadIbcnt();
 		public static int ThreadIbcnt()
 		{
@@ -413,249 +413,290 @@ namespace LengthBench
 
 		/////
 
-		[DllImport(_GpibDll, EntryPoint="AllSpoll")]
+		[DllImport(_GpibDll, EntryPoint = "AllSpoll")]
 		private static extern void _AllSpoll(int board, short[] addrlist, short[] results);
 		public static void AllSpoll(int board, short[] addrlist, short[] results)
 		{
 			_AllSpoll(board, addrlist, results);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="DevClear")]
+		[DllImport(_GpibDll, EntryPoint = "DevClear")]
 		private static extern void _DevClear(int board, short address);
 		public static void DevClear(int board, short address)
 		{
 			_DevClear(board, address);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="DevClearList")]
+		[DllImport(_GpibDll, EntryPoint = "DevClearList")]
 		private static extern void _DevClearList(int board, short[] addrlist);
 		public static void DevClearList(int board, short[] addrlist)
 		{
 			_DevClearList(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="EnableLocal")]
+		[DllImport(_GpibDll, EntryPoint = "EnableLocal")]
 		private static extern void _EnableLocal(int board, short[] addrlist);
 		public static void EnableLocal(int board, short[] addrlist)
 		{
 			_EnableLocal(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="EnableRemote")]
+		[DllImport(_GpibDll, EntryPoint = "EnableRemote")]
 		private static extern void _EnableRemote(int board, short[] addrlist);
 		public static void EnableRemote(int board, short[] addrlist)
 		{
 			_EnableRemote(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="FindLstn")]
+		[DllImport(_GpibDll, EntryPoint = "FindLstn")]
 		private static extern void _FindLstn(int board, short[] addrlist, short[] results, IntPtr limit);
 		public static void FindLstn(int board, short[] addrlist, short[] results, int limit)
 		{
 			_FindLstn(board, addrlist, results, (IntPtr)limit);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="FindRQS")]
+		[DllImport(_GpibDll, EntryPoint = "FindRQS")]
 		private static extern void _FindRQS(int board, short[] addrlist, out short devstat);
 		public static void FindRQS(int board, short[] addrlist, out short devstat)
 		{
 			_FindRQS(board, addrlist, out devstat);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="PPoll")]
+		[DllImport(_GpibDll, EntryPoint = "PPoll")]
 		private static extern void _PPoll(int board, out short result);
 		public static void PPoll(int board, out short result)
 		{
 			_PPoll(board, out result);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="PPollConfig")]
+		[DllImport(_GpibDll, EntryPoint = "PPollConfig")]
 		private static extern void _PPollConfig(int board, short address, int dataline, int linesense);
 		public static void PPollConfig(int board, short address, int dataline, int linesense)
 		{
 			_PPollConfig(board, address, dataline, linesense);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="PPollUnconfig")]
+		[DllImport(_GpibDll, EntryPoint = "PPollUnconfig")]
 		private static extern void _PPollUnconfig(int board, short[] addrlist);
 		public static void PPollUnconfig(int board, short[] addrlist)
 		{
 			_PPollUnconfig(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="PassControl")]
+		[DllImport(_GpibDll, EntryPoint = "PassControl")]
 		private static extern void _PassControl(int board, short address);
 		public static void PassControl(int board, short address)
 		{
 			_PassControl(board, address);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="RcvRespMsg")]
+		[DllImport(_GpibDll, EntryPoint = "RcvRespMsg")]
 		private static extern void _RcvRespMsg(int board, byte[] buffer, IntPtr count, int termination);
 		public static void RcvRespMsg(int board, byte[] buffer, int count, int termination)
 		{
 			_RcvRespMsg(board, buffer, (IntPtr)count, termination);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="RcvRespMsg")]
-		private static extern void _RcvRespMsg(int board, [MarshalAs(UnmanagedType.LPStr)]StringBuilder buffer, IntPtr count, int termination);
-		public static void RcvRespMsg(int board, [MarshalAs(UnmanagedType.LPStr)]StringBuilder buffer, int count, int termination)
+		[DllImport(_GpibDll, EntryPoint = "RcvRespMsg")]
+		private static extern void _RcvRespMsg(int board, [MarshalAs(UnmanagedType.LPStr)] StringBuilder buffer, IntPtr count, int termination);
+		public static void RcvRespMsg(int board, [MarshalAs(UnmanagedType.LPStr)] StringBuilder buffer, int count, int termination)
 		{
 			_RcvRespMsg(board, buffer, (IntPtr)count, termination);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ReadStatusByte")]
+		[DllImport(_GpibDll, EntryPoint = "ReadStatusByte")]
 		private static extern void _ReadStatusByte(int board, short addr, out short result);
 		public static void ReadStatusByte(int board, short addr, out short result)
 		{
 			_ReadStatusByte(board, addr, out result);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Receive")]
+		[DllImport(_GpibDll, EntryPoint = "Receive")]
 		private static extern void _Receive(int board, short address, byte[] buffer, IntPtr count, int termination);
 		public static void Receive(int board, short address, byte[] buffer, int count, int termination)
 		{
 			_Receive(board, address, buffer, (IntPtr)count, termination);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Receive")]
-		private static extern void _Receive(int board, short address, [MarshalAs(UnmanagedType.LPStr)]StringBuilder buffer, IntPtr count, int termination);
-		public static void Receive(int board, short address, [MarshalAs(UnmanagedType.LPStr)]StringBuilder buffer, int count, int termination)
+		[DllImport(_GpibDll, EntryPoint = "Receive")]
+		private static extern void _Receive(int board, short address, [MarshalAs(UnmanagedType.LPStr)] StringBuilder buffer, IntPtr count, int termination);
+		public static void Receive(int board, short address, [MarshalAs(UnmanagedType.LPStr)] StringBuilder buffer, int count, int termination)
 		{
 			_Receive(board, address, buffer, (IntPtr)count, termination);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ReceiveSetup")]
+		[DllImport(_GpibDll, EntryPoint = "ReceiveSetup")]
 		private static extern void _ReceiveSetup(int board, short address);
 		public static void ReceiveSetup(int board, short address)
 		{
 			_ReceiveSetup(board, address);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="ResetSys")]
+		[DllImport(_GpibDll, EntryPoint = "ResetSys")]
 		private static extern void _ResetSys(int board, short[] addrlist);
 		public static void ResetSys(int board, short[] addrlist)
 		{
 			_ResetSys(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Send")]
+		[DllImport(_GpibDll, EntryPoint = "Send")]
 		private static extern void _Send(int board, short address, byte[] buffer, IntPtr count, int eotmode);
 		public static void Send(int board, short address, byte[] buffer, int count, int eotmode)
 		{
 			_Send(board, address, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Send")]
+		[DllImport(_GpibDll, EntryPoint = "Send")]
 		private static extern void _Send(int board, short address, string buffer, IntPtr count, int eotmode);
 		public static void Send(int board, short address, string buffer, int count, int eotmode)
 		{
 			_Send(board, address, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendCmds")]
+		[DllImport(_GpibDll, EntryPoint = "SendCmds")]
 		private static extern void _SendCmds(int board, byte[] buffer, IntPtr count);
 		public static void SendCmds(int board, byte[] buffer, int count)
 		{
 			_SendCmds(board, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendCmds")]
+		[DllImport(_GpibDll, EntryPoint = "SendCmds")]
 		private static extern void _SendCmds(int board, string buffer, IntPtr count);
 		public static void SendCmds(int board, string buffer, int count)
 		{
 			_SendCmds(board, buffer, (IntPtr)count);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendDataBytes")]
+		[DllImport(_GpibDll, EntryPoint = "SendDataBytes")]
 		private static extern void _SendDataBytes(int board, byte[] buffer, IntPtr count, int eotmode);
 		public static void SendDataBytes(int board, byte[] buffer, int count, int eotmode)
 		{
 			_SendDataBytes(board, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendDataBytes")]
+		[DllImport(_GpibDll, EntryPoint = "SendDataBytes")]
 		private static extern void _SendDataBytes(int board, string buffer, IntPtr count, int eotmode);
 		public static void SendDataBytes(int board, string buffer, int count, int eotmode)
 		{
 			_SendDataBytes(board, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendIFC")]
+		[DllImport(_GpibDll, EntryPoint = "SendIFC")]
 		private static extern void _SendIFC(int board);
 		public static void SendIFC(int board)
 		{
 			_SendIFC(board);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendLLO")]
+		[DllImport(_GpibDll, EntryPoint = "SendLLO")]
 		private static extern void _SendLLO(int board);
 		public static void SendLLO(int board)
 		{
 			_SendLLO(board);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendList")]
+		[DllImport(_GpibDll, EntryPoint = "SendList")]
 		private static extern void _SendList(int board, short[] addrlist, byte[] buffer, IntPtr count, int eotmode);
 		public static void SendList(int board, short[] addrlist, byte[] buffer, int count, int eotmode)
 		{
 			_SendList(board, addrlist, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendList")]
+		[DllImport(_GpibDll, EntryPoint = "SendList")]
 		private static extern void _SendList(int board, short[] addrlist, string buffer, IntPtr count, int eotmode);
 		public static void SendList(int board, short[] addrlist, string buffer, int count, int eotmode)
 		{
 			_SendList(board, addrlist, buffer, (IntPtr)count, eotmode);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendSetup")]
+		[DllImport(_GpibDll, EntryPoint = "SendSetup")]
 		private static extern void _SendSetup(int board, short[] addrlist);
 		public static void SendSetup(int board, short[] addrlist)
 		{
 			_SendSetup(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="SendRWLS")]
+		[DllImport(_GpibDll, EntryPoint = "SendRWLS")]
 		private static extern void _SendRWLS(int board, short[] addrlist);
 		public static void SendRWLS(int board, short[] addrlist)
 		{
 			_SendRWLS(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="TestSRQ")]
+		[DllImport(_GpibDll, EntryPoint = "TestSRQ")]
 		private static extern void _TestSRQ(int board, out short result);
 		public static void TestSRQ(int board, out short result)
 		{
 			_TestSRQ(board, out result);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="TestSys")]
+		[DllImport(_GpibDll, EntryPoint = "TestSys")]
 		private static extern void _TestSys(int board, short[] addrlist, short[] results);
 		public static void TestSys(int board, short[] addrlist, short[] results)
 		{
 			_TestSys(board, addrlist, results);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="Trigger")]
+		[DllImport(_GpibDll, EntryPoint = "Trigger")]
 		private static extern void _Trigger(int board, short address);
 		public static void Trigger(int board, short address)
 		{
 			_Trigger(board, address);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="TriggerList")]
+		[DllImport(_GpibDll, EntryPoint = "TriggerList")]
 		private static extern void _TriggerList(int board, short[] addrlist);
 		public static void TriggerList(int board, short[] addrlist)
 		{
 			_TriggerList(board, addrlist);
 		}
 
-		[DllImport(_GpibDll, EntryPoint="WaitSRQ")]
+		[DllImport(_GpibDll, EntryPoint = "WaitSRQ")]
 		private static extern void _WaitSRQ(int board, out short result);
 		public static void WaitSRQ(int board, out short result)
 		{
 			_WaitSRQ(board, out result);
 		}
-	}
+	/*
+		public static double ReadRigidSample()
+		{
+			double rigid_sample = 0;
+
+			public int laser;
+			public int counter;
+			string ibuf;
+
+			laser=Gpib488.ibdev(0, 3, 0, 13, 1, 0); // Define device description
+
+            // Give a space for Laser buffer to put info into GPIB buffer
+            Gpib488.ibwait(laser, RQS);
+			
+			// Instruct program to wait until the Button is pressed
+			Gpib.ibrd(laser, ibuf);
+        
+			// Read from the newly created buffer ibuf$ to get value out
+			rigid_sample = ibuf; 
+		  
+			return rigid_sample;
+
+            // divides the laser reading by two as this is a double-band pass laser
+           
+                'TakeLaserReadings = Val(ibuf$)
+                ''laser reading direct from display
+                'TakeLaserReadings = Rnd()
+                ''random result for laser reading used to test program when laser not connected
+                Call ibonl(laser %, 0)
+                ' put value into TakeReadings variable for passing
+                ' back to main procedure - really cool
+                If(ibsta And EERR) Then
+                    ' error check for IEEE, like we need it Ha!
+                    Call GPIBCleanup("Unable to clear device")
+                End If
+                ' Oh my god that was hard to find out
+
+            */
+
+          
+        }
+}
 }

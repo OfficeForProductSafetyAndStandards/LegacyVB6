@@ -18,19 +18,28 @@ using Outlook = Microsoft.Office.Interop.Outlook;
 
 namespace LengthBench
 {
+
     public partial class frmLaserReadings1 : Form
     {
         private int iPts = 0;
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (Program.LaserFound == true)
+            if (Program.FlexiLaserFound == true)
             {
-                var x = Program.laser.ReadBeamStrength() * 100;
+                var x = Program.laser.ReadFlexiBeamStrength() * 100;
                 pbBeamStrength.Value = (int)x;
-                var y = Program.laser.ReadSample();
+                var y = Program.laser.ReadFlexiSample();
                 label2.Text = y.ToString();
                 pbBeamStrength.Value = (int)x;
             }
+            else if (Program.RigidLaserFound == true)
+            {
+                var x = Program.Gpib488.ReadRigidBeamStrength() * 100;
+                pbBeamStrength.Value = (int)x;
+                var y = Program.Gpib488.ReadRigidSample();
+                label2.Text = y.ToString();
+                pbBeamStrength.Value = (int)x;
+            }   
             else
             {
                 // stub for now use timer to generate a random number
@@ -69,10 +78,14 @@ namespace LengthBench
 
             Random Random = new Random();
             double x = 0;
-            if (Program.LaserFound)
+            if (Program.FlexiLaserFound)
             {
-                x = Program.laser.ReadSample();
+                x = Program.laser.ReadFlexiSample();
             }
+            else if (Program.RigidLaserFound)
+            {
+                x = Program.Gpib488.ReadRigidLaserSample();
+            }    
             else
             {
                 x = Random.Next(0, 100);
