@@ -1,0 +1,13 @@
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\bin\x86\Debug\net8.0\Gpib488Test.exe
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\bin\x86\Debug\net8.0\Gpib488Test.deps.json
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\bin\x86\Debug\net8.0\Gpib488Test.runtimeconfig.json
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\bin\x86\Debug\net8.0\Gpib488Test.dll
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\bin\x86\Debug\net8.0\Gpib488Test.pdb
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.csproj.CoreCompileInputs.cache
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.sourcelink.json
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.dll
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\refint\Gpib488Test.dll
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.pdb
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\Gpib488Test.genruntimeconfig.cache
+C:\Users\mike\LegacyVB6\seebrez\GPIB-488\Language Interfaces\C#\obj\x86\Debug\net8.0\ref\Gpib488Test.dll

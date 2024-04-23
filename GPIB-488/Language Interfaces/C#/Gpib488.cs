@@ -174,9 +174,10 @@ namespace QISI
 	/// </summary>
 	public class Gpib488
 	{
-		private const string _GpibDll = "gpib488.dll";
+		// private const string _GpibDll = "gpib488.dll";
+        private const string _GpibDll = "gpib-32.dll";
 
-		[DllImport(_GpibDll, EntryPoint="ibask")]
+        [DllImport(_GpibDll, EntryPoint="ibask")]
 		private static extern int _ibask(int ud, int option, out int v);
 		public static int ibask(int ud, int option, out int v)
 		{
