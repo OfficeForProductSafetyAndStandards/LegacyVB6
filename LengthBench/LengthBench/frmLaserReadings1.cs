@@ -22,8 +22,10 @@ namespace LengthBench
     public partial class frmLaserReadings1 : Form
     {
         private int iPts = 0;
+
         private void timer_Tick(object sender, EventArgs e)
         {
+            StringBuilder ibuf = new StringBuilder(100);
             if (Program.FlexiLaserFound == true)
             {
                 var x = Program.laser.ReadFlexiBeamStrength() * 100;
@@ -34,9 +36,9 @@ namespace LengthBench
             }
             else if (Program.RigidLaserFound == true)
             {
-                var x = Program.Gpib488.ReadRigidBeamStrength() * 100;
+                var x = Gpib488.ReadRigidBeamStrength() * 100;
                 pbBeamStrength.Value = (int)x;
-                var y = Program.Gpib488.ReadRigidSample();
+                var y = Gpib488.ReadRigidSample(ibuf);
                 label2.Text = y.ToString();
                 pbBeamStrength.Value = (int)x;
             }   
@@ -70,6 +72,7 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
+            StringBuilder ibuf = new StringBuilder(100);
 
             if (iPts < 0)
             {
@@ -78,13 +81,13 @@ namespace LengthBench
 
             Random Random = new Random();
             double x = 0;
-            if (Program.FlexiLaserFound)
+            if (Program.FlexiLaserFound) 
             {
                 x = Program.laser.ReadFlexiSample();
             }
             else if (Program.RigidLaserFound)
             {
-                x = Program.Gpib488.ReadRigidLaserSample();
+                x = Gpib488.ReadRigidSample(ibuf);
             }    
             else
             {

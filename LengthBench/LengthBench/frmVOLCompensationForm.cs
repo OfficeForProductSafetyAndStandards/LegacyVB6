@@ -25,7 +25,7 @@ namespace LengthBench
             {
                 Program.humidity = Convert.ToDouble(txtHumidity.Text);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Please enter a valid number");
             }

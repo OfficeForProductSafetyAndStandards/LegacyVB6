@@ -57,6 +57,7 @@ namespace LengthBench
         public static string? email;
 
         public static Laser laser;
+        public static Gpib488 gpib;
 
         public static double temperature;
         public static double humidity;

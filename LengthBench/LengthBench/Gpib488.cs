@@ -657,46 +657,63 @@ namespace LengthBench
 		{
 			_WaitSRQ(board, out result);
 		}
-	/*
-		public static double ReadRigidSample()
+
+		public static double ReadRigidSample(StringBuilder ibuf)
 		{
 			double rigid_sample = 0;
 
-			public int laser;
-			public int counter;
-			string ibuf;
+            int laser;
+			int counter;
+			// StringBuilder ibuf = new StringBuilder(100);	
 
-			laser=Gpib488.ibdev(0, 3, 0, 13, 1, 0); // Define device description
+            // Open the GPIB device	
+            laser = Gpib488.ibdev(0, 3, 0, 13, 1, 0); // Define device description
 
             // Give a space for Laser buffer to put info into GPIB buffer
-            Gpib488.ibwait(laser, RQS);
-			
-			// Instruct program to wait until the Button is pressed
-			Gpib.ibrd(laser, ibuf);
-        
+            Gpib488.ibwait(laser, Gpib488Consts.RQS);
+
+            // Instruct program to wait until the Button is pressed
+            Gpib488.ibrd(laser, ibuf, laser);
+
 			// Read from the newly created buffer ibuf$ to get value out
-			rigid_sample = ibuf; 
-		  
-			return rigid_sample;
+			String str;
+			str=ibuf.ToString();
+            rigid_sample = double.Parse(str);
 
-            // divides the laser reading by two as this is a double-band pass laser
-           
-                'TakeLaserReadings = Val(ibuf$)
-                ''laser reading direct from display
-                'TakeLaserReadings = Rnd()
-                ''random result for laser reading used to test program when laser not connected
-                Call ibonl(laser %, 0)
-                ' put value into TakeReadings variable for passing
-                ' back to main procedure - really cool
-                If(ibsta And EERR) Then
-                    ' error check for IEEE, like we need it Ha!
-                    Call GPIBCleanup("Unable to clear device")
-                End If
-                ' Oh my god that was hard to find out
 
-            */
-
-          
+            return rigid_sample;
         }
-}
+
+		public static double ReadRigidBeamStrength()
+		{
+			double rigid_beam_strength = 0;
+
+			return rigid_beam_strength;
+		}
+
+
+		/*
+        var x = Program.gpib.ReadRigidBeamStrength() * 100;
+        pbBeamStrength.Value = (int) x;
+        var y = Program.gpib.ReadRigidSample();
+
+        // divides the laser reading by two as this is a double-band pass laser
+        /*
+             'TakeLaserReadings = Val(ibuf$)
+             ''laser reading direct from display
+             'TakeLaserReadings = Rnd()
+             ''random result for laser reading used to test program when laser not connected
+             Call ibonl(laser %, 0)
+             ' put value into TakeReadings variable for passing
+             ' back to main procedure - really cool
+             If(ibsta And EERR) Then
+                 ' error check for IEEE, like we need it Ha!
+                 Call GPIBCleanup("Unable to clear device")
+             End If
+             ' Oh my god that was hard to find out
+
+         */
+
+
+    }
 }
