@@ -27,6 +27,25 @@ namespace LengthBench
         public frmTempMeasure()
         {
             InitializeComponent();
+            /* Flexi has 10 probes Rigid has 6 */
+            if (Program.RigidLaserFound)
+            {
+                checkBox7.Visible = false;
+                checkBox8.Visible = false;
+                checkBox9.Visible = false;
+                checkBox10.Visible = false;
+
+                txtManual7.Visible = false;
+                txtManual8.Visible = false;
+                txtManual9.Visible = false;
+                txtManual10.Visible = false;
+
+                txtManual17.Visible = false;
+                txtManual18.Visible = false;
+                txtManual19.Visible = false;
+                txtManual20.Visible = false;
+
+            }
         }
 
         private Color check(double x)
@@ -437,41 +456,6 @@ namespace LengthBench
                     break;
 
             }
-
-
-            /*
-            void radioButton1_CheckedChanged(object sender, EventArgs e)
-            {
-                // MSCommLib.MSComm mscomm = new MSCommLib.MSCommClass();
-                mscomm = new MSComm();
-                mscomm.CommPort = 2;
-
-                // Set the port number
-                // ManualEdale (11) 'when digital edale clicked go to sub ManualEdale with no of probes as 11
-                mscomm.PortOpen = true;  // Open comm port for EDALE
-                mscomm.Output = "ManualEdale (11)";
-                // read port#
-                mscomm.RThreshold = 1;  // Fire OnComm event after any data is received
-
-                // Handle OnComm event to read data
-                // mscomm.OnComm += new DMSCommEvents_OnCommEventHandler(OnCommEvent); // Assigns the event handler
-                // Declare the timer
-                System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
-                myTimer.Interval = 1000;
-                myTimer.Tick += new EventHandler(RefreshEvent);
-                myTimer.Start();
-
-
-                //mscomm.OnComm += new EventHandler(OnCommEvent); // Assigns the event handler
-
-                // mscomm.PortOpen = false; // Close comm port for EDALE
-
-            }*/
-            /*
-            void txtManual1_TextChanged(object sender, EventArgs e)
-            {
-            }
-            */
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
