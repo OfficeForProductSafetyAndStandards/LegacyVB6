@@ -1,13 +1,12 @@
 modSetUp = 26, 26, 1074, 617, 
-frmLaserReadings = 0, 0, 0, 0, C, 0, 0, 0, 0, C
-modTakeLaserReadings = 0, 0, 0, 0, C
+frmLaserReadings = 156, 156, 979, 769, , 0, 0, 0, 0, C
+modTakeLaserReadings = 182, 182, 1005, 795, Z
 modErrorCleanUp = 0, 0, 0, 0, C
 modSetUpLaser = 52, 52, 981, 678, 
 frmMeasurementSelection = 78, 78, 1007, 704, , 0, 0, 0, 0, C
 modTakeBarometerReading = 0, 0, 0, 0, C
-frmManualEdaleEntry = 130, 130, 1059, 756, Z, 182, 182, 1111, 808, C
+frmManualEdaleEntry = 130, 130, 1059, 756, , 182, 182, 1111, 808, C
 modTakeTemperature = 0, 0, 0, 0, C
-frmVOLCompensationForm = 0, 0, 0, 0, C, 156, 156, 1085, 782, C
 frmSelectClassOfMeasurement = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 frmCustomerDetails = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 NIGLOBAL = 0, 0, 0, 0, C

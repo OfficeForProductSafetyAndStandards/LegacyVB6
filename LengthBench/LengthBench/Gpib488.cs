@@ -667,13 +667,13 @@ namespace LengthBench
 			// StringBuilder ibuf = new StringBuilder(100);	
 
             // Open the GPIB device	
-            laser = Gpib488.ibdev(0, 3, 0, 13, 1, 0); // Define device description
+            laser = ibdev(0, 3, 0, 13, 1, 0); // Define device description
 
             // Give a space for Laser buffer to put info into GPIB buffer
-            Gpib488.ibwait(laser, Gpib488Consts.RQS);
+            ibwait(laser, Gpib488Consts.RQS);
 
             // Instruct program to wait until the Button is pressed
-            Gpib488.ibrd(laser, ibuf, laser);
+            ibrd(laser, ibuf, laser);
 
 			// Read from the newly created buffer ibuf$ to get value out
 			String str;
@@ -686,9 +686,27 @@ namespace LengthBench
 
 		public static double ReadRigidBeamStrength()
 		{
-			double rigid_beam_strength = 0;
 
-			return rigid_beam_strength;
+            double rigid_beam_strength = 0;
+
+			int laser;
+
+            StringBuilder ibuf = new StringBuilder(100);
+
+            laser = Gpib488.ibdev(0, 3, 0, 13, 1, 0); // Define device description
+
+            // Send the command to read the laser beam strength
+            ibwrt(laser, "READ:LASER:STRENGTH?", 20);
+
+            // R((ead the response
+            ibrd(laser, ibuf, laser);
+
+            /// Read from the newly created buffer ibuf$ to get value out
+			String str;
+            str = ibuf.ToString();
+            rigid_beam_strength = double.Parse(str);
+
+            return rigid_beam_strength;
 		}
 
 
