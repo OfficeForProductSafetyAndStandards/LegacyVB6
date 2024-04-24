@@ -1,4 +1,4 @@
-# LegacyVB6 into C#
+# LegacyVB6 into C# 12 .NET 8
 
 This is a dump of the existing source code for the flexi laser 50m system.
 The code in use is the old flexi laser software 2004 - it doesnt seem to be complete in that the new code has .bas files etc. The new software vb source code hasnt been deployed yet. The existing code has been "ported" into  C#.
