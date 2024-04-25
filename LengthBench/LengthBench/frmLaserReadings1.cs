@@ -25,7 +25,7 @@ namespace LengthBench
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            StringBuilder ibuf = new StringBuilder(100);
+            StringBuilder ibuf = new StringBuilder(15);
             if (Program.FlexiLaserFound == true)
             {
                 var x = Program.laser.ReadFlexiBeamStrength() * 100;
@@ -36,11 +36,11 @@ namespace LengthBench
             }
             else if (Program.RigidLaserFound == true)
             {
-                var x = Gpib488.ReadRigidBeamStrength() * 100;
-                pbBeamStrength.Value = (int)x;
+                // var x = Gpib488.ReadRigidBeamStrength() * 100;
+                // pbBeamStrength.Value = (int)x;
                 var y = Gpib488.ReadRigidSample(ibuf);
                 label2.Text = y.ToString();
-                pbBeamStrength.Value = (int)x;
+                // pbBeamStrength.Value = (int)x;
             }   
             else
             {
@@ -62,10 +62,10 @@ namespace LengthBench
             pbBeamStrength.BackColor = System.Drawing.Color.White;
             pbBeamStrength.ForeColor = System.Drawing.Color.Red;
             textBox1.Text = Program.email;
-            Timer timer = new Timer();
-            timer.Interval = 10;
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
+            // Timer timer = new Timer();
+            // timer.Interval = 10;
+            // timer.Tick += new EventHandler(timer_Tick);
+            // timer.Start();
 
         }
 

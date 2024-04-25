@@ -162,9 +162,9 @@ namespace LengthBench
 				 *  with EOI asserted to the end of the message.  If the error bit ERR
 				 *  is set in ibsta, throw an error message.
 				 */
-				Gpib488.SendList(board, Result, "*idn?", 5, Gpib488Consts.NLend);
-				if ((Gpib488.Ibsta() & Gpib488Consts.ERR) != 0)
-					throw new System.Exception("Unable to write to devices");												
+				// causing crash ? Gpib488.SendList(board, Result, "*idn?", 5, Gpib488Consts.NLend);
+				// if ((Gpib488.Ibsta() & Gpib488Consts.ERR) != 0)
+				//	throw new System.Exception("Unable to write to devices");												
 
 				/*
 				 *  Read each device's identification code, one at a time.
@@ -183,7 +183,7 @@ namespace LengthBench
 					 *  function Receive to terminate the read when END is detected.
 					 *  If the error bit ERR is set in ibsta, throw an error message
 					 */
-                    Gpib488.Receive(board, Result[loop], ReadBuffer, ARRAYSIZE, Gpib488Consts.STOPend);
+                    // Gpib488.Receive(board, Result[loop], ReadBuffer, ARRAYSIZE, Gpib488Consts.STOPend);
 
                     // Print out the ReadBuffer 
                     Console.WriteLine("Address: " + Result[loop].ToString() + ", " + ReadBuffer);

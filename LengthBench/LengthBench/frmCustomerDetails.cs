@@ -21,6 +21,12 @@ namespace LengthBench
             InitializeComponent();
             txtDepartmentNumber.Text = Program.dept;
             txtReferenceTemperature.Text = "20";
+            if (Program.RigidLaserFound)
+            {
+                lblNumberOfPoints.Text = "Enter graduation in mm or in.";
+                lblTensionWeight.Text = "Scale calibrated";
+                txtTensionWeight.Visible = false;
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -58,31 +64,31 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 3] = "Time of test " + Timestring;
             int y = 0;
 
-            try
+            if (Program.FlexiLaserFound)
             {
-                y = Convert.ToInt32(txtNumberOfPoints.Text);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please enter a number of points");
-                return;
-            }
-            y = y + 4;
+                try
+                {
+                    y = Convert.ToInt32(txtNumberOfPoints.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please enter a number of points");
+                    return;
+                }
+                y = y + 4;
 
-            for (int x = 4; x < y; x++)
-            {
-                Form frmlaser1 = new frmlaser1(x);
-                frmlaser1.ShowDialog();
-                Program.xlsheetResultsMeasurement.Cells[x, 7] = LengthBench.frmlaser1.x;
+                for (int x = 4; x < y; x++)
+                {
+                    Form frmlaser1 = new frmlaser1(x);
+                    frmlaser1.ShowDialog();
+                    Program.xlsheetResultsMeasurement.Cells[x, 7] = LengthBench.frmlaser1.x;
+                }
             }
 
             Program.xlbookResults?.Save();
 
             Form frmTempMeasure1 = new frmTempMeasure();
             frmTempMeasure1.Show();
-
-            // Form frmLaserReadings1 = new frmLaserReadings1();
-            // frmLaserReadings1.Show();
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
@@ -146,6 +152,11 @@ namespace LengthBench
         }
 
         private void txtTensionWeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumberOfPoints_Click(object sender, EventArgs e)
         {
 
         }

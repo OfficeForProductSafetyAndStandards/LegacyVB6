@@ -45,6 +45,7 @@
             comboBox1 = new ComboBox();
             cmdGotoNextScreen = new Button();
             txtCoefficient = new TextBox();
+            comboBox2 = new ComboBox();
             SuspendLayout();
             // 
             // lblCustomerName
@@ -76,6 +77,7 @@
             lblNumberOfPoints.Size = new Size(101, 15);
             lblNumberOfPoints.TabIndex = 2;
             lblNumberOfPoints.Text = "Number of Points";
+            lblNumberOfPoints.Click += lblNumberOfPoints_Click;
             // 
             // lblTapeMaterial
             // 
@@ -83,9 +85,9 @@
             lblTapeMaterial.Location = new Point(25, 88);
             lblTapeMaterial.Margin = new Padding(2, 0, 2, 0);
             lblTapeMaterial.Name = "lblTapeMaterial";
-            lblTapeMaterial.Size = new Size(77, 15);
+            lblTapeMaterial.Size = new Size(76, 15);
             lblTapeMaterial.TabIndex = 3;
-            lblTapeMaterial.Text = "Tape Material";
+            lblTapeMaterial.Text = "Rule Material";
             // 
             // lblCoefficientOfThermalExpansion
             // 
@@ -212,11 +214,22 @@
             txtCoefficient.Size = new Size(86, 23);
             txtCoefficient.TabIndex = 4;
             // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Top", "Bottom" });
+            comboBox2.Location = new Point(339, 154);
+            comboBox2.Margin = new Padding(2, 1, 2, 1);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(87, 23);
+            comboBox2.TabIndex = 12;
+            // 
             // frmCustomerDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 250);
+            Controls.Add(comboBox2);
             Controls.Add(txtCoefficient);
             Controls.Add(cmdGotoNextScreen);
             Controls.Add(comboBox1);
@@ -261,5 +274,6 @@
         private ComboBox comboBox1;
         private Button cmdGotoNextScreen;
         private TextBox txtCoefficient;
+        private ComboBox comboBox2;
     }
 }
