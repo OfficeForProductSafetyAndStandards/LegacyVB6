@@ -74,9 +74,9 @@
             lblNumberOfPoints.Location = new Point(25, 66);
             lblNumberOfPoints.Margin = new Padding(2, 0, 2, 0);
             lblNumberOfPoints.Name = "lblNumberOfPoints";
-            lblNumberOfPoints.Size = new Size(101, 15);
+            lblNumberOfPoints.Size = new Size(132, 15);
             lblNumberOfPoints.TabIndex = 2;
-            lblNumberOfPoints.Text = "Number of Points";
+            lblNumberOfPoints.Text = "Number of Graduations";
             lblNumberOfPoints.Click += lblNumberOfPoints_Click;
             // 
             // lblTapeMaterial
@@ -218,11 +218,12 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Upper", "Lower" });
-            comboBox2.Location = new Point(339, 154);
+            comboBox2.Location = new Point(340, 157);
             comboBox2.Margin = new Padding(2, 1, 2, 1);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(87, 23);
             comboBox2.TabIndex = 12;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // frmCustomerDetails
             // 

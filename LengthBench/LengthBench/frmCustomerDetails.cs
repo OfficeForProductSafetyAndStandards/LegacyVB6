@@ -27,6 +27,11 @@ namespace LengthBench
                 lblTensionWeight.Text = "Scale calibrated";
                 txtTensionWeight.Visible = false;
             }
+            if (Program.FlexiLaserFound)
+            {
+                lblTapeMaterial.Text = "Tape Material";
+                comboBox2.Visible = false;
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -171,6 +176,11 @@ namespace LengthBench
         }
 
         private void lblNumberOfPoints_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

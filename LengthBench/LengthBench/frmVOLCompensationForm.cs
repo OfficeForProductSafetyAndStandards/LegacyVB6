@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ABI.Windows.ApplicationModel.Activation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,11 @@ namespace LengthBench
         public frmVOLCompensationForm()
         {
             InitializeComponent();
+            if(Program.FlexiLaserFound == true)
+            {
+                cmdClose.Text = "Continue to customer details";
+            }
+
         }
 
         private void txtHumidity_TextChanged(object sender, EventArgs e)
@@ -60,12 +66,21 @@ namespace LengthBench
 
         private void cmdClose_Click(object sender, EventArgs e)
         {
-            // save off the humidity and barometric pressure values
-            Program.xlbookResults?.Save();
-            frmTempMeasure frmTempMeasure = new frmTempMeasure();
-            // Form frmCustomerDetails = new frmCustomerDetails();
-            //frmCustomerDetails.Show();
-            frmTempMeasure.Show();
+
+
+            if (Program.RigidLaserFound)
+            {
+                // save off the humidity and barometric pressure values
+                Program.xlbookResults?.Save();
+                frmTempMeasure frmTempMeasure = new frmTempMeasure();
+                frmTempMeasure.Show();
+            }
+            if (Program.FlexiLaserFound == true)
+            {
+                Form frmCustomerDetails = new frmCustomerDetails();
+                frmCustomerDetails.Show();
+            }
+            
         }
 
         private void cmdRetrurnToMainMenu_Click(object sender, EventArgs e)

@@ -114,9 +114,6 @@ namespace LengthBench
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StringBuilder ibuf = new StringBuilder(100);
-
-            cmdLaserReading.Enabled = false;
 
             if (iPts < 0)
             {
@@ -130,30 +127,14 @@ namespace LengthBench
                 x = Program.laser.ReadFlexiSample();
             }
             else if (Program.RigidLaserFound)
-            { // custom behaviour for rigid laser
-                // initial reading
+            {
+                StringBuilder ibuf = new StringBuilder(15);
                 x = Gpib488.ReadRigidSample(ibuf);
-                Display(0, x);
-                x = Gpib488.ReadRigidSample(ibuf);
-                Display(1, x);
-                Program.ProbeCounter = (int)Program.CONSTANTS.INTERMEDIATE;
-                x = Gpib488.ReadRigidSample(ibuf);
-                Display(1, x);
-                x = Gpib488.ReadRigidSample(ibuf);
-                Program.ProbeCounter = (int)Program.CONSTANTS.INTERMEDIATE;
-                Display(0, x);
             }
-            else
             {
                 x = Random.Next(0, 100);
             }
-            if (Program.RigidLaserFound == false)
-            {
-                Display(iPts, x);
-            }
-        }
-        private void Display(int iPts, double x)
-        {
+
             switch (iPts)
             {
                 case 0:
@@ -341,16 +322,16 @@ namespace LengthBench
                 iPts -= 1; // decrement the point number
             }
 
-            if (iPts > Program.NoOfPoints && Program.RigidLaserFound == false)
+            if (iPts > Program.NoOfPoints)
             {
                 Program.ProbeCounter++;
                 Form form = new frmTempMeasure();
                 form.Show();
                 iPts--;
             }
-
         }
-    
+
+
 
         private void frmLaserReadings1_Load(object sender, EventArgs e)
         {
