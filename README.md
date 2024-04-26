@@ -13,5 +13,8 @@ Edale (flexi) laser driver - C:\Windows\SysWOW64\e1735a.dll
 Edale (flexi) laser driver - C:\Windows\SysWOW64\E1735ACore.dll
 Rigid laser driver - C:\Windows\SysWOW64\ni4882.dll
 
+Excel Spreadsheet dependencies
+
+
 Tech debt
 Couldnt find a way to have array of controls so simulate an array within a cass statement - this can be addressed programmatically - i dont have the time.
