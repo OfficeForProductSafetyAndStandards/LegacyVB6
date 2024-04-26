@@ -27,7 +27,7 @@ namespace LengthBench
             Program.xlsheetResultsMeasurement.Cells[27, 5] = "No";
             string units = "UM";
 
-            Program.SetUp_Flexi_Laser(units);
+            Program.Setup_Flexi_Laser(units);
             Program.Setup_Rigid_Laser(units);
 
             Program.xlbookResults.Save();

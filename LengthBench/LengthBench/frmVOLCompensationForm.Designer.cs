@@ -139,7 +139,7 @@
             cmdClose.Name = "cmdClose";
             cmdClose.Size = new Size(125, 60);
             cmdClose.TabIndex = 9;
-            cmdClose.Text = "Continue to Customer Details";
+            cmdClose.Text = "Continue to Material Temperatures";
             cmdClose.UseVisualStyleBackColor = true;
             cmdClose.Click += cmdClose_Click;
             // 

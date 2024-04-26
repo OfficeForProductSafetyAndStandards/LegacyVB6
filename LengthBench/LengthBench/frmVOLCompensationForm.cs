@@ -62,8 +62,10 @@ namespace LengthBench
         {
             // save off the humidity and barometric pressure values
             Program.xlbookResults?.Save();
-            Form frmCustomerDetails = new frmCustomerDetails();
-            frmCustomerDetails.Show();
+            frmTempMeasure frmTempMeasure = new frmTempMeasure();
+            // Form frmCustomerDetails = new frmCustomerDetails();
+            //frmCustomerDetails.Show();
+            frmTempMeasure.Show();
         }
 
         private void cmdRetrurnToMainMenu_Click(object sender, EventArgs e)

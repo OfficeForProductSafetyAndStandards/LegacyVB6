@@ -11,7 +11,7 @@ namespace LengthBench
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            // this.Close();
+            this.Visible = false;
             // this.Dispose();
             // NewFileName = InputBox("What File for saving results, use Department No for simplicity")
             Program.xlsheetResultsVOLandCustomerData.Cells[2, 2] = Program.NewFileName;
@@ -40,6 +40,25 @@ namespace LengthBench
         }
 
         private void frmStartScreen_Load(object sender, EventArgs e)
+        {
+            Program.Setup_Rigid_Laser("UM");
+            Program.Setup_Flexi_Laser("UM");
+
+            if (Program.RigidLaserFound)
+            {
+                this.Text = "Rigid Length Laser Detected";
+                label1.Visible = false;
+                label2.Visible = true;
+            }
+            if (Program.FlexiLaserFound)
+            {
+                this.Text = "Flexi Length Laser Detected";
+                label2.Visible = false;
+                label1.Visible = true;
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

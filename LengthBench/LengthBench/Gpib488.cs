@@ -664,6 +664,8 @@ namespace LengthBench
 
             int laser;
 			int counter;
+
+
 			// StringBuilder ibuf = new StringBuilder(100);	
 
 			// Takes 2 readings first - zero and 1st point
@@ -682,9 +684,17 @@ namespace LengthBench
 			// Read from the newly created buffer ibuf$ to get value out
 			String str;
 			str=ibuf.ToString();
+			// String[] strs = str.Split();
 			if (str != "" || str != null)
 			{
-				rigid_sample = double.Parse(str);
+				try
+				{ 
+					rigid_sample = double.Parse(str);
+				}
+				catch(Exception)
+				{
+                    rigid_sample = 0;
+                }	
 			}
 
 

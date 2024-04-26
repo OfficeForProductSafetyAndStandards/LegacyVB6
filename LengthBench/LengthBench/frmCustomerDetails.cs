@@ -83,12 +83,19 @@ namespace LengthBench
                     frmlaser1.ShowDialog();
                     Program.xlsheetResultsMeasurement.Cells[x, 7] = LengthBench.frmlaser1.x;
                 }
+
+
+                Program.xlbookResults?.Save();
+
+                Form frmTempMeasure1 = new frmTempMeasure();
+                frmTempMeasure1.Show();
             }
-
-            Program.xlbookResults?.Save();
-
-            Form frmTempMeasure1 = new frmTempMeasure();
-            frmTempMeasure1.Show();
+            else
+            {
+                Program.xlbookResults?.Save();
+                Form frmVOLCompensationForm = new frmVOLCompensationForm();
+                frmVOLCompensationForm.ShowDialog();
+            }
         }
 
         private void txtCustomerName_TextChanged(object sender, EventArgs e)
@@ -141,13 +148,20 @@ namespace LengthBench
 
         private void txtNumberOfPoints_TextChanged(object sender, EventArgs e)
         {
-            try
+            if (Program.RigidLaserFound)
             {
-                Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
+                Program.NoOfPoints = 1;
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Please enter a number for points");
+                try
+                {
+                    Program.NoOfPoints = Convert.ToInt32(txtNumberOfPoints.Text);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Please enter a number for points");
+                }
             }
         }
 

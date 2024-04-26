@@ -12,6 +12,7 @@ using Timer = System.Windows.Forms.Timer;
 using System.Net;
 using System.Net.Mail;
 using Outlook = Microsoft.Office.Interop.Outlook;
+using System.Runtime.ConstrainedExecution;
 
 
 
@@ -41,7 +42,7 @@ namespace LengthBench
                 var y = Gpib488.ReadRigidSample(ibuf);
                 label2.Text = y.ToString();
                 // pbBeamStrength.Value = (int)x;
-            }   
+            }
             else
             {
                 // stub for now use timer to generate a random number
@@ -62,10 +63,51 @@ namespace LengthBench
             pbBeamStrength.BackColor = System.Drawing.Color.White;
             pbBeamStrength.ForeColor = System.Drawing.Color.Red;
             textBox1.Text = Program.email;
-            // Timer timer = new Timer();
-            // timer.Interval = 10;
-            // timer.Tick += new EventHandler(timer_Tick);
-            // timer.Start();
+            if (Program.FlexiLaserFound)
+            {
+
+
+                Timer timer = new Timer();
+                timer.Interval = 10;
+                timer.Tick += new EventHandler(timer_Tick);
+                timer.Start();
+            }
+            else
+            {
+                cmdLaserReading.Text = "Start Laser Reading";
+                txtLaserReading2.Visible = false;
+                txtLaserReading3.Visible = false;
+                txtLaserReading4.Visible = false;
+                txtLaserReading5.Visible = false;
+                txtLaserReading6.Visible = false;
+                txtLaserReading7.Visible = false;
+                txtLaserReading8.Visible = false;
+                txtLaserReading9.Visible = false;
+                txtLaserReading10.Visible = false;
+                txtLaserReading11.Visible = false;
+                txtLaserReading12.Visible = false;
+                txtLaserReading13.Visible = false;
+                txtLaserReading14.Visible = false;
+                txtLaserReading15.Visible = false;
+                txtLaserReading16.Visible = false;
+                txtLaserRun2.Visible = false;
+                txtLaserRun3.Visible = false;
+                txtLaserRun4.Visible = false;
+                txtLaserRun5.Visible = false;
+                txtLaserRun6.Visible = false;
+                txtLaserRun7.Visible = false;
+                txtLaserRun8.Visible = false;
+                txtLaserRun9.Visible = false;
+                txtLaserRun10.Visible = false;
+                txtLaserRun11.Visible = false;
+                txtLaserRun12.Visible = false;
+                txtLaserRun13.Visible = false;
+                txtLaserRun14.Visible = false;
+                txtLaserRun15.Visible = false;
+                txtLaserRun16.Visible = false;
+
+
+            }
 
         }
 
@@ -74,6 +116,8 @@ namespace LengthBench
         {
             StringBuilder ibuf = new StringBuilder(100);
 
+            cmdLaserReading.Enabled = false;
+
             if (iPts < 0)
             {
                 return;
@@ -81,19 +125,35 @@ namespace LengthBench
 
             Random Random = new Random();
             double x = 0;
-            if (Program.FlexiLaserFound) 
+            if (Program.FlexiLaserFound)
             {
                 x = Program.laser.ReadFlexiSample();
             }
             else if (Program.RigidLaserFound)
-            {
+            { // custom behaviour for rigid laser
+                // initial reading
                 x = Gpib488.ReadRigidSample(ibuf);
-            }    
+                Display(0, x);
+                x = Gpib488.ReadRigidSample(ibuf);
+                Display(1, x);
+                Program.ProbeCounter = (int)Program.CONSTANTS.INTERMEDIATE;
+                x = Gpib488.ReadRigidSample(ibuf);
+                Display(1, x);
+                x = Gpib488.ReadRigidSample(ibuf);
+                Program.ProbeCounter = (int)Program.CONSTANTS.INTERMEDIATE;
+                Display(0, x);
+            }
             else
             {
                 x = Random.Next(0, 100);
             }
-
+            if (Program.RigidLaserFound == false)
+            {
+                Display(iPts, x);
+            }
+        }
+        private void Display(int iPts, double x)
+        {
             switch (iPts)
             {
                 case 0:
@@ -281,14 +341,16 @@ namespace LengthBench
                 iPts -= 1; // decrement the point number
             }
 
-            if (iPts > Program.NoOfPoints)
+            if (iPts > Program.NoOfPoints && Program.RigidLaserFound == false)
             {
                 Program.ProbeCounter++;
                 Form form = new frmTempMeasure();
                 form.Show();
                 iPts--;
             }
+
         }
+    
 
         private void frmLaserReadings1_Load(object sender, EventArgs e)
         {
@@ -401,8 +463,19 @@ namespace LengthBench
 
         private void cmdResetLaser_Click_1(object sender, EventArgs e)
         {
+            
             cmdResetLaser.Visible = false;
             cmdLaserReading.Visible = true;
+            if (Program.RigidLaserFound)
+            {
+                // Define device desription
+                int laser = 0;
+                laser = Gpib488.ibdev(0, 3, 0, 13, 1, 0);
+                Gpib488.ibwrt(laser, "RS" + (char)10, 3);
+                // resets laser
+                // Gpib488.ibonl(Program.laser, 0)
+                //Places Laser interface offline
+            }
         }
 
         private void txtFinalZeroReading_TextChanged(object sender, EventArgs e)

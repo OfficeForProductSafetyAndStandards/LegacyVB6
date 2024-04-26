@@ -183,7 +183,7 @@ namespace LengthBench
 					 *  function Receive to terminate the read when END is detected.
 					 *  If the error bit ERR is set in ibsta, throw an error message
 					 */
-                    // Gpib488.Receive(board, Result[loop], ReadBuffer, ARRAYSIZE, Gpib488Consts.STOPend);
+                    Gpib488.Receive(board, Result[loop], ReadBuffer, ARRAYSIZE, Gpib488Consts.STOPend);
 
                     // Print out the ReadBuffer 
                     Console.WriteLine("Address: " + Result[loop].ToString() + ", " + ReadBuffer);
@@ -225,7 +225,7 @@ namespace LengthBench
        }
 
        
-        public static void SetUp_Flexi_Laser(string units)
+        public static void Setup_Flexi_Laser(string units)
         {
 
             // bool reading_2nd_laser = false;
@@ -338,7 +338,7 @@ namespace LengthBench
         /// </summary>
         [STAThread]
         static void Main()
-        {
+            {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             SetUp();

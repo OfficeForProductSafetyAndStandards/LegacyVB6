@@ -217,7 +217,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Top", "Bottom" });
+            comboBox2.Items.AddRange(new object[] { "Upper", "Lower" });
             comboBox2.Location = new Point(339, 154);
             comboBox2.Margin = new Padding(2, 1, 2, 1);
             comboBox2.Name = "comboBox2";
