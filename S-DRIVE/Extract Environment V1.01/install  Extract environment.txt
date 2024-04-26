@@ -1,0 +1,4 @@
+
+copy mscomct2.ocx to c:\windows\system32
+run cmd as admin
+regsrv32 mscomct2.ocx
