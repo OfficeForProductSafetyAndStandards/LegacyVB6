@@ -14,6 +14,7 @@ Edale (flexi) laser driver - C:\Windows\SysWOW64\E1735ACore.dll
 Rigid laser driver - C:\Windows\SysWOW64\ni4882.dll
 
 Excel Spreadsheet dependencies
+currently usng c:\temp for length.xlsx(template file) snd Edale.xlsx(Correction file)
 
 
 Tech debt
