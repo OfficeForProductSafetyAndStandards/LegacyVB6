@@ -69,7 +69,7 @@ namespace LengthBench
             Program.xlsheetResultsVOLandCustomerData.Cells[8, 3] = "Time of test " + Timestring;
             int y = 0;
 
-            if (Program.FlexiLaserFound)
+            if (Program.FlexiLaserFound || (Program.RigidLaserFound == false &&  Program.FlexiLaserFound ==false))
             {
                 try
                 {

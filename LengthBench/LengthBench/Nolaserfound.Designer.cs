@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nolaserfound));
             label1 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(38, 22);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Location = new Point(59, 47);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(364, 45);
+            label1.Size = new Size(884, 128);
             label1.TabIndex = 0;
-            label1.Text = "Unable to communicate with laser - is the laser on and connected ? \r\nDo you have the right  e1735a.dll and e1735aCore .dll installed \r\nin c:\\windows\\SysWOW64 directory\r\n";
+            label1.Text = resources.GetString("label1.Text");
+            label1.Click += label1_Click;
             // 
             // Nolaserfound
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(431, 211);
+            ClientSize = new Size(957, 450);
             Controls.Add(label1);
-            Margin = new Padding(2, 1, 2, 1);
+            Margin = new Padding(4, 2, 4, 2);
             Name = "Nolaserfound";
             Text = "Laser Not Found";
             Load += Nolaserfound_Load;

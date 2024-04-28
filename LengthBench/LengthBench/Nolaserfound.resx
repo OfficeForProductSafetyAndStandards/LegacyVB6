@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Unable to communicate with rigid or flexi laser - is the laser on and connected ? 
+For the Flexi laser do you have the right  e1735a.dll and e1735aCore .dll installed 
+in c:\windows\SysWOW64 directory
+ or C:\Windows\SysWOW64\ni4882.dll for the rigid laser ?</value>
+  </data>
 </root>

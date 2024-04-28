@@ -8,6 +8,14 @@ namespace LengthBench
         public frmStartScreen()
         {
             InitializeComponent();
+            if (Program.RigidLaserFound == false)  
+            {
+                label1.Text = "Agilent 1359 NOT detected";
+            }
+            if (Program.FlexiLaserFound == false)
+            {
+                label2.Text = "HP-IB3812 NOT detected";
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {

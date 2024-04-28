@@ -18,7 +18,11 @@ namespace LengthBench
         public frmVOLCompensationForm()
         {
             InitializeComponent();
-            if(Program.FlexiLaserFound == true)
+            if (Program.FlexiLaserFound == true)
+            {
+                cmdClose.Text = "Continue to customer details";
+            }
+            if (Program.RigidLaserFound == false && Program.FlexiLaserFound == false)
             {
                 cmdClose.Text = "Continue to customer details";
             }
@@ -67,19 +71,24 @@ namespace LengthBench
         private void cmdClose_Click(object sender, EventArgs e)
         {
 
-
+            Program.xlbookResults?.Save();
             if (Program.RigidLaserFound)
             {
                 // save off the humidity and barometric pressure values
-                Program.xlbookResults?.Save();
                 frmTempMeasure frmTempMeasure = new frmTempMeasure();
                 frmTempMeasure.Show();
             }
-            if (Program.FlexiLaserFound == true)
+            if (Program.FlexiLaserFound)
             {
                 Form frmCustomerDetails = new frmCustomerDetails();
                 frmCustomerDetails.Show();
             }
+            if (Program.RigidLaserFound == false && Program.FlexiLaserFound ==false) 
+            {
+                Form frmCustomerDetails = new frmCustomerDetails();
+                frmCustomerDetails.Show();
+            }
+            
             
         }
 
