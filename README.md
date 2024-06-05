@@ -5,11 +5,11 @@ This repository holds the source code for the NPL Flexi Laser, Rigid Laser and M
 Flexi is a 50m long bench used for measuring flexible metal tape, subsequently used to callibrate 50m reel tape measures.
 Rigit is far smaller, and measure rigid steel rules.
 Mass measures a variety of data related to the size, weight and volume of objects.
-**
+
 50m Flexi Laser - measuring flexible metal tape for metric tape reels**
 ![IMG_9696](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/a289f13d-d48b-424a-a633-4c0a55284d50)
 
-**
+
 Rigid Laser - measuting steel rules**
 ![IMG_9699](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/fd95f945-9de5-410a-8841-c8b603ff1fc9)
 
