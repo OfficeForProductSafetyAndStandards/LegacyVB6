@@ -6,11 +6,11 @@ Flexi is a 50m long bench used for measuring flexible metal tape, subsequently u
 Rigit is far smaller, and measure rigid steel rules.
 Mass measures a variety of data related to the size, weight and volume of objects.
 
-50m Flexi Laser - measuring flexible metal tape for metric tape reels**
+50m Flexi Laser - measuring flexible metal tape for metric tape reels
 ![IMG_9696](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/a289f13d-d48b-424a-a633-4c0a55284d50)
 
 
-Rigid Laser - measuting steel rules**
+Rigid Laser - measuting steel rules
 ![IMG_9699](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/fd95f945-9de5-410a-8841-c8b603ff1fc9)
 
 Several versions of the code existed, and old versions have been moved to the Archive folder. The Flexi and Rigid folders at root are the current code.
