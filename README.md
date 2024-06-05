@@ -5,11 +5,12 @@ This repository holds the source code for the NPL Flexi Laser, Rigid Laser and M
 Flexi is a 50m long bench used for measuring flexible metal tape, subsequently used to callibrate 50m reel tape measures.
 Rigit is far smaller, and measure rigid steel rules.
 Mass measures a variety of data related to the size, weight and volume of objects.
-
-50m Flexi
+**
+50m Flexi Laser - measuring flexible metal tape for metric tape reels**
 ![IMG_9696](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/a289f13d-d48b-424a-a633-4c0a55284d50)
 
-Rigid
+**
+Rigid Laser - measuting steel rules**
 ![IMG_9699](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/fd95f945-9de5-410a-8841-c8b603ff1fc9)
 
 Several versions of the code existed, and old versions have been moved to the Archive folder. The Flexi and Rigid folders at root are the current code.
@@ -17,7 +18,7 @@ First priority is to update the existing VB code to remove hard links to two OPS
 This will enable OPSS to decommission these servers before their support contract renewal is up.
 
 The VB code for Flexi has been amended to save to C: instead of the server, and is working on Windows 11.
-The code for Rigid needs to be updated in the same manner, however we also need to explore saving files on an online service (such as Amazon S3) in order to be able to share files across systems.
+The code for Rigid needs to be updated in the same manner, however we also need to explore saving files on an online service (such as an Amazon instance) in order to be able to share files across systems.
 
 The server also holds a small SQL database, which holds measurements from three instruments: Temprature, Humidity and Pressure.
 These measurements are aggrigated with the laser measurement to evidence the atmospheric environment in plase when the laser measurement was taken.
