@@ -31,19 +31,15 @@ The Flexi lab VB code was roughly translated into C# and is held in the Archive 
 Once all server dependencies have been eliminated, the code for both lasers and the mass lab will be properly migrated to modern code, atop of a modern cloud stack.
 
 
-External dependencies:
-Excel interop - C:\Program Files\Microsoft Office\root\Office16\excel.exe
-Outlook interop for email - C:\Program Files\Microsoft Office\root\Office16\outlook.exe
-MS serial com - C:\Windows\SysWOW64\mscomm32.ocx
+External dependencies:\
+  * Excel interop - C:\Program Files\Microsoft Office\root\Office16\excel.exe\
+  * Outlook interop for email - C:\Program Files\Microsoft Office\root\Office16\outlook.exe\
+  * MS serial com - C:\Windows\SysWOW64\mscomm32.ocx\
+  * Edale (flexi) laser driver - C:\Windows\SysWOW64\e1735a.dll\
+  * Edale (flexi) laser driver - C:\Windows\SysWOW64\E1735ACore.dll\
+  * Rigid laser driver - C:\Windows\SysWOW64\ni4882.dll\
 
-Edale (flexi) laser driver - C:\Windows\SysWOW64\e1735a.dll
 
-Edale (flexi) laser driver - C:\Windows\SysWOW64\E1735ACore.dll
-
-Rigid laser driver - C:\Windows\SysWOW64\ni4882.dll
-
-Excel spreadsheet dependencies:
-Currently using c:\temp for length.xlsx(template file) and Edale.xlsx(Correction file).
-
-Laser output files are written to c:\metrology\@private\@mu\Length Results in either the flexi or rigid directories as appropriate.
-
+Excel spreadsheet dependencies:\
+  * Currently using c:\temp for length.xlsx(template file) and Edale.xlsx(Correction file).\
+  * Laser output files are written to c:\metrology\@private\@mu\Length Results in either the flexi or rigid directories as appropriate.\
