@@ -33,9 +33,7 @@ Once all server dependencies have been eliminated, the code for both lasers and 
 
 External dependencies:
 Excel interop - C:\Program Files\Microsoft Office\root\Office16\excel.exe
-
 Outlook interop for email - C:\Program Files\Microsoft Office\root\Office16\outlook.exe
-
 MS serial com - C:\Windows\SysWOW64\mscomm32.ocx
 
 Edale (flexi) laser driver - C:\Windows\SysWOW64\e1735a.dll
