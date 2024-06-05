@@ -6,6 +6,12 @@ Flexi is a 50m long bench used for measuring flexible metal tape, subsequently u
 Rigit is far smaller, and measure rigid steel rules.
 Mass measures a variety of data related to the size, weight and volume of objects.
 
+50m Flexi
+![IMG_9696](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/a289f13d-d48b-424a-a633-4c0a55284d50)
+
+Rigid
+![IMG_9699](https://github.com/OfficeForProductSafetyAndStandards/LegacyVB6/assets/38748914/fd95f945-9de5-410a-8841-c8b603ff1fc9)
+
 Several versions of the code existed, and old versions have been moved to the Archive folder. The Flexi and Rigid folders at root are the current code.
 First priority is to update the existing VB code to remove hard links to two OPSS internal servers (S: and M:, known as Trent and Avon).
 This will enable OPSS to decommission these servers before their support contract renewal is up.
@@ -18,7 +24,7 @@ These measurements are aggrigated with the laser measurement to evidence the atm
 This is a simple table which will need to be migrated to an online service, such as Amazon RDS.
 
 The Mass lab has several instruments which also save to S: via a setting within their 3rd party software. Again these data will need to be redirected to an online service. Two VBA applications are used to collect measurement data, and then aggrigate these data with the measurements held in the SQL database.
-This code is under the Extract Environment folder, under MassLab 2024
+This code is under the Extract Environment folder, under MassLab
 
 The Flexi lab VB code was roughly translated into C# and is held in the Archive folder, however is not fit for live use and will serve as Proof of Concept only.
 Once all server dependencies have been eliminated, the code for both lasers and the mass lab will be properly migrated to modern code, atop of a modern cloud stack.
