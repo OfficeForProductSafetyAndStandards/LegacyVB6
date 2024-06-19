@@ -20,16 +20,16 @@ This will enable OPSS to decommission these servers before their support contrac
 The VB code for Flexi has been amended to save to C: instead of the server, and is working on Windows 11.
 The code for Rigid needs to be updated in the same manner however, we also need to explore saving files on an online service (such as an Amazon instance) to be able to share files across systems.
 
-The server also holds a small SQL database, which holds measurements from three instruments: temperature, Humidity and Pressure.
+The server also holds a small SQL database with measurements from three instruments: temperature, Humidity and Pressure.
 These measurements are aggregated with the laser measurement to evidence the atmospheric environment in place when the laser measurement was taken.
-This is a simple table which will need to be migrated to an online service, such as Amazon RDS.
+This simple table will need to be migrated to an online service, such as Amazon RDS.
 
-The Mass lab has several instruments which also save to S: via a setting within their 3rd party software. Again these data will need to be redirected to an online service. Two VBA applications are used to collect measurement data, and then aggregate these data with the measurements held in the SQL database.
+The Mass lab has several instruments saving to S: via a setting within their 3rd party software. Again these data will need to be redirected to an online service. Two VBA applications are used to collect measurement data, and then aggregate these data with the measurements held in the SQL database.
 This code is under the Extract Environment folder, under MassLab
 
-The Flexi lab VB code was roughly translated into C# and is held in the Archive folder, however is not fit for live use and will serve as Proof of Concept only.
+The Flexi lab VB code was roughly translated into C# and is held in the Archive folder however it is not fit for live use and will serve as Proof of Concept only.
 
-Once all server dependencies have been eliminated, the code for both lasers and the mass lab will be properly migrated to modern code, atop a modern cloud stack.
+Once all server dependencies have been eliminated, the code will be properly migrated to structured C# atop a modern cloud stack.
 
 External dependencies:
   * Excel interop - 'C:\Program Files\Microsoft Office\root\Office16\excel.exe'
