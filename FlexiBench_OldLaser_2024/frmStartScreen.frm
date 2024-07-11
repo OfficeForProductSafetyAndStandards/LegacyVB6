@@ -91,7 +91,8 @@ NewFileName = InputBox("What File for saving results, use Department No for simp
 xlsheetResultsVOLandCustomerData.Cells(2, 2) = NewFileName
 Datestring = Format(Date, "dd mmm yyyy")
 Timestring = Format(Time(), "hh-mm")
-NewFileName = "c:\metrology\@private\@mu\" & NewFileName & " " & Datestring & " " & Timestring
+'NewFileName = "c:\metrology\@private\@mu\" & NewFileName & " " & Datestring & " " & Timestring
+NewFileName = INIRead("MappedLocations", "ResultFolder") & NewFileName & " " & Datestring & " " & Timestring
 'Using Department No add time and date to make this set of results unique
 xlbookResults.SaveAs (NewFileName)
 xlsheetResultsMeasurement.Cells(26, 5) = cboMetrologist.Text
@@ -111,17 +112,21 @@ Exit Sub
 End Sub
 
 Private Sub Form_Load()
-If Rownumber = 5 And LaserTestSetNo = 3 Then
-Unload frmTinsleyLaserReadings
-Unload frmIntermediateandFinalTinsleyTemperatures
-Else
-End If
-Setup
-    cboMetrologist.AddItem "Melanie Dixon"
-    cboMetrologist.AddItem "Jon Blues"
-    cboMetrologist.AddItem "Alan Tuck"
-    cboMetrologist.AddItem "Ivor James"
-    cboMetrologist.AddItem "Guest"
-'unload all previous forms if from previous calibration and populate
-'combo box with appropriate names
+    If Rownumber = 5 And LaserTestSetNo = 3 Then
+        Unload frmTinsleyLaserReadings
+        Unload frmIntermediateandFinalTinsleyTemperatures
+    Else
+    End If
+    Setup
+
+    Dim sMetrologists As String
+    sMetrologists = INIRead("Metrologists", "Names")
+    Dim aMetrologists() As String
+    aMetrologists = Split(sMetrologists, ",")
+    Dim i As Integer
+    For i = 0 To UBound(aMetrologists)
+       cboMetrologist.AddItem aMetrologists(i)
+    Next
+    'unload all previous forms if from previous calibration and populate
+    'combo box with appropriate names
 End Sub

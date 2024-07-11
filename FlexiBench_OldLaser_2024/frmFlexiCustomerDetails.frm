@@ -22,9 +22,7 @@ Begin VB.Form frmCustomerDetails
       EndProperty
       ForeColor       =   &H00FF8080&
       Height          =   480
-      ItemData        =   "frmFlexiCustomerDetails.frx":0000
       Left            =   6720
-      List            =   "frmFlexiCustomerDetails.frx":001F
       TabIndex        =   14
       TabStop         =   0   'False
       Top             =   2280
@@ -380,7 +378,7 @@ End Sub
 
 Private Sub cmdGotoNextScreen_Click()
 On Error Resume Next
-Dim x As Integer
+Dim X As Integer
 Dim Point As Single
 Dim TypeOfTape As String
 Dim ClassOfTape As String
@@ -390,10 +388,10 @@ Units = "metres"
 Else
 Units = "feet"
 End If
-For x = 4 To (Val(txtNumberOfPoints) + 3)
-Point = InputBox("Length of interval No. " & (x - 3) & " in " & Units)
-xlsheetResultsMeasurement.Cells(x, 7) = Point
-Next x
+For X = 4 To (Val(txtNumberOfPoints) + 3)
+Point = InputBox("Length of interval No. " & (X - 3) & " in " & Units)
+xlsheetResultsMeasurement.Cells(X, 7) = Point
+Next X
 'use loop to enter required points into the spreadsheet so calculations
 'can be made on them
 xlsheetResultsVOLandCustomerData.Cells(1, 2) = txtCustomerName
