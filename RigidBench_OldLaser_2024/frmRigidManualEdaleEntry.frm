@@ -31,14 +31,15 @@ Begin VB.Form frmManualEdaleEntry
       Left            =   7440
       Top             =   8280
    End
-   Begin VB.PictureBox MSComm2 
-      Height          =   480
+   Begin MSCommLib.MSComm MSComm2 
       Left            =   9240
-      ScaleHeight     =   420
-      ScaleWidth      =   1140
-      TabIndex        =   65
       Top             =   8400
-      Width           =   1200
+      _ExtentX        =   1005
+      _ExtentY        =   1005
+      _Version        =   393216
+      CommPort        =   2
+      DTREnable       =   -1  'True
+      RThreshold      =   1
    End
    Begin VB.CommandButton cmdResultsNotOk 
       BackColor       =   &H00FFFF80&

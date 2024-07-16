@@ -103,7 +103,8 @@ xlsheetResultsVOLandCustomerData.Cells(2, 2) = NewFileName1
 xlsheetResultsVOLandCustomerData.Cells(3, 2) = NewFileName2
 Datestring = Format(Date, "dd mmm yyyy")
 Timestring = Format(Time(), "hh-mm")
-NewFileName = "C:\metrology\@private\@mu\Length Results\Rigid\" & NewFileName1 & "-" & NewFileName2 & " " & Datestring & " " & Timestring
+'NewFileName = "C:\metrology\@private\@mu\Length Results\Rigid\" & NewFileName1 & "-" & NewFileName2 & " " & Datestring & " " & Timestring
+NewFileName = INIRead("MappedLocations", "ResultFolder") & NewFileName1 & "-" & NewFileName2 & " " & Datestring & " " & Timestring
 'new file name is dept number, graduation and time and date to make this  set of results unique
 xlbookResults.SaveAs (NewFileName)
 
