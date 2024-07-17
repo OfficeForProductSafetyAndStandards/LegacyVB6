@@ -375,10 +375,14 @@ Private Sub cmdReturn_Click()
 End Sub
 
 Private Sub Form_Load()
-   cboNames.AddItem "Melanie Dixon"
-   cboNames.AddItem "Jonathon Blues"
-   cboNames.AddItem "Ivor James"
-   cboNames.AddItem "Alan Tuck"
+    Dim sMetrologists As String
+    sMetrologists = INIRead("Metrologists", "Names")
+    Dim aMetrologists() As String
+    aMetrologists = Split(sMetrologists, ",")
+    Dim i As Integer
+    For i = 0 To UBound(aMetrologists)
+       cboNames.AddItem aMetrologists(i)
+    Next
    'set combo box names which can be selected from drop down
 If ClassOfMeasurement = "Class B" Then
     lblCoefficientOfThermalExpansion.Visible = False
