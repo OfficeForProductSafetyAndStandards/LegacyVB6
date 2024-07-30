@@ -22,7 +22,9 @@ Begin VB.Form frmCustomerDetails
       EndProperty
       ForeColor       =   &H00FF8080&
       Height          =   480
+      ItemData        =   "frmFlexiCustomerDetails.frx":0000
       Left            =   6720
+      List            =   "frmFlexiCustomerDetails.frx":001F
       TabIndex        =   14
       TabStop         =   0   'False
       Top             =   2280
