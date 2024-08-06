@@ -2,7 +2,7 @@ VERSION 5.00
 Object = "{F9043C88-F6F2-101A-A3C9-08002B2F49FB}#1.2#0"; "COMDLG32.OCX"
 Begin VB.Form frmMassExtract 
    BackColor       =   &H00C0FFC0&
-   Caption         =   "Mass Extractor V1.04"
+   Caption         =   "Mass Extractor 2024"
    ClientHeight    =   7515
    ClientLeft      =   2715
    ClientTop       =   1560
@@ -55,9 +55,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   4
-      ItemData        =   "Mass ExtractorV104.frx":0000
+      ItemData        =   "Mass Extractor.frx":0000
       Left            =   8280
-      List            =   "Mass ExtractorV104.frx":000A
+      List            =   "Mass Extractor.frx":000A
       TabIndex        =   31
       Text            =   "Combo1"
       Top             =   3480
@@ -66,9 +66,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   3
-      ItemData        =   "Mass ExtractorV104.frx":0016
+      ItemData        =   "Mass Extractor.frx":0016
       Left            =   6600
-      List            =   "Mass ExtractorV104.frx":0020
+      List            =   "Mass Extractor.frx":0020
       TabIndex        =   30
       Text            =   "Combo1"
       Top             =   3480
@@ -77,9 +77,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   2
-      ItemData        =   "Mass ExtractorV104.frx":002C
+      ItemData        =   "Mass Extractor.frx":002C
       Left            =   4920
-      List            =   "Mass ExtractorV104.frx":0036
+      List            =   "Mass Extractor.frx":0036
       TabIndex        =   29
       Text            =   "Combo1"
       Top             =   3480
@@ -88,9 +88,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   1
-      ItemData        =   "Mass ExtractorV104.frx":0042
+      ItemData        =   "Mass Extractor.frx":0042
       Left            =   3240
-      List            =   "Mass ExtractorV104.frx":004C
+      List            =   "Mass Extractor.frx":004C
       TabIndex        =   28
       Text            =   "Combo1"
       Top             =   3480
@@ -99,9 +99,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   0
-      ItemData        =   "Mass ExtractorV104.frx":0058
+      ItemData        =   "Mass Extractor.frx":0058
       Left            =   1560
-      List            =   "Mass ExtractorV104.frx":0062
+      List            =   "Mass Extractor.frx":0062
       TabIndex        =   27
       Text            =   "Combo1"
       Top             =   3480
@@ -153,9 +153,9 @@ Begin VB.Form frmMassExtract
    End
    Begin VB.ComboBox cboMetrologist 
       Height          =   315
-      ItemData        =   "Mass ExtractorV104.frx":006E
+      ItemData        =   "Mass Extractor.frx":006E
       Left            =   1560
-      List            =   "Mass ExtractorV104.frx":0081
+      List            =   "Mass Extractor.frx":0081
       TabIndex        =   22
       Top             =   3960
       Width           =   1575
@@ -175,7 +175,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   20
-      Text            =   "Mass ExtractorV104.frx":00C7
+      Text            =   "Mass Extractor.frx":00C7
       Top             =   1080
       Width           =   1575
    End
@@ -186,7 +186,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   19
-      Text            =   "Mass ExtractorV104.frx":00CD
+      Text            =   "Mass Extractor.frx":00CD
       Top             =   1080
       Width           =   1575
    End
@@ -237,7 +237,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   13
-      Text            =   "Mass ExtractorV104.frx":00D3
+      Text            =   "Mass Extractor.frx":00D3
       Top             =   1080
       Width           =   1575
    End
@@ -248,7 +248,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   12
-      Text            =   "Mass ExtractorV104.frx":00D9
+      Text            =   "Mass Extractor.frx":00D9
       Top             =   1080
       Width           =   1575
    End
@@ -259,7 +259,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   11
-      Text            =   "Mass ExtractorV104.frx":00DF
+      Text            =   "Mass Extractor.frx":00DF
       Top             =   1080
       Width           =   1575
    End
@@ -342,7 +342,7 @@ Begin VB.Form frmMassExtract
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
-      Caption         =   $"Mass ExtractorV104.frx":00E5
+      Caption         =   $"Mass Extractor.frx":00E5
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   9.75
@@ -824,6 +824,12 @@ End Function
 
 Sub PlaceResultsInMassSpreadsheet()
 On Error GoTo ErrorHandler
+
+Dim IniFile As String
+IniFile = App.Path & "\" & "Instruments.Ini"
+Dim strMassWorkbookLocation As String
+Call GetStringFromIni(IniFile, "Paths", "MassWorkbook", strMassWorkbookLocation)
+
 DataRow = 31
 Dim rsComm As ADODB.Recordset
 Dim rsConn As ADODB.Connection
@@ -834,8 +840,7 @@ Dim strWtPrefix As String
 Set rsConn = New ADODB.Connection
 rsConn.Open rsEnvironStr
 Set rsComm = New ADODB.Recordset
-'Set xlBookMass = xl.Workbooks.Open("\\PDC\Metrology\@Private\@MU\massxl.xls")
-Set xlBookMass = xl.Workbooks.Open("\\Trent\Metrology\@Private\@MU\massxl.xls")
+Set xlBookMass = xl.Workbooks.Open(strMassWorkbookLocation)
 Set xlsheetmass = xlBookMass.Worksheets("MassNew")
 Set xlsheetPrint = xlBookMass.Worksheets("Print Preview")
 xlBookMass.Activate
