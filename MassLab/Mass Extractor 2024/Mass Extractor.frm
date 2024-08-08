@@ -57,7 +57,7 @@ Begin VB.Form frmMassExtract
       Index           =   4
       ItemData        =   "Mass Extractor.frx":0000
       Left            =   8280
-      List            =   "Mass Extractor.frx":0002
+      List            =   "Mass Extractor.frx":000A
       TabIndex        =   31
       Text            =   "Combo1"
       Top             =   3480
@@ -66,9 +66,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   3
-      ItemData        =   "Mass Extractor.frx":0004
+      ItemData        =   "Mass Extractor.frx":0016
       Left            =   6600
-      List            =   "Mass Extractor.frx":0006
+      List            =   "Mass Extractor.frx":0020
       TabIndex        =   30
       Text            =   "Combo1"
       Top             =   3480
@@ -77,9 +77,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   2
-      ItemData        =   "Mass Extractor.frx":0008
+      ItemData        =   "Mass Extractor.frx":002C
       Left            =   4920
-      List            =   "Mass Extractor.frx":000A
+      List            =   "Mass Extractor.frx":0036
       TabIndex        =   29
       Text            =   "Combo1"
       Top             =   3480
@@ -88,9 +88,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   1
-      ItemData        =   "Mass Extractor.frx":000C
+      ItemData        =   "Mass Extractor.frx":0042
       Left            =   3240
-      List            =   "Mass Extractor.frx":000E
+      List            =   "Mass Extractor.frx":004C
       TabIndex        =   28
       Text            =   "Combo1"
       Top             =   3480
@@ -99,9 +99,9 @@ Begin VB.Form frmMassExtract
    Begin VB.ComboBox cboClass 
       Height          =   315
       Index           =   0
-      ItemData        =   "Mass Extractor.frx":0010
+      ItemData        =   "Mass Extractor.frx":0058
       Left            =   1560
-      List            =   "Mass Extractor.frx":0012
+      List            =   "Mass Extractor.frx":0062
       TabIndex        =   27
       Text            =   "Combo1"
       Top             =   3480
@@ -153,9 +153,9 @@ Begin VB.Form frmMassExtract
    End
    Begin VB.ComboBox cboMetrologist 
       Height          =   315
-      ItemData        =   "Mass Extractor.frx":0014
+      ItemData        =   "Mass Extractor.frx":006E
       Left            =   1560
-      List            =   "Mass Extractor.frx":0016
+      List            =   "Mass Extractor.frx":0070
       TabIndex        =   22
       Top             =   3960
       Width           =   1575
@@ -175,7 +175,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   20
-      Text            =   "Mass Extractor.frx":0018
+      Text            =   "Mass Extractor.frx":0072
       Top             =   1080
       Width           =   1575
    End
@@ -186,7 +186,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   19
-      Text            =   "Mass Extractor.frx":001E
+      Text            =   "Mass Extractor.frx":0078
       Top             =   1080
       Width           =   1575
    End
@@ -237,7 +237,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   13
-      Text            =   "Mass Extractor.frx":0024
+      Text            =   "Mass Extractor.frx":007E
       Top             =   1080
       Width           =   1575
    End
@@ -248,7 +248,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   12
-      Text            =   "Mass Extractor.frx":002A
+      Text            =   "Mass Extractor.frx":0084
       Top             =   1080
       Width           =   1575
    End
@@ -259,7 +259,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   11
-      Text            =   "Mass Extractor.frx":0030
+      Text            =   "Mass Extractor.frx":008A
       Top             =   1080
       Width           =   1575
    End
@@ -342,7 +342,7 @@ Begin VB.Form frmMassExtract
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
-      Caption         =   $"Mass Extractor.frx":0036
+      Caption         =   $"Mass Extractor.frx":0090
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   9.75
@@ -798,8 +798,8 @@ With rsEnviron
     For i = 1 To UBound(iTempProbeNo)
         strNumericResults = "Exec Probe" & CStr(iTempProbeNo(i)) & " '" & Format(dtStartTime, "yyyy-mm-dd hh:mm:ss") & "' ,'" & _
         Format(dtEndTime, "yyyy-mm-dd hh:mm:ss") & "'"
-        Debug.Print strNumericResults
         rsEnviron.Open strNumericResults, rsEnvironConn, adOpenStatic, adLockOptimistic
+        Debug.Print strNumericResults
         MeanPressure = .Fields("MeanPressure") + MeanPressure
         MeanTemperature = .Fields("MeanTemp") + MeanTemperature
         MeanHumidity = .Fields("MeanHumidity") + MeanHumidity
@@ -883,9 +883,10 @@ Do Until No_Of_Weights > UBound(ResultsSet, 2) + 1
         xl.Run "header_input"
         If cboClass(TestNumber).Text = "E2" Then
             xl.Run "twocycle"
+            xlsheetmass.Cells(6, 3) = "E2"
+        Else
+            xlsheetmass.Cells(6, 3) = "F1"
         End If
-        xlsheetmass.Cells(6, 3) = cboClass(TestNumber).Text
-
 
         GoSub PutGeneralInfoInToExcel
         
@@ -1111,27 +1112,15 @@ Public Sub SetupDefaults()
 
     Dim IniFile As String
     IniFile = App.Path & "\" & "Instruments.Ini"
-    Dim i As Integer
-    Dim j As Integer
-    
     Dim sMetrologists As String
     Call GetStringFromIni(IniFile, "Metrologists", "Names", sMetrologists)
     Dim aMetrologists() As String
     aMetrologists = Split(sMetrologists, ",")
+    Dim i As Integer
     For i = 0 To UBound(aMetrologists)
        cboMetrologist.AddItem aMetrologists(i)
     Next
-    
-    Dim sTestClasses As String
-    Call GetStringFromIni(IniFile, "Test", "Classes", sTestClasses)
-    Dim aTestClasses() As String
-    aTestClasses = Split(sTestClasses, ",")
-    For j = 0 To 4
-        For i = 0 To UBound(aTestClasses)
-           cboClass(j).AddItem aTestClasses(i)
-        Next
-    Next
-    
+
 End Sub
 
 Public Function GetInstrumentInfo() As Boolean
