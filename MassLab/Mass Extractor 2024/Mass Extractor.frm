@@ -155,7 +155,7 @@ Begin VB.Form frmMassExtract
       Height          =   315
       ItemData        =   "Mass Extractor.frx":006E
       Left            =   1560
-      List            =   "Mass Extractor.frx":0081
+      List            =   "Mass Extractor.frx":0070
       TabIndex        =   22
       Top             =   3960
       Width           =   1575
@@ -175,7 +175,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   20
-      Text            =   "Mass Extractor.frx":00C7
+      Text            =   "Mass Extractor.frx":0072
       Top             =   1080
       Width           =   1575
    End
@@ -186,7 +186,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   19
-      Text            =   "Mass Extractor.frx":00CD
+      Text            =   "Mass Extractor.frx":0078
       Top             =   1080
       Width           =   1575
    End
@@ -237,7 +237,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   13
-      Text            =   "Mass Extractor.frx":00D3
+      Text            =   "Mass Extractor.frx":007E
       Top             =   1080
       Width           =   1575
    End
@@ -248,7 +248,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   12
-      Text            =   "Mass Extractor.frx":00D9
+      Text            =   "Mass Extractor.frx":0084
       Top             =   1080
       Width           =   1575
    End
@@ -259,7 +259,7 @@ Begin VB.Form frmMassExtract
       MultiLine       =   -1  'True
       ScrollBars      =   2  'Vertical
       TabIndex        =   11
-      Text            =   "Mass Extractor.frx":00DF
+      Text            =   "Mass Extractor.frx":008A
       Top             =   1080
       Width           =   1575
    End
@@ -342,7 +342,7 @@ Begin VB.Form frmMassExtract
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
-      Caption         =   $"Mass Extractor.frx":00E5
+      Caption         =   $"Mass Extractor.frx":0090
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   9.75
@@ -1109,6 +1109,18 @@ Call SetupDefaults
 End Sub
 
 Public Sub SetupDefaults()
+
+    Dim IniFile As String
+    IniFile = App.Path & "\" & "Instruments.Ini"
+    Dim sMetrologists As String
+    Call GetStringFromIni(IniFile, "Metrologists", "Names", sMetrologists)
+    Dim aMetrologists() As String
+    aMetrologists = Split(sMetrologists, ",")
+    Dim i As Integer
+    For i = 0 To UBound(aMetrologists)
+       cboMetrologist.AddItem aMetrologists(i)
+    Next
+
 End Sub
 
 Public Function GetInstrumentInfo() As Boolean
