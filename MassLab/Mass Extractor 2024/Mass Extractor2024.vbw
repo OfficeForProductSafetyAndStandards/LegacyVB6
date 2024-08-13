@@ -1,4 +1,4 @@
-frmMassExtract = 78, 78, 1202, 641, C, 26, 26, 1057, 625, C
-modVariables = 52, 52, 1083, 556, C
-modErrorHandler = 0, 0, 0, 0, C
-IniRoutines = 130, 130, 1161, 634, C
+frmMassExtract = 78, 78, 1202, 641, , 26, 26, 1057, 625, C
+modVariables = 52, 52, 1083, 556, 
+modErrorHandler = 130, 130, 1161, 634, 
+IniRoutines = 130, 130, 1161, 634, 

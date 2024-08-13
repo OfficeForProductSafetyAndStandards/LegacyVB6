@@ -1112,6 +1112,7 @@ Public Sub SetupDefaults()
 
     Dim IniFile As String
     IniFile = App.Path & "\" & "Instruments.Ini"
+    
     Dim sMetrologists As String
     Call GetStringFromIni(IniFile, "Metrologists", "Names", sMetrologists)
     Dim aMetrologists() As String
@@ -1120,6 +1121,8 @@ Public Sub SetupDefaults()
     For i = 0 To UBound(aMetrologists)
        cboMetrologist.AddItem aMetrologists(i)
     Next
+    
+    Call GetStringFromIni(IniFile, "Paths", "DataSource", rsEnvironStr)
 
 End Sub
 
