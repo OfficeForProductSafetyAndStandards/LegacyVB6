@@ -28,7 +28,8 @@ Public No_Of_Weights As Integer
 
 Public rsEnviron As ADODB.Recordset
 Public rsEnvironConn As ADODB.Connection
-Public Const rsEnvironStr = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MQU_Job;Data Source=Avon\Goldmine"
+Public rsEnvironStr As String
+' Public Const rsEnvironStr = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MQU_Job;Data Source=Avon\Goldmine"
 ' Public Const rsEnvironStr = "Provider=SQLOLEDB.1;Persist Security Info=False;" & _
 "User ID=sa;Initial Catalog=MQU_Job;Data Source=Goldmine"
 

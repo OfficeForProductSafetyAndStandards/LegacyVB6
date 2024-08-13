@@ -62,7 +62,7 @@ Public Function GetStringFromIni(IniFile As String, strHeading As String, strTop
 'Routines Called:
 '   GetPrivateProfileString
 
-Dim MyStr As String * 80
+Dim MyStr As String * 255
 Dim Iret As Integer 'returned string length
 
 Dim SubTitle As String

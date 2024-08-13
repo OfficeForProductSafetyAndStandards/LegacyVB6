@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmExtract 
    Caption         =   "Get Environmental Data"
    ClientHeight    =   2355
@@ -17,7 +18,7 @@ Begin VB.Form frmExtract
       Top             =   1440
       Width           =   1455
    End
-   Begin VB.PictureBox dtpEnd 
+   Begin MSComCtl2.DTPicker dtpEnd 
       BeginProperty DataFormat 
          Type            =   1
          Format          =   "d/MM/yyyy"
@@ -29,13 +30,16 @@ Begin VB.Form frmExtract
       EndProperty
       Height          =   615
       Left            =   5160
-      ScaleHeight     =   555
-      ScaleWidth      =   2835
       TabIndex        =   2
       Top             =   480
       Width           =   2895
+      _ExtentX        =   5106
+      _ExtentY        =   1085
+      _Version        =   393216
+      Format          =   94240769
+      CurrentDate     =   36494
    End
-   Begin VB.PictureBox dtpStart 
+   Begin MSComCtl2.DTPicker dtpStart 
       BeginProperty DataFormat 
          Type            =   1
          Format          =   "d/MM/yyyy"
@@ -47,11 +51,14 @@ Begin VB.Form frmExtract
       EndProperty
       Height          =   615
       Left            =   1920
-      ScaleHeight     =   555
-      ScaleWidth      =   2955
       TabIndex        =   1
       Top             =   480
       Width           =   3015
+      _ExtentX        =   5318
+      _ExtentY        =   1085
+      _Version        =   393216
+      Format          =   94240769
+      CurrentDate     =   36494
    End
    Begin VB.CommandButton Command1 
       Caption         =   "Get extract"
@@ -62,7 +69,7 @@ Begin VB.Form frmExtract
       Width           =   1455
    End
    Begin VB.Label Label3 
-      Caption         =   $"Extract Environment V1.01.frx":0000
+      Caption         =   $"Extract Environment.frx":0000
       Height          =   855
       Left            =   5160
       TabIndex        =   6
@@ -98,7 +105,7 @@ Unload Me
 End Sub
 
 Private Sub Command1_Click()
-On Error Resume Next
+On Error GoTo CancelErrorTrap
 Dim DateString As String
 Dim xl As Excel.Application
 Dim xlBook As Excel.Workbook
@@ -110,27 +117,26 @@ Dim x As Integer
 Dim y As Integer
 y = 1
 Dim connStr As String
+connStr = INIRead("Paths", "DataSource")
 Dim ExtractString As String
-ExtractString = "exec GetEnvironment '" & Format(dtpStart.Value, "yyyy-mm-dd hh:mm:ss") & _
-"','" & Format(dtpEnd.Value, "yyyy-mm-dd hh:mm:ss") & "'"
+ExtractString = "call GetEnvironment ('" & Format(dtpStart.Value, "yyyy-mm-dd hh:mm:ss") & _
+"','" & Format(dtpEnd.Value, "yyyy-mm-dd hh:mm:ss") & "');"
 Debug.Print ExtractString
+Screen.MousePointer = vbHourglass
 Set xl = GetObject(, "Excel.Application")
 If Err.Number <> 0 Then
         Set xl = CreateObject("Excel.Application")
 End If
 Set xlBook = xl.Workbooks.Add
 Set xlSheet = xlBook.Worksheets("Sheet1")
-connStr = "Provider=SQLOLEDB.1;Integrated Security=SSPI;" & _
-"Persist Security Info=False;Initial Catalog=MQU_Job;" & _
-"Data Source=\\164.36.97.133\GOLDMINE"
 Set rsConn = New ADODB.Connection
 rsConn.Open connStr
 Set rs = New ADODB.Recordset
 rs.Open ExtractString, rsConn
 rsCount = rs.Fields.Count
-For x = 0 To rsCount
+For x = 0 To rsCount - 1
 xlSheet.Cells(y, x + 1) = CStr(rs.Fields(x).Name)
-Debug.Print rs.Fields(x).Name
+Debug.Print x, rs.Fields(x).Name
 Next x
 y = y + 1
 rs.MoveFirst
@@ -158,8 +164,25 @@ rs.MoveNext
 Loop
 xl.Visible = True
 
+rs.Close
+Set rs = Nothing
+rsConn.Close
+Screen.MousePointer = vbDefault
 
+Exit Sub
 
+CancelErrorTrap:
+    ErrorString = "The error was " & Err.Description & " And error number " & Err.Number
+    Debug.Print ErrorString
+    Response = MsgBox(ErrorString, vbOKOnly)
+    Err.Clear
+    On Error GoTo 0
+    If Not xl Is Nothing Then
+        xl.Quit
+    End If
+    Screen.MousePointer = vbDefault
+
+    Exit Sub
 
 
 End Sub
