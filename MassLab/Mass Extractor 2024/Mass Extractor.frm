@@ -141,6 +141,7 @@ Begin VB.Form frmMassExtract
       Left            =   3240
       TabIndex        =   24
       Top             =   3960
+      Value           =   1  'Checked
       Width           =   6615
    End
    Begin VB.TextBox txtSTDNo 
