@@ -36,7 +36,7 @@ Begin VB.Form frmExtract
       _ExtentX        =   5106
       _ExtentY        =   1085
       _Version        =   393216
-      Format          =   94240769
+      Format          =   135069697
       CurrentDate     =   36494
    End
    Begin MSComCtl2.DTPicker dtpStart 
@@ -57,7 +57,7 @@ Begin VB.Form frmExtract
       _ExtentX        =   5318
       _ExtentY        =   1085
       _Version        =   393216
-      Format          =   94240769
+      Format          =   135069697
       CurrentDate     =   36494
    End
    Begin VB.CommandButton Command1 
@@ -123,10 +123,12 @@ ExtractString = "call GetEnvironment ('" & Format(dtpStart.Value, "yyyy-mm-dd hh
 "','" & Format(dtpEnd.Value, "yyyy-mm-dd hh:mm:ss") & "');"
 Debug.Print ExtractString
 Screen.MousePointer = vbHourglass
+On Error Resume Next
 Set xl = GetObject(, "Excel.Application")
 If Err.Number <> 0 Then
         Set xl = CreateObject("Excel.Application")
 End If
+On Error GoTo CancelErrorTrap
 Set xlBook = xl.Workbooks.Add
 Set xlSheet = xlBook.Worksheets("Sheet1")
 Set rsConn = New ADODB.Connection
