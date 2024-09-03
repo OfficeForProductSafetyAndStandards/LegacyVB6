@@ -696,7 +696,7 @@ Else
             txtDeptNo(TextBoxNo).Text = xlSheetResults.Cells(x, 3)
             Debug.Print txtDeptNo(TextBoxNo).Text
 '                The part below works when there is a daybook number and the job has been booked in New Delta
-            rs.Open "exec GetLatestCompany '" & txtDeptNo(TextBoxNo).Text & "'", rsConn
+            rs.Open "call GetLatestCompany ('" & txtDeptNo(TextBoxNo).Text & "');", rsConn
             txtCustomerNo(TextBoxNo).Text = rs.Fields("Company")
             txtSTDNo(TextBoxNo).Text = rs.Fields("STDNo")
             txtDayBookNo(TextBoxNo).Text = rs.Fields("DayBookNo")
@@ -797,10 +797,10 @@ End If
 rsEnvironConn.Open rsEnvironStr
 With rsEnviron
     For i = 1 To UBound(iTempProbeNo)
-        strNumericResults = "Exec Probe" & CStr(iTempProbeNo(i)) & " '" & Format(dtStartTime, "yyyy-mm-dd hh:mm:ss") & "' ,'" & _
-        Format(dtEndTime, "yyyy-mm-dd hh:mm:ss") & "'"
-        rsEnviron.Open strNumericResults, rsEnvironConn, adOpenStatic, adLockOptimistic
+        strNumericResults = "call Probe" & CStr(iTempProbeNo(i)) & " ('" & Format(dtStartTime, "yyyy-mm-dd hh:mm:ss") & "' ,'" & _
+        Format(dtEndTime, "yyyy-mm-dd hh:mm:ss") & "');"
         Debug.Print strNumericResults
+        rsEnviron.Open strNumericResults, rsEnvironConn ', adOpenStatic, adLockOptimistic
         MeanPressure = .Fields("MeanPressure") + MeanPressure
         MeanTemperature = .Fields("MeanTemp") + MeanTemperature
         MeanHumidity = .Fields("MeanHumidity") + MeanHumidity
