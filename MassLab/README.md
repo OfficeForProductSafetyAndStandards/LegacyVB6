@@ -5,4 +5,5 @@ A single Windows 11 machine logs probe temperature data (up to 12 probes), humid
 Mass Extractor and Extract Environment are the only 2 specialist Visual Basic 6 programs used here.
 
 Extract Environment asks the user for a date range, and extracts the environmental data for that period from the AWS MySQL database, dumping it into an Excel sheet.
-Mass Extractor combines information from the a5 machine, and environmental data from the AWS MySQL database, and produces PDF reports of the results for the clients.
+
+Mass Extractor combines information from the A5 machine, and environmental data from the AWS MySQL database, and produces PDF reports of the results for the clients.
