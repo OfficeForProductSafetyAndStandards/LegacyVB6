@@ -515,7 +515,7 @@ End With
 
 
     ''   Find the information regarding the balance
-    '   I have removed this, as unfortunatly not all the Mettler software
+    '   I have removed this, as unfortunately not all the Mettler software
     '   has BalanceID under the balance heading
     'Do Until xlSheetResults.Cells(RowCounter, 1) = "Balance settings"
     '    RowCounter = RowCounter + 1
@@ -525,7 +525,7 @@ End With
     'RowCounter = RowCounter + 2
     'strBalanceId = Trim(xlSheetResults.Cells(RowCounter, 1))
     'strBalanceId = Trim(Right(strBalanceId, (Len(strBalanceId) - 18)))
-'   Find where the calibtation data is, designated by the string 'Day'
+'   Find where the calibration data is, designated by the string 'Day'
 Do Until xlSheetResults.Cells(RowCounter, 1) = "Day"
 RowCounter = RowCounter + 1
 Loop
@@ -554,7 +554,7 @@ Debug.Print , dtTime, dtStartTime
 
 
 '   Insert the weights ID, density and nominal value
-'   Code changed to stop error occuring due to search ID including spaces - use of TRIM
+'   Code changed to stop error occurring due to search ID including spaces - use of TRIM
 Do Until xlSheetResults.Cells(RowCounter, 1) = ""
     xlSheetResults.Range("J" & RowCounter).Formula = "=VLOOKUP(TRIM(D" & _
     RowCounter & "),A" & Position1 & ":G" & Position2 & ",4,FALSE)"  'insert the Weight id
@@ -786,7 +786,7 @@ End If
 
 
 
-'   Setup string for getting environmental data back, remember each temerature probe gets humidity, pressure
+'   Setup string for getting environmental data back, remember each temperature probe gets humidity, pressure
 'iTNP = UBound(iTempProbeNo)
 ''ReDim strNumericResults(iTNP)
 'For i = 1 To iTNP
@@ -1065,7 +1065,7 @@ End Sub
 
 
 Public Function GetUnitPart(strWeightId As String) As String
-'   Seperate the mass value from the units
+'   Separate the mass value from the units
 '   10kg would be split into
 '   sngMass = 10
 '   strUnit = kg
@@ -1077,7 +1077,7 @@ On Error Resume Next
     GetUnitPart = Right(strUnit, Len(strUnit) - Len(Trim(sngMass)))
 End Function
 Public Function GetMassPart(strWeightId As String) As Single
-'   Seperate the mass value from the units
+'   Separate the mass value from the units
 '   10kg would be split into
 '   sngMass = 10
 '   strUnit = kg
@@ -1087,7 +1087,7 @@ On Error Resume Next
     GetMassPart = Val(strWeightId)
 End Function
 Public Function GetFrontStringPart(strWeightId As String) As String
-'   Seperate the string part at the front of the weight id
+'   Separate the string part at the front of the weight id
 '   The initial part of the weight id designates if the weight
 '   is plain , dot , double dot etc
 '   If there is no identifying marks on the weight then it is assumed to be plain
